@@ -146,7 +146,7 @@ export default function WhatsNewPage() {
 
   const handleShare = (method: "copy" | "twitter" | "linkedin") => {
     const url = window.location.href;
-    const title = "What's New in UK Financial Regulation. RegVarsity";
+    const title = "What's New in UK and EU Financial Regulation | RegVarsity";
     if (method === "copy") {
       navigator.clipboard.writeText(url).then(() => toast.success("Link copied to clipboard!"));
     } else if (method === "twitter") {
