@@ -1,19 +1,19 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 1 — PRIN: Principles for Business
+// MODULE 1 - PRIN: Principles for Business
 // ============================================================
 export const modulePRIN: Module = {
   id: "prin",
   number: 1,
-  title: "PRIN — Principles for Business",
+  title: "PRIN - Principles for Business",
   slug: "prin-principles-for-business",
   block: "High Level Standards",
   sourceCode: "PRIN",
   colour: "bg-blue-50",
   accentColour: "oklch(0.38 0.14 255)",
   description:
-    "The 12 Principles are the foundation of everything the FCA does. Every regulated firm must follow them. Think of them as the Ten Commandments of UK financial services — except there are twelve, and breaking them can cost you your licence.",
+    "The 12 Principles are the foundation of everything the FCA does. Every regulated firm must follow them. Think of them as the Ten Commandments of UK financial services, except there are twelve, and breaking them can cost you your licence.",
   whoItAppliesTo: "Every FCA-authorised firm, without exception.",
   chapters: [
     {
@@ -23,22 +23,22 @@ export const modulePRIN: Module = {
       slug: "what-are-the-principles",
       readingTimeMinutes: 6,
       intro:
-        "Before we dive into the individual principles, let us understand why they exist at all. The FCA could have written thousands of rules covering every possible situation. Instead, it chose a different approach — a short list of high-level principles that capture what good behaviour looks like, regardless of the specific situation.",
+        "Before we dive into the individual principles, let us understand why they exist at all. The FCA could have written thousands of rules covering every possible situation. Instead, it chose a different approach, a short list of high-level principles that capture what good behaviour looks like, regardless of the specific situation.",
       subSections: [
         {
           id: "prin-1-1",
-          heading: "1.1 — The philosophy behind principles-based regulation",
+          heading: "1.1 - The philosophy behind principles-based regulation",
           content: `The FCA operates what it calls a "principles-based" approach to regulation. This means that instead of writing a rule for every conceivable scenario, the regulator sets out broad standards of behaviour and expects firms to use their judgement to meet them.
 
 Think of it like the difference between a driving instructor who gives you a rule for every junction versus one who teaches you to read the road and make good decisions. The FCA wants firms that can read the road.
 
-The Principles for Business (PRIN) are the clearest expression of this philosophy. They are short, plain-English statements that describe what it means to be a good, trustworthy financial firm. They sit at the top of the entire FCA Handbook — everything else flows from them.
+The Principles for Business (PRIN) are the clearest expression of this philosophy. They are short, plain-English statements that describe what it means to be a good, trustworthy financial firm. They sit at the top of the entire FCA Handbook, everything else flows from them.
 
-There are currently **12 Principles**. The first 11 have been in place since the FSA era. **Principle 12 — Consumer Duty** was added in July 2023 and represents the most significant shift in retail regulation in a generation.`,
+There are currently **12 Principles**. The first 11 have been in place since the FSA era. **Principle 12 - Consumer Duty** was added in July 2023 and represents the most significant shift in retail regulation in a generation.`,
         },
         {
           id: "prin-1-2",
-          heading: "1.2 — Who must follow the Principles?",
+          heading: "1.2 - Who must follow the Principles?",
           content: `The Principles apply to every firm that is authorised by the FCA. This includes:
 
 - Banks and building societies
@@ -51,26 +51,26 @@ There are currently **12 Principles**. The first 11 have been in place since the
 
 The Principles also apply to firms carrying on regulated activities in the UK even if they are based overseas (e.g. EEA firms operating under temporary permissions).
 
-Importantly, the Principles are **outcome-focused**. The FCA does not just ask "did you follow the rule?" — it asks "did the customer get a good outcome?" This is a fundamental difference from a tick-box compliance culture.`,
+Importantly, the Principles are **outcome-focused**. The FCA does not just ask "did you follow the rule?", it asks "did the customer get a good outcome?" This is a fundamental difference from a tick-box compliance culture.`,
         },
         {
           id: "prin-1-3",
-          heading: "1.3 — What happens if you breach a Principle?",
+          heading: "1.3 - What happens if you breach a Principle?",
           content: `Breaching a Principle is a serious matter. The FCA can take a range of actions:
 
-**Financial penalties** — The FCA can fine firms enormous sums. In 2024 alone, it issued £176 million in fines — more than three times the 2023 total. The largest single FCA fine to date is £284.4 million, imposed on Barclays in May 2015 for failings in its foreign exchange business.
+**Financial penalties**. The FCA can fine firms enormous sums. In 2024 alone, it issued £176 million in fines, more than three times the 2023 total. The largest single FCA fine to date is £284.4 million, imposed on Barclays in May 2015 for failings in its foreign exchange business.
 
-**Public censure** — The FCA can issue a public statement criticising a firm's conduct, even without a fine. This reputational damage can be severe.
+**Public censure**. The FCA can issue a public statement criticising a firm's conduct, even without a fine. This reputational damage can be severe.
 
-**Withdrawal of authorisation** — In extreme cases, the FCA can cancel a firm's permission to carry on regulated activities — effectively shutting it down.
+**Withdrawal of authorisation**. In extreme cases, the FCA can cancel a firm's permission to carry on regulated activities, effectively shutting it down.
 
-**Skilled person reviews** — The FCA can require a firm to appoint an independent expert (a "skilled person" under Section 166 of FSMA) to review its practices at the firm's own expense.
+**Skilled person reviews**. The FCA can require a firm to appoint an independent expert (a "skilled person" under Section 166 of FSMA) to review its practices at the firm's own expense.
 
-**Enforcement action against individuals** — Senior managers can be personally fined or banned from working in financial services under the Senior Managers and Certification Regime (SMCR).`,
+**Enforcement action against individuals**. Senior managers can be personally fined or banned from working in financial services under the Senior Managers and Certification Regime (SMCR).`,
         },
       ],
       keyTakeaways: [
-        { text: "The FCA uses principles-based regulation — broad standards rather than rules for every situation." },
+        { text: "The FCA uses principles-based regulation, broad standards rather than rules for every situation." },
         { text: "There are 12 Principles for Business. Every FCA-authorised firm must follow all of them." },
         { text: "Principle 12 (Consumer Duty) was added in July 2023 and is the most significant recent change." },
         { text: "Breaching a Principle can result in fines, public censure, loss of authorisation, or personal bans." },
@@ -80,13 +80,13 @@ Importantly, the Principles are **outcome-focused**. The FCA does not just ask "
           id: "prin-1-q1",
           question: "A retail bank introduces a new savings product. It is technically compliant with all specific FCA product rules, but the interest rate is structured in a way that most customers will never achieve the advertised headline rate. Which Principle is most likely being breached?",
           options: [
-            "Principle 1 (Integrity) — because the bank is being dishonest",
-            "Principle 6 (Customers' interests) — because the bank is not treating customers fairly",
-            "Principle 12 (Consumer Duty) — because customers are not receiving good outcomes",
+            "Principle 1 (Integrity), because the bank is being dishonest",
+            "Principle 6 (Customers' interests), because the bank is not treating customers fairly",
+            "Principle 12 (Consumer Duty), because customers are not receiving good outcomes",
             "Both Principle 6 and Principle 12 could apply",
           ],
           correctIndex: 3,
-          explanation: "Both Principle 6 and Principle 12 are relevant here. Principle 6 requires firms to pay due regard to the interests of customers and treat them fairly — a misleading headline rate likely fails this. Principle 12 (Consumer Duty) requires firms to deliver good outcomes for retail customers, including on price and value. The fact that the product is technically rule-compliant does not protect the firm if the outcome for customers is poor. This is the essence of principles-based regulation.",
+          explanation: "Both Principle 6 and Principle 12 are relevant here. Principle 6 requires firms to pay due regard to the interests of customers and treat them fairly, a misleading headline rate likely fails this. Principle 12 (Consumer Duty) requires firms to deliver good outcomes for retail customers, including on price and value. The fact that the product is technically rule-compliant does not protect the firm if the outcome for customers is poor. This is the essence of principles-based regulation.",
         },
         {
           id: "prin-1-q2",
@@ -125,88 +125,88 @@ Importantly, the Principles are **outcome-focused**. The FCA does not just ask "
       subSections: [
         {
           id: "prin-2-1",
-          heading: "2.1 — Principles 1 to 4: The Character Principles",
-          content: `**Principle 1 — Integrity**: A firm must conduct its business with integrity.
+          heading: "2.1 - Principles 1 to 4: The Character Principles",
+          content: `**Principle 1 - Integrity**: A firm must conduct its business with integrity.
 
 This is the most fundamental principle. Integrity means being honest, acting in good faith, and not deceiving anyone. A firm that sells products it knows are unsuitable, or that misleads customers about costs, is breaching Principle 1.
 
-*Real example*: In October 2024, the FCA fined Starling Bank £29 million for failings in its financial crime systems and controls — the bank opened over 54,000 accounts for high-risk customers despite a requirement not to, and its sanctions screening was inadequate. The FCA viewed this as a serious failure in managing financial crime risk.
+*Real example*: In October 2024, the FCA fined Starling Bank £29 million for failings in its financial crime systems and controls, the bank opened over 54,000 accounts for high-risk customers despite a requirement not to, and its sanctions screening was inadequate. The FCA viewed this as a serious failure in managing financial crime risk.
 
 ---
 
-**Principle 2 — Skill, care and diligence**: A firm must conduct its business with due skill, care and diligence.
+**Principle 2 - Skill, care and diligence**: A firm must conduct its business with due skill, care and diligence.
 
-This means firms must be competent. They must have qualified staff, proper systems, and robust processes. It is not enough to mean well — you must actually be good at what you do.
+This means firms must be competent. They must have qualified staff, proper systems, and robust processes. It is not enough to mean well, you must actually be good at what you do.
 
 *Real example*: A small investment firm that gives advice without properly understanding the products it recommends, leading to customer losses, would breach Principle 2.
 
 ---
 
-**Principle 3 — Management and control**: A firm must take reasonable care to organise and control its affairs responsibly and effectively, with adequate risk management systems.
+**Principle 3 - Management and control**: A firm must take reasonable care to organise and control its affairs responsibly and effectively, with adequate risk management systems.
 
 This principle is about governance. Senior management must be in control of what the firm does. There must be clear lines of responsibility, proper oversight, and effective risk management.
 
-*Real example*: The FCA's enforcement actions under SMCR frequently cite Principle 3 — when a firm's senior managers fail to properly oversee a business area that subsequently causes harm.
+*Real example*: The FCA's enforcement actions under SMCR frequently cite Principle 3, when a firm's senior managers fail to properly oversee a business area that subsequently causes harm.
 
 ---
 
-**Principle 4 — Financial prudence**: A firm must maintain adequate financial resources.
+**Principle 4 - Financial prudence**: A firm must maintain adequate financial resources.
 
 A firm must have enough capital and liquidity to meet its obligations. It must not take on more risk than it can absorb. This principle underpins the entire prudential regulatory framework.`,
         },
         {
           id: "prin-2-2",
-          heading: "2.2 — Principles 5 to 8: The Market Conduct Principles",
-          content: `**Principle 5 — Market conduct**: A firm must observe proper standards of market conduct.
+          heading: "2.2 - Principles 5 to 8: The Market Conduct Principles",
+          content: `**Principle 5 - Market conduct**: A firm must observe proper standards of market conduct.
 
 This principle requires firms to behave properly in financial markets. It covers areas like market abuse, insider dealing, and manipulation. It works alongside the Market Abuse Regulation (MAR) and the FCA's Market Conduct sourcebook.
 
 ---
 
-**Principle 6 — Customers' interests**: A firm must pay due regard to the interests of its customers and treat them fairly.
+**Principle 6 - Customers' interests**: A firm must pay due regard to the interests of its customers and treat them fairly.
 
-This is the famous "Treating Customers Fairly" (TCF) principle. It requires firms to put customers' interests at the heart of their business. It is not just about avoiding harm — it is about actively looking out for customers.
+This is the famous "Treating Customers Fairly" (TCF) principle. It requires firms to put customers' interests at the heart of their business. It is not just about avoiding harm, it is about actively looking out for customers.
 
 *Note*: Since July 2023, Principle 12 (Consumer Duty) has significantly strengthened and expanded on Principle 6 for retail customers. Principle 6 still applies to all customers including wholesale clients.
 
 ---
 
-**Principle 7 — Communications with clients**: A firm must pay due regard to the information needs of its clients, and communicate information to them in a way which is clear, fair and not misleading.
+**Principle 7 - Communications with clients**: A firm must pay due regard to the information needs of its clients, and communicate information to them in a way which is clear, fair and not misleading.
 
-Every communication with a client — whether a product brochure, a website, a telephone call, or a social media post — must be clear, fair, and not misleading. This principle is the foundation of the FCA's financial promotions regime.
+Every communication with a client, whether a product brochure, a website, a telephone call, or a social media post, must be clear, fair, and not misleading. This principle is the foundation of the FCA's financial promotions regime.
 
-*Real example*: In 2024, FCA interventions led to 19,766 financial promotions being amended or withdrawn by authorised firms, and the FCA issued 2,240 alerts about unauthorised firms and individuals — particularly in the crypto and high-risk investment space.
+*Real example*: In 2024, FCA interventions led to 19,766 financial promotions being amended or withdrawn by authorised firms, and the FCA issued 2,240 alerts about unauthorised firms and individuals, particularly in the crypto and high-risk investment space.
 
 ---
 
-**Principle 8 — Conflicts of interest**: A firm must manage conflicts of interest fairly, both between itself and its customers and between a customer and another client.
+**Principle 8 - Conflicts of interest**: A firm must manage conflicts of interest fairly, both between itself and its customers and between a customer and another client.
 
-Every financial firm faces conflicts of interest — situations where its own financial interests could conflict with its customers' interests. Principle 8 requires firms to identify these conflicts and manage them properly, not just disclose them.`,
+Every financial firm faces conflicts of interest, situations where its own financial interests could conflict with its customers' interests. Principle 8 requires firms to identify these conflicts and manage them properly, not just disclose them.`,
         },
         {
           id: "prin-2-3",
-          heading: "2.3 — Principles 9 to 12: The Relationship Principles",
-          content: `**Principle 9 — Customers: relationships of trust**: A firm must take reasonable care to ensure the suitability of its advice and discretionary decisions for any customer who is entitled to rely on its judgement.
+          heading: "2.3 - Principles 9 to 12: The Relationship Principles",
+          content: `**Principle 9 - Customers: relationships of trust**: A firm must take reasonable care to ensure the suitability of its advice and discretionary decisions for any customer who is entitled to rely on its judgement.
 
-When a customer relies on a firm's judgement — for example, when receiving investment advice — the firm must ensure its recommendations are suitable for that specific customer. This requires understanding the customer's circumstances, risk appetite, and financial goals.
+When a customer relies on a firm's judgement: for example, when receiving investment advice, the firm must ensure its recommendations are suitable for that specific customer. This requires understanding the customer's circumstances, risk appetite, and financial goals.
 
 ---
 
-**Principle 10 — Clients' assets**: A firm must arrange adequate protection for clients' assets when it is responsible for them.
+**Principle 10 - Clients' assets**: A firm must arrange adequate protection for clients' assets when it is responsible for them.
 
 When a firm holds client money or assets, it must keep them safe and separate from the firm's own assets. This principle underpins the entire Client Assets sourcebook (CASS). The collapse of MF Global in 2011, which left clients unable to recover their assets, led to significant strengthening of this area.
 
 ---
 
-**Principle 11 — Relations with regulators**: A firm must deal with its regulators in an open and cooperative way, and must disclose to the FCA appropriately anything relating to the firm of which the FCA would reasonably expect notice.
+**Principle 11 - Relations with regulators**: A firm must deal with its regulators in an open and cooperative way, and must disclose to the FCA appropriately anything relating to the firm of which the FCA would reasonably expect notice.
 
 Firms must be transparent with the FCA. They must report problems promptly, cooperate with investigations, and not mislead the regulator. This is sometimes called the "open and cooperative" principle.
 
-*Real example*: Firms that discover a significant operational incident, data breach, or compliance failure must notify the FCA promptly. Failure to do so — or attempting to conceal problems — is a serious breach of Principle 11.
+*Real example*: Firms that discover a significant operational incident, data breach, or compliance failure must notify the FCA promptly. Failure to do so, or attempting to conceal problems, is a serious breach of Principle 11.
 
 ---
 
-**Principle 12 — Consumer Duty**: A firm must deliver good outcomes for retail customers.
+**Principle 12 - Consumer Duty**: A firm must deliver good outcomes for retail customers.
 
 Added in July 2023, this is the most powerful principle in the modern FCA Handbook. It requires firms to:
 - Deliver products and services that meet customers' needs
@@ -214,7 +214,7 @@ Added in July 2023, this is the most powerful principle in the modern FCA Handbo
 - Give customers the information they need to make good decisions
 - Provide support that actually helps customers
 
-Principle 12 applies to all firms in the distribution chain for retail products — not just the firm that sells directly to the customer.`,
+Principle 12 applies to all firms in the distribution chain for retail products, not just the firm that sells directly to the customer.`,
         },
       ],
       keyTakeaways: [
@@ -266,16 +266,16 @@ Principle 12 applies to all firms in the distribution chain for retail products 
     {
       id: "prin-3",
       number: 3,
-      title: "Consumer Duty — The New Standard",
+      title: "Consumer Duty - The New Standard",
       slug: "consumer-duty",
       readingTimeMinutes: 12,
       intro:
-        "Consumer Duty is the biggest change to retail financial regulation in over a decade. It came into force on 31 July 2023 for new and existing products, and on 31 July 2024 for closed products. Understanding it is essential for anyone working in retail financial services — or for any consumer who wants to know their rights.",
+        "Consumer Duty is the biggest change to retail financial regulation in over a decade. It came into force on 31 July 2023 for new and existing products, and on 31 July 2024 for closed products. Understanding it is essential for anyone working in retail financial services, or for any consumer who wants to know their rights.",
       subSections: [
         {
           id: "prin-3-1",
-          heading: "3.1 — What is Consumer Duty and why was it introduced?",
-          content: `Consumer Duty (Principle 12) was introduced because the FCA concluded that the existing rules — including Principle 6 (Treating Customers Fairly) — were not producing consistently good outcomes for retail customers.
+          heading: "3.1 - What is Consumer Duty and why was it introduced?",
+          content: `Consumer Duty (Principle 12) was introduced because the FCA concluded that the existing rules: including Principle 6 (Treating Customers Fairly), were not producing consistently good outcomes for retail customers.
 
 The FCA's research found widespread evidence of:
 - Products that did not meet customers' needs
@@ -285,33 +285,33 @@ The FCA's research found widespread evidence of:
 
 Consumer Duty is the FCA's response. It shifts the standard from "did you follow the rules?" to "did your customers get a good outcome?"
 
-The key phrase in the Duty is that firms must act to deliver **good outcomes** for retail customers. This is an active obligation — firms cannot simply avoid doing harm. They must positively ensure customers are getting what they need.`,
+The key phrase in the Duty is that firms must act to deliver **good outcomes** for retail customers. This is an active obligation, firms cannot simply avoid doing harm. They must positively ensure customers are getting what they need.`,
         },
         {
           id: "prin-3-2",
-          heading: "3.2 — The Four Outcomes",
+          heading: "3.2 - The Four Outcomes",
           content: `Consumer Duty is structured around four specific outcomes that firms must deliver:
 
-**Outcome 1 — Products and Services**: Firms must design and distribute products and services that meet the needs of the target market. A product designed for sophisticated investors should not be sold to vulnerable retail customers. A savings account with complex terms should not be marketed to people with low financial literacy.
+**Outcome 1 - Products and Services**: Firms must design and distribute products and services that meet the needs of the target market. A product designed for sophisticated investors should not be sold to vulnerable retail customers. A savings account with complex terms should not be marketed to people with low financial literacy.
 
-**Outcome 2 — Price and Value**: The price a customer pays must be reasonable relative to the benefits they receive. This does not mean prices must be the lowest in the market — but firms must be able to demonstrate that their pricing represents fair value. The FCA has been particularly focused on so-called "loyalty penalties" — where existing customers pay more than new customers for the same product.
+**Outcome 2 - Price and Value**: The price a customer pays must be reasonable relative to the benefits they receive. This does not mean prices must be the lowest in the market, but firms must be able to demonstrate that their pricing represents fair value. The FCA has been particularly focused on so-called "loyalty penalties", where existing customers pay more than new customers for the same product.
 
-**Outcome 3 — Consumer Understanding**: Firms must communicate in a way that enables customers to make informed decisions. This goes beyond "clear, fair and not misleading" (Principle 7). Firms must actually test whether customers understand the information they are given. A technically accurate but confusing document fails this outcome.
+**Outcome 3 - Consumer Understanding**: Firms must communicate in a way that enables customers to make informed decisions. This goes beyond "clear, fair and not misleading" (Principle 7). Firms must actually test whether customers understand the information they are given. A technically accurate but confusing document fails this outcome.
 
-**Outcome 4 — Consumer Support**: Firms must provide support that meets customers' needs throughout the product lifecycle — not just at the point of sale. This includes making it easy to make a complaint, switch products, or exit a contract. Deliberately making it difficult to cancel a subscription, for example, would breach this outcome.`,
+**Outcome 4 - Consumer Support**: Firms must provide support that meets customers' needs throughout the product lifecycle, not just at the point of sale. This includes making it easy to make a complaint, switch products, or exit a contract. Deliberately making it difficult to cancel a subscription, for example, would breach this outcome.`,
         },
         {
           id: "prin-3-3",
-          heading: "3.3 — Vulnerable Customers",
-          content: `One of the most important aspects of Consumer Duty is its focus on **vulnerable customers**. The FCA defines a vulnerable customer as someone who, due to their personal circumstances, is especially susceptible to harm — particularly when a firm is not acting with appropriate levels of care.
+          heading: "3.3 - Vulnerable Customers",
+          content: `One of the most important aspects of Consumer Duty is its focus on **vulnerable customers**. The FCA defines a vulnerable customer as someone who, due to their personal circumstances, is especially susceptible to harm, particularly when a firm is not acting with appropriate levels of care.
 
 Vulnerability can be:
-- **Health-related** — physical disability, serious illness, mental health conditions
-- **Life event-related** — bereavement, job loss, relationship breakdown
-- **Resilience-related** — low financial resilience, over-indebtedness
-- **Capability-related** — low literacy, language barriers, lack of digital access
+- **Health-related**, physical disability, serious illness, mental health conditions
+- **Life event-related**, bereavement, job loss, relationship breakdown
+- **Resilience-related**, low financial resilience, over-indebtedness
+- **Capability-related**, low literacy, language barriers, lack of digital access
 
-The FCA estimates that around 50% of UK adults show characteristics of vulnerability at any given time. This is not a small minority — it is the mainstream.
+The FCA estimates that around 50% of UK adults show characteristics of vulnerability at any given time. This is not a small minority, it is the mainstream.
 
 Under Consumer Duty, firms must:
 1. Identify customers who may be vulnerable
@@ -323,8 +323,8 @@ The FCA's Guidance on Vulnerable Customers (FG21/1) provides detailed expectatio
         },
         {
           id: "prin-3-4",
-          heading: "3.4 — The Distribution Chain",
-          content: `One of the most significant aspects of Consumer Duty is that it applies to **all firms in the distribution chain** — not just the firm that sells directly to the customer.
+          heading: "3.4 - The Distribution Chain",
+          content: `One of the most significant aspects of Consumer Duty is that it applies to **all firms in the distribution chain**, not just the firm that sells directly to the customer.
 
 Consider a simple example: a bank creates a savings product, a platform distributes it, and an adviser recommends it to a customer. Under Consumer Duty, all three firms have obligations:
 
@@ -332,15 +332,15 @@ Consider a simple example: a bank creates a savings product, a platform distribu
 - The **distributor** (platform) must ensure the product is appropriate for the customers it serves and share relevant information with the manufacturer
 - The **adviser** must ensure the recommendation is suitable and that the customer understands what they are buying
 
-Firms must also share information up and down the chain. A manufacturer cannot simply say "we designed a good product" — they must monitor how it is being distributed and whether customers are getting good outcomes.
+Firms must also share information up and down the chain. A manufacturer cannot simply say "we designed a good product", they must monitor how it is being distributed and whether customers are getting good outcomes.
 
-This has significant implications for firms that previously considered themselves "wholesale" businesses — if your products ultimately reach retail customers, Consumer Duty applies to you.`,
+This has significant implications for firms that previously considered themselves "wholesale" businesses, if your products ultimately reach retail customers, Consumer Duty applies to you.`,
         },
       ],
       keyTakeaways: [
         { text: "Consumer Duty (Principle 12) came into force on 31 July 2023 for new products and 31 July 2024 for closed products." },
         { text: "It requires firms to deliver four outcomes: good products/services, fair value, consumer understanding, and effective support." },
-        { text: "Vulnerable customers must be identified and treated with additional care — around 50% of UK adults show vulnerability characteristics." },
+        { text: "Vulnerable customers must be identified and treated with additional care, around 50% of UK adults show vulnerability characteristics." },
         { text: "Consumer Duty applies to all firms in the distribution chain, not just those selling directly to retail customers." },
         { text: "The standard is outcome-based: firms must demonstrate customers are getting good outcomes, not just that rules were followed." },
       ],

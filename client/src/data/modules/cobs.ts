@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 3 — COBS: Conduct of Business
+// MODULE 3 - COBS: Conduct of Business
 // ============================================================
 export const moduleCOBS: Module = {
   id: "cobs",
   number: 3,
-  title: "COBS — Conduct of Business",
+  title: "COBS - Conduct of Business",
   slug: "cobs-conduct-of-business",
   block: "Business Standards",
   sourceCode: "COBS",
@@ -19,28 +19,28 @@ export const moduleCOBS: Module = {
     {
       id: "cobs-1",
       number: 1,
-      title: "Client Classification — Who Is Your Client?",
+      title: "Client Classification - Who Is Your Client?",
       slug: "client-classification",
       readingTimeMinutes: 8,
       intro:
-        "One of the most important decisions a firm makes is how to classify its clients. The level of protection a client receives — and the obligations a firm has — depends entirely on which category the client falls into. Getting this wrong can have serious consequences for both the firm and the client.",
+        "One of the most important decisions a firm makes is how to classify its clients. The level of protection a client receives, and the obligations a firm has, depends entirely on which category the client falls into. Getting this wrong can have serious consequences for both the firm and the client.",
       subSections: [
         {
           id: "cobs-1-1",
-          heading: "1.1 — The three client categories",
+          heading: "1.1 - The three client categories",
           content: `COBS divides clients into three categories, each with different levels of regulatory protection:
 
-**Retail Clients** — The highest level of protection. A retail client is essentially anyone who is not a professional client or eligible counterparty. Most individual investors, including high-net-worth individuals who have not been reclassified, are retail clients. Retail clients receive the full suite of COBS protections.
+**Retail Clients**. The highest level of protection. A retail client is essentially anyone who is not a professional client or eligible counterparty. Most individual investors, including high-net-worth individuals who have not been reclassified, are retail clients. Retail clients receive the full suite of COBS protections.
 
-**Professional Clients** — A reduced level of protection. Professional clients are presumed to have the knowledge and experience to make their own investment decisions and understand the risks involved. There are two types:
-- *Per se professional clients* — automatically classified as professional (e.g. investment firms, credit institutions, insurance companies, pension funds, large corporates)
-- *Elective professional clients* — retail clients who have asked to be reclassified as professional and meet certain criteria
+**Professional Clients**. A reduced level of protection. Professional clients are presumed to have the knowledge and experience to make their own investment decisions and understand the risks involved. There are two types:
+- *Per se professional clients*, automatically classified as professional (e.g. investment firms, credit institutions, insurance companies, pension funds, large corporates)
+- *Elective professional clients*, retail clients who have asked to be reclassified as professional and meet certain criteria
 
-**Eligible Counterparties (ECPs)** — The lowest level of protection. ECPs are the most sophisticated market participants — typically other financial institutions. Firms dealing with ECPs have very limited COBS obligations.`,
+**Eligible Counterparties (ECPs)**. The lowest level of protection. ECPs are the most sophisticated market participants, typically other financial institutions. Firms dealing with ECPs have very limited COBS obligations.`,
         },
         {
           id: "cobs-1-2",
-          heading: "1.2 — Elective professional client reclassification",
+          heading: "1.2 - Elective professional client reclassification",
           content: `A retail client can request to be reclassified as an elective professional client. This gives them access to products and services not available to retail clients, but at the cost of reduced regulatory protection.
 
 To be reclassified, a client must meet at least two of three quantitative criteria:
@@ -53,11 +53,11 @@ Even if a client meets these criteria, the firm must:
 - Obtain the client's written consent to the reclassification
 - Assess whether the client has the necessary expertise and experience
 
-Reclassification is not a one-way door — a client can request to be reclassified back to retail at any time.`,
+Reclassification is not a one-way door, a client can request to be reclassified back to retail at any time.`,
         },
         {
           id: "cobs-1-3",
-          heading: "1.3 — Why classification matters in practice",
+          heading: "1.3 - Why classification matters in practice",
           content: `Client classification has real consequences for both firms and clients. Here are the key differences:
 
 **Suitability assessments**: Firms must conduct a suitability assessment before giving investment advice or managing a portfolio for retail and professional clients. For ECPs, no suitability assessment is required.
@@ -70,7 +70,7 @@ Reclassification is not a one-way door — a client can request to be reclassifi
 
 **Information requirements**: Retail clients must receive more detailed pre-sale information (e.g. Key Information Documents for PRIIPs) than professional clients.
 
-A firm that misclassifies a client — treating a retail client as a professional, for example — faces significant regulatory risk. The FCA has taken enforcement action against firms that used reclassification to avoid their retail client obligations.`,
+A firm that misclassifies a client, treating a retail client as a professional, for example, faces significant regulatory risk. The FCA has taken enforcement action against firms that used reclassification to avoid their retail client obligations.`,
         },
       ],
       keyTakeaways: [
@@ -78,7 +78,7 @@ A firm that misclassifies a client — treating a retail client as a professiona
         { text: "Retail clients receive the full suite of COBS protections. Professional clients and ECPs have reduced protections." },
         { text: "A retail client can be reclassified as an elective professional if they meet two of three quantitative criteria and provide written consent." },
         { text: "Client classification affects suitability, appropriateness, product access, and information requirements." },
-        { text: "Misclassifying clients — especially treating retail clients as professional — is a serious regulatory breach." },
+        { text: "Misclassifying clients, especially treating retail clients as professional, is a serious regulatory breach." },
       ],
       quizQuestions: [
         {
@@ -122,19 +122,19 @@ A firm that misclassifies a client — treating a retail client as a professiona
     {
       id: "cobs-2",
       number: 2,
-      title: "Suitability — The Right Advice for the Right Person",
+      title: "Suitability - The Right Advice for the Right Person",
       slug: "suitability",
       readingTimeMinutes: 9,
       intro:
-        "The suitability requirement is one of the most important obligations in COBS. It requires firms to ensure that any investment advice or discretionary management decision is suitable for the specific client — not just generically reasonable. Getting suitability wrong is one of the most common causes of FCA enforcement action.",
+        "The suitability requirement is one of the most important obligations in COBS. It requires firms to ensure that any investment advice or discretionary management decision is suitable for the specific client, not just generically reasonable. Getting suitability wrong is one of the most common causes of FCA enforcement action.",
       subSections: [
         {
           id: "cobs-2-1",
-          heading: "2.1 — When does the suitability requirement apply?",
+          heading: "2.1 - When does the suitability requirement apply?",
           content: `The suitability requirement applies whenever a firm:
 
-1. **Provides personal investment recommendations** — advice that is personalised to a specific client and recommends a specific course of action (e.g. "you should invest in this fund")
-2. **Manages a portfolio on a discretionary basis** — where the firm has authority to make investment decisions on behalf of the client without seeking approval for each transaction
+1. **Provides personal investment recommendations**, advice that is personalised to a specific client and recommends a specific course of action (e.g. "you should invest in this fund")
+2. **Manages a portfolio on a discretionary basis**, where the firm has authority to make investment decisions on behalf of the client without seeking approval for each transaction
 
 The suitability requirement does **not** apply to:
 - Generic financial information (e.g. explaining how bonds work)
@@ -145,21 +145,21 @@ Note: For execution-only services with retail clients, a separate **appropriaten
         },
         {
           id: "cobs-2-2",
-          heading: "2.2 — The three pillars of suitability",
+          heading: "2.2 - The three pillars of suitability",
           content: `To assess suitability, a firm must gather information about three things:
 
-**Pillar 1 — Knowledge and Experience**: Does the client understand the type of product being recommended? Do they have experience with similar investments? A client who has never invested before should not be recommended a complex structured product without extensive explanation.
+**Pillar 1 - Knowledge and Experience**: Does the client understand the type of product being recommended? Do they have experience with similar investments? A client who has never invested before should not be recommended a complex structured product without extensive explanation.
 
-**Pillar 2 — Financial Situation**: Can the client afford the investment? What are their income, assets, liabilities, and financial commitments? Can they afford to lose the money invested? A client who needs their savings for a house purchase in six months should not be recommended a long-term illiquid investment.
+**Pillar 2 - Financial Situation**: Can the client afford the investment? What are their income, assets, liabilities, and financial commitments? Can they afford to lose the money invested? A client who needs their savings for a house purchase in six months should not be recommended a long-term illiquid investment.
 
-**Pillar 3 — Investment Objectives**: What is the client trying to achieve? What is their risk tolerance? What is their investment time horizon? A client saving for retirement in 30 years has very different needs from one saving for a child's education in five years.
+**Pillar 3 - Investment Objectives**: What is the client trying to achieve? What is their risk tolerance? What is their investment time horizon? A client saving for retirement in 30 years has very different needs from one saving for a child's education in five years.
 
 The firm must document all of this information and be able to demonstrate that the recommendation was suitable given what it knew about the client.`,
         },
         {
           id: "cobs-2-3",
-          heading: "2.3 — The Suitability Report",
-          content: `When a firm provides a personal recommendation to a retail client, it must provide a **Suitability Report** — a written document that explains:
+          heading: "2.3 - The Suitability Report",
+          content: `When a firm provides a personal recommendation to a retail client, it must provide a **Suitability Report**, a written document that explains:
 
 1. Why the recommendation is suitable for the specific client
 2. How the recommendation meets the client's investment objectives
@@ -168,7 +168,7 @@ The firm must document all of this information and be able to demonstrate that t
 
 The Suitability Report must be provided before the client acts on the recommendation (or at the latest, immediately after, if the client requests immediate execution).
 
-The FCA has been critical of Suitability Reports that are generic, formulaic, or that simply repeat information provided by the client without explaining why the recommendation is suitable. A good Suitability Report tells a story — it connects the client's specific circumstances to the specific recommendation.
+The FCA has been critical of Suitability Reports that are generic, formulaic, or that simply repeat information provided by the client without explaining why the recommendation is suitable. A good Suitability Report tells a story, it connects the client's specific circumstances to the specific recommendation.
 
 **Common suitability failures** identified by the FCA include:
 - Recommending products without adequately assessing the client's risk tolerance
@@ -178,7 +178,7 @@ The FCA has been critical of Suitability Reports that are generic, formulaic, or
         },
       ],
       keyTakeaways: [
-        { text: "Suitability applies to personal investment recommendations and discretionary portfolio management — not to generic advice or execution-only services." },
+        { text: "Suitability applies to personal investment recommendations and discretionary portfolio management, not to generic advice or execution-only services." },
         { text: "Suitability must be assessed across three pillars: knowledge/experience, financial situation, and investment objectives." },
         { text: "A Suitability Report must be provided to retail clients explaining why the recommendation is suitable for them specifically." },
         { text: "Common failures include not assessing risk tolerance properly, recommending illiquid products to clients who need liquidity, and generic reports." },
@@ -225,15 +225,15 @@ The FCA has been critical of Suitability Reports that are generic, formulaic, or
     {
       id: "cobs-3",
       number: 3,
-      title: "Financial Promotions — Communicating with Clients",
+      title: "Financial Promotions - Communicating with Clients",
       slug: "financial-promotions",
       readingTimeMinutes: 8,
       intro:
-        "Every communication a firm makes that is designed to promote a financial product or service is a 'financial promotion.' The rules governing financial promotions are strict — and the FCA has been increasingly active in enforcing them, particularly online and on social media.",
+        "Every communication a firm makes that is designed to promote a financial product or service is a 'financial promotion.' The rules governing financial promotions are strict, and the FCA has been increasingly active in enforcing them, particularly online and on social media.",
       subSections: [
         {
           id: "cobs-3-1",
-          heading: "3.1 — What is a financial promotion?",
+          heading: "3.1 - What is a financial promotion?",
           content: `A **financial promotion** is any communication that invites or induces a person to engage in investment activity. This is an extremely broad definition that covers:
 
 - Advertisements in newspapers, on television, or on billboards
@@ -249,23 +249,23 @@ The key test is whether the communication is designed to promote a financial pro
         },
         {
           id: "cobs-3-2",
-          heading: "3.2 — The clear, fair and not misleading standard",
+          heading: "3.2 - The clear, fair and not misleading standard",
           content: `All financial promotions must be **clear, fair and not misleading**. This is the fundamental standard that applies to every communication with a client.
 
 **Clear** means the promotion is easy to understand. Technical jargon, small print, and complex structures that obscure the key information all fail this standard.
 
 **Fair** means the promotion presents a balanced picture. It must not cherry-pick only the positive aspects of a product while burying the risks. If a product has a 5% chance of total loss, that must be prominently disclosed.
 
-**Not misleading** means the promotion must not create a false impression — even if every individual statement is technically accurate. A promotion that says "our fund has returned 20% per year" without mentioning that this was a single exceptional year, and that the fund has lost money in four of the last five years, is misleading even if the 20% figure is accurate.
+**Not misleading** means the promotion must not create a false impression, even if every individual statement is technically accurate. A promotion that says "our fund has returned 20% per year" without mentioning that this was a single exceptional year, and that the fund has lost money in four of the last five years, is misleading even if the 20% figure is accurate.
 
 The FCA's **Financial Promotions Regime** has been significantly strengthened in recent years, particularly for high-risk investments and crypto assets. From October 2023, crypto promotions must be approved by an FCA-authorised firm and must include prominent risk warnings.`,
         },
         {
           id: "cobs-3-3",
-          heading: "3.3 — Social media and finfluencers",
+          heading: "3.3 - Social media and finfluencers",
           content: `The rise of social media has created significant challenges for the financial promotions regime. The FCA has been increasingly active in pursuing individuals who promote financial products on social media without proper authorisation.
 
-**Finfluencers** — social media influencers who promote financial products — are subject to the same rules as traditional financial promoters. If an influencer promotes an investment product to their followers, that is a financial promotion and must comply with the rules.
+**Finfluencers**, social media influencers who promote financial products, are subject to the same rules as traditional financial promoters. If an influencer promotes an investment product to their followers, that is a financial promotion and must comply with the rules.
 
 In 2024, the FCA took action against a number of finfluencers who had been promoting high-risk investments (including forex trading schemes and crypto products) without proper authorisation. Several were referred to the police for potential criminal prosecution.
 
@@ -273,12 +273,12 @@ Key points for social media:
 - Promoting an unauthorised financial product is a criminal offence under Section 25 of FSMA
 - The fact that a promotion is on social media does not exempt it from the rules
 - Paid promotions (where an influencer receives payment to promote a product) are particularly scrutinised
-- Risk warnings must be prominent — not buried in small print or at the end of a long video`,
+- Risk warnings must be prominent, not buried in small print or at the end of a long video`,
         },
       ],
       keyTakeaways: [
-        { text: "A financial promotion is any communication designed to promote a financial product — including social media posts and influencer content." },
-        { text: "All promotions must be clear, fair, and not misleading — presenting a balanced picture including risks." },
+        { text: "A financial promotion is any communication designed to promote a financial product: including social media posts and influencer content." },
+        { text: "All promotions must be clear, fair, and not misleading, presenting a balanced picture including risks." },
         { text: "Financial promotions must be communicated by or approved by an FCA-authorised firm." },
         { text: "From October 2023, crypto promotions must be approved by an FCA-authorised firm and include prominent risk warnings." },
         { text: "Promoting unauthorised financial products is a criminal offence under Section 25 of FSMA." },

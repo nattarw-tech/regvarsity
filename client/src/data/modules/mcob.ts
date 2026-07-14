@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 12 — MCOB: Mortgage Conduct of Business
+// MODULE 12 - MCOB: Mortgage Conduct of Business
 // ============================================================
 export const moduleMCOB: Module = {
   id: "mcob",
   number: 12,
-  title: "MCOB — Mortgage Conduct of Business",
+  title: "MCOB - Mortgage Conduct of Business",
   slug: "mcob-mortgage-conduct",
   block: "Business Standards",
   sourceCode: "MCOB",
@@ -27,19 +27,19 @@ export const moduleMCOB: Module = {
       subSections: [
         {
           id: "mcob-1-1",
-          heading: "1.1 — What the MMR changed",
-          content: `Before the MMR, many mortgages were sold on a **self-certified** basis — borrowers simply stated their income without providing evidence. The MMR introduced three key changes:\n\n1. **Affordability assessment:** Lenders must assess whether the borrower can afford the mortgage at the initial rate and if interest rates rise (stress testing).\n2. **Income verification:** Self-certification mortgages were banned. All income must be verified.\n3. **Advised sales:** Most mortgage sales must now be advised — the broker must make a personal recommendation and explain why the product is suitable.`,
+          heading: "1.1 - What the MMR changed",
+          content: `Before the MMR, many mortgages were sold on a **self-certified** basis - borrowers simply stated their income without providing evidence. The MMR introduced three key changes:\n\n1. **Affordability assessment:** Lenders must assess whether the borrower can afford the mortgage at the initial rate and if interest rates rise (stress testing).\n2. **Income verification:** Self-certification mortgages were banned. All income must be verified.\n3. **Advised sales:** Most mortgage sales must now be advised, the broker must make a personal recommendation and explain why the product is suitable.`,
         },
         {
           id: "mcob-1-2",
-          heading: "1.2 — The ESIS and the 7-day reflection period",
-          content: `The **European Standardised Information Sheet (ESIS)** is a mandatory document provided before a customer commits to a mortgage. It includes the Annual Percentage Rate of Charge (APRC), the total amount payable over the life of the mortgage, and a **7-day reflection period** — the customer cannot be pressured to commit immediately.\n\nThe ESIS replaced the previous Key Facts Illustration (KFI) for most mortgages. Although the UK has left the EU, these rules remain in UK law under the retained Mortgage Credit Directive.`,
+          heading: "1.2 - The ESIS and the 7-day reflection period",
+          content: `The **European Standardised Information Sheet (ESIS)** is a mandatory document provided before a customer commits to a mortgage. It includes the Annual Percentage Rate of Charge (APRC), the total amount payable over the life of the mortgage, and a **7-day reflection period**, the customer cannot be pressured to commit immediately.\n\nThe ESIS replaced the previous Key Facts Illustration (KFI) for most mortgages. Although the UK has left the EU, these rules remain in UK law under the retained Mortgage Credit Directive.`,
         },
       ],
       keyTakeaways: [
         { text: "The Mortgage Market Review (2014) banned self-certified mortgages and introduced mandatory affordability assessments." },
         { text: "Lenders must stress-test affordability against potential interest rate rises, not just the initial rate." },
-        { text: "Most mortgage sales must be advised — the broker must make a personal recommendation." },
+        { text: "Most mortgage sales must be advised, the broker must make a personal recommendation." },
         { text: "The ESIS provides standardised pre-contractual information and includes a 7-day reflection period." },
       ],
       quizQuestions: [
@@ -92,7 +92,7 @@ export const moduleMCOB: Module = {
       subSections: [
         {
           id: "mcob-2-1",
-          heading: "2.1 — The arrears handling rules",
+          heading: "2.1 - The arrears handling rules",
           content: `MCOB 13 requires that **repossession must be a last resort**. When a borrower falls into arrears, the lender must contact them promptly, explore all reasonable options, consider any proposals the borrower makes, not charge excessive fees, and refer the borrower to free debt advice services.\n\n**Forbearance options** include: extending the mortgage term, switching to interest-only temporarily, payment holidays, capitalising the arrears, and accepting reduced payments for a period.\n\nThe courts also apply the **Pre-Action Protocol for Possession Claims** which requires evidence that the lender has genuinely explored alternatives before a possession order will be granted.`,
         },
       ],

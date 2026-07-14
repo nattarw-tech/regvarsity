@@ -210,7 +210,7 @@ function ExerciseCard({
               className="font-semibold text-sm"
               style={{ color: isCorrect ? "oklch(0.35 0.14 155)" : "oklch(0.45 0.22 25)" }}
             >
-              {isCorrect ? "Correct! Well done." : `Incorrect — the correct answer is (${exercise.correctId.toUpperCase()}).`}
+              {isCorrect ? "Correct! Well done." : `Incorrect, the correct answer is (${exercise.correctId.toUpperCase()}).`}
             </span>
           </div>
 
@@ -324,7 +324,7 @@ export default function ExercisesPage() {
             </h1>
             <p className="text-lg leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
               Real-world scenarios, CFA ethics-style. Choose your answer, then read a detailed
-              explanation of why it's right or wrong. No account needed — your progress is saved
+              explanation of why it's right or wrong. No account needed, your progress is saved
               in your browser.
             </p>
             {totalAnswered > 0 && (

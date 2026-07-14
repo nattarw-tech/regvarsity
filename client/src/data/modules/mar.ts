@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 8 — MAR: Market Abuse
+// MODULE 8 - MAR: Market Abuse
 // ============================================================
 export const moduleMAR: Module = {
   id: "mar",
   number: 8,
-  title: "MAR — Market Abuse and Insider Dealing",
+  title: "MAR - Market Abuse and Insider Dealing",
   slug: "mar-market-abuse",
   block: "Business Standards",
   sourceCode: "MAR / UK MAR",
@@ -14,7 +14,7 @@ export const moduleMAR: Module = {
   accentColour: "oklch(0.45 0.2 25)",
   description:
     "Market abuse undermines the integrity of financial markets and harms investors. The UK Market Abuse Regulation (UK MAR) prohibits insider dealing, market manipulation, and unlawful disclosure of inside information. Understanding these rules is essential for anyone working in or around financial markets.",
-  whoItAppliesTo: "Anyone who trades in financial instruments admitted to trading on a UK trading venue — including individuals, firms, and issuers.",
+  whoItAppliesTo: "Anyone who trades in financial instruments admitted to trading on a UK trading venue: including individuals, firms, and issuers.",
   chapters: [
     {
       id: "mar-1",
@@ -23,17 +23,17 @@ export const moduleMAR: Module = {
       slug: "insider-dealing",
       readingTimeMinutes: 8,
       intro:
-        "Insider dealing is one of the oldest and most serious financial crimes. It involves trading on information that is not publicly available — giving the trader an unfair advantage over other market participants. Understanding what constitutes 'inside information' is the starting point.",
+        "Insider dealing is one of the oldest and most serious financial crimes. It involves trading on information that is not publicly available, giving the trader an unfair advantage over other market participants. Understanding what constitutes 'inside information' is the starting point.",
       subSections: [
         {
           id: "mar-1-1",
-          heading: "1.1 — What is inside information?",
+          heading: "1.1 - What is inside information?",
           content: `**Inside information** is information that:
 
-1. Is of a **precise nature** — it is specific enough to draw a conclusion about the likely effect on prices
-2. Has **not been made public** — it is not generally available to the market
+1. Is of a **precise nature**, it is specific enough to draw a conclusion about the likely effect on prices
+2. Has **not been made public**, it is not generally available to the market
 3. Relates **directly or indirectly** to one or more issuers or financial instruments
-4. Would, if made public, be **likely to have a significant effect on prices** — a reasonable investor would use it in making investment decisions
+4. Would, if made public, be **likely to have a significant effect on prices**, a reasonable investor would use it in making investment decisions
 
 The "reasonable investor" test is key. Information that a reasonable investor would consider important in making an investment decision is likely to be inside information.
 
@@ -50,30 +50,30 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
         },
         {
           id: "mar-1-2",
-          heading: "1.2 — The three forms of market abuse",
+          heading: "1.2 - The three forms of market abuse",
           content: `UK MAR prohibits three forms of market abuse:
 
-**1. Insider dealing**: Using inside information to trade in financial instruments — either for yourself or on behalf of others. It is also insider dealing to recommend or induce someone else to trade on the basis of inside information (even if you do not tell them the information itself).
+**1. Insider dealing**: Using inside information to trade in financial instruments, either for yourself or on behalf of others. It is also insider dealing to recommend or induce someone else to trade on the basis of inside information (even if you do not tell them the information itself).
 
-**2. Unlawful disclosure**: Disclosing inside information to another person outside the normal exercise of your employment, profession, or duties. If you tell a friend that your company is about to announce a major acquisition, that is unlawful disclosure — even if you do not trade yourself.
+**2. Unlawful disclosure**: Disclosing inside information to another person outside the normal exercise of your employment, profession, or duties. If you tell a friend that your company is about to announce a major acquisition, that is unlawful disclosure, even if you do not trade yourself.
 
 **3. Market manipulation**: Engaging in transactions or orders that give false or misleading signals about the supply, demand, or price of a financial instrument. This includes:
-- **Wash trading** — buying and selling the same instrument to create artificial volume
-- **Spoofing** — placing large orders with no intention of executing them, to move prices
-- **Pump and dump** — artificially inflating a price through misleading information, then selling
-- **Layering** — placing multiple orders at different prices to create a false impression of market depth`,
+- **Wash trading**, buying and selling the same instrument to create artificial volume
+- **Spoofing**, placing large orders with no intention of executing them, to move prices
+- **Pump and dump**, artificially inflating a price through misleading information, then selling
+- **Layering**, placing multiple orders at different prices to create a false impression of market depth`,
         },
         {
           id: "mar-1-3",
-          heading: "1.3 — Insider lists and market soundings",
+          heading: "1.3 - Insider lists and market soundings",
           content: `**Insider lists**: Issuers (companies with shares listed on a trading venue) must maintain a list of all persons who have access to inside information. This list must be provided to the FCA on request. Maintaining accurate insider lists is a key compliance obligation.
 
-**Market soundings**: Before announcing a significant transaction (e.g. a capital raising), an issuer or its advisers may need to "sound out" potential investors — i.e. share inside information with them to gauge interest. UK MAR provides a safe harbour for legitimate market soundings, but strict procedures must be followed:
+**Market soundings**: Before announcing a significant transaction (e.g. a capital raising), an issuer or its advisers may need to "sound out" potential investors, i.e. share inside information with them to gauge interest. UK MAR provides a safe harbour for legitimate market soundings, but strict procedures must be followed:
 - The person conducting the sounding must assess whether it involves disclosing inside information
 - The recipient must be informed that they may receive inside information and that they will be restricted from trading
 - Records must be kept of all soundings
 
-**Wall-crossing**: This is the informal term for the process of bringing a potential investor "over the wall" — i.e. sharing inside information with them. Once crossed, the investor is restricted from trading in the relevant instrument until the information is made public.`,
+**Wall-crossing**: This is the informal term for the process of bringing a potential investor "over the wall", i.e. sharing inside information with them. Once crossed, the investor is restricted from trading in the relevant instrument until the information is made public.`,
         },
       ],
       keyTakeaways: [

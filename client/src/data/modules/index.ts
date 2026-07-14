@@ -1,5 +1,5 @@
 // ============================================================
-// RegVarsity — Module & Chapter Data
+// RegVarsity - Module & Chapter Data
 // Varsity-style learning content for UK and EU financial regulation
 // ============================================================
 

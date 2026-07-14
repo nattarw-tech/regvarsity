@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 14 — DTR: Disclosure and Transparency Rules
+// MODULE 14 - DTR: Disclosure and Transparency Rules
 // ============================================================
 export const moduleDTR: Module = {
   id: "dtr",
   number: 14,
-  title: "DTR — Disclosure and Transparency Rules",
+  title: "DTR - Disclosure and Transparency Rules",
   slug: "dtr-disclosure-transparency",
   block: "Listing Rules",
   sourceCode: "DTR",
@@ -27,13 +27,13 @@ export const moduleDTR: Module = {
       subSections: [
         {
           id: "dtr-1-1",
-          heading: "1.1 — What is inside information?",
-          content: `**Inside information** is information that is: (1) precise, (2) non-public, (3) relating to an issuer or financial instrument, and (4) price sensitive — if made public, it would likely have a significant effect on the price.\n\nExamples include: a profit warning before announcement, a major acquisition, a regulatory investigation, a significant contract win or loss, or a change in key management.\n\n**The disclosure obligation:** Under DTR 2, issuers must disclose inside information to the market **as soon as possible** via a Regulatory Information Service (RIS) — typically the London Stock Exchange's Regulatory News Service (RNS).`,
+          heading: "1.1 - What is inside information?",
+          content: `**Inside information** is information that is: (1) precise, (2) non-public, (3) relating to an issuer or financial instrument, and (4) price sensitive - if made public, it would likely have a significant effect on the price.\n\nExamples include: a profit warning before announcement, a major acquisition, a regulatory investigation, a significant contract win or loss, or a change in key management.\n\n**The disclosure obligation:** Under DTR 2, issuers must disclose inside information to the market **as soon as possible** via a Regulatory Information Service (RIS), typically the London Stock Exchange's Regulatory News Service (RNS).`,
         },
         {
           id: "dtr-1-2",
-          heading: "1.2 — Delaying disclosure and insider lists",
-          content: `There is a limited right to **delay disclosure** if: immediate disclosure would prejudice the issuer's legitimate interests (e.g. ongoing negotiations), the delay would not mislead the public, and the issuer can ensure confidentiality.\n\n**Insider lists:** Whenever a company delays disclosure, it must maintain an **insider list** — a record of everyone who has access to the inside information. This must be provided to the FCA on request. Insider lists must include the identity of each person with access, the reason they have access, and the date they were given access.`,
+          heading: "1.2 - Delaying disclosure and insider lists",
+          content: `There is a limited right to **delay disclosure** if: immediate disclosure would prejudice the issuer's legitimate interests (e.g. ongoing negotiations), the delay would not mislead the public, and the issuer can ensure confidentiality.\n\n**Insider lists:** Whenever a company delays disclosure, it must maintain an **insider list**, a record of everyone who has access to the inside information. This must be provided to the FCA on request. Insider lists must include the identity of each person with access, the reason they have access, and the date they were given access.`,
         },
       ],
       keyTakeaways: [
@@ -91,8 +91,8 @@ export const moduleDTR: Module = {
       subSections: [
         {
           id: "dtr-2-1",
-          heading: "2.1 — The notification thresholds",
-          content: `DTR 5 requires investors to notify a listed company (and the FCA) when their voting rights cross certain **thresholds**: 3% (the initial threshold), then every 1% above 3%, and when falling back through these thresholds.\n\nNotification must be made **within two trading days** of the threshold being crossed. The notification must include the identity of the shareholder, the date the threshold was crossed, and the total number of voting rights held.\n\nMajor shareholding notifications give the market visibility of who owns significant stakes — important for detecting potential takeover activity, understanding the shareholder base, and identifying activist investors.`,
+          heading: "2.1 - The notification thresholds",
+          content: `DTR 5 requires investors to notify a listed company (and the FCA) when their voting rights cross certain **thresholds**: 3% (the initial threshold), then every 1% above 3%, and when falling back through these thresholds.\n\nNotification must be made **within two trading days** of the threshold being crossed. The notification must include the identity of the shareholder, the date the threshold was crossed, and the total number of voting rights held.\n\nMajor shareholding notifications give the market visibility of who owns significant stakes, important for detecting potential takeover activity, understanding the shareholder base, and identifying activist investors.`,
         },
       ],
       keyTakeaways: [

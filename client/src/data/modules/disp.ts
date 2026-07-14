@@ -1,19 +1,19 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 7 — DISP / COMP: Complaints and Compensation
+// MODULE 7 - DISP / COMP: Complaints and Compensation
 // ============================================================
 export const moduleDISP: Module = {
   id: "disp",
   number: 7,
-  title: "DISP & COMP — Complaints and Compensation",
+  title: "DISP & COMP - Complaints and Compensation",
   slug: "disp-comp-complaints-compensation",
   block: "Redress",
   sourceCode: "DISP / COMP",
   colour: "bg-orange-50",
   accentColour: "oklch(0.55 0.18 55)",
   description:
-    "When things go wrong, customers need to know how to complain and what compensation they can receive. DISP sets out how firms must handle complaints. COMP covers the Financial Services Compensation Scheme (FSCS) — the safety net that protects customers if a firm fails.",
+    "When things go wrong, customers need to know how to complain and what compensation they can receive. DISP sets out how firms must handle complaints. COMP covers the Financial Services Compensation Scheme (FSCS), the safety net that protects customers if a firm fails.",
   whoItAppliesTo: "All FCA-authorised firms that deal with retail customers.",
   chapters: [
     {
@@ -23,62 +23,62 @@ export const moduleDISP: Module = {
       slug: "how-firms-handle-complaints",
       readingTimeMinutes: 7,
       intro:
-        "Every financial firm will receive complaints. How a firm handles those complaints — the speed, the fairness, and the outcome — is a key indicator of its culture and its commitment to Consumer Duty. DISP sets out the minimum standards.",
+        "Every financial firm will receive complaints. How a firm handles those complaints, the speed, the fairness, and the outcome, is a key indicator of its culture and its commitment to Consumer Duty. DISP sets out the minimum standards.",
       subSections: [
         {
           id: "disp-1-1",
-          heading: "1.1 — What counts as a complaint?",
+          heading: "1.1 - What counts as a complaint?",
           content: `Under DISP, a **complaint** is any oral or written expression of dissatisfaction, whether justified or not, from or on behalf of an eligible complainant, about the firm's provision of, or failure to provide, a financial service or product.
 
 Key points:
-- It does not matter whether the complaint is justified — if a customer expresses dissatisfaction, it is a complaint
+- It does not matter whether the complaint is justified, if a customer expresses dissatisfaction, it is a complaint
 - It can be made orally (e.g. by phone) or in writing (e.g. by email or letter)
-- It must be from an **eligible complainant** — this includes retail clients, small businesses (with an annual turnover below £6.5 million), and charities (with an annual income below £6.5 million)
+- It must be from an **eligible complainant**, this includes retail clients, small businesses (with an annual turnover below £6.5 million), and charities (with an annual income below £6.5 million)
 
-Large corporates and sophisticated investors are generally not eligible complainants for DISP purposes — they are expected to resolve disputes through commercial channels or litigation.`,
+Large corporates and sophisticated investors are generally not eligible complainants for DISP purposes, they are expected to resolve disputes through commercial channels or litigation.`,
         },
         {
           id: "disp-1-2",
-          heading: "1.2 — The complaints handling process",
+          heading: "1.2 - The complaints handling process",
           content: `DISP sets out a clear process for handling complaints:
 
-**Step 1 — Acknowledgement**: The firm must acknowledge the complaint promptly (within 5 business days for most complaints, or immediately for complaints that can be resolved within 3 business days).
+**Step 1 - Acknowledgement**: The firm must acknowledge the complaint promptly (within 5 business days for most complaints, or immediately for complaints that can be resolved within 3 business days).
 
-**Step 2 — Investigation**: The firm must investigate the complaint fairly and thoroughly. It must consider all relevant evidence and not simply defend its original position.
+**Step 2 - Investigation**: The firm must investigate the complaint fairly and thoroughly. It must consider all relevant evidence and not simply defend its original position.
 
-**Step 3 — Response**: The firm must send a **final response** within **8 weeks** of receiving the complaint. The final response must:
+**Step 3 - Response**: The firm must send a **final response** within **8 weeks** of receiving the complaint. The final response must:
 - Accept or reject the complaint (with reasons)
 - If accepting, offer appropriate redress
 - Inform the customer of their right to refer the complaint to the Financial Ombudsman Service (FOS)
 
-**Step 4 — Referral to FOS**: If the customer is not satisfied with the firm's response, or if the firm has not responded within 8 weeks, the customer can refer the complaint to the FOS. The FOS can award up to **£455,000** in compensation (for complaints referred on or after 1 April 2026 about acts occurring on or after 1 April 2019). The limit is adjusted each April in line with inflation.`,
+**Step 4 - Referral to FOS**: If the customer is not satisfied with the firm's response, or if the firm has not responded within 8 weeks, the customer can refer the complaint to the FOS. The FOS can award up to **£455,000** in compensation (for complaints referred on or after 1 April 2026 about acts occurring on or after 1 April 2019). The limit is adjusted each April in line with inflation.`,
         },
         {
           id: "disp-1-3",
-          heading: "1.3 — The Financial Ombudsman Service (FOS)",
+          heading: "1.3 - The Financial Ombudsman Service (FOS)",
           content: `The **Financial Ombudsman Service (FOS)** is an independent body that resolves disputes between financial firms and their customers. It was established by FSMA 2000 and is funded by levies on financial firms.
 
 Key facts about the FOS:
 - It is **free** for customers to use
 - It can award up to **£455,000** in compensation (for complaints referred on or after 1 April 2026)
-- Its decisions are **binding on firms** (but not on customers — a customer can reject an FOS decision and go to court instead)
-- It considers what is **fair and reasonable** — not just what is strictly legal
+- Its decisions are **binding on firms** (but not on customers, a customer can reject an FOS decision and go to court instead)
+- It considers what is **fair and reasonable**, not just what is strictly legal
 
 The FOS receives **hundreds of thousands of new cases each year**, with volumes rising sharply in recent years driven by motor finance complaints. The most common complaint types are about:
-- Payment protection insurance (PPI) — though this has now largely been resolved
+- Payment protection insurance (PPI), though this has now largely been resolved
 - Current accounts and banking services
 - Motor finance (a major area of current concern)
 - Investments and pensions
 
-**Motor finance redress**: Following its review of discretionary commission arrangements and the Supreme Court's 2025 ruling on undisclosed commissions, the FCA confirmed an industry-wide consumer redress scheme in March 2026 (PS26/3). The FCA estimates around £7.5 billion in redress across roughly 12 million eligible agreements — around £9.1 billion once firms' costs are included — making it one of the largest consumer redress exercises in UK history. Parts of the scheme are currently paused pending legal challenges.`,
+**Motor finance redress**: Following its review of discretionary commission arrangements and the Supreme Court's 2025 ruling on undisclosed commissions, the FCA confirmed an industry-wide consumer redress scheme in March 2026 (PS26/3). The FCA estimates around £7.5 billion in redress across roughly 12 million eligible agreements, around £9.1 billion once firms' costs are included, making it one of the largest consumer redress exercises in UK history. Parts of the scheme are currently paused pending legal challenges.`,
         },
       ],
       keyTakeaways: [
-        { text: "A complaint is any expression of dissatisfaction from an eligible complainant — it does not need to be justified." },
+        { text: "A complaint is any expression of dissatisfaction from an eligible complainant, it does not need to be justified." },
         { text: "Firms must send a final response within 8 weeks, accepting or rejecting the complaint with reasons." },
         { text: "Customers can refer unresolved complaints to the FOS, which can award up to £455,000 in compensation (2026/27 limit)." },
         { text: "FOS decisions are binding on firms but not on customers." },
-        { text: "Motor finance redress is a major current issue — the FCA's 2026 scheme estimates around £7.5 billion in redress across the industry." },
+        { text: "Motor finance redress is a major current issue, the FCA's 2026 scheme estimates around £7.5 billion in redress across the industry." },
       ],
       quizQuestions: [
         {
@@ -130,12 +130,12 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
       subSections: [
         {
           id: "disp-2-1",
-          heading: "2.1 — What does the FSCS cover?",
+          heading: "2.1 - What does the FSCS cover?",
           content: `The FSCS covers several types of financial products and services:
 
-**Deposits (bank accounts)**: Up to **£120,000** per person per authorised institution (raised from £85,000 on 1 December 2025). If you have accounts at two banks that are separately authorised, you are protected up to £120,000 at each. Note: some banks share an authorisation (e.g. Halifax and Bank of Scotland are both part of Lloyds Banking Group) — in this case, the limit applies across both.
+**Deposits (bank accounts)**: Up to **£120,000** per person per authorised institution (raised from £85,000 on 1 December 2025). If you have accounts at two banks that are separately authorised, you are protected up to £120,000 at each. Note: some banks share an authorisation (e.g. Halifax and Bank of Scotland are both part of Lloyds Banking Group), in this case, the limit applies across both.
 
-**Investments**: Up to **£85,000** per person per firm for investment business (e.g. stocks and shares ISAs, investment portfolios). The December 2025 increase applied to deposits only — the investment limit remains £85,000.
+**Investments**: Up to **£85,000** per person per firm for investment business (e.g. stocks and shares ISAs, investment portfolios). The December 2025 increase applied to deposits only, the investment limit remains £85,000.
 
 **Insurance**: Up to **90%** of the claim value for most types of insurance (100% for compulsory insurance like motor insurance).
 
@@ -147,18 +147,18 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
         },
         {
           id: "disp-2-2",
-          heading: "2.2 — What the FSCS does NOT cover",
+          heading: "2.2 - What the FSCS does NOT cover",
           content: `The FSCS does not cover everything. Important exclusions include:
 
-**Unauthorised firms**: If you invest with a firm that is not FCA-authorised, the FSCS will not protect you. This is why the FCA's **Warning List** and **ScamSmart** service are important — always check that a firm is authorised before investing.
+**Unauthorised firms**: If you invest with a firm that is not FCA-authorised, the FSCS will not protect you. This is why the FCA's **Warning List** and **ScamSmart** service are important, always check that a firm is authorised before investing.
 
-**Investment losses**: The FSCS covers you if a firm fails (i.e. goes insolvent) — not if your investments simply lose value. If you invest in a fund that performs poorly, that is an investment risk, not an FSCS claim.
+**Investment losses**: The FSCS covers you if a firm fails (i.e. goes insolvent), not if your investments simply lose value. If you invest in a fund that performs poorly, that is an investment risk, not an FSCS claim.
 
 **Crypto assets**: Crypto assets are not currently covered by the FSCS. When the new crypto regime comes into force in 2027, some crypto activities may become eligible.
 
-**Pension shortfalls**: The FSCS covers advice about pensions, but not shortfalls in defined benefit pension schemes — these are covered by the Pension Protection Fund (PPF).
+**Pension shortfalls**: The FSCS covers advice about pensions, but not shortfalls in defined benefit pension schemes, these are covered by the Pension Protection Fund (PPF).
 
-**Fraud by the firm**: If a firm commits fraud against you (e.g. a Ponzi scheme), the FSCS may cover you — but only if the firm was authorised and the activity was a regulated activity.`,
+**Fraud by the firm**: If a firm commits fraud against you (e.g. a Ponzi scheme), the FSCS may cover you, but only if the firm was authorised and the activity was a regulated activity.`,
         },
       ],
       keyTakeaways: [
@@ -166,7 +166,7 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
         { text: "Investments are protected up to £85,000 per person per firm. Insurance claims are covered up to 90% (100% for compulsory insurance)." },
         { text: "Temporary high balances (e.g. from property sales) may be protected up to £1.4 million for 6 months." },
         { text: "The FSCS does NOT cover unauthorised firms, investment losses, or crypto assets (currently)." },
-        { text: "Always check a firm is FCA-authorised before investing — use the FCA Register." },
+        { text: "Always check a firm is FCA-authorised before investing, use the FCA Register." },
       ],
       quizQuestions: [
         {

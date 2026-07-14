@@ -3,7 +3,7 @@
 Total time: about 30 minutes. Everything is free tier.
 
 ## 1. Push the code to GitHub
-1. Create a new repository on github.com (e.g. `regvarsity`). Keep it public — it doubles as portfolio code.
+1. Create a new repository on github.com (e.g. `regvarsity`). Keep it public, it doubles as portfolio code.
 2. In this folder run:
    ```bash
    git init

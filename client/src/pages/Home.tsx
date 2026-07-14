@@ -31,7 +31,7 @@ export default function Home() {
           </h1>
           <p className="text-lg md:text-xl leading-relaxed max-w-2xl mb-10 text-muted-foreground">
             {ALL_MODULES.length} structured modules covering the FCA Handbook and key EU
-            frameworks — from the Principles and Consumer Duty to AML, MiFID, MiCA and data
+            frameworks: from the Principles and Consumer Duty to AML, MiFID, MiCA and data
             protection. Written like a good textbook, not a legal document.
           </p>
           <div className="flex flex-wrap items-center gap-6">
@@ -55,7 +55,7 @@ export default function Home() {
         <section className="border-b border-border bg-surface-2">
           <div className="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3 text-sm">
             <span className="text-muted-foreground">
-              Welcome back — {stats.chaptersRead} of {stats.totalChapters} chapters read
+              Welcome back - {stats.chaptersRead} of {stats.totalChapters} chapters read
               {stats.badgesEarned > 0 && (
                 <>
                   {" "}
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── The syllabus — numbered table of contents ── */}
+      {/* ── The syllabus, numbered table of contents ── */}
       <section className="max-w-5xl mx-auto px-6 py-16 md:py-20">
         <div className="flex items-baseline justify-between gap-4 mb-2">
           <h2>The syllabus</h2>
@@ -110,7 +110,7 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-muted-foreground mb-10 max-w-2xl">
-          Each module maps to a real FCA Handbook sourcebook or EU regulation. Start anywhere —
+          Each module maps to a real FCA Handbook sourcebook or EU regulation. Start anywhere, 
           no prior knowledge assumed.
         </p>
 
@@ -157,7 +157,7 @@ export default function Home() {
               {
                 n: "02",
                 title: "Test your understanding",
-                desc: "Scenario questions at the end of each chapter — real situations, not abstract theory, with a full explanation for every answer.",
+                desc: "Scenario questions at the end of each chapter, real situations, not abstract theory, with a full explanation for every answer.",
               },
               {
                 n: "03",
@@ -187,7 +187,7 @@ export default function Home() {
             {
               href: "/glossary",
               title: "Glossary",
-              desc: "57 regulatory terms explained without jargon — from CDD and EDD to SMCR and Consumer Duty.",
+              desc: "57 regulatory terms explained without jargon: from CDD and EDD to SMCR and Consumer Duty.",
             },
             {
               href: "/ai-expert",

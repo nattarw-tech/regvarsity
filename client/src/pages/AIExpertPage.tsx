@@ -90,7 +90,7 @@ export default function AIExpertPage() {
       id: "welcome",
       role: "assistant",
       content:
-        "Hello! I'm **RegVarsity AI**, your UK and EU financial regulation expert.\n\nI can help you understand FCA rules, AML/KYC requirements, MiFID II obligations, the UK's crypto asset regime, the EU's MiCA, and UK GDPR — in plain English or with full technical detail, depending on what you need.\n\nWhat would you like to know?",
+        "Hello! I'm **RegVarsity AI**, your UK and EU financial regulation expert.\n\nI can help you understand FCA rules, AML/KYC requirements, MiFID II obligations, the UK's crypto asset regime, the EU's MiCA, and UK GDPR, in plain English or with full technical detail, depending on what you need.\n\nWhat would you like to know?",
       timestamp: new Date(),
     },
   ]);
@@ -206,7 +206,7 @@ export default function AIExpertPage() {
                   RegVarsity AI Expert
                 </h1>
                 <p className="text-xs text-muted-foreground">
-                  UK & EU financial regulation — FCA · AML/KYC · MiFID II · Crypto · MiCA · UK GDPR
+                  UK & EU financial regulation. FCA · AML/KYC · MiFID II · Crypto · MiCA · UK GDPR
                 </p>
               </div>
             </div>
@@ -300,7 +300,7 @@ export default function AIExpertPage() {
                 </Button>
               </div>
               <p className="text-xs mt-2 text-center text-muted-foreground">
-                Educational information only — not legal advice. Always consult qualified professionals for compliance decisions.
+                Educational information only, not legal advice. Always consult qualified professionals for compliance decisions.
               </p>
             </div>
           </div>

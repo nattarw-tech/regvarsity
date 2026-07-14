@@ -46,7 +46,7 @@ export default function ModuleBadge({ module, earned, size = 96 }: ModuleBadgePr
       aria-label={
         earned
           ? `Completion badge for ${module.title}`
-          : `Locked badge for ${module.title} — pass the module test to earn it`
+          : `Locked badge for ${module.title} - pass the module test to earn it`
       }
       style={{ opacity: earned ? 1 : 0.45 }}
     >

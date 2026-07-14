@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 9 — ESG / SDR: Sustainability and Green Finance
+// MODULE 9 - ESG / SDR: Sustainability and Green Finance
 // ============================================================
 export const moduleESG: Module = {
   id: "esg",
   number: 9,
-  title: "ESG & SDR — Sustainability and Green Finance",
+  title: "ESG & SDR - Sustainability and Green Finance",
   slug: "esg-sdr-sustainability",
   block: "Business Standards",
   sourceCode: "ESG / SDR",
@@ -27,7 +27,7 @@ export const moduleESG: Module = {
       subSections: [
         {
           id: "esg-1-1",
-          heading: "1.1 — The scale of the problem",
+          heading: "1.1 - The scale of the problem",
           content: `The market for ESG (Environmental, Social and Governance) investments has grown enormously. Global ESG assets under management passed $30 trillion in 2022 and are forecast by Bloomberg Intelligence to exceed $40 trillion by 2030. But with this growth has come a significant problem: greenwashing.
 
 Greenwashing takes many forms:
@@ -36,20 +36,20 @@ Greenwashing takes many forms:
 - **Misleading metrics**: Using ESG scores or ratings that do not accurately reflect a product's sustainability
 - **Rebranding**: Renaming existing funds as "ESG" without changing the underlying investment approach
 
-The FCA's research found that many investors were confused about what ESG products actually do — and that some products marketed as sustainable were investing in companies with poor environmental records.`,
+The FCA's research found that many investors were confused about what ESG products actually do, and that some products marketed as sustainable were investing in companies with poor environmental records.`,
         },
         {
           id: "esg-1-2",
-          heading: "1.2 — The UK's SDR regime",
+          heading: "1.2 - The UK's SDR regime",
           content: `The UK's **Sustainability Disclosure Requirements (SDR)** regime came into force in stages from 2024. It has three main components:
 
-**1. The Anti-Greenwashing Rule**: From May 2024, all FCA-authorised firms must ensure that any sustainability-related claims they make are fair, clear, and not misleading. This applies to all communications — not just those about SDR-labelled products.
+**1. The Anti-Greenwashing Rule**: From May 2024, all FCA-authorised firms must ensure that any sustainability-related claims they make are fair, clear, and not misleading. This applies to all communications, not just those about SDR-labelled products.
 
 **2. Investment Labels**: From July 2024, firms can use one of four labels for investment products that meet specific sustainability criteria:
-- *Sustainability Focus* — invests in assets that are environmentally or socially sustainable
-- *Sustainability Improvers* — invests in assets with the potential to improve sustainability over time
-- *Sustainability Impact* — invests with the aim of achieving a positive sustainability impact
-- *Sustainability Mixed Goals* — combines elements of the above
+- *Sustainability Focus*, invests in assets that are environmentally or socially sustainable
+- *Sustainability Improvers*, invests in assets with the potential to improve sustainability over time
+- *Sustainability Impact*, invests with the aim of achieving a positive sustainability impact
+- *Sustainability Mixed Goals*, combines elements of the above
 
 **3. Disclosure Requirements**: From December 2024, firms offering labelled products must publish detailed disclosures about their sustainability objectives, investment strategy, and metrics.
 
@@ -57,7 +57,7 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
         },
       ],
       keyTakeaways: [
-        { text: "Greenwashing is making misleading claims about the sustainability of financial products — a top FCA enforcement priority." },
+        { text: "Greenwashing is making misleading claims about the sustainability of financial products, a top FCA enforcement priority." },
         { text: "The Anti-Greenwashing Rule (from May 2024) requires all sustainability claims to be fair, clear, and not misleading." },
         { text: "Four investment labels are available: Sustainability Focus, Sustainability Improvers, Sustainability Impact, and Sustainability Mixed Goals." },
         { text: "Detailed disclosures are required for labelled products from December 2024." },

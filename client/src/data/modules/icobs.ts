@@ -1,19 +1,19 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 11 — ICOBS: Insurance Conduct of Business
+// MODULE 11 - ICOBS: Insurance Conduct of Business
 // ============================================================
 export const moduleICOBS: Module = {
   id: "icobs",
   number: 11,
-  title: "ICOBS — Insurance Conduct of Business",
+  title: "ICOBS - Insurance Conduct of Business",
   slug: "icobs-insurance-conduct",
   block: "Business Standards",
   sourceCode: "ICOBS",
   colour: "bg-orange-50",
   accentColour: "oklch(0.55 0.18 40)",
   description:
-    "ICOBS governs how insurance firms must treat their customers — from the initial sale through to claims handling. It applies to all general insurance products sold in the UK, including motor, home, travel, and payment protection insurance.",
+    "ICOBS governs how insurance firms must treat their customers: from the initial sale through to claims handling. It applies to all general insurance products sold in the UK, including motor, home, travel, and payment protection insurance.",
   whoItAppliesTo: "All firms that sell, administer, or advise on general insurance products.",
   chapters: [
     {
@@ -23,28 +23,28 @@ export const moduleICOBS: Module = {
       slug: "insurance-sales-and-disclosure",
       readingTimeMinutes: 9,
       intro:
-        "Insurance customers must be given the right information at the right time to make an informed choice. ICOBS sets out exactly what firms must disclose before, during, and after a sale — and how claims must be handled fairly.",
+        "Insurance customers must be given the right information at the right time to make an informed choice. ICOBS sets out exactly what firms must disclose before, during, and after a sale, and how claims must be handled fairly.",
       subSections: [
         {
           id: "icobs-1-1",
-          heading: "1.1 — Pre-sale disclosure and the IPID",
-          content: `Before selling any insurance product, firms must give customers a clear picture of what they are buying. The key document is the **Insurance Product Information Document (IPID)** — a standardised two-page summary covering what is insured, what is not insured, restrictions on cover, and how to complain. The IPID must be written in plain, clear language. Firms cannot bury important exclusions in small print.\n\nFor insurance intermediaries (brokers), ICOBS also requires disclosure of whether they are acting on behalf of the customer or the insurer, the basis of their remuneration, and any material conflicts of interest.`,
+          heading: "1.1 - Pre-sale disclosure and the IPID",
+          content: `Before selling any insurance product, firms must give customers a clear picture of what they are buying. The key document is the **Insurance Product Information Document (IPID)**, a standardised two-page summary covering what is insured, what is not insured, restrictions on cover, and how to complain. The IPID must be written in plain, clear language. Firms cannot bury important exclusions in small print.\n\nFor insurance intermediaries (brokers), ICOBS also requires disclosure of whether they are acting on behalf of the customer or the insurer, the basis of their remuneration, and any material conflicts of interest.`,
         },
         {
           id: "icobs-1-2",
-          heading: "1.2 — Demands, needs and suitability",
+          heading: "1.2 - Demands, needs and suitability",
           content: `ICOBS 5 requires that any insurance product sold must be **consistent with the customer's demands and needs**. For non-advised sales, the firm must ask enough questions to understand the customer's basic insurance needs. For advised sales, the firm must make a personal recommendation and explain why the product is suitable.\n\n**The add-on problem:** The FCA introduced specific rules requiring firms to give customers time to consider add-on products (e.g. travel insurance sold with a holiday) separately, after research showed customers often did not understand what they were buying.`,
         },
         {
           id: "icobs-1-3",
-          heading: "1.3 — Claims handling and the dual pricing ban",
-          content: `ICOBS 8 requires insurers to handle claims promptly and fairly — not reject claims unreasonably, settle promptly once liability is agreed, and keep customers informed.\n\n**The dual pricing ban (January 2022):** The FCA found that insurers were charging loyal customers significantly more than new customers for the same cover — a practice known as "price walking". New rules, in force from 1 January 2022, require insurers to offer renewal customers the same price as equivalent new customers. This was a major market intervention affecting millions of UK consumers.`,
+          heading: "1.3 - Claims handling and the dual pricing ban",
+          content: `ICOBS 8 requires insurers to handle claims promptly and fairly, not reject claims unreasonably, settle promptly once liability is agreed, and keep customers informed.\n\n**The dual pricing ban (January 2022):** The FCA found that insurers were charging loyal customers significantly more than new customers for the same cover, a practice known as "price walking". New rules, in force from 1 January 2022, require insurers to offer renewal customers the same price as equivalent new customers. This was a major market intervention affecting millions of UK consumers.`,
         },
       ],
       keyTakeaways: [
         { text: "The IPID is a mandatory standardised document summarising what is and is not covered by an insurance product." },
-        { text: "Insurance products must meet the customer's demands and needs — advised sales require a personal recommendation." },
-        { text: "The FCA banned 'price walking' from January 2022 — insurers cannot charge loyal customers more than new customers for equivalent cover." },
+        { text: "Insurance products must meet the customer's demands and needs, advised sales require a personal recommendation." },
+        { text: "The FCA banned 'price walking' from January 2022, insurers cannot charge loyal customers more than new customers for equivalent cover." },
         { text: "Claims must be handled promptly and fairly; repossession of assets is always a last resort." },
       ],
       quizQuestions: [
@@ -97,17 +97,17 @@ export const moduleICOBS: Module = {
       subSections: [
         {
           id: "icobs-2-1",
-          heading: "2.1 — From utmost good faith to reasonable care",
-          content: `Before 2012, UK insurance law was based on **utmost good faith** (uberrimae fidei). Customers had to volunteer all material information — even if not asked. If they failed, the insurer could void the policy and refuse all claims, even for innocent non-disclosure.\n\nThe **Consumer Insurance (Disclosure and Representations) Act 2012** replaced this with a duty to **take reasonable care not to make a misrepresentation** when answering the insurer's questions. Customers no longer have to volunteer information unprompted.`,
+          heading: "2.1 - From utmost good faith to reasonable care",
+          content: `Before 2012, UK insurance law was based on **utmost good faith** (uberrimae fidei). Customers had to volunteer all material information - even if not asked. If they failed, the insurer could void the policy and refuse all claims, even for innocent non-disclosure.\n\nThe **Consumer Insurance (Disclosure and Representations) Act 2012** replaced this with a duty to **take reasonable care not to make a misrepresentation** when answering the insurer's questions. Customers no longer have to volunteer information unprompted.`,
         },
         {
           id: "icobs-2-2",
-          heading: "2.2 — Proportionate remedies",
+          heading: "2.2 - Proportionate remedies",
           content: `Under the 2012 Act, the insurer's remedy depends on the type of misrepresentation:\n\n| Type | Remedy |\n|---|---|\n| Deliberate or reckless | Void policy; keep premium |\n| Careless | Proportionate remedy |\n\nFor a careless misrepresentation, if the insurer would have charged a higher premium, it can reduce the claim payout proportionately. This is far fairer than the old all-or-nothing rule.\n\nThe **Insurance Act 2015** extended similar reforms to commercial insurance, replacing the old disclosure duty with a duty of **fair presentation of the risk**.`,
         },
       ],
       keyTakeaways: [
-        { text: "The old duty of utmost good faith required customers to volunteer all material information — this was replaced in 2012." },
+        { text: "The old duty of utmost good faith required customers to volunteer all material information, this was replaced in 2012." },
         { text: "Consumers now only need to take reasonable care not to misrepresent when answering the insurer's questions." },
         { text: "Remedies are now proportionate: deliberate misrepresentation voids the policy; careless misrepresentation results in a proportionate reduction." },
         { text: "The Insurance Act 2015 extended similar reforms to commercial (business) insurance." },

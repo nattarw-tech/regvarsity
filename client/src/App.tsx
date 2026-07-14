@@ -23,7 +23,7 @@ function Router() {
       {/* Learning routes */}
       <Route path="/learn" component={ModulesPage} />
       <Route path="/learn/:moduleSlug" component={ModuleDetailPage} />
-      {/* "/test" must stay above the chapterSlug route — "test" is a reserved chapter slug */}
+      {/* "/test" must stay above the chapterSlug route, "test" is a reserved chapter slug */}
       <Route path="/learn/:moduleSlug/test" component={ModuleTestPage} />
       <Route path="/learn/:moduleSlug/:chapterSlug" component={ChapterPage} />
       {/* Tools & resources */}
@@ -53,7 +53,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
-          {/* Floating AI chat widget — appears on every page, minimisable */}
+          {/* Floating AI chat widget, appears on every page, minimisable */}
           <FloatingAIChat />
         </TooltipProvider>
       </ThemeProvider>

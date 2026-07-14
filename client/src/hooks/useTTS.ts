@@ -118,7 +118,7 @@ export function useTTS(chunks: TTSChunk[]) {
     // voices load asynchronously in some browsers; retry once they arrive
     if (window.speechSynthesis.getVoices().length === 0) {
       window.speechSynthesis.addEventListener("voiceschanged", () => speakFrom(0), { once: true });
-      // fall through and try anyway — some browsers speak with the default voice
+      // fall through and try anyway - some browsers speak with the default voice
     }
     speakFrom(0);
   }, [supported, status, buildQueue, speakFrom]);

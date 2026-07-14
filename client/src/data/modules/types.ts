@@ -1,5 +1,5 @@
 // ============================================================
-// RegVarsity — Shared content types
+// RegVarsity - Shared content types
 // ============================================================
 
 export interface KeyTakeaway {
@@ -29,7 +29,7 @@ export interface Chapter {
   id: string;
   number: number;
   title: string;
-  // "test" is reserved for the module test route — never use it as a chapter slug
+  // "test" is reserved for the module test route - never use it as a chapter slug
   slug: string;
   readingTimeMinutes: number;
   intro: string;

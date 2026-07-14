@@ -75,7 +75,7 @@ export default function FloatingAIChat() {
 
   return (
     <>
-      {/* Floating trigger button — always visible */}
+      {/* Floating trigger button, always visible */}
       {!open && (
         <button
           onClick={() => { setOpen(true); setMinimised(false); }}
@@ -147,7 +147,7 @@ export default function FloatingAIChat() {
             </div>
           </div>
 
-          {/* Body — hidden when minimised */}
+          {/* Body, hidden when minimised */}
           {!minimised && (
             <>
               {/* Messages */}
@@ -161,7 +161,7 @@ export default function FloatingAIChat() {
                     >
                       <p className="font-semibold mb-1">Hello! I'm RegVarsity AI.</p>
                       <p style={{ color: "var(--muted-foreground)" }}>
-                        Ask me anything about UK and EU financial regulation — FCA rules, AML/KYC, MiFID II, Crypto, MiCA, UK GDPR, or any term in the glossary. I'll explain it in plain English.
+                        Ask me anything about UK and EU financial regulation. FCA rules, AML/KYC, MiFID II, Crypto, MiCA, UK GDPR, or any term in the glossary. I'll explain it in plain English.
                       </p>
                     </div>
                     {/* Suggested questions */}
@@ -282,7 +282,7 @@ export default function FloatingAIChat() {
                   </button>
                 </div>
                 <p className="text-center text-[10px] mt-1.5" style={{ color: "var(--muted-foreground)" }}>
-                  Educational only — not legal advice
+                  Educational only, not legal advice
                 </p>
               </div>
             </>

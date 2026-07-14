@@ -1,10 +1,10 @@
-# RegVarsity — Project Status
+# RegVarsity. Project Status
 
 ## Done (July 2026 relaunch)
 - [x] Renamed RegWise -> RegVarsity (regwise.io conflict in the same space)
-- [x] Full accuracy audit against primary sources (FCA, FSCS, FOS, FATF, HMT) — fines, dates, limits corrected; fabricated What's New entries replaced with verified events
+- [x] Full accuracy audit against primary sources (FCA, FSCS, FOS, FATF, HMT), fines, dates, limits corrected; fabricated What's New entries replaced with verified events
 - [x] Editorial redesign: Fraunces + Inter, warm paper palette, numbered syllabus, hairline rules
-- [x] Removed Manus runtime (tRPC/auth/storage) — now a static Vite build
+- [x] Removed Manus runtime (tRPC/auth/storage), now a static Vite build
 - [x] AI Expert chat rewired to Groq via Vercel serverless function (api/chat.ts)
 - [x] Rebuilt exercises data (16 scenario MCQs across 4 topics)
 - [x] Launch basics: meta/OG tags, OG image, favicon, footer disclaimer, per-chapter source links, "last reviewed" stamps

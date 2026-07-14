@@ -199,7 +199,7 @@ export default function ModuleTestPage() {
                   <ModuleBadge module={mod} earned size={140} />
                 </div>
                 <p className="overline-kicker mb-3">Module complete</p>
-                <h1 className="mb-4">Well done — you passed.</h1>
+                <h1 className="mb-4">Well done, you passed.</h1>
                 <p className="text-muted-foreground max-w-md mx-auto leading-relaxed mb-8">
                   You scored {outcome.scorePercent}% on the {mod.title} test. The module badge is
                   yours, and it now appears on your progress page.

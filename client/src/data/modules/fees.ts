@@ -1,19 +1,19 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 15 — FEES & FSCS: Fees and Compensation
+// MODULE 15 - FEES & FSCS: Fees and Compensation
 // ============================================================
 export const moduleFEES: Module = {
   id: "fees",
   number: 15,
-  title: "FEES & FSCS — Fees, Levies, and Compensation",
+  title: "FEES & FSCS - Fees, Levies, and Compensation",
   slug: "fees-fscs-compensation",
   block: "Regulatory Infrastructure",
   sourceCode: "FEES",
   colour: "bg-yellow-50",
   accentColour: "oklch(0.50 0.14 60)",
   description:
-    "Every FCA-authorised firm pays fees to fund the FCA, the Financial Ombudsman Service (FOS), and the Financial Services Compensation Scheme (FSCS). Understanding how these work — and what the FSCS covers — is essential for both firms and consumers.",
+    "Every FCA-authorised firm pays fees to fund the FCA, the Financial Ombudsman Service (FOS), and the Financial Services Compensation Scheme (FSCS). Understanding how these work, and what the FSCS covers, is essential for both firms and consumers.",
   whoItAppliesTo: "All FCA-authorised firms. FSCS protection applies to eligible claimants dealing with authorised firms.",
   chapters: [
     {
@@ -27,7 +27,7 @@ export const moduleFEES: Module = {
       subSections: [
         {
           id: "fees-1-1",
-          heading: "1.1 — The fee structure",
+          heading: "1.1 - The fee structure",
           content: `The FCA charges fees to fund three separate bodies: (1) the FCA itself, (2) the Financial Ombudsman Service (FOS), and (3) the Financial Services Compensation Scheme (FSCS).\n\nFCA fees are calculated based on a firm's **fee-block** (the category of regulated activity) and its **tariff data** (a measure of size, such as income, assets under management, or number of mortgages).\n\nFirms pay an **application fee** when seeking authorisation and then **annual fees** thereafter. Even the smallest authorised firms pay a minimum annual fee (currently around £1,000–£2,000), ensuring all firms contribute to the cost of regulation.`,
         },
       ],
@@ -82,24 +82,24 @@ export const moduleFEES: Module = {
       slug: "fscs-protection",
       readingTimeMinutes: 8,
       intro:
-        "The FSCS is the UK's statutory compensation scheme for customers of failed financial firms. Understanding what it covers — and what it does not — is essential knowledge for anyone in financial services.",
+        "The FSCS is the UK's statutory compensation scheme for customers of failed financial firms. Understanding what it covers, and what it does not, is essential knowledge for anyone in financial services.",
       subSections: [
         {
           id: "fees-2-1",
-          heading: "2.1 — What the FSCS covers",
-          content: `The FSCS provides compensation to eligible claimants when an FCA-authorised firm is unable to pay claims against it — typically because it has gone insolvent.\n\n| Category | Compensation Limit |\n|---|---|\n| Deposits (bank accounts) | £120,000 per person per institution (since 1 December 2025) |\n| Investments | £85,000 per person per firm |\n| Home finance (mortgages) | £85,000 per person per firm |\n| Insurance policies | 90% of the claim (no upper limit for compulsory insurance) |\n| Long-term insurance (life) | 100% of the claim |\n\n**Important:** The FSCS only covers customers of **FCA-authorised firms**. Always check a firm is authorised on the FCA Register before giving it your money.`,
+          heading: "2.1 - What the FSCS covers",
+          content: `The FSCS provides compensation to eligible claimants when an FCA-authorised firm is unable to pay claims against it, typically because it has gone insolvent.\n\n| Category | Compensation Limit |\n|---|---|\n| Deposits (bank accounts) | £120,000 per person per institution (since 1 December 2025) |\n| Investments | £85,000 per person per firm |\n| Home finance (mortgages) | £85,000 per person per firm |\n| Insurance policies | 90% of the claim (no upper limit for compulsory insurance) |\n| Long-term insurance (life) | 100% of the claim |\n\n**Important:** The FSCS only covers customers of **FCA-authorised firms**. Always check a firm is authorised on the FCA Register before giving it your money.`,
         },
         {
           id: "fees-2-2",
-          heading: "2.2 — What the FSCS does not cover",
-          content: `The FSCS does **not** cover:\n\n- **Investment losses** — if an investment falls in value, the FSCS cannot compensate you. It only pays out when a firm has failed.\n- **Unauthorised firms** — if you deal with a firm that is not FCA-authorised, you have no FSCS protection.\n- **Overseas firms** — firms based outside the UK and not authorised by the FCA are not covered.\n\n**Temporary high balances:** If you have more than £120,000 in a bank account due to a specific life event (house sale, inheritance, redundancy), the FSCS provides temporary protection of up to £1.4 million for six months.`,
+          heading: "2.2 - What the FSCS does not cover",
+          content: `The FSCS does **not** cover:\n\n- **Investment losses** - if an investment falls in value, the FSCS cannot compensate you. It only pays out when a firm has failed.\n- **Unauthorised firms** - if you deal with a firm that is not FCA-authorised, you have no FSCS protection.\n- **Overseas firms** - firms based outside the UK and not authorised by the FCA are not covered.\n\n**Temporary high balances:** If you have more than £120,000 in a bank account due to a specific life event (house sale, inheritance, redundancy), the FSCS provides temporary protection of up to £1.4 million for six months.`,
         },
       ],
       keyTakeaways: [
-        { text: "The FSCS compensates customers of failed FCA-authorised firms — not investment losses." },
+        { text: "The FSCS compensates customers of failed FCA-authorised firms, not investment losses." },
         { text: "Deposit protection is £120,000 per person per institution (since 1 December 2025)." },
         { text: "Investment protection is £85,000 per person per firm." },
-        { text: "The FSCS does not cover unauthorised firms — always check the FCA Register." },
+        { text: "The FSCS does not cover unauthorised firms, always check the FCA Register." },
       ],
       quizQuestions: [
         {

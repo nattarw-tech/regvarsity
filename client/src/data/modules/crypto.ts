@@ -1,7 +1,7 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 6 — Crypto Asset Regulation
+// MODULE 6 - Crypto Asset Regulation
 // ============================================================
 export const moduleCrypto: Module = {
   id: "crypto",
@@ -23,27 +23,27 @@ export const moduleCrypto: Module = {
       slug: "uk-crypto-regulatory-journey",
       readingTimeMinutes: 8,
       intro:
-        "The UK's approach to crypto regulation has evolved significantly over the past five years — from a light-touch registration regime focused on AML, to a comprehensive framework covering trading, custody, stablecoins, and market abuse. Understanding this journey helps explain where we are today.",
+        "The UK's approach to crypto regulation has evolved significantly over the past five years: from a light-touch registration regime focused on AML, to a comprehensive framework covering trading, custody, stablecoins, and market abuse. Understanding this journey helps explain where we are today.",
       subSections: [
         {
           id: "crypto-1-1",
-          heading: "1.1 — From registration to full regulation",
+          heading: "1.1 - From registration to full regulation",
           content: `The UK's crypto regulatory journey has three distinct phases:
 
-**Phase 1 — AML Registration (2020-2023)**: The UK first regulated crypto asset businesses under the Money Laundering Regulations 2017 (as amended). Firms had to register with the FCA and demonstrate compliance with AML/KYC requirements. This was a relatively light-touch regime focused on financial crime rather than investor protection.
+**Phase 1 - AML Registration (2020-2023)**: The UK first regulated crypto asset businesses under the Money Laundering Regulations 2017 (as amended). Firms had to register with the FCA and demonstrate compliance with AML/KYC requirements. This was a relatively light-touch regime focused on financial crime rather than investor protection.
 
-**Phase 2 — Financial Promotions (2023-2024)**: From October 2023, the UK extended its financial promotions regime to crypto assets. Crypto promotions must now be approved by an FCA-authorised firm and include prominent risk warnings. This was a significant step — it brought crypto marketing under the same rules as traditional financial promotions.
+**Phase 2 - Financial Promotions (2023-2024)**: From October 2023, the UK extended its financial promotions regime to crypto assets. Crypto promotions must now be approved by an FCA-authorised firm and include prominent risk warnings. This was a significant step, it brought crypto marketing under the same rules as traditional financial promotions.
 
-**Phase 3 — Comprehensive Regulation (2024-2027)**: The Financial Services and Markets Act 2023 (FSMA 2023) gave HM Treasury powers to bring crypto assets within the full scope of financial regulation. HM Treasury designated crypto activities as regulated activities in 2024. The FCA published its final rules on 30 June 2026, with the new regime coming into force on 25 October 2027.`,
+**Phase 3 - Comprehensive Regulation (2024-2027)**: The Financial Services and Markets Act 2023 (FSMA 2023) gave HM Treasury powers to bring crypto assets within the full scope of financial regulation. HM Treasury designated crypto activities as regulated activities in 2024. The FCA published its final rules on 30 June 2026, with the new regime coming into force on 25 October 2027.`,
         },
         {
           id: "crypto-1-2",
-          heading: "1.2 — What activities will be regulated?",
+          heading: "1.2 - What activities will be regulated?",
           content: `Under the new regime, the following activities will require FCA authorisation:
 
 **Crypto asset trading**: Operating a crypto exchange or trading platform that allows customers to buy and sell crypto assets.
 
-**Crypto asset custody**: Holding crypto assets on behalf of customers — including private keys and wallet services.
+**Crypto asset custody**: Holding crypto assets on behalf of customers: including private keys and wallet services.
 
 **Stablecoin issuance**: Issuing fiat-referenced stablecoins (e.g. a stablecoin pegged to GBP or USD). Stablecoin issuers will face requirements similar to those for e-money institutions.
 
@@ -55,14 +55,14 @@ export const moduleCrypto: Module = {
         },
         {
           id: "crypto-1-3",
-          heading: "1.3 — The FCA's final rules (June 2026)",
+          heading: "1.3 - The FCA's final rules (June 2026)",
           content: `On 30 June 2026, the FCA published its final rules for the crypto asset regime. Key requirements include:
 
-**Consumer protection**: Crypto firms must apply the same consumer protection standards as traditional investment firms — including suitability assessments for advised services, clear and fair communications, and complaints handling.
+**Consumer protection**: Crypto firms must apply the same consumer protection standards as traditional investment firms: including suitability assessments for advised services, clear and fair communications, and complaints handling.
 
 **Market integrity**: Crypto exchanges must implement market abuse detection systems and report suspicious transactions. The UK's Market Abuse Regulation (MAR) will be extended to crypto assets.
 
-**Prudential requirements**: Crypto firms must hold minimum capital requirements — the specific amounts depend on the type and scale of activities.
+**Prudential requirements**: Crypto firms must hold minimum capital requirements, the specific amounts depend on the type and scale of activities.
 
 **Operational resilience**: Firms must demonstrate they can continue to operate during disruptions and recover from failures. This includes requirements for business continuity planning and cyber security.
 
@@ -76,7 +76,7 @@ The transition period runs from the publication of final rules (30 June 2026) to
         { text: "The new regime comes into force on 25 October 2027 and covers trading, custody, stablecoins, lending, and advice." },
         { text: "The FCA published its final rules on 30 June 2026." },
         { text: "Stablecoin issuers must hold 100% reserves in high-quality liquid assets and provide redemption rights." },
-        { text: "DeFi regulation remains complex — protocols with sufficient centralisation may be caught by the new regime." },
+        { text: "DeFi regulation remains complex, protocols with sufficient centralisation may be caught by the new regime." },
       ],
       quizQuestions: [
         {

@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 13 — CONC: Consumer Credit
+// MODULE 13 - CONC: Consumer Credit
 // ============================================================
 export const moduleCONC: Module = {
   id: "conc",
   number: 13,
-  title: "CONC — Consumer Credit",
+  title: "CONC - Consumer Credit",
   slug: "conc-consumer-credit",
   block: "Business Standards",
   sourceCode: "CONC",
@@ -27,12 +27,12 @@ export const moduleCONC: Module = {
       subSections: [
         {
           id: "conc-1-1",
-          heading: "1.1 — The regulatory framework",
-          content: `The **Consumer Credit Act 1974 (CCA)** created the basic framework — licensing requirements, the right to cancel, the right to early repayment, and the concept of the **Annual Percentage Rate (APR)** as a standardised measure of credit cost.\n\nThe FCA's **Consumer Credit sourcebook (CONC)** applies to all firms that lend money to consumers, arrange credit, or collect debts. This includes personal loans, credit cards, overdrafts, hire purchase, payday loans, and buy-now-pay-later (BNPL) products.`,
+          heading: "1.1 - The regulatory framework",
+          content: `The **Consumer Credit Act 1974 (CCA)** created the basic framework - licensing requirements, the right to cancel, the right to early repayment, and the concept of the **Annual Percentage Rate (APR)** as a standardised measure of credit cost.\n\nThe FCA's **Consumer Credit sourcebook (CONC)** applies to all firms that lend money to consumers, arrange credit, or collect debts. This includes personal loans, credit cards, overdrafts, hire purchase, payday loans, and buy-now-pay-later (BNPL) products.`,
         },
         {
           id: "conc-1-2",
-          heading: "1.2 — Responsible lending and the payday loan cap",
+          heading: "1.2 - Responsible lending and the payday loan cap",
           content: `The centrepiece of CONC is the **responsible lending** obligation. Before granting credit, lenders must carry out a **creditworthiness assessment** considering the borrower's income, expenditure, existing credit commitments, and credit history.\n\n**The payday lending price cap (2015):** The FCA introduced a cap on high-cost short-term credit limiting interest and fees to 0.8% per day, default fees to £15, and total cost to 100% of the original loan. This halved the cost of payday loans and drove many irresponsible lenders out of the market.`,
         },
       ],
@@ -91,12 +91,12 @@ export const moduleCONC: Module = {
       subSections: [
         {
           id: "conc-2-1",
-          heading: "2.1 — The BNPL regulatory gap and its closure",
+          heading: "2.1 - The BNPL regulatory gap and its closure",
           content: `**Buy-now-pay-later (BNPL)** products like Klarna, Clearpay, and Laybuy were structured to fall outside the Consumer Credit Act 1974 through an exemption for interest-free credit repayable within 12 months. This meant BNPL providers were not regulated by the FCA and did not have to carry out affordability checks.\n\nThe **Woolard Review (2021)** identified BNPL as a significant consumer harm risk. The **Financial Services and Markets Act 2023** included powers to regulate BNPL. As of 2026, the FCA is finalising its BNPL rules, which will require FCA authorisation, affordability assessments, clear cost information, and access to the Financial Ombudsman Service.`,
         },
       ],
       keyTakeaways: [
-        { text: "Most BNPL products were previously unregulated due to a CCA exemption — this is being closed." },
+        { text: "Most BNPL products were previously unregulated due to a CCA exemption, this is being closed." },
         { text: "The Woolard Review (2021) recommended bringing BNPL within the regulatory perimeter." },
         { text: "The Financial Services and Markets Act 2023 gives the FCA powers to regulate BNPL." },
         { text: "New BNPL rules will require FCA authorisation and affordability assessments." },

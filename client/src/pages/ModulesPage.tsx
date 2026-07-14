@@ -30,7 +30,7 @@ export default function ModulesPage() {
           <h1 className="mb-4">All modules</h1>
           <p className="text-lg max-w-2xl text-muted-foreground mb-6">
             Structured, plain-English guides to every major area of UK financial regulation,
-            plus the EU frameworks employers expect you to know. Start anywhere — each module
+            plus the EU frameworks employers expect you to know. Start anywhere, each module
             is self-contained.
           </p>
           <p className="text-sm text-muted-foreground">
@@ -95,7 +95,7 @@ export default function ModulesPage() {
         {/* Footer note */}
         <p className="text-sm text-muted-foreground border-t border-border pt-6">
           <strong className="text-foreground">Content is reviewed regularly.</strong> Everything
-          here reflects the regulatory position as of July 2026. Regulations change — always
+          here reflects the regulatory position as of July 2026. Regulations change, always
           verify with the{" "}
           <a
             href="https://handbook.fca.org.uk"

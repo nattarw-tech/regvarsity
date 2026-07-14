@@ -1,17 +1,17 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 16 — MiCA: EU Markets in Crypto-Assets Regulation
+// MODULE 16 - MiCA: EU Markets in Crypto-Assets Regulation
 // ============================================================
 export const moduleMiCA: Module = {
   id: "mica",
   number: 16,
-  title: "MiCA — EU Markets in Crypto-Assets Regulation",
+  title: "MiCA - EU Markets in Crypto-Assets Regulation",
   slug: "mica-eu-crypto-assets",
   block: "EU Regulation",
   sourceCode: "MiCA",
   sourceUrl: "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
-  sourceLabel: "EUR-Lex — Regulation (EU) 2023/1114 (MiCA)",
+  sourceLabel: "EUR-Lex - Regulation (EU) 2023/1114 (MiCA)",
   lastReviewed: "July 2026",
   colour: "bg-indigo-50",
   accentColour: "oklch(0.45 0.16 265)",
@@ -30,7 +30,7 @@ export const moduleMiCA: Module = {
       subSections: [
         {
           id: "mica-1-1",
-          heading: "1.1 — One rulebook for 27 countries",
+          heading: "1.1 - One rulebook for 27 countries",
           content: `The **Markets in Crypto-Assets Regulation (MiCA)**, formally Regulation (EU) 2023/1114, was adopted in May 2023. It is a regulation, not a directive, which means it applies directly in every EU member state without national implementing laws. One set of rules, 27 countries.
 
 MiCA arrived in two stages:
@@ -44,7 +44,7 @@ A licence granted in one member state can be **passported** across the entire EU
         },
         {
           id: "mica-1-2",
-          heading: "1.2 — The three token categories",
+          heading: "1.2 - The three token categories",
           content: `MiCA sorts crypto assets into three categories, and the rules that apply depend entirely on which box a token falls into:
 
 **1. Asset-referenced tokens (ARTs)**: tokens that aim to keep a stable value by referencing a basket of assets, one or more currencies (but not a single currency in the e-money sense), commodities, or other crypto assets. Think of a token pegged to a mix of the dollar, gold and government bonds.
@@ -57,7 +57,7 @@ Issuers of "other crypto assets" must publish a **crypto-asset white paper**: a 
         },
         {
           id: "mica-1-3",
-          heading: "1.3 — What MiCA does not cover",
+          heading: "1.3 - What MiCA does not cover",
           content: `Knowing what is outside MiCA matters as much as knowing what is inside:
 
 **Security tokens**: crypto assets that qualify as financial instruments, such as tokenised shares or bonds, are regulated under MiFID II, not MiCA. If a token gives you rights like a share, it is treated like a share.
@@ -120,7 +120,7 @@ Issuers of "other crypto assets" must publish a **crypto-asset white paper**: a 
     {
       id: "mica-2",
       number: 2,
-      title: "CASPs — Licensing Crypto Businesses",
+      title: "CASPs - Licensing Crypto Businesses",
       slug: "casps-crypto-service-providers",
       readingTimeMinutes: 8,
       intro:
@@ -128,7 +128,7 @@ Issuers of "other crypto assets" must publish a **crypto-asset white paper**: a 
       subSections: [
         {
           id: "mica-2-1",
-          heading: "2.1 — Who needs a CASP licence?",
+          heading: "2.1 - Who needs a CASP licence?",
           content: `MiCA lists ten crypto-asset services. Providing any of them as a business in the EU requires authorisation as a **CASP**:
 
 1. Custody and administration of crypto assets for clients
@@ -148,7 +148,7 @@ Certain traditional financial firms, such as credit institutions and MiFID inves
         },
         {
           id: "mica-2-2",
-          heading: "2.2 — Conduct obligations",
+          heading: "2.2 - Conduct obligations",
           content: `A CASP licence is not just a badge. It carries continuing obligations that will feel familiar to anyone who knows the FCA Handbook:
 
 **Act honestly, fairly and professionally** in the best interests of clients, with communications that are fair, clear and not misleading. Risk warnings are mandatory.
@@ -165,7 +165,7 @@ The overall philosophy is that crypto customers deserve the same basic protectio
         },
         {
           id: "mica-2-3",
-          heading: "2.3 — The transition period and the UK comparison",
+          heading: "2.3 - The transition period and the UK comparison",
           content: `Firms already providing crypto services under national law before 30 December 2024 could benefit from a **grandfathering period**: they may keep operating under their old national rules until they receive (or are refused) a MiCA authorisation, with a hard stop at **1 July 2026**. Member states could shorten this window, and many did. France, Malta and Luxembourg allowed the full period, while Germany, Austria, Ireland, the Netherlands and Poland chose shorter ones.
 
 **How does this compare with the UK?**
@@ -227,7 +227,7 @@ For a compliance career, the practical point is that the two regimes are cousins
     {
       id: "mica-3",
       number: 3,
-      title: "Stablecoins — The Strictest Rules in MiCA",
+      title: "Stablecoins - The Strictest Rules in MiCA",
       slug: "stablecoins-arts-emts",
       readingTimeMinutes: 8,
       intro:
@@ -235,7 +235,7 @@ For a compliance career, the practical point is that the two regimes are cousins
       subSections: [
         {
           id: "mica-3-1",
-          heading: "3.1 — Who may issue stablecoins",
+          heading: "3.1 - Who may issue stablecoins",
           content: `From 30 June 2024, issuing a stablecoin to the EU public became a regulated activity:
 
 **E-money tokens (EMTs)** may only be issued by **authorised credit institutions or electronic money institutions**. An EMT is legally close to e-money: holders have a **claim at par** on the issuer, meaning the right to redeem at any moment, at face value, in the referenced currency. Charging a fee for redemption is prohibited.
@@ -248,7 +248,7 @@ One visible market effect: several major global stablecoins chose not to seek EU
         },
         {
           id: "mica-3-2",
-          heading: "3.2 — Reserves, and 'significant' tokens",
+          heading: "3.2 - Reserves, and 'significant' tokens",
           content: `**Reserve requirements**: issuers must back tokens with a reserve of assets that is legally and operationally segregated from the issuer's own estate, insulated from insolvency, and invested only in secure, low-risk, liquid instruments. Part of the reserve must be held as deposits with credit institutions. The reserve must always at least match the claims of token holders, and it is subject to independent audit.
 
 **Significant ARTs and EMTs**: tokens that cross thresholds for size and reach, such as more than 10 million holders or a large reserve value, are classified as **significant**. Significant tokens face tougher requirements, including higher capital, liquidity management and interoperability standards, and their supervision shifts substantially from national regulators to the **European Banking Authority (EBA)**.
@@ -315,7 +315,7 @@ One visible market effect: several major global stablecoins chose not to seek EU
       subSections: [
         {
           id: "mica-4-1",
-          heading: "4.1 — The crypto market abuse regime",
+          heading: "4.1 - The crypto market abuse regime",
           content: `MiCA prohibits three forms of market abuse for crypto assets admitted to trading, directly mirroring the traditional regime:
 
 **Insider dealing**: trading on inside information, meaning precise, non-public information that would likely have a significant effect on the price of a crypto asset. Knowing before the public that a major exchange will list a token, and buying ahead of the announcement, is the classic crypto example.
@@ -330,7 +330,7 @@ Penalties are set by member states but must meet EU minimums, and national regul
         },
         {
           id: "mica-4-2",
-          heading: "4.2 — MiCA and the UK regime side by side",
+          heading: "4.2 - MiCA and the UK regime side by side",
           content: `A practical summary for anyone working across both markets:
 
 | Topic | EU (MiCA) | UK (FSMA 2023 regime) |

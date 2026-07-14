@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 4 — AML/KYC: Anti-Money Laundering
+// MODULE 4 - AML/KYC: Anti-Money Laundering
 // ============================================================
 export const moduleAML: Module = {
   id: "aml",
   number: 4,
-  title: "AML / KYC — Anti-Money Laundering",
+  title: "AML / KYC - Anti-Money Laundering",
   slug: "aml-kyc-anti-money-laundering",
   block: "Financial Crime",
   sourceCode: "MLRs / POCA",
@@ -23,29 +23,29 @@ export const moduleAML: Module = {
       slug: "what-is-money-laundering",
       readingTimeMinutes: 7,
       intro:
-        "Money laundering is the process of making illegally obtained money look legitimate. Understanding how it works — and why it matters — is the foundation of everything else in AML compliance.",
+        "Money laundering is the process of making illegally obtained money look legitimate. Understanding how it works, and why it matters, is the foundation of everything else in AML compliance.",
       subSections: [
         {
           id: "aml-1-1",
-          heading: "1.1 — The three stages of money laundering",
+          heading: "1.1 - The three stages of money laundering",
           content: `Money laundering typically occurs in three stages:
 
-**Stage 1 — Placement**: This is where criminal funds first enter the financial system. It is the riskiest stage for the criminal because the money is most obviously connected to its illegal source. Examples include depositing large amounts of cash from drug sales, using cash to buy assets, or smuggling cash across borders.
+**Stage 1 - Placement**: This is where criminal funds first enter the financial system. It is the riskiest stage for the criminal because the money is most obviously connected to its illegal source. Examples include depositing large amounts of cash from drug sales, using cash to buy assets, or smuggling cash across borders.
 
-**Stage 2 — Layering**: Once in the system, the criminal tries to disguise the trail. This involves multiple transactions designed to put distance between the money and its source. Examples include transferring money between multiple accounts in different countries, converting cash into financial instruments, and using shell companies.
+**Stage 2 - Layering**: Once in the system, the criminal tries to disguise the trail. This involves multiple transactions designed to put distance between the money and its source. Examples include transferring money between multiple accounts in different countries, converting cash into financial instruments, and using shell companies.
 
-**Stage 3 — Integration**: The money re-enters the legitimate economy, appearing to be from a lawful source. Examples include investing in property, buying luxury goods, or investing in legitimate businesses.
+**Stage 3 - Integration**: The money re-enters the legitimate economy, appearing to be from a lawful source. Examples include investing in property, buying luxury goods, or investing in legitimate businesses.
 
 The UK's **Proceeds of Crime Act 2002 (POCA)** makes it a criminal offence to:
 - Conceal, disguise, convert, transfer, or remove criminal property
 - Arrange or facilitate the acquisition, retention, use, or control of criminal property
 - Acquire, use, or possess criminal property
 
-Crucially, you can commit a money laundering offence without knowing the money is criminal — if you had "reasonable grounds to suspect" it was criminal, that may be sufficient.`,
+Crucially, you can commit a money laundering offence without knowing the money is criminal, if you had "reasonable grounds to suspect" it was criminal, that may be sufficient.`,
         },
         {
           id: "aml-1-2",
-          heading: "1.2 — The scale of the problem",
+          heading: "1.2 - The scale of the problem",
           content: `The UK's **2025 National Risk Assessment (NRA)**, published by HM Treasury and the Home Office on 17 July 2025, assessed the UK as remaining at **high risk** of money laundering.
 
 Key findings from the 2025 NRA:
@@ -53,9 +53,9 @@ Key findings from the 2025 NRA:
 - Professional services (law firms, accountants, estate agents) remain a significant vulnerability
 - Crypto assets are an increasing concern, with criminals using decentralised exchanges to layer funds
 - AI-enabled fraud is growing rapidly, with criminals using deepfakes and synthetic identities to defeat KYC checks
-- Kleptocracy — the laundering of funds stolen by corrupt foreign officials — remains a significant threat
+- Kleptocracy, the laundering of funds stolen by corrupt foreign officials, remains a significant threat
 
-The NRA also highlighted the growing overlap between money laundering, sanctions evasion, and fraud. These are no longer separate problems — they are increasingly interconnected.
+The NRA also highlighted the growing overlap between money laundering, sanctions evasion, and fraud. These are no longer separate problems, they are increasingly interconnected.
 
 **Recent enforcement actions** illustrate the scale of the problem:
 - Metro Bank was fined £16.7 million in November 2024 for failing to properly monitor potential money laundering between 2016 and 2020
@@ -65,7 +65,7 @@ The NRA also highlighted the growing overlap between money laundering, sanctions
       ],
       keyTakeaways: [
         { text: "Money laundering occurs in three stages: Placement (entering the system), Layering (disguising the trail), and Integration (re-entering the economy)." },
-        { text: "POCA 2002 makes it a criminal offence to deal with criminal property — even if you only had reasonable grounds to suspect it was criminal." },
+        { text: "POCA 2002 makes it a criminal offence to deal with criminal property, even if you only had reasonable grounds to suspect it was criminal." },
         { text: "The 2025 NRA assessed the UK as high risk, with growing threats from crypto, AI-enabled fraud, and kleptocracy." },
         { text: "Recent fines include Metro Bank (£16.7m) and Starling Bank (£29m) for financial crime control failures." },
       ],
@@ -115,26 +115,26 @@ The NRA also highlighted the growing overlap between money laundering, sanctions
       slug: "customer-due-diligence",
       readingTimeMinutes: 10,
       intro:
-        "Customer Due Diligence (CDD) is the process of verifying who your customer is and understanding the nature of your business relationship with them. It is the foundation of AML compliance — and the reason your bank asks for your passport.",
+        "Customer Due Diligence (CDD) is the process of verifying who your customer is and understanding the nature of your business relationship with them. It is the foundation of AML compliance, and the reason your bank asks for your passport.",
       subSections: [
         {
           id: "aml-2-1",
-          heading: "2.1 — When must CDD be applied?",
+          heading: "2.1 - When must CDD be applied?",
           content: `Under the **Money Laundering Regulations 2017 (MLRs)**, regulated firms must apply CDD when:
 
-1. **Establishing a new business relationship** — before you start doing business with a new customer
+1. **Establishing a new business relationship**, before you start doing business with a new customer
 2. **Carrying out an occasional transaction** above €15,000 (or two linked transactions totalling this amount)
-3. **There is a suspicion of money laundering or terrorist financing** — regardless of the amount or the type of customer
-4. **There is doubt about the accuracy of previously obtained identification information** — if you think a customer has given you false information, you must re-verify
+3. **There is a suspicion of money laundering or terrorist financing**, regardless of the amount or the type of customer
+4. **There is doubt about the accuracy of previously obtained identification information**, if you think a customer has given you false information, you must re-verify
 
-The MLRs also require firms to apply CDD on an **ongoing basis** — not just at the start of a relationship. Firms must monitor transactions and update customer information as circumstances change.`,
+The MLRs also require firms to apply CDD on an **ongoing basis**, not just at the start of a relationship. Firms must monitor transactions and update customer information as circumstances change.`,
         },
         {
           id: "aml-2-2",
-          heading: "2.2 — The three tiers of due diligence",
+          heading: "2.2 - The three tiers of due diligence",
           content: `The MLRs provide for three tiers of due diligence, depending on the risk level:
 
-**Simplified Due Diligence (SDD)**: For lower-risk customers and products. Firms can apply reduced measures — for example, they may not need to verify the customer's identity in the same depth. SDD can only be applied where the firm has assessed the risk as genuinely low — it is not a shortcut.
+**Simplified Due Diligence (SDD)**: For lower-risk customers and products. Firms can apply reduced measures: for example, they may not need to verify the customer's identity in the same depth. SDD can only be applied where the firm has assessed the risk as genuinely low, it is not a shortcut.
 
 **Standard CDD**: The default for most customers. Standard CDD requires:
 - Identifying the customer (name, date of birth, address)
@@ -142,7 +142,7 @@ The MLRs also require firms to apply CDD on an **ongoing basis** — not just at
 - Understanding the purpose and nature of the business relationship
 - For companies: identifying the beneficial owners (those who own or control more than 25%)
 
-**Enhanced Due Diligence (EDD)**: Required for higher-risk situations. EDD means doing more — gathering more information, verifying it more rigorously, and monitoring the relationship more closely. EDD is mandatory for:
+**Enhanced Due Diligence (EDD)**: Required for higher-risk situations. EDD means doing more, gathering more information, verifying it more rigorously, and monitoring the relationship more closely. EDD is mandatory for:
 - Politically Exposed Persons (PEPs) and their associates
 - Customers from high-risk third countries (as designated by HM Treasury)
 - Complex or unusually large transactions
@@ -150,10 +150,10 @@ The MLRs also require firms to apply CDD on an **ongoing basis** — not just at
         },
         {
           id: "aml-2-3",
-          heading: "2.3 — Beneficial Ownership",
-          content: `One of the most important aspects of CDD is identifying **beneficial owners** — the real people who ultimately own or control a business.
+          heading: "2.3 - Beneficial Ownership",
+          content: `One of the most important aspects of CDD is identifying **beneficial owners**, the real people who ultimately own or control a business.
 
-Criminals often use complex corporate structures — chains of companies in multiple jurisdictions — to hide who actually owns an asset. The beneficial ownership rules are designed to cut through this complexity.
+Criminals often use complex corporate structures, chains of companies in multiple jurisdictions, to hide who actually owns an asset. The beneficial ownership rules are designed to cut through this complexity.
 
 Under the MLRs, firms must identify any person who:
 - Owns or controls more than **25%** of the shares or voting rights in a company
@@ -163,7 +163,7 @@ For trusts, firms must identify the settlor, trustees, protectors, beneficiaries
 
 The **Companies House register** is a key tool for beneficial ownership verification. Under the Economic Crime and Corporate Transparency Act 2023, Companies House has significantly strengthened its powers. Identity verification became available voluntarily from April 2025 and mandatory for new directors and persons with significant control (PSCs) from 18 November 2025, with existing directors required to verify by November 2026.
 
-However, beneficial ownership verification is not always straightforward. Criminals deliberately structure their affairs to avoid the 25% threshold. Firms must look beyond the formal structure and consider who actually exercises control — even if they do not formally own more than 25%.`,
+However, beneficial ownership verification is not always straightforward. Criminals deliberately structure their affairs to avoid the 25% threshold. Firms must look beyond the formal structure and consider who actually exercises control, even if they do not formally own more than 25%.`,
         },
       ],
       keyTakeaways: [
@@ -222,8 +222,8 @@ However, beneficial ownership verification is not always straightforward. Crimin
       subSections: [
         {
           id: "aml-3-1",
-          heading: "3.1 — Politically Exposed Persons (PEPs)",
-          content: `A **Politically Exposed Person (PEP)** is an individual who holds or has held a prominent public function. The concern is that such individuals may be in a position to abuse their public office for personal gain — and that their financial transactions may involve the proceeds of corruption.
+          heading: "3.1 - Politically Exposed Persons (PEPs)",
+          content: `A **Politically Exposed Person (PEP)** is an individual who holds or has held a prominent public function. The concern is that such individuals may be in a position to abuse their public office for personal gain, and that their financial transactions may involve the proceeds of corruption.
 
 PEPs include:
 - Heads of state and government ministers
@@ -244,18 +244,18 @@ An important distinction: the FCA's guidance distinguishes between **foreign PEP
         },
         {
           id: "aml-3-2",
-          heading: "3.2 — Sanctions Screening",
+          heading: "3.2 - Sanctions Screening",
           content: `**Financial sanctions** are restrictions imposed by governments or international bodies that prohibit or limit financial dealings with specific individuals, entities, or countries. Breaching sanctions is a criminal offence.
 
-The UK's sanctions regime is administered by the **Office of Financial Sanctions Implementation (OFSI)**, part of HM Treasury. Since Brexit, the UK operates its own independent sanctions regime — it no longer automatically follows EU sanctions.
+The UK's sanctions regime is administered by the **Office of Financial Sanctions Implementation (OFSI)**, part of HM Treasury. Since Brexit, the UK operates its own independent sanctions regime, it no longer automatically follows EU sanctions.
 
 Key UK sanctions regimes include:
-- **Russia sanctions** — significantly expanded since the 2022 invasion of Ukraine
-- **Iran sanctions** — relating to nuclear proliferation
-- **North Korea sanctions** — relating to weapons of mass destruction
-- **Global human rights sanctions** — targeting individuals responsible for serious human rights violations
+- **Russia sanctions**, significantly expanded since the 2022 invasion of Ukraine
+- **Iran sanctions**, relating to nuclear proliferation
+- **North Korea sanctions**, relating to weapons of mass destruction
+- **Global human rights sanctions**, targeting individuals responsible for serious human rights violations
 
-Firms must screen all customers and transactions against the **OFSI consolidated list** — a regularly updated list of all sanctioned individuals and entities. This screening must be:
+Firms must screen all customers and transactions against the **OFSI consolidated list**, a regularly updated list of all sanctioned individuals and entities. This screening must be:
 - Conducted at the start of a relationship
 - Repeated whenever the sanctions list is updated
 - Applied to all transactions, not just new relationships
@@ -264,16 +264,16 @@ The consequences of breaching sanctions are severe. OFSI can impose civil moneta
         },
         {
           id: "aml-3-3",
-          heading: "3.3 — Suspicious Activity Reports (SARs)",
+          heading: "3.3 - Suspicious Activity Reports (SARs)",
           content: `A **Suspicious Activity Report (SAR)** is a report made to the **National Crime Agency (NCA)** when a firm suspects that a customer or transaction is connected to money laundering or terrorist financing.
 
 The obligation to report is set out in POCA 2002. It is a criminal offence to fail to report when you know or suspect (or have reasonable grounds to suspect) that a person is engaged in money laundering.
 
-**The tipping-off offence**: Once a SAR has been submitted, firms must not "tip off" the customer — i.e. tell them that a report has been made or that they are under investigation. Doing so is a criminal offence. This creates a practical challenge: firms must continue to deal with the customer normally while the NCA considers the report.
+**The tipping-off offence**: Once a SAR has been submitted, firms must not "tip off" the customer, i.e. tell them that a report has been made or that they are under investigation. Doing so is a criminal offence. This creates a practical challenge: firms must continue to deal with the customer normally while the NCA considers the report.
 
 **The consent SAR**: If a firm wants to proceed with a transaction that it suspects may involve criminal property, it can submit a "consent SAR" to the NCA and wait for consent before proceeding. The NCA has 7 days to refuse consent (or 31 days if it gives notice of investigation). If the NCA does not respond within the relevant period, the firm can proceed.
 
-The UK receives around **900,000 SARs per year** — one of the highest rates in the world. The NCA uses SARs to identify money laundering networks, recover criminal assets, and support law enforcement investigations.`,
+The UK receives around **900,000 SARs per year**, one of the highest rates in the world. The NCA uses SARs to identify money laundering networks, recover criminal assets, and support law enforcement investigations.`,
         },
       ],
       keyTakeaways: [

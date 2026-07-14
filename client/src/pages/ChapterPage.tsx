@@ -39,7 +39,7 @@ export default function ChapterPage() {
       { sectionId: "", text: `${chapter.title}. ${chapter.intro}` },
       ...chapter.subSections.map((s) => ({
         sectionId: s.id,
-        text: `${s.heading.replace(/^[\d.\s—-]+/, "")}. ${stripMarkdown(s.content)}`,
+        text: `${s.heading.replace(/^[\d.\s, -]+/, "")}. ${stripMarkdown(s.content)}`,
       })),
     ];
   }, [result?.chapter.id]);
@@ -79,7 +79,7 @@ export default function ChapterPage() {
 
   const handleShare = (method: "copy" | "twitter" | "linkedin") => {
     const url = window.location.href;
-    const title = result ? `${result.chapter.title} — RegVarsity` : "RegVarsity";
+    const title = result ? `${result.chapter.title} - RegVarsity` : "RegVarsity";
     if (method === "copy") {
       navigator.clipboard.writeText(url).then(() => toast.success("Link copied to clipboard!"));
     } else if (method === "twitter") {
@@ -254,7 +254,7 @@ export default function ChapterPage() {
                   rel="noopener noreferrer"
                   className="underline underline-offset-2"
                 >
-                  FCA Handbook — {mod.sourceCode}
+                  FCA Handbook - {mod.sourceCode}
                 </a>
               ) : (
                 <span>{mod.sourceCode}</span>

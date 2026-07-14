@@ -25,7 +25,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
                 <span className="font-serif text-lg font-semibold text-foreground">RegVarsity</span>
               </div>
               <p className="text-sm leading-relaxed mb-3 text-muted-foreground">
-                UK and EU financial regulation explained in plain English — for everyone.
+                UK and EU financial regulation explained in plain English, for everyone.
               </p>
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Created by{" "}
@@ -49,9 +49,9 @@ export default function PageLayout({ children }: PageLayoutProps) {
               </h4>
               <ul className="space-y-2 text-sm">
                 {[
-                  { href: "/learn/prin-principles-for-business", label: "PRIN — Principles" },
+                  { href: "/learn/prin-principles-for-business", label: "PRIN. Principles" },
                   { href: "/learn/sysc-smcr-senior-management", label: "SYSC & SMCR" },
-                  { href: "/learn/cobs-conduct-of-business", label: "COBS — Conduct" },
+                  { href: "/learn/cobs-conduct-of-business", label: "COBS. Conduct" },
                   { href: "/learn/aml-kyc-anti-money-laundering", label: "AML / KYC" },
                   { href: "/learn", label: "View all 17 →" },
                 ].map((l) => (
@@ -117,7 +117,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
 
           <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-xs text-muted-foreground">
-              © 2026 RegVarsity. Educational purposes only — not legal or financial advice. Not
+              © 2026 RegVarsity. Educational purposes only, not legal or financial advice. Not
               affiliated with or endorsed by the FCA.
             </p>
             <p className="text-xs text-center text-muted-foreground">

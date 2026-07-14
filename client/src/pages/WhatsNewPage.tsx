@@ -86,7 +86,7 @@ const DIGESTS: { month: string; year: number; items: DigestItem[] }[] = [
         category: "FCA",
         title: "FSCS deposit protection limit rises to £120,000",
         summary:
-          "The PRA raised the FSCS deposit protection limit from £85,000 to £120,000 per person per authorised institution — the first increase since 2017. The temporary high balance limit rose from £1 million to £1.4 million. The change applies to deposits only; the £85,000 limit for investment claims is unchanged.",
+          "The PRA raised the FSCS deposit protection limit from £85,000 to £120,000 per person per authorised institution, the first increase since 2017. The temporary high balance limit rose from £1 million to £1.4 million. The change applies to deposits only; the £85,000 limit for investment claims is unchanged.",
         impact: "High",
         sourceUrl: "https://www.fscs.org.uk/what-we-cover/banks-building-societies-credit-unions/deposit-limit-increase/",
         sourceLabel: "FSCS",
@@ -116,7 +116,7 @@ const DIGESTS: { month: string; year: number; items: DigestItem[] }[] = [
         category: "AML/KYC",
         title: "2025 National Risk Assessment published",
         summary:
-          "HM Treasury and the Home Office published the 2025 National Risk Assessment (NRA) on 17 July 2025 — the first since 2020. The UK remains at high risk of money laundering. Cryptoasset risk was raised from medium to high, and key concerns include cash-based laundering, UK companies, sanctions evasion, and property.",
+          "HM Treasury and the Home Office published the 2025 National Risk Assessment (NRA) on 17 July 2025, the first since 2020. The UK remains at high risk of money laundering. Cryptoasset risk was raised from medium to high, and key concerns include cash-based laundering, UK companies, sanctions evasion, and property.",
         impact: "High",
         sourceUrl: "https://www.gov.uk/government/publications/national-risk-assessment-of-money-laundering-and-terrorist-financing-2025",
         sourceLabel: "HM Treasury NRA 2025",
@@ -146,7 +146,7 @@ export default function WhatsNewPage() {
 
   const handleShare = (method: "copy" | "twitter" | "linkedin") => {
     const url = window.location.href;
-    const title = "What's New in UK Financial Regulation — RegVarsity";
+    const title = "What's New in UK Financial Regulation. RegVarsity";
     if (method === "copy") {
       navigator.clipboard.writeText(url).then(() => toast.success("Link copied to clipboard!"));
     } else if (method === "twitter") {
@@ -159,7 +159,7 @@ export default function WhatsNewPage() {
 
   return (
     <PageLayout>
-      {/* Header — clean white */}
+      {/* Header, clean white */}
       <section className="bg-background border-b border-border">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <p className="text-sm font-semibold mb-2 text-primary">
@@ -169,7 +169,7 @@ export default function WhatsNewPage() {
             What's New in UK Financial Regulation
           </h1>
           <p className="text-base max-w-2xl mb-6 text-muted-foreground">
-            A plain-English summary of the most important regulatory changes, consultations, and enforcement actions — updated quarterly. Bookmark this page or share it with your team.
+            A plain-English summary of the most important regulatory changes, consultations, and enforcement actions, updated quarterly. Bookmark this page or share it with your team.
           </p>
           <div className="flex flex-wrap gap-3">
             <div className="relative">

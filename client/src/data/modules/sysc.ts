@@ -1,12 +1,12 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 2 — SYSC / SMCR: Senior Management & Governance
+// MODULE 2 - SYSC / SMCR: Senior Management & Governance
 // ============================================================
 export const moduleSYSC: Module = {
   id: "sysc",
   number: 2,
-  title: "SYSC & SMCR — Senior Management & Governance",
+  title: "SYSC & SMCR - Senior Management & Governance",
   slug: "sysc-smcr-senior-management",
   block: "High Level Standards",
   sourceCode: "SYSC",
@@ -23,12 +23,12 @@ export const moduleSYSC: Module = {
       slug: "why-personal-accountability-matters",
       readingTimeMinutes: 7,
       intro:
-        "After the 2008 financial crisis, a common complaint was that no individual banker went to prison despite the catastrophic harm caused. The SMCR was designed to change this — to make it possible to hold specific individuals accountable when things go wrong.",
+        "After the 2008 financial crisis, a common complaint was that no individual banker went to prison despite the catastrophic harm caused. The SMCR was designed to change this, to make it possible to hold specific individuals accountable when things go wrong.",
       subSections: [
         {
           id: "sysc-1-1",
-          heading: "1.1 — The problem with the old regime",
-          content: `Before SMCR, the UK used the **Approved Persons Regime (APR)**. Under the APR, individuals needed FCA approval to perform certain "controlled functions" — but the regime had significant weaknesses.
+          heading: "1.1 - The problem with the old regime",
+          content: `Before SMCR, the UK used the **Approved Persons Regime (APR)**. Under the APR, individuals needed FCA approval to perform certain "controlled functions", but the regime had significant weaknesses.
 
 The biggest problem was what regulators called the "responsibility gap." When something went wrong at a firm, it was often impossible to pin responsibility on any specific individual. Executives would say "I didn't know about that" or "that was someone else's area." The APR did not require firms to clearly map out who was responsible for what.
 
@@ -38,25 +38,25 @@ SMCR was the result. It came into force for banks in 2016 and was extended to al
         },
         {
           id: "sysc-1-2",
-          heading: "1.2 — The three tiers of SMCR",
+          heading: "1.2 - The three tiers of SMCR",
           content: `SMCR divides regulated firms into three categories, with different requirements for each:
 
-**Enhanced firms** — The largest and most complex firms, including major banks, building societies, and large investment firms. These firms face the most extensive SMCR requirements, including detailed Statements of Responsibilities for every Senior Manager.
+**Enhanced firms**. The largest and most complex firms, including major banks, building societies, and large investment firms. These firms face the most extensive SMCR requirements, including detailed Statements of Responsibilities for every Senior Manager.
 
-**Core firms** — The majority of FCA-regulated firms. They must comply with the Senior Managers Regime and the Certification Regime, but with less prescriptive requirements than Enhanced firms.
+**Core firms**. The majority of FCA-regulated firms. They must comply with the Senior Managers Regime and the Certification Regime, but with less prescriptive requirements than Enhanced firms.
 
-**Limited scope firms** — Smaller firms with limited regulatory permissions. They face reduced SMCR requirements.
+**Limited scope firms**. Smaller firms with limited regulatory permissions. They face reduced SMCR requirements.
 
 The three components of SMCR are:
 
-1. **The Senior Managers Regime (SMR)** — applies to the most senior individuals who hold "Senior Manager Functions" (SMFs)
-2. **The Certification Regime** — applies to employees who could cause significant harm to customers or markets
-3. **The Conduct Rules** — minimum standards of behaviour that apply to almost all employees`,
+1. **The Senior Managers Regime (SMR)**, applies to the most senior individuals who hold "Senior Manager Functions" (SMFs)
+2. **The Certification Regime**, applies to employees who could cause significant harm to customers or markets
+3. **The Conduct Rules**, minimum standards of behaviour that apply to almost all employees`,
         },
         {
           id: "sysc-1-3",
-          heading: "1.3 — The Duty of Responsibility",
-          content: `The most powerful element of SMCR is the **Duty of Responsibility**. Under this duty, if a firm breaches an FCA requirement, a Senior Manager who was responsible for that area can be held personally liable — unless they can show they took "reasonable steps" to prevent the breach.
+          heading: "1.3 - The Duty of Responsibility",
+          content: `The most powerful element of SMCR is the **Duty of Responsibility**. Under this duty, if a firm breaches an FCA requirement, a Senior Manager who was responsible for that area can be held personally liable, unless they can show they took "reasonable steps" to prevent the breach.
 
 This reverses the burden of proof in a subtle but important way. Previously, the FCA had to prove that a senior manager was personally responsible for a breach. Now, if a breach occurs in a Senior Manager's area of responsibility, they must demonstrate they did everything reasonable to prevent it.
 
@@ -66,7 +66,7 @@ This reverses the burden of proof in a subtle but important way. Previously, the
 - Monitoring compliance and escalating concerns
 - Acting promptly when problems were identified
 
-A Senior Manager who simply says "I didn't know" will not satisfy the Duty of Responsibility if they should have known — if proper oversight would have revealed the problem.`,
+A Senior Manager who simply says "I didn't know" will not satisfy the Duty of Responsibility if they should have known, if proper oversight would have revealed the problem.`,
         },
       ],
       keyTakeaways: [
@@ -121,46 +121,46 @@ A Senior Manager who simply says "I didn't know" will not satisfy the Duty of Re
       slug: "senior-manager-functions",
       readingTimeMinutes: 9,
       intro:
-        "A Senior Manager Function (SMF) is a specific role that requires FCA approval. Each SMF holder must have a clear Statement of Responsibilities — a document that sets out exactly what they are personally responsible for.",
+        "A Senior Manager Function (SMF) is a specific role that requires FCA approval. Each SMF holder must have a clear Statement of Responsibilities, a document that sets out exactly what they are personally responsible for.",
       subSections: [
         {
           id: "sysc-2-1",
-          heading: "2.1 — Key Senior Manager Functions",
+          heading: "2.1 - Key Senior Manager Functions",
           content: `The FCA designates specific roles as Senior Manager Functions. The most important include:
 
-**SMF1 — Chief Executive Officer**: The CEO is responsible for the overall management of the firm. They are the most senior SMF holder and are ultimately accountable for the firm's compliance with FCA requirements.
+**SMF1 - Chief Executive Officer**: The CEO is responsible for the overall management of the firm. They are the most senior SMF holder and are ultimately accountable for the firm's compliance with FCA requirements.
 
-**SMF2 — Chief Finance Officer**: Responsible for the financial management of the firm, including capital adequacy, liquidity, and financial reporting.
+**SMF2 - Chief Finance Officer**: Responsible for the financial management of the firm, including capital adequacy, liquidity, and financial reporting.
 
-**SMF3 — Executive Director**: Any executive director who is not covered by another specific SMF.
+**SMF3 - Executive Director**: Any executive director who is not covered by another specific SMF.
 
-**SMF4 — Chief Risk Officer**: Responsible for the firm's risk management framework and oversight of all material risks.
+**SMF4 - Chief Risk Officer**: Responsible for the firm's risk management framework and oversight of all material risks.
 
-**SMF5 — Head of Internal Audit**: Responsible for the internal audit function and reporting to the board on the effectiveness of controls.
+**SMF5 - Head of Internal Audit**: Responsible for the internal audit function and reporting to the board on the effectiveness of controls.
 
-**SMF16 — Compliance Oversight**: Responsible for the compliance function and ensuring the firm meets its regulatory obligations. This is one of the most important SMFs for day-to-day regulatory compliance.
+**SMF16 - Compliance Oversight**: Responsible for the compliance function and ensuring the firm meets its regulatory obligations. This is one of the most important SMFs for day-to-day regulatory compliance.
 
-**SMF17 — Money Laundering Reporting Officer (MLRO)**: The individual responsible for the firm's AML/KYC compliance and for making Suspicious Activity Reports (SARs) to the National Crime Agency.`,
+**SMF17 - Money Laundering Reporting Officer (MLRO)**: The individual responsible for the firm's AML/KYC compliance and for making Suspicious Activity Reports (SARs) to the National Crime Agency.`,
         },
         {
           id: "sysc-2-2",
-          heading: "2.2 — Statements of Responsibilities and the Responsibilities Map",
-          content: `Every Senior Manager must have a **Statement of Responsibilities (SoR)** — a document that clearly sets out what they are personally responsible for. The SoR must be:
+          heading: "2.2 - Statements of Responsibilities and the Responsibilities Map",
+          content: `Every Senior Manager must have a **Statement of Responsibilities (SoR)**, a document that clearly sets out what they are personally responsible for. The SoR must be:
 
-- Specific and clear — vague statements like "responsible for compliance" are not sufficient
-- Complete — it must cover all the firm's regulated activities
-- Accurate — it must reflect what the Senior Manager actually does, not just their job title
+- Specific and clear, vague statements like "responsible for compliance" are not sufficient
+- Complete, it must cover all the firm's regulated activities
+- Accurate, it must reflect what the Senior Manager actually does, not just their job title
 
-For Enhanced firms, the firm must also produce a **Responsibilities Map** — a comprehensive document showing how all the firm's activities and responsibilities are allocated across its Senior Managers. The Responsibilities Map must cover every area of the firm's regulated activities, with no gaps.
+For Enhanced firms, the firm must also produce a **Responsibilities Map**, a comprehensive document showing how all the firm's activities and responsibilities are allocated across its Senior Managers. The Responsibilities Map must cover every area of the firm's regulated activities, with no gaps.
 
 The FCA uses Statements of Responsibilities and Responsibilities Maps when investigating incidents. If a problem occurs in an area that is clearly assigned to a specific Senior Manager, that person will be the FCA's first port of call.`,
         },
         {
           id: "sysc-2-3",
-          heading: "2.3 — The Certification Regime",
+          heading: "2.3 - The Certification Regime",
           content: `Below the Senior Manager level, the **Certification Regime** applies to employees who could cause "significant harm" to customers, markets, or the firm. These are called **Certified Persons**.
 
-Unlike Senior Managers, Certified Persons do not need FCA approval — but firms must certify them as fit and proper to perform their role. This certification must be renewed annually.
+Unlike Senior Managers, Certified Persons do not need FCA approval, but firms must certify them as fit and proper to perform their role. This certification must be renewed annually.
 
 Roles that typically fall within the Certification Regime include:
 - Investment advisers and portfolio managers
@@ -176,7 +176,7 @@ Firms must maintain records of all Certified Persons and their certifications. I
         { text: "Senior Manager Functions (SMFs) are specific roles requiring FCA pre-approval. Key SMFs include CEO, CFO, CRO, Head of Compliance, and MLRO." },
         { text: "Every SMF holder must have a Statement of Responsibilities clearly setting out their personal accountability." },
         { text: "Enhanced firms must produce a Responsibilities Map covering all regulated activities with no gaps." },
-        { text: "The Certification Regime covers employees below SMF level who could cause significant harm — firms must annually certify them as fit and proper." },
+        { text: "The Certification Regime covers employees below SMF level who could cause significant harm, firms must annually certify them as fit and proper." },
       ],
       quizQuestions: [
         {
@@ -224,39 +224,39 @@ Firms must maintain records of all Certified Persons and their certifications. I
       slug: "the-conduct-rules",
       readingTimeMinutes: 6,
       intro:
-        "The Conduct Rules are the minimum standards of behaviour that apply to almost everyone working in an FCA-regulated firm. They are the SMCR's equivalent of the Principles for Business — but for individuals rather than firms.",
+        "The Conduct Rules are the minimum standards of behaviour that apply to almost everyone working in an FCA-regulated firm. They are the SMCR's equivalent of the Principles for Business, but for individuals rather than firms.",
       subSections: [
         {
           id: "sysc-3-1",
-          heading: "3.1 — Individual Conduct Rules (Tier 1)",
+          heading: "3.1 - Individual Conduct Rules (Tier 1)",
           content: `The **Individual Conduct Rules** apply to all employees of regulated firms who are not ancillary staff (e.g. cleaners, caterers, IT contractors who do not perform regulated activities). There are five Individual Conduct Rules:
 
-**Rule 1 — Act with integrity**: You must be honest and act in good faith in everything you do. This is the individual equivalent of Principle 1.
+**Rule 1 - Act with integrity**: You must be honest and act in good faith in everything you do. This is the individual equivalent of Principle 1.
 
-**Rule 2 — Act with due skill, care and diligence**: You must be competent and careful in your work. You must not take on responsibilities you are not qualified to handle.
+**Rule 2 - Act with due skill, care and diligence**: You must be competent and careful in your work. You must not take on responsibilities you are not qualified to handle.
 
-**Rule 3 — Be open and cooperative with the FCA, PRA, and other regulators**: You must be transparent with regulators. You must not mislead them or withhold information they need.
+**Rule 3 - Be open and cooperative with the FCA, PRA, and other regulators**: You must be transparent with regulators. You must not mislead them or withhold information they need.
 
-**Rule 4 — Pay due regard to the interests of customers and treat them fairly**: You must put customers' interests first. This is the individual equivalent of Principle 6.
+**Rule 4 - Pay due regard to the interests of customers and treat them fairly**: You must put customers' interests first. This is the individual equivalent of Principle 6.
 
-**Rule 5 — Observe proper standards of market conduct**: You must behave properly in financial markets. You must not engage in market abuse or manipulation.`,
+**Rule 5 - Observe proper standards of market conduct**: You must behave properly in financial markets. You must not engage in market abuse or manipulation.`,
         },
         {
           id: "sysc-3-2",
-          heading: "3.2 — Senior Manager Conduct Rules (Tier 2)",
+          heading: "3.2 - Senior Manager Conduct Rules (Tier 2)",
           content: `In addition to the Individual Conduct Rules, Senior Managers must also comply with four additional **Senior Manager Conduct Rules**:
 
-**Rule 6 — Take reasonable steps to ensure that the business of the firm for which you are responsible is controlled effectively**: Senior Managers must actively manage and oversee their areas of responsibility. Passive oversight is not enough.
+**Rule 6 - Take reasonable steps to ensure that the business of the firm for which you are responsible is controlled effectively**: Senior Managers must actively manage and oversee their areas of responsibility. Passive oversight is not enough.
 
-**Rule 7 — Take reasonable steps to ensure that the business of the firm for which you are responsible complies with the relevant requirements and standards of the regulatory system**: Senior Managers must ensure their areas comply with all applicable FCA rules.
+**Rule 7 - Take reasonable steps to ensure that the business of the firm for which you are responsible complies with the relevant requirements and standards of the regulatory system**: Senior Managers must ensure their areas comply with all applicable FCA rules.
 
-**Rule 8 — Take reasonable steps to ensure that any delegation of your responsibilities is to an appropriate person and that you oversee the discharge of the delegated responsibility effectively**: If you delegate a responsibility, you remain accountable for it. You must delegate to competent people and monitor them.
+**Rule 8 - Take reasonable steps to ensure that any delegation of your responsibilities is to an appropriate person and that you oversee the discharge of the delegated responsibility effectively**: If you delegate a responsibility, you remain accountable for it. You must delegate to competent people and monitor them.
 
-**Rule 9 — Disclose appropriately any information of which the FCA or PRA would reasonably expect notice**: Senior Managers have a personal obligation to report material information to regulators — not just the firm as a whole.`,
+**Rule 9 - Disclose appropriately any information of which the FCA or PRA would reasonably expect notice**: Senior Managers have a personal obligation to report material information to regulators, not just the firm as a whole.`,
         },
       ],
       keyTakeaways: [
-        { text: "The Individual Conduct Rules apply to almost all employees of FCA-regulated firms — not just senior managers." },
+        { text: "The Individual Conduct Rules apply to almost all employees of FCA-regulated firms, not just senior managers." },
         { text: "The five Individual Conduct Rules cover integrity, skill, openness with regulators, customer fairness, and market conduct." },
         { text: "Senior Managers have four additional Conduct Rules covering effective control, compliance, delegation, and disclosure." },
         { text: "Breaching the Conduct Rules can result in personal fines and bans from working in financial services." },

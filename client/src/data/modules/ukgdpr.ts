@@ -1,17 +1,17 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 17 — UK GDPR & DPA 2018: Data Protection
+// MODULE 17 - UK GDPR & DPA 2018: Data Protection
 // ============================================================
 export const moduleUKGDPR: Module = {
   id: "ukgdpr",
   number: 17,
-  title: "UK GDPR & DPA 2018 — Data Protection Essentials",
+  title: "UK GDPR & DPA 2018 - Data Protection Essentials",
   slug: "uk-gdpr-data-protection",
   block: "Data Protection",
   sourceCode: "UK GDPR",
   sourceUrl: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/",
-  sourceLabel: "ICO — UK GDPR guidance and resources",
+  sourceLabel: "ICO - UK GDPR guidance and resources",
   lastReviewed: "July 2026",
   colour: "bg-rose-50",
   accentColour: "oklch(0.48 0.16 350)",
@@ -30,7 +30,7 @@ export const moduleUKGDPR: Module = {
       subSections: [
         {
           id: "ukgdpr-1-1",
-          heading: "1.1 — The legal framework and the ICO",
+          heading: "1.1 - The legal framework and the ICO",
           content: `Three pieces of law matter:
 
 **UK GDPR**: when the UK left the EU, it kept the EU's General Data Protection Regulation in domestic law and renamed it the UK GDPR. The substance is very close to the EU version, which is why people often just say "GDPR".
@@ -45,7 +45,7 @@ The regulator is the **Information Commissioner's Office (ICO)**. It publishes g
         },
         {
           id: "ukgdpr-1-2",
-          heading: "1.2 — Personal data and special category data",
+          heading: "1.2 - Personal data and special category data",
           content: `**Personal data** is any information relating to an identified or identifiable living individual. Names and addresses obviously qualify, but so do customer IDs, IP addresses, location data, voice recordings and transaction histories, anything that can be linked back to a person, directly or indirectly.
 
 **Special category data** gets extra protection because misuse can cause serious harm: data revealing racial or ethnic origin, political opinions, religious beliefs, trade union membership, genetic data, biometric data used for identification, health data, and data about sex life or sexual orientation. Processing it requires both a lawful basis and a separate special condition.
@@ -56,7 +56,7 @@ The regulator is the **Information Commissioner's Office (ICO)**. It publishes g
         },
         {
           id: "ukgdpr-1-3",
-          heading: "1.3 — The principles and the six lawful bases",
+          heading: "1.3 - The principles and the six lawful bases",
           content: `UK GDPR rests on seven principles: **lawfulness, fairness and transparency; purpose limitation; data minimisation; accuracy; storage limitation; integrity and confidentiality (security); and accountability**. The accountability principle means you must not only comply but be able to demonstrate compliance, through records, policies and training.
 
 Every act of processing needs one of six **lawful bases**:
@@ -128,7 +128,7 @@ A common exam and interview trap: consent is not the default lawful basis, and a
       subSections: [
         {
           id: "ukgdpr-2-1",
-          heading: "2.1 — The eight rights",
+          heading: "2.1 - The eight rights",
           content: `Individuals have eight rights, though several apply only in specific situations:
 
 1. **Right to be informed**: privacy notices must explain what data is collected and why.
@@ -144,7 +144,7 @@ None of these rights is unlimited. Erasure, for instance, does not override a ba
         },
         {
           id: "ukgdpr-2-2",
-          heading: "2.2 — Handling a DSAR",
+          heading: "2.2 - Handling a DSAR",
           content: `A **data subject access request (DSAR)** is a request by an individual for a copy of their personal data and supporting information (purposes, recipients, retention periods, sources).
 
 The mechanics:
@@ -215,7 +215,7 @@ The mechanics:
       subSections: [
         {
           id: "ukgdpr-3-1",
-          heading: "3.1 — Personal data breaches and the 72-hour rule",
+          heading: "3.1 - Personal data breaches and the 72-hour rule",
           content: `A **personal data breach** is a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data. It is wider than "being hacked":
 
 - An email with customer data sent to the wrong recipient
@@ -233,7 +233,7 @@ For financial firms there is a parallel duty: significant operational or securit
         },
         {
           id: "ukgdpr-3-2",
-          heading: "3.2 — Security and Data Protection Impact Assessments",
+          heading: "3.2 - Security and Data Protection Impact Assessments",
           content: `The security principle requires **appropriate technical and organisational measures**: encryption, access controls, pseudonymisation, staff training, vendor due diligence, tested backups. "Appropriate" scales with risk: a bank holding millions of customer records is held to a far higher standard than a corner shop.
 
 A **Data Protection Impact Assessment (DPIA)** is a structured risk assessment that is **mandatory before processing likely to result in a high risk** to individuals. Triggers include:
@@ -304,7 +304,7 @@ In practice, compliance analysts meet DPIAs whenever a firm rolls out new monito
       subSections: [
         {
           id: "ukgdpr-4-1",
-          heading: "4.1 — ICO enforcement and fines",
+          heading: "4.1 - ICO enforcement and fines",
           content: `The ICO has a graduated toolkit: information notices (demanding information), assessment notices (compulsory audits), enforcement notices (ordering action or stopping processing), and monetary penalties.
 
 Fines come in two tiers:
@@ -320,7 +320,7 @@ An enforcement notice can hurt more than a fine: being ordered to stop processin
         },
         {
           id: "ukgdpr-4-2",
-          heading: "4.2 — The FCA overlap",
+          heading: "4.2 - The FCA overlap",
           content: `Data protection and FCA regulation intersect constantly. The places you will meet both:
 
 **KYC and AML**: the MLRs force firms to collect identity data (lawful basis: legal obligation), but UK GDPR disciplines how much is collected (minimisation), how long it is kept (five years after the relationship, then delete unless another basis applies) and how securely it is held.

@@ -44,7 +44,7 @@ export default function ProgressPage() {
           <p className="overline-kicker mb-4">Your record</p>
           <h1 className="mb-4">My progress</h1>
           <p className="text-lg max-w-2xl text-muted-foreground mb-8">
-            Everything is stored in your browser. No account, no tracking — clear your browser data
+            Everything is stored in your browser. No account, no tracking, clear your browser data
             and it resets.
           </p>
 

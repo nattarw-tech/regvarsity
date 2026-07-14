@@ -1,19 +1,19 @@
 import type { Module } from "./types";
 
 // ============================================================
-// MODULE 10 — CASS: Client Assets
+// MODULE 10 - CASS: Client Assets
 // ============================================================
 export const moduleCASS: Module = {
   id: "cass",
   number: 10,
-  title: "CASS — Client Assets and Client Money",
+  title: "CASS - Client Assets and Client Money",
   slug: "cass-client-assets",
   block: "Business Standards",
   sourceCode: "CASS",
   colour: "bg-cyan-50",
   accentColour: "oklch(0.42 0.14 210)",
   description:
-    "When you invest through a broker or platform, your money and assets are held by that firm on your behalf. CASS sets out the rules for how firms must protect client assets — keeping them separate from the firm's own assets so that, if the firm fails, your assets can be returned to you.",
+    "When you invest through a broker or platform, your money and assets are held by that firm on your behalf. CASS sets out the rules for how firms must protect client assets, keeping them separate from the firm's own assets so that, if the firm fails, your assets can be returned to you.",
   whoItAppliesTo: "Investment firms, stockbrokers, and platforms that hold client money or assets.",
   chapters: [
     {
@@ -27,18 +27,18 @@ export const moduleCASS: Module = {
       subSections: [
         {
           id: "cass-1-1",
-          heading: "1.1 — The segregation principle",
-          content: `The fundamental principle of CASS is **segregation** — client assets must be kept separate from the firm's own assets. This means:
+          heading: "1.1 - The segregation principle",
+          content: `The fundamental principle of CASS is **segregation**, client assets must be kept separate from the firm's own assets. This means:
 
-**Client money**: Money belonging to clients must be held in a **client money bank account** — a separate bank account that is clearly identified as holding client money and not the firm's own money. The account must be with an approved bank and must be designated as a client account.
+**Client money**: Money belonging to clients must be held in a **client money bank account**, a separate bank account that is clearly identified as holding client money and not the firm's own money. The account must be with an approved bank and must be designated as a client account.
 
-**Client assets (custody assets)**: Financial instruments (shares, bonds, etc.) held on behalf of clients must be held in a **client custody account** — separate from the firm's own proprietary holdings. The firm must be able to identify which assets belong to which client at all times.
+**Client assets (custody assets)**: Financial instruments (shares, bonds, etc.) held on behalf of clients must be held in a **client custody account**, separate from the firm's own proprietary holdings. The firm must be able to identify which assets belong to which client at all times.
 
-The purpose of segregation is to ensure that, if the firm becomes insolvent, client assets can be identified and returned to clients — they do not form part of the firm's estate available to general creditors.`,
+The purpose of segregation is to ensure that, if the firm becomes insolvent, client assets can be identified and returned to clients, they do not form part of the firm's estate available to general creditors.`,
         },
         {
           id: "cass-1-2",
-          heading: "1.2 — The trust mechanism",
+          heading: "1.2 - The trust mechanism",
           content: `CASS uses a **statutory trust** mechanism to protect client money. When a firm receives client money, it holds it on trust for the client. This means:
 
 - The money legally belongs to the client, not the firm
@@ -47,12 +47,12 @@ The purpose of segregation is to ensure that, if the firm becomes insolvent, cli
 
 The trust mechanism was tested in the Lehman Brothers insolvency. The UK Supreme Court confirmed in 2012 that client money held in properly segregated accounts was protected and could be returned to clients.
 
-However, the Lehman case also revealed weaknesses — some client money had not been properly segregated, leading to significant losses for some clients. CASS has been significantly strengthened since then.`,
+However, the Lehman case also revealed weaknesses, some client money had not been properly segregated, leading to significant losses for some clients. CASS has been significantly strengthened since then.`,
         },
       ],
       keyTakeaways: [
         { text: "CASS requires firms to segregate client money and assets from the firm's own assets." },
-        { text: "Client money is held on statutory trust — it legally belongs to the client, not the firm." },
+        { text: "Client money is held on statutory trust, it legally belongs to the client, not the firm." },
         { text: "Proper segregation means client assets can be returned if the firm becomes insolvent." },
         { text: "CASS was significantly strengthened after the Lehman Brothers and MF Global insolvencies." },
       ],

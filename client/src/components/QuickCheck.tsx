@@ -48,7 +48,7 @@ export default function QuickCheck({ module, chapter, questions }: QuickCheckPro
     progress.recordQuickCheck(chapter.id, correctCount, questions.length);
     if (!progress.isChapterRead(chapter.id)) {
       progress.markChapterRead(module, chapter);
-      toast.success("Quick Check done — chapter marked as read.");
+      toast.success("Quick Check done, chapter marked as read.");
     }
   };
 

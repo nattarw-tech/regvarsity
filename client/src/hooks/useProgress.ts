@@ -1,5 +1,5 @@
 // ============================================================
-// useProgress — single source of truth for learner progress.
+// useProgress - single source of truth for learner progress.
 // One localStorage key, shared live across all pages (and tabs)
 // via useSyncExternalStore. Replaces the old per-module keys
 // (regvarsity_progress_<moduleId>), which are migrated on first load.
@@ -88,7 +88,7 @@ function persist(next: ProgressState) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
   } catch {
-    // storage full or unavailable — keep going with in-memory state
+    // storage full or unavailable - keep going with in-memory state
   }
 }
 

@@ -212,7 +212,7 @@ export default function Navigation() {
 
           {/* Right: theme switcher + mobile menu */}
           <div className="flex items-center gap-2">
-            {/* Theme switcher — segmented control */}
+            {/* Theme switcher, segmented control */}
             <div className="hidden md:flex items-center rounded-lg border border-border p-0.5 gap-0.5 bg-muted/50">
               {themeOptions.map((opt) => (
                 <button

@@ -165,7 +165,7 @@ export default function ModuleDetailPage() {
                 {!mod.moduleTest
                   ? "The test for this module is still being written."
                   : mp.testPassed
-                  ? `Passed — best score ${mp.bestScorePercent}%. You can retake it any time.`
+                  ? `Passed, best score ${mp.bestScorePercent}%. You can retake it any time.`
                   : mp.readCount === mp.totalChapters
                   ? `All chapters read. ${mod.moduleTest.questions.length} questions, ${mod.moduleTest.passMarkPercent}% to pass and earn the badge.`
                   : `${mod.moduleTest.questions.length} questions covering the whole module. ${mod.moduleTest.passMarkPercent}% to pass. Best taken after reading the chapters.`}
