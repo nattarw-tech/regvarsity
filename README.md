@@ -1,5 +1,7 @@
 # RegVarsity
 
+[![Visit the website](https://img.shields.io/badge/%C2%A7%20Visit%20the%20website-regvarsity.vercel.app-1f4d3d?style=for-the-badge)](https://regvarsity.vercel.app)
+
 UK and EU financial regulation, explained in plain English. Seventeen structured modules
 covering the FCA Handbook. PRIN, SYSC/SMCR, COBS, AML, MiFID, DISP, MAR, ESG/SDR, CASS,
 ICOBS, MCOB, CONC, DTR, FEES, plus the EU's MiCA and UK GDPR/DPA 2018. Every chapter has
