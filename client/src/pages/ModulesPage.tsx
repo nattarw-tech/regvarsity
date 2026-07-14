@@ -1,19 +1,7 @@
 import { ALL_MODULES } from "@/data/modules";
 import { Link } from "wouter";
 import PageLayout from "@/components/PageLayout";
-import { useEffect, useState } from "react";
-
-function getModuleProgress(moduleId: string, totalChapters: number) {
-  try {
-    const raw = localStorage.getItem(`regvarsity_progress_${moduleId}`);
-    if (!raw) return { count: 0, pct: 0 };
-    const completed: string[] = JSON.parse(raw);
-    const count = completed.length;
-    return { count, pct: totalChapters > 0 ? Math.round((count / totalChapters) * 100) : 0 };
-  } catch {
-    return { count: 0, pct: 0 };
-  }
-}
+import { useProgress } from "@/hooks/useProgress";
 
 export default function ModulesPage() {
   const totalChapters = ALL_MODULES.reduce((sum, m) => sum + m.chapters.length, 0);
@@ -22,16 +10,8 @@ export default function ModulesPage() {
     0
   );
 
-  const [progressMap, setProgressMap] = useState<Record<string, { count: number; pct: number }>>({});
-  useEffect(() => {
-    const map: Record<string, { count: number; pct: number }> = {};
-    ALL_MODULES.forEach((mod) => {
-      map[mod.id] = getModuleProgress(mod.id, mod.chapters.length);
-    });
-    setProgressMap(map);
-  }, []);
-
-  const totalCompleted = Object.values(progressMap).reduce((sum, p) => sum + p.count, 0);
+  const progress = useProgress();
+  const totalCompleted = progress.getOverallStats().chaptersRead;
 
   // Group modules by block, preserving order
   const blocks: { block: string; mods: typeof ALL_MODULES }[] = [];
@@ -49,8 +29,9 @@ export default function ModulesPage() {
           <p className="overline-kicker mb-4">The Library</p>
           <h1 className="mb-4">All modules</h1>
           <p className="text-lg max-w-2xl text-muted-foreground mb-6">
-            Structured, plain-English guides to every major area of UK financial regulation.
-            Start anywhere — each module is self-contained.
+            Structured, plain-English guides to every major area of UK financial regulation,
+            plus the EU frameworks employers expect you to know. Start anywhere — each module
+            is self-contained.
           </p>
           <p className="text-sm text-muted-foreground">
             {ALL_MODULES.length} modules · {totalChapters} chapters · ~
@@ -70,7 +51,7 @@ export default function ModulesPage() {
             <ol className="border-t border-border">
               {mods.map((mod) => {
                 const totalTime = mod.chapters.reduce((s, c) => s + c.readingTimeMinutes, 0);
-                const progress = progressMap[mod.id];
+                const mp = progress.getModuleProgress(mod);
                 return (
                   <li key={mod.id} className="border-b border-border">
                     <Link href={`/learn/${mod.slug}`}>
@@ -88,11 +69,14 @@ export default function ModulesPage() {
                           <p className="text-xs text-muted-foreground tabular-nums">
                             {mod.chapters.length} chapter{mod.chapters.length !== 1 ? "s" : ""} ·{" "}
                             {totalTime} min
-                            {progress?.count > 0 && (
+                            {mp.readCount > 0 && (
                               <span className="text-primary font-semibold">
                                 {" "}
-                                · {progress.count}/{mod.chapters.length} read
+                                · {mp.readCount}/{mp.totalChapters} read
                               </span>
+                            )}
+                            {mp.badgeEarned && (
+                              <span className="text-primary font-semibold"> · badge earned ✓</span>
                             )}
                           </p>
                         </div>
@@ -120,6 +104,24 @@ export default function ModulesPage() {
             className="underline underline-offset-2"
           >
             FCA Handbook
+          </a>
+          ,{" "}
+          <a
+            href="https://eur-lex.europa.eu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2"
+          >
+            EUR-Lex
+          </a>{" "}
+          or the{" "}
+          <a
+            href="https://ico.org.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2"
+          >
+            ICO
           </a>{" "}
           for the latest position.
         </p>

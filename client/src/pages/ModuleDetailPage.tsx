@@ -1,30 +1,14 @@
-import { ALL_MODULES, getModuleBySlug } from "@/data/modules";
+import { getModuleBySlug } from "@/data/modules";
 import { Link, useParams } from "wouter";
 import PageLayout from "@/components/PageLayout";
-import { ArrowLeft, BookOpen, CheckCircle, ChevronRight, Clock, Users } from "lucide-react";
-import { useEffect, useState } from "react";
-
-function getProgress(moduleId: string, totalChapters: number) {
-  try {
-    const raw = localStorage.getItem(`regvarsity_progress_${moduleId}`);
-    if (!raw) return { completed: [], count: 0 };
-    const completed: string[] = JSON.parse(raw);
-    return { completed, count: completed.length };
-  } catch {
-    return { completed: [], count: 0 };
-  }
-}
+import ModuleBadge from "@/components/ModuleBadge";
+import { ArrowLeft, BookOpen, CheckCircle, ChevronRight, Clock, GraduationCap, Users } from "lucide-react";
+import { useProgress } from "@/hooks/useProgress";
 
 export default function ModuleDetailPage() {
   const params = useParams<{ moduleSlug: string }>();
   const mod = getModuleBySlug(params.moduleSlug ?? "");
-  const [progress, setProgress] = useState<{ completed: string[]; count: number }>({ completed: [], count: 0 });
-
-  useEffect(() => {
-    if (mod) {
-      setProgress(getProgress(mod.id, mod.chapters.length));
-    }
-  }, [mod?.id]);
+  const progress = useProgress();
 
   if (!mod) {
     return (
@@ -40,7 +24,10 @@ export default function ModuleDetailPage() {
   }
 
   const totalTime = mod.chapters.reduce((s, c) => s + c.readingTimeMinutes, 0);
-  const pct = mod.chapters.length > 0 ? Math.round((progress.count / mod.chapters.length) * 100) : 0;
+  const mp = progress.getModuleProgress(mod);
+  const lastVisitedSlug = progress.getLastVisited(mod.slug);
+  const continueChapter =
+    mod.chapters.find((c) => c.slug === lastVisitedSlug) ?? mod.chapters[0];
 
   return (
     <PageLayout>
@@ -72,6 +59,11 @@ export default function ModuleDetailPage() {
                 {mod.title}
               </h1>
             </div>
+            {mp.badgeEarned && (
+              <div className="hidden sm:block flex-shrink-0 ml-auto" title="Module badge earned">
+                <ModuleBadge module={mod} earned size={72} />
+              </div>
+            )}
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-3xl">
@@ -94,16 +86,16 @@ export default function ModuleDetailPage() {
           </div>
 
           {/* Progress bar */}
-          {progress.count > 0 && (
+          {mp.readCount > 0 && (
             <div className="max-w-sm">
               <div className="flex justify-between text-xs text-muted-foreground mb-1">
-                <span>{progress.count} of {mod.chapters.length} chapters read</span>
-                <span>{pct}%</span>
+                <span>{mp.readCount} of {mp.totalChapters} chapters read</span>
+                <span>{mp.percent}%</span>
               </div>
               <div className="h-2 bg-muted rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all duration-500"
-                  style={{ width: `${pct}%`, background: mod.accentColour }}
+                  style={{ width: `${mp.percent}%`, background: mod.accentColour }}
                 />
               </div>
             </div>
@@ -116,7 +108,7 @@ export default function ModuleDetailPage() {
         <h2 className="text-xl font-bold text-foreground mb-6">Chapters in this Module</h2>
         <div className="space-y-3">
           {mod.chapters.map((chapter, idx) => {
-            const isRead = progress.completed.includes(chapter.id);
+            const isRead = progress.isChapterRead(chapter.id);
             return (
               <Link key={chapter.id} href={`/learn/${mod.slug}/${chapter.slug}`}>
                 <div className="group flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/40 hover:shadow-md transition-all duration-200 cursor-pointer">
@@ -155,14 +147,51 @@ export default function ModuleDetailPage() {
           })}
         </div>
 
+        {/* Module test card */}
+        <div className="mt-8 p-6 bg-card border border-border rounded-xl">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+            <div className="flex-shrink-0">
+              {mp.badgeEarned ? (
+                <ModuleBadge module={mod} earned size={80} />
+              ) : (
+                <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center">
+                  <GraduationCap className="w-7 h-7 text-muted-foreground" />
+                </div>
+              )}
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-foreground mb-1">Module test</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {!mod.moduleTest
+                  ? "The test for this module is still being written."
+                  : mp.testPassed
+                  ? `Passed — best score ${mp.bestScorePercent}%. You can retake it any time.`
+                  : mp.readCount === mp.totalChapters
+                  ? `All chapters read. ${mod.moduleTest.questions.length} questions, ${mod.moduleTest.passMarkPercent}% to pass and earn the badge.`
+                  : `${mod.moduleTest.questions.length} questions covering the whole module. ${mod.moduleTest.passMarkPercent}% to pass. Best taken after reading the chapters.`}
+              </p>
+            </div>
+            {mod.moduleTest && (
+              <Link href={`/learn/${mod.slug}/test`}>
+                <button
+                  className="flex-shrink-0 px-6 py-2.5 rounded-xl text-sm font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  style={{ background: mod.accentColour }}
+                >
+                  {mp.testPassed ? "Retake test" : "Take the test"}
+                </button>
+              </Link>
+            )}
+          </div>
+        </div>
+
         {/* Start CTA */}
         <div className="mt-8 text-center">
-          <Link href={`/learn/${mod.slug}/${mod.chapters[0]?.slug}`}>
+          <Link href={`/learn/${mod.slug}/${continueChapter?.slug}`}>
             <button
               className="inline-flex items-center gap-2 px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
               style={{ background: mod.accentColour }}
             >
-              {progress.count > 0 ? "Continue Reading" : "Start Chapter 1"}
+              {mp.readCount > 0 ? "Continue Reading" : "Start Chapter 1"}
               <ChevronRight className="w-4 h-4" />
             </button>
           </Link>

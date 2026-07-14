@@ -14,47 +14,40 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Streamdown } from "streamdown";
 import { toast } from "sonner";
-
-function markChapterRead(moduleId: string, chapterId: string) {
-  try {
-    const key = `regvarsity_progress_${moduleId}`;
-    const raw = localStorage.getItem(key);
-    const completed: string[] = raw ? JSON.parse(raw) : [];
-    if (!completed.includes(chapterId)) {
-      completed.push(chapterId);
-      localStorage.setItem(key, JSON.stringify(completed));
-    }
-  } catch {}
-}
-
-function isChapterRead(moduleId: string, chapterId: string): boolean {
-  try {
-    const key = `regvarsity_progress_${moduleId}`;
-    const raw = localStorage.getItem(key);
-    if (!raw) return false;
-    const completed: string[] = JSON.parse(raw);
-    return completed.includes(chapterId);
-  } catch {
-    return false;
-  }
-}
+import { useProgress, recordVisit } from "@/hooks/useProgress";
+import QuickCheck from "@/components/QuickCheck";
+import ListenPlayer from "@/components/ListenPlayer";
+import { useTTS, type TTSChunk } from "@/hooks/useTTS";
+import { stripMarkdown } from "@/lib/stripMarkdown";
 
 export default function ChapterPage() {
   const params = useParams<{ moduleSlug: string; chapterSlug: string }>();
   const result = getChapterBySlug(params.moduleSlug ?? "", params.chapterSlug ?? "");
+  const progress = useProgress();
   const [activeSection, setActiveSection] = useState<string>("");
-  const [quizAnswer, setQuizAnswer] = useState<number | null>(null);
-  const [isRead, setIsRead] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
+  // Audio: title + intro, then each subsection, as ordered speech chunks
+  const ttsChunks = useMemo<TTSChunk[]>(() => {
+    if (!result) return [];
+    const { chapter } = result;
+    return [
+      { sectionId: "", text: `${chapter.title}. ${chapter.intro}` },
+      ...chapter.subSections.map((s) => ({
+        sectionId: s.id,
+        text: `${s.heading.replace(/^[\d.\s—-]+/, "")}. ${stripMarkdown(s.content)}`,
+      })),
+    ];
+  }, [result?.chapter.id]);
+  const tts = useTTS(ttsChunks);
+
   useEffect(() => {
     if (result) {
-      setIsRead(isChapterRead(result.module.id, result.chapter.id));
-      setQuizAnswer(null);
+      recordVisit(result.module, result.chapter);
       setActiveSection(result.chapter.subSections[0]?.id ?? "");
       window.scrollTo(0, 0);
     }
@@ -79,8 +72,7 @@ export default function ChapterPage() {
 
   const handleMarkRead = () => {
     if (result) {
-      markChapterRead(result.module.id, result.chapter.id);
-      setIsRead(true);
+      progress.markChapterRead(result.module, result.chapter);
       toast.success("Chapter marked as read!");
     }
   };
@@ -112,6 +104,7 @@ export default function ChapterPage() {
   }
 
   const { module: mod, chapter, prevChapter, nextChapter } = result;
+  const isRead = progress.isChapterRead(chapter.id);
 
   return (
     <PageLayout>
@@ -144,7 +137,7 @@ export default function ChapterPage() {
               </div>
               <nav className="space-y-1">
                 {mod.chapters.map((ch, idx) => {
-                  const read = isChapterRead(mod.id, ch.id);
+                  const read = progress.isChapterRead(ch.id);
                   const isCurrent = ch.id === chapter.id;
                   return (
                     <Link key={ch.id} href={`/learn/${mod.slug}/${ch.slug}`}>
@@ -187,6 +180,16 @@ export default function ChapterPage() {
               <p className="font-serif text-lg md:text-xl text-muted-foreground leading-relaxed italic">
                 {chapter.intro}
               </p>
+              {tts.supported && (
+                <ListenPlayer
+                  status={tts.status}
+                  rate={tts.rate}
+                  onPlay={tts.play}
+                  onPause={tts.pause}
+                  onStop={tts.stop}
+                  onRateChange={tts.changeRate}
+                />
+              )}
             </div>
 
             {/* Sub-sections */}
@@ -196,7 +199,11 @@ export default function ChapterPage() {
                   key={section.id}
                   id={section.id}
                   data-section-id={section.id}
-                  className="scroll-mt-24"
+                  className={`scroll-mt-24 transition-all ${
+                    tts.currentSectionId === section.id
+                      ? "border-l-2 border-primary/60 pl-4 -ml-4"
+                      : ""
+                  }`}
                 >
                   <h2 className="text-xl md:text-2xl mb-4 pb-3 border-b border-border">
                     {section.heading}
@@ -223,58 +230,24 @@ export default function ChapterPage() {
               </ul>
             </div>
 
-            {/* Quiz */}
-            {chapter.quizQuestion && (
-              <div className="mt-8 p-6 bg-card border border-border rounded-2xl">
-                <h3 className="font-bold text-foreground mb-2">Quick Check</h3>
-                <p className="text-muted-foreground mb-5 leading-relaxed">
-                  {chapter.quizQuestion.question}
-                </p>
-                <div className="space-y-3">
-                  {chapter.quizQuestion.options.map((opt, i) => {
-                    const isCorrect = i === chapter.quizQuestion!.correctIndex;
-                    const isSelected = quizAnswer === i;
-                    const showResult = quizAnswer !== null;
-                    return (
-                      <button
-                        key={i}
-                        onClick={() => setQuizAnswer(i)}
-                        disabled={quizAnswer !== null}
-                        className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all duration-200 ${
-                          showResult
-                            ? isCorrect
-                              ? "bg-green-50 border-green-400 text-green-800 dark:bg-green-900/20 dark:border-green-600 dark:text-green-300"
-                              : isSelected
-                              ? "bg-red-50 border-red-400 text-red-800 dark:bg-red-900/20 dark:border-red-600 dark:text-red-300"
-                              : "bg-muted border-border text-muted-foreground"
-                            : "bg-muted border-border text-muted-foreground hover:border-primary hover:bg-muted/70 cursor-pointer"
-                        }`}
-                      >
-                        <span className="font-semibold mr-2">{String.fromCharCode(65 + i)}.</span>
-                        {opt}
-                      </button>
-                    );
-                  })}
-                </div>
-                {quizAnswer !== null && (
-                  <div
-                    className={`mt-4 p-4 rounded-xl text-sm leading-relaxed ${
-                      quizAnswer === chapter.quizQuestion.correctIndex
-                        ? "bg-green-50 text-green-800 dark:bg-green-900/20 dark:text-green-300"
-                        : "bg-amber-50 text-amber-800 dark:bg-amber-900/20 dark:text-amber-300"
-                    }`}
-                  >
-                    <strong>{quizAnswer === chapter.quizQuestion.correctIndex ? "✓ Correct!" : "Not quite."}</strong>{" "}
-                    {chapter.quizQuestion.explanation}
-                  </div>
-                )}
-              </div>
+            {/* Quick Check quiz */}
+            {chapter.quizQuestions && chapter.quizQuestions.length > 0 && (
+              <QuickCheck module={mod} chapter={chapter} questions={chapter.quizQuestions} />
             )}
 
             {/* Source line */}
             <p className="mt-8 max-w-[72ch] text-xs text-muted-foreground border-t border-border pt-4">
               Source:{" "}
-              {/^[A-Z]+$/.test(mod.sourceCode) ? (
+              {mod.sourceUrl ? (
+                <a
+                  href={mod.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2"
+                >
+                  {mod.sourceLabel ?? mod.sourceCode}
+                </a>
+              ) : /^[A-Z]+$/.test(mod.sourceCode) ? (
                 <a
                   href={`https://handbook.fca.org.uk/handbook/${mod.sourceCode}`}
                   target="_blank"
@@ -286,7 +259,7 @@ export default function ChapterPage() {
               ) : (
                 <span>{mod.sourceCode}</span>
               )}{" "}
-              · Last reviewed July 2026 · Educational purposes only, not legal advice.
+              · Last reviewed {mod.lastReviewed ?? "July 2026"} · Educational purposes only, not legal advice.
             </p>
 
             {/* Actions row */}
@@ -400,19 +373,23 @@ export default function ChapterPage() {
                 On this page
               </div>
               <nav className="space-y-1">
-                {chapter.subSections.map((section) => (
-                  <a
-                    key={section.id}
-                    href={`#${section.id}`}
-                    className={`block text-xs py-1.5 px-2 rounded-lg transition-all ${
-                      activeSection === section.id
-                        ? "text-primary font-semibold bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    {section.heading}
-                  </a>
-                ))}
+                {chapter.subSections.map((section) => {
+                  const isSpoken = tts.currentSectionId === section.id;
+                  return (
+                    <a
+                      key={section.id}
+                      href={`#${section.id}`}
+                      className={`block text-xs py-1.5 px-2 rounded-lg transition-all ${
+                        isSpoken || activeSection === section.id
+                          ? "text-primary font-semibold bg-primary/10"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      {isSpoken && <span aria-hidden="true">♪ </span>}
+                      {section.heading}
+                    </a>
+                  );
+                })}
               </nav>
             </div>
           </aside>

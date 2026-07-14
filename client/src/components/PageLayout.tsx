@@ -25,7 +25,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
                 <span className="font-serif text-lg font-semibold text-foreground">RegVarsity</span>
               </div>
               <p className="text-sm leading-relaxed mb-3 text-muted-foreground">
-                UK financial regulation explained in plain English — for everyone.
+                UK and EU financial regulation explained in plain English — for everyone.
               </p>
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Created by{" "}
@@ -53,7 +53,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
                   { href: "/learn/sysc-smcr-senior-management", label: "SYSC & SMCR" },
                   { href: "/learn/cobs-conduct-of-business", label: "COBS — Conduct" },
                   { href: "/learn/aml-kyc-anti-money-laundering", label: "AML / KYC" },
-                  { href: "/learn", label: "View all 15 →" },
+                  { href: "/learn", label: "View all 17 →" },
                 ].map((l) => (
                   <li key={l.href}>
                     <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
@@ -96,6 +96,8 @@ export default function PageLayout({ children }: PageLayoutProps) {
                   { href: "https://handbook.fca.org.uk", label: "FCA Handbook" },
                   { href: "https://www.legislation.gov.uk", label: "UK Legislation" },
                   { href: "https://www.gov.uk/government/organisations/hm-treasury", label: "HM Treasury" },
+                  { href: "https://eur-lex.europa.eu", label: "EUR-Lex (EU Law)" },
+                  { href: "https://ico.org.uk", label: "ICO" },
                 ].map((l) => (
                   <li key={l.href}>
                     <a

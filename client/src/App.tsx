@@ -12,6 +12,8 @@ import FloatingAIChat from "./components/FloatingAIChat";
 import ModulesPage from "./pages/ModulesPage";
 import ModuleDetailPage from "./pages/ModuleDetailPage";
 import ChapterPage from "./pages/ChapterPage";
+import ModuleTestPage from "./pages/ModuleTestPage";
+import ProgressPage from "./pages/ProgressPage";
 import WhatsNewPage from "./pages/WhatsNewPage";
 
 function Router() {
@@ -21,8 +23,11 @@ function Router() {
       {/* Learning routes */}
       <Route path="/learn" component={ModulesPage} />
       <Route path="/learn/:moduleSlug" component={ModuleDetailPage} />
+      {/* "/test" must stay above the chapterSlug route — "test" is a reserved chapter slug */}
+      <Route path="/learn/:moduleSlug/test" component={ModuleTestPage} />
       <Route path="/learn/:moduleSlug/:chapterSlug" component={ChapterPage} />
       {/* Tools & resources */}
+      <Route path="/progress" component={ProgressPage} />
       <Route path="/exercises" component={ExercisesPage} />
       <Route path="/exercises/:topic" component={ExercisesPage} />
       <Route path="/glossary" component={GlossaryPage} />

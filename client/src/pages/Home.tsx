@@ -2,9 +2,23 @@ import { ALL_MODULES } from "@/data/modules";
 import { Link } from "wouter";
 import PageLayout from "@/components/PageLayout";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { useProgress } from "@/hooks/useProgress";
 
 export default function Home() {
   const totalChapters = ALL_MODULES.reduce((s, m) => s + m.chapters.length, 0);
+  const progress = useProgress();
+  const stats = progress.getOverallStats();
+
+  // most recently visited module that still has something left to do
+  const continueTarget = (() => {
+    for (const mod of ALL_MODULES) {
+      const lastSlug = progress.getLastVisited(mod.slug);
+      if (!lastSlug) continue;
+      const mp = progress.getModuleProgress(mod);
+      if (!mp.complete) return { mod, chapterSlug: lastSlug };
+    }
+    return null;
+  })();
 
   return (
     <PageLayout>
@@ -13,12 +27,12 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24">
           <p className="overline-kicker mb-6">Free · No account · Plain English</p>
           <h1 className="max-w-3xl text-balance mb-7">
-            UK financial regulation, explained so anyone can understand it.
+            UK and EU financial regulation, explained so anyone can understand it.
           </h1>
           <p className="text-lg md:text-xl leading-relaxed max-w-2xl mb-10 text-muted-foreground">
-            Fifteen structured modules covering the FCA Handbook — from the Principles and
-            Consumer Duty to AML, MiFID and the new crypto regime. Written like a good
-            textbook, not a legal document.
+            {ALL_MODULES.length} structured modules covering the FCA Handbook and key EU
+            frameworks — from the Principles and Consumer Duty to AML, MiFID, MiCA and data
+            protection. Written like a good textbook, not a legal document.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <Link href="/learn">
@@ -35,6 +49,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Welcome back strip ── */}
+      {stats.chaptersRead > 0 && (
+        <section className="border-b border-border bg-surface-2">
+          <div className="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+            <span className="text-muted-foreground">
+              Welcome back — {stats.chaptersRead} of {stats.totalChapters} chapters read
+              {stats.badgesEarned > 0 && (
+                <>
+                  {" "}
+                  · {stats.badgesEarned} badge{stats.badgesEarned !== 1 ? "s" : ""} earned
+                </>
+              )}
+            </span>
+            <span className="flex items-center gap-5">
+              {continueTarget && (
+                <Link href={`/learn/${continueTarget.mod.slug}/${continueTarget.chapterSlug}`}>
+                  <span className="font-semibold text-primary hover:underline cursor-pointer">
+                    Continue reading →
+                  </span>
+                </Link>
+              )}
+              <Link href="/progress">
+                <span className="font-semibold text-primary hover:underline cursor-pointer">
+                  My progress
+                </span>
+              </Link>
+            </span>
+          </div>
+        </section>
+      )}
 
       {/* ── Numbers strip ── */}
       <section className="border-b border-border">
@@ -65,8 +110,8 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-muted-foreground mb-10 max-w-2xl">
-          Each module maps to a real FCA Handbook sourcebook. Start anywhere — no prior
-          knowledge assumed.
+          Each module maps to a real FCA Handbook sourcebook or EU regulation. Start anywhere —
+          no prior knowledge assumed.
         </p>
 
         <ol className="border-t border-border">
@@ -147,7 +192,7 @@ export default function Home() {
             {
               href: "/ai-expert",
               title: "AI expert",
-              desc: "Ask any question about UK financial regulation and get a clear answer, with the caveats that matter.",
+              desc: "Ask any question about UK or EU financial regulation and get a clear answer, with the caveats that matter.",
             },
           ].map((card) => (
             <Link key={card.href} href={card.href}>
@@ -167,7 +212,7 @@ export default function Home() {
       <section className="max-w-5xl mx-auto px-6 pb-16">
         <p className="text-xs leading-relaxed text-muted-foreground border-t border-border pt-6">
           <strong className="text-foreground">Educational purposes only.</strong> RegVarsity
-          provides general information about UK financial regulation. It is not legal or
+          provides general information about UK and EU financial regulation. It is not legal or
           compliance advice, and it is not affiliated with or endorsed by the FCA. For
           compliance decisions, consult the{" "}
           <a href="https://handbook.fca.org.uk" target="_blank" rel="noopener noreferrer" className="underline">

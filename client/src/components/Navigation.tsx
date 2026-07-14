@@ -20,6 +20,7 @@ import {
   Newspaper,
   Sparkles,
   Library,
+  Medal,
 } from "lucide-react";
 import { ALL_MODULES } from "@/data/modules";
 
@@ -188,6 +189,16 @@ export default function Navigation() {
               What's New
             </Link>
 
+            {/* My Progress */}
+            <Link
+              href="/progress"
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-accent/50 ${
+                isActive("/progress") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              My Progress
+            </Link>
+
             {/* AI Expert */}
             <Link
               href="/ai-expert"
@@ -278,6 +289,7 @@ export default function Navigation() {
                       { href: "/exercises", label: "Exercises", icon: GraduationCap },
                       { href: "/glossary", label: "Glossary", icon: BookMarked },
                       { href: "/whats-new", label: "What's New", icon: Newspaper },
+                      { href: "/progress", label: "My Progress", icon: Medal },
                       { href: "/ai-expert", label: "AI Expert", icon: Sparkles },
                     ].map((link) => {
                       const Icon = link.icon;

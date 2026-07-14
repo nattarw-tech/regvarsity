@@ -117,7 +117,7 @@ export default function FloatingAIChat() {
             <div className="flex-1 min-w-0">
               <div className="font-semibold text-sm leading-tight">RegVarsity AI Expert</div>
               {!minimised && (
-                <div className="text-xs text-white/70 truncate">UK Financial Regulation</div>
+                <div className="text-xs text-white/70 truncate">UK & EU Financial Regulation</div>
               )}
             </div>
             <div className="flex items-center gap-1">
@@ -161,7 +161,7 @@ export default function FloatingAIChat() {
                     >
                       <p className="font-semibold mb-1">Hello! I'm RegVarsity AI.</p>
                       <p style={{ color: "var(--muted-foreground)" }}>
-                        Ask me anything about UK financial regulation — FCA rules, AML/KYC, MiFID II, Crypto, or any term in the glossary. I'll explain it in plain English.
+                        Ask me anything about UK and EU financial regulation — FCA rules, AML/KYC, MiFID II, Crypto, MiCA, UK GDPR, or any term in the glossary. I'll explain it in plain English.
                       </p>
                     </div>
                     {/* Suggested questions */}
@@ -260,7 +260,7 @@ export default function FloatingAIChat() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    placeholder="Ask about UK financial regulation..."
+                    placeholder="Ask about UK or EU financial regulation..."
                     rows={1}
                     className="flex-1 resize-none bg-transparent text-sm outline-none leading-relaxed max-h-28 overflow-y-auto"
                     style={{ color: "var(--foreground)" }}

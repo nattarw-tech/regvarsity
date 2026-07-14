@@ -90,7 +90,7 @@ export default function AIExpertPage() {
       id: "welcome",
       role: "assistant",
       content:
-        "Hello! I'm **RegVarsity AI**, your UK financial regulation expert.\n\nI can help you understand FCA rules, AML/KYC requirements, MiFID II obligations, and the UK's crypto asset regime — in plain English or with full technical detail, depending on what you need.\n\nWhat would you like to know?",
+        "Hello! I'm **RegVarsity AI**, your UK and EU financial regulation expert.\n\nI can help you understand FCA rules, AML/KYC requirements, MiFID II obligations, the UK's crypto asset regime, the EU's MiCA, and UK GDPR — in plain English or with full technical detail, depending on what you need.\n\nWhat would you like to know?",
       timestamp: new Date(),
     },
   ]);
@@ -184,7 +184,7 @@ export default function AIExpertPage() {
         id: "welcome-reset",
         role: "assistant",
         content:
-          "Conversation cleared. What would you like to know about UK financial regulation?",
+          "Conversation cleared. What would you like to know about UK or EU financial regulation?",
         timestamp: new Date(),
       },
     ]);
@@ -206,7 +206,7 @@ export default function AIExpertPage() {
                   RegVarsity AI Expert
                 </h1>
                 <p className="text-xs text-muted-foreground">
-                  UK financial regulation — FCA · AML/KYC · MiFID II · Crypto
+                  UK & EU financial regulation — FCA · AML/KYC · MiFID II · Crypto · MiCA · UK GDPR
                 </p>
               </div>
             </div>
@@ -284,7 +284,7 @@ export default function AIExpertPage() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask about UK financial regulation..."
+                  placeholder="Ask about UK or EU financial regulation..."
                   className="min-h-[44px] max-h-[200px] resize-none border-0 bg-transparent p-2 text-sm text-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
                   rows={1}
                   aria-label="Chat input"

@@ -1,9 +1,11 @@
 # RegVarsity
 
-UK financial regulation, explained in plain English. Fifteen structured modules covering
-the FCA Handbook — PRIN, SYSC/SMCR, COBS, AML, MiFID, DISP, MAR, ESG/SDR, CASS, ICOBS,
-MCOB, CONC, DTR, FEES — plus scenario exercises, a glossary, a regulatory updates digest,
-and an AI expert chat.
+UK and EU financial regulation, explained in plain English. Seventeen structured modules
+covering the FCA Handbook — PRIN, SYSC/SMCR, COBS, AML, MiFID, DISP, MAR, ESG/SDR, CASS,
+ICOBS, MCOB, CONC, DTR, FEES — plus the EU's MiCA and UK GDPR/DPA 2018. Every chapter has
+a Quick Check quiz, every module has a pass-marked test with a completion badge, chapters
+can be listened to as audio, and there is a progress dashboard, scenario exercises, a
+glossary, a regulatory updates digest, and an AI expert chat.
 
 Created by Nisrin S Attarwala · Bayes Business School, Class of 2026.
 
@@ -32,4 +34,4 @@ See DEPLOYMENT.md.
 
 Educational purposes only — not legal or financial advice. Not affiliated with or endorsed
 by the FCA. Every figure is checked against primary sources (FCA, FSCS, FOS, HM Treasury,
-FATF). Last full review: July 2026.
+FATF, EUR-Lex, ESMA/EBA, ICO). Last full review: July 2026.
