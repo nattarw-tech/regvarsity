@@ -21,12 +21,14 @@ export function stripMarkdown(md: string): string {
       // table separator rows (|---|---|) -> drop
       .replace(/^\s*\|[\s:|-]+\|\s*$/gm, "")
       // table rows -> comma-separated sentence
-      .replace(/^\s*\|(.+)\|\s*$/gm, (_m, row: string) =>
-        row
-          .split("|")
-          .map((c: string) => c.trim())
-          .filter(Boolean)
-          .join(", ") + ".",
+      .replace(
+        /^\s*\|(.+)\|\s*$/gm,
+        (_m, row: string) =>
+          row
+            .split("|")
+            .map((c: string) => c.trim())
+            .filter(Boolean)
+            .join(", ") + "."
       )
       // list markers
       .replace(/^\s*[-*+]\s+/gm, "")

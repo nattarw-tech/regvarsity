@@ -3,7 +3,14 @@
 // Varsity-style learning content for UK and EU financial regulation
 // ============================================================
 
-export type { KeyTakeaway, SubSection, QuizQuestion, ModuleTest, Chapter, Module } from "./types";
+export type {
+  KeyTakeaway,
+  SubSection,
+  QuizQuestion,
+  ModuleTest,
+  Chapter,
+  Module,
+} from "./types";
 import type { Chapter, Module } from "./types";
 
 import { modulePRIN } from "./prin";
@@ -45,16 +52,23 @@ export const ALL_MODULES: Module[] = [
 ];
 
 export function getModuleBySlug(slug: string): Module | undefined {
-  return ALL_MODULES.find((m) => m.slug === slug);
+  return ALL_MODULES.find(m => m.slug === slug);
 }
 
 export function getChapterBySlug(
   moduleSlug: string,
-  chapterSlug: string,
-): { module: Module; chapter: Chapter; prevChapter: Chapter | null; nextChapter: Chapter | null } | undefined {
+  chapterSlug: string
+):
+  | {
+      module: Module;
+      chapter: Chapter;
+      prevChapter: Chapter | null;
+      nextChapter: Chapter | null;
+    }
+  | undefined {
   const mod = getModuleBySlug(moduleSlug);
   if (!mod) return undefined;
-  const idx = mod.chapters.findIndex((c) => c.slug === chapterSlug);
+  const idx = mod.chapters.findIndex(c => c.slug === chapterSlug);
   if (idx === -1) return undefined;
   return {
     module: mod,

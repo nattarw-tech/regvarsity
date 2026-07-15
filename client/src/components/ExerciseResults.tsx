@@ -20,10 +20,19 @@ interface ExerciseResultsProps {
 
 // Where to send learners who struggled with a topic
 const TOPIC_MODULE: Record<TopicKey, { slug: string; moduleName: string }> = {
-  fca: { slug: "prin-principles-for-business", moduleName: "PRIN - Principles for Business" },
-  aml: { slug: "aml-kyc-anti-money-laundering", moduleName: "AML / KYC - Anti-Money Laundering" },
+  fca: {
+    slug: "prin-principles-for-business",
+    moduleName: "PRIN - Principles for Business",
+  },
+  aml: {
+    slug: "aml-kyc-anti-money-laundering",
+    moduleName: "AML / KYC - Anti-Money Laundering",
+  },
   mifid: { slug: "mifid-ii-uk-mifir", moduleName: "MiFID II / UK MiFIR" },
-  crypto: { slug: "crypto-asset-regulation", moduleName: "Crypto Asset Regulation" },
+  crypto: {
+    slug: "crypto-asset-regulation",
+    moduleName: "Crypto Asset Regulation",
+  },
 };
 
 function headline(pct: number): string {
@@ -43,8 +52,21 @@ function ScoreRing({ percent }: { percent: number }) {
   const r = 52;
   const circumference = 2 * Math.PI * r;
   return (
-    <svg width="140" height="140" viewBox="0 0 120 120" role="img" aria-label={`Score ${percent}%`}>
-      <circle cx="60" cy="60" r={r} fill="none" stroke="var(--border)" strokeWidth="6" />
+    <svg
+      width="140"
+      height="140"
+      viewBox="0 0 120 120"
+      role="img"
+      aria-label={`Score ${percent}%`}
+    >
+      <circle
+        cx="60"
+        cy="60"
+        r={r}
+        fill="none"
+        stroke="var(--border)"
+        strokeWidth="6"
+      />
       <circle
         cx="60"
         cy="60"
@@ -56,7 +78,9 @@ function ScoreRing({ percent }: { percent: number }) {
         strokeDasharray={circumference}
         strokeDashoffset={circumference * (1 - sweep / 100)}
         transform="rotate(-90 60 60)"
-        style={{ transition: "stroke-dashoffset 1.1s cubic-bezier(0.22, 1, 0.36, 1)" }}
+        style={{
+          transition: "stroke-dashoffset 1.1s cubic-bezier(0.22, 1, 0.36, 1)",
+        }}
       />
       <text
         x="60"
@@ -85,7 +109,17 @@ function ScoreRing({ percent }: { percent: number }) {
 }
 
 /** Per-topic bar that animates to its width when shown. */
-function TopicBar({ label, colour, correct, total }: { label: string; colour: string; correct: number; total: number }) {
+function TopicBar({
+  label,
+  colour,
+  correct,
+  total,
+}: {
+  label: string;
+  colour: string;
+  correct: number;
+  total: number;
+}) {
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
   const [width, setWidth] = useState(0);
   useEffect(() => {
@@ -121,11 +155,15 @@ function TopicBar({ label, colour, correct, total }: { label: string; colour: st
  * Summarises the score with an animated ring, breaks it down by topic, and
  * points at the modules worth revisiting.
  */
-export default function ExerciseResults({ open, onOpenChange, progress }: ExerciseResultsProps) {
+export default function ExerciseResults({
+  open,
+  onOpenChange,
+  progress,
+}: ExerciseResultsProps) {
   const topics = Object.keys(topicMeta) as TopicKey[];
-  const byTopic = topics.map((topic) => {
-    const topicExercises = exercises.filter((e) => e.topic === topic);
-    const correct = topicExercises.filter((e) => progress[e.id]?.correct).length;
+  const byTopic = topics.map(topic => {
+    const topicExercises = exercises.filter(e => e.topic === topic);
+    const correct = topicExercises.filter(e => progress[e.id]?.correct).length;
     return { topic, correct, total: topicExercises.length };
   });
   const totalCorrect = byTopic.reduce((s, t) => s + t.correct, 0);
@@ -134,7 +172,7 @@ export default function ExerciseResults({ open, onOpenChange, progress }: Exerci
 
   // weakest first, only topics with something to improve
   const improvements = byTopic
-    .filter((t) => t.correct < t.total)
+    .filter(t => t.correct < t.total)
     .sort((a, b) => a.correct / a.total - b.correct / b.total);
 
   return (
@@ -142,13 +180,18 @@ export default function ExerciseResults({ open, onOpenChange, progress }: Exerci
       <DialogContent className="max-w-lg max-h-[85vh] overflow-y-auto">
         <DialogHeader>
           <p className="overline-kicker">All exercises complete</p>
-          <DialogTitle className="font-serif text-2xl">{headline(percent)}</DialogTitle>
+          <DialogTitle className="font-serif text-2xl">
+            {headline(percent)}
+          </DialogTitle>
           <DialogDescription>
-            You answered all {total} scenario exercises and got {totalCorrect} right.
+            You answered all {total} scenario exercises and got {totalCorrect}{" "}
+            right.
           </DialogDescription>
         </DialogHeader>
 
-        <div className="flex justify-center py-2">{open && <ScoreRing percent={percent} />}</div>
+        <div className="flex justify-center py-2">
+          {open && <ScoreRing percent={percent} />}
+        </div>
 
         <div className="space-y-3">
           {byTopic.map(({ topic, correct, total: t }) => (
@@ -169,8 +212,14 @@ export default function ExerciseResults({ open, onOpenChange, progress }: Exerci
               {improvements.map(({ topic, correct, total: t }) => {
                 const target = TOPIC_MODULE[topic];
                 return (
-                  <li key={topic} className="flex items-start gap-2.5 text-sm leading-relaxed">
-                    <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: topicMeta[topic].color }} />
+                  <li
+                    key={topic}
+                    className="flex items-start gap-2.5 text-sm leading-relaxed"
+                  >
+                    <BookOpen
+                      className="w-4 h-4 mt-0.5 flex-shrink-0"
+                      style={{ color: topicMeta[topic].color }}
+                    />
                     <span className="text-muted-foreground">
                       {topicMeta[topic].label}: {correct} of {t}. Revisit{" "}
                       <Link href={`/learn/${target.slug}`}>
@@ -192,8 +241,8 @@ export default function ExerciseResults({ open, onOpenChange, progress }: Exerci
         ) : (
           <div className="border-t border-border pt-4 mt-2">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Nothing to improve here. If you have not already, take the module tests to earn
-              your badges.
+              Nothing to improve here. If you have not already, take the module
+              tests to earn your badges.
             </p>
           </div>
         )}

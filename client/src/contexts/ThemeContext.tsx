@@ -25,7 +25,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-      if (stored === "dark" || stored === "high-contrast" || stored === "normal") return stored;
+      if (
+        stored === "dark" ||
+        stored === "high-contrast" ||
+        stored === "normal"
+      )
+        return stored;
     } catch {}
     return "normal";
   });
@@ -36,7 +41,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const setTheme = (t: Theme) => {
     setThemeState(t);
-    try { localStorage.setItem(STORAGE_KEY, t); } catch {}
+    try {
+      localStorage.setItem(STORAGE_KEY, t);
+    } catch {}
   };
 
   return (

@@ -1,6 +1,7 @@
 # RegVarsity. Project Status
 
 ## Done (July 2026 relaunch)
+
 - [x] Renamed RegWise -> RegVarsity (regwise.io conflict in the same space)
 - [x] Full accuracy audit against primary sources (FCA, FSCS, FOS, FATF, HMT), fines, dates, limits corrected; fabricated What's New entries replaced with verified events
 - [x] Editorial redesign: Fraunces + Inter, warm paper palette, numbered syllabus, hairline rules
@@ -10,6 +11,7 @@
 - [x] Launch basics: meta/OG tags, OG image, favicon, footer disclaimer, per-chapter source links, "last reviewed" stamps
 
 ## To do
+
 - [ ] Buy domain (regvarsity.com / .co.uk) and connect to Vercel
 - [ ] Set GROQ_API_KEY env var in Vercel
 - [ ] Add analytics (Plausible or GA4) once account exists

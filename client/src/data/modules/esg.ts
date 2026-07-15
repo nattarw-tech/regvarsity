@@ -14,7 +14,8 @@ export const moduleESG: Module = {
   accentColour: "oklch(0.45 0.18 135)",
   description:
     "The UK's Sustainability Disclosure Requirements (SDR) and investment labels regime came into force in 2024. They aim to tackle greenwashing and help investors understand the sustainability credentials of financial products. This is one of the fastest-moving areas of UK financial regulation.",
-  whoItAppliesTo: "Asset managers, investment firms, and financial advisers offering sustainability-related products to UK investors.",
+  whoItAppliesTo:
+    "Asset managers, investment firms, and financial advisers offering sustainability-related products to UK investors.",
   chapters: [
     {
       id: "esg-1",
@@ -57,15 +58,24 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
         },
       ],
       keyTakeaways: [
-        { text: "Greenwashing is making misleading claims about the sustainability of financial products, a top FCA enforcement priority." },
-        { text: "The Anti-Greenwashing Rule (from May 2024) requires all sustainability claims to be fair, clear, and not misleading." },
-        { text: "Four investment labels are available: Sustainability Focus, Sustainability Improvers, Sustainability Impact, and Sustainability Mixed Goals." },
-        { text: "Detailed disclosures are required for labelled products from December 2024." },
+        {
+          text: "Greenwashing is making misleading claims about the sustainability of financial products, a top FCA enforcement priority.",
+        },
+        {
+          text: "The Anti-Greenwashing Rule (from May 2024) requires all sustainability claims to be fair, clear, and not misleading.",
+        },
+        {
+          text: "Four investment labels are available: Sustainability Focus, Sustainability Improvers, Sustainability Impact, and Sustainability Mixed Goals.",
+        },
+        {
+          text: "Detailed disclosures are required for labelled products from December 2024.",
+        },
       ],
       quizQuestions: [
         {
           id: "esg-1-q1",
-          question: "A fund renames itself 'Global Sustainable Leaders' without changing its underlying investment approach at all. What form of greenwashing is this?",
+          question:
+            "A fund renames itself 'Global Sustainable Leaders' without changing its underlying investment approach at all. What form of greenwashing is this?",
           options: [
             "Cherry-picking",
             "Misleading metrics",
@@ -73,11 +83,13 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
             "Vague claims",
           ],
           correctIndex: 2,
-          explanation: "Rebranding is renaming an existing fund as ESG or sustainable without changing the underlying investment approach. Other forms include vague claims ('green' with no basis), cherry-picking positive factors, and misleading ESG scores.",
+          explanation:
+            "Rebranding is renaming an existing fund as ESG or sustainable without changing the underlying investment approach. Other forms include vague claims ('green' with no basis), cherry-picking positive factors, and misleading ESG scores.",
         },
         {
           id: "esg-1-q2",
-          question: "Who does the Anti-Greenwashing Rule apply to, and since when?",
+          question:
+            "Who does the Anti-Greenwashing Rule apply to, and since when?",
           options: [
             "Only firms using SDR labels, from December 2024",
             "All FCA-authorised firms making sustainability claims, from May 2024",
@@ -85,11 +97,13 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
             "Only overseas funds sold in the UK",
           ],
           correctIndex: 1,
-          explanation: "From May 2024, the Anti-Greenwashing Rule requires every FCA-authorised firm to ensure its sustainability-related claims are fair, clear and not misleading. It applies to all communications, not just products carrying an SDR label.",
+          explanation:
+            "From May 2024, the Anti-Greenwashing Rule requires every FCA-authorised firm to ensure its sustainability-related claims are fair, clear and not misleading. It applies to all communications, not just products carrying an SDR label.",
         },
         {
           id: "esg-1-q3",
-          question: "A fund invests in companies that are not yet sustainable but have credible potential to become so over time. Which SDR label fits?",
+          question:
+            "A fund invests in companies that are not yet sustainable but have credible potential to become so over time. Which SDR label fits?",
           options: [
             "Sustainability Focus",
             "Sustainability Improvers",
@@ -97,7 +111,8 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
             "Sustainability Mixed Goals",
           ],
           correctIndex: 1,
-          explanation: "Sustainability Improvers is for funds investing in assets with the potential to improve their sustainability over time. Focus is for already-sustainable assets, Impact aims to achieve positive sustainability impact, and Mixed Goals combines elements of the other three.",
+          explanation:
+            "Sustainability Improvers is for funds investing in assets with the potential to improve their sustainability over time. Focus is for already-sustainable assets, Impact aims to achieve positive sustainability impact, and Mixed Goals combines elements of the other three.",
         },
       ],
     },
@@ -107,7 +122,8 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
     questions: [
       {
         id: "esg-test-q1",
-        question: "How large were global ESG assets under management by 2022, and where are they forecast to go?",
+        question:
+          "How large were global ESG assets under management by 2022, and where are they forecast to go?",
         options: [
           "Passed $3 trillion, forecast to reach $4 trillion by 2030",
           "Passed $30 trillion, forecast by Bloomberg Intelligence to exceed $40 trillion by 2030",
@@ -115,7 +131,8 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
           "ESG assets have been shrinking since 2020",
         ],
         correctIndex: 1,
-        explanation: "Global ESG assets under management passed $30 trillion in 2022 and are forecast by Bloomberg Intelligence to exceed $40 trillion by 2030. That growth is exactly why greenwashing became a priority for regulators.",
+        explanation:
+          "Global ESG assets under management passed $30 trillion in 2022 and are forecast by Bloomberg Intelligence to exceed $40 trillion by 2030. That growth is exactly why greenwashing became a priority for regulators.",
       },
       {
         id: "esg-test-q2",
@@ -127,7 +144,8 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
           "EU taxonomy alignment, SFDR and CSRD",
         ],
         correctIndex: 1,
-        explanation: "SDR has three components introduced in stages through 2024: the Anti-Greenwashing Rule (May), the four investment labels (July), and detailed disclosure requirements for labelled products (December).",
+        explanation:
+          "SDR has three components introduced in stages through 2024: the Anti-Greenwashing Rule (May), the four investment labels (July), and detailed disclosure requirements for labelled products (December).",
       },
       {
         id: "esg-test-q3",
@@ -139,7 +157,8 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
           "Green Premium",
         ],
         correctIndex: 2,
-        explanation: "The four labels are Sustainability Focus, Sustainability Improvers, Sustainability Impact and Sustainability Mixed Goals. Each requires the product to meet specific sustainability criteria.",
+        explanation:
+          "The four labels are Sustainability Focus, Sustainability Improvers, Sustainability Impact and Sustainability Mixed Goals. Each requires the product to meet specific sustainability criteria.",
       },
       {
         id: "esg-test-q4",
@@ -151,11 +170,13 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
           "Only pension funds",
         ],
         correctIndex: 1,
-        explanation: "SDR applies to UK-domiciled funds sold to UK retail investors. The FCA has indicated it will extend the regime to overseas funds in due course, but that extension has not yet been confirmed.",
+        explanation:
+          "SDR applies to UK-domiciled funds sold to UK retail investors. The FCA has indicated it will extend the regime to overseas funds in due course, but that extension has not yet been confirmed.",
       },
       {
         id: "esg-test-q5",
-        question: "A marketing email describes a fund as 'responsible' with no substantive basis for the claim. Which SDR component does this breach?",
+        question:
+          "A marketing email describes a fund as 'responsible' with no substantive basis for the claim. Which SDR component does this breach?",
         options: [
           "The labelling rules, because the fund has no label",
           "The Anti-Greenwashing Rule, because sustainability claims must be fair, clear and not misleading",
@@ -163,19 +184,17 @@ The SDR regime applies to UK-domiciled funds sold to UK retail investors. The FC
           "Nothing, because 'responsible' is not a regulated term",
         ],
         correctIndex: 1,
-        explanation: "Vague sustainability claims without substance are exactly what the Anti-Greenwashing Rule targets. Since May 2024, any sustainability-related claim by an FCA-authorised firm must be fair, clear and not misleading, whether or not the product uses an SDR label.",
+        explanation:
+          "Vague sustainability claims without substance are exactly what the Anti-Greenwashing Rule targets. Since May 2024, any sustainability-related claim by an FCA-authorised firm must be fair, clear and not misleading, whether or not the product uses an SDR label.",
       },
       {
         id: "esg-test-q6",
-        question: "From when must firms offering labelled products publish detailed sustainability disclosures?",
-        options: [
-          "May 2024",
-          "July 2024",
-          "December 2024",
-          "January 2027",
-        ],
+        question:
+          "From when must firms offering labelled products publish detailed sustainability disclosures?",
+        options: ["May 2024", "July 2024", "December 2024", "January 2027"],
         correctIndex: 2,
-        explanation: "The disclosure requirements took effect from December 2024: firms with labelled products must publish details of their sustainability objectives, investment strategy and metrics. Labels themselves became available from July 2024.",
+        explanation:
+          "The disclosure requirements took effect from December 2024: firms with labelled products must publish details of their sustainability objectives, investment strategy and metrics. Labels themselves became available from July 2024.",
       },
     ],
   },

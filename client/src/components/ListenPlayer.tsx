@@ -41,7 +41,9 @@ export default function ListenPlayer({
       ) : (
         <button
           onClick={onPlay}
-          aria-label={status === "paused" ? "Resume audio" : "Play chapter audio"}
+          aria-label={
+            status === "paused" ? "Resume audio" : "Play chapter audio"
+          }
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
         >
           <Play className="w-3.5 h-3.5" />
@@ -61,7 +63,7 @@ export default function ListenPlayer({
       )}
 
       <div className="flex items-center rounded-lg border border-border p-0.5 gap-0.5 bg-muted/50 ml-auto">
-        {TTS_RATES.map((r) => (
+        {TTS_RATES.map(r => (
           <button
             key={r}
             onClick={() => onRateChange(r)}

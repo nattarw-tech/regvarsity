@@ -4,7 +4,10 @@ import PageLayout from "@/components/PageLayout";
 import { useProgress } from "@/hooks/useProgress";
 
 export default function ModulesPage() {
-  const totalChapters = ALL_MODULES.reduce((sum, m) => sum + m.chapters.length, 0);
+  const totalChapters = ALL_MODULES.reduce(
+    (sum, m) => sum + m.chapters.length,
+    0
+  );
   const totalReadingTime = ALL_MODULES.reduce(
     (sum, m) => sum + m.chapters.reduce((s, c) => s + c.readingTimeMinutes, 0),
     0
@@ -15,7 +18,7 @@ export default function ModulesPage() {
 
   // Group modules by block, preserving order
   const blocks: { block: string; mods: typeof ALL_MODULES }[] = [];
-  ALL_MODULES.forEach((mod) => {
+  ALL_MODULES.forEach(mod => {
     const last = blocks[blocks.length - 1];
     if (last && last.block === mod.block) last.mods.push(mod);
     else blocks.push({ block: mod.block, mods: [mod] });
@@ -29,15 +32,18 @@ export default function ModulesPage() {
           <p className="overline-kicker mb-4">The Library</p>
           <h1 className="mb-4">All modules</h1>
           <p className="text-lg max-w-2xl text-muted-foreground mb-6">
-            Structured, plain-English guides to every major area of UK financial regulation,
-            plus the EU frameworks employers expect you to know. Start anywhere, each module
-            is self-contained.
+            Structured, plain-English guides to every major area of UK financial
+            regulation, plus the EU frameworks employers expect you to know.
+            Start anywhere, each module is self-contained.
           </p>
           <p className="text-sm text-muted-foreground">
             {ALL_MODULES.length} modules · {totalChapters} chapters · ~
             {Math.round(totalReadingTime / 60)} hours of reading
             {totalCompleted > 0 && (
-              <span className="text-primary font-semibold"> · {totalCompleted} chapters completed</span>
+              <span className="text-primary font-semibold">
+                {" "}
+                · {totalCompleted} chapters completed
+              </span>
             )}
           </p>
         </div>
@@ -49,8 +55,11 @@ export default function ModulesPage() {
           <div key={block} className="mb-12">
             <p className="overline-kicker mb-4">{block}</p>
             <ol className="border-t border-border">
-              {mods.map((mod) => {
-                const totalTime = mod.chapters.reduce((s, c) => s + c.readingTimeMinutes, 0);
+              {mods.map(mod => {
+                const totalTime = mod.chapters.reduce(
+                  (s, c) => s + c.readingTimeMinutes,
+                  0
+                );
                 const mp = progress.getModuleProgress(mod);
                 return (
                   <li key={mod.id} className="border-b border-border">
@@ -67,8 +76,9 @@ export default function ModulesPage() {
                             {mod.description}
                           </p>
                           <p className="text-xs text-muted-foreground tabular-nums">
-                            {mod.chapters.length} chapter{mod.chapters.length !== 1 ? "s" : ""} ·{" "}
-                            {totalTime} min
+                            {mod.chapters.length} chapter
+                            {mod.chapters.length !== 1 ? "s" : ""} · {totalTime}{" "}
+                            min
                             {mp.readCount > 0 && (
                               <span className="text-primary font-semibold">
                                 {" "}
@@ -76,7 +86,10 @@ export default function ModulesPage() {
                               </span>
                             )}
                             {mp.badgeEarned && (
-                              <span className="text-primary font-semibold"> · badge earned ✓</span>
+                              <span className="text-primary font-semibold">
+                                {" "}
+                                · badge earned ✓
+                              </span>
                             )}
                           </p>
                         </div>
@@ -94,9 +107,11 @@ export default function ModulesPage() {
 
         {/* Footer note */}
         <p className="text-sm text-muted-foreground border-t border-border pt-6">
-          <strong className="text-foreground">Content is reviewed regularly.</strong> Everything
-          here reflects the regulatory position as of July 2026. Regulations change, always
-          verify with the{" "}
+          <strong className="text-foreground">
+            Content is reviewed regularly.
+          </strong>{" "}
+          Everything here reflects the regulatory position as of July 2026.
+          Regulations change, always verify with the{" "}
           <a
             href="https://handbook.fca.org.uk"
             target="_blank"

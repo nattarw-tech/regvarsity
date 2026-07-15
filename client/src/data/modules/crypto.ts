@@ -14,7 +14,8 @@ export const moduleCrypto: Module = {
   accentColour: "oklch(0.42 0.18 290)",
   description:
     "The UK is building a comprehensive regulatory framework for crypto assets. On 30 June 2026, the FCA published its final rules. The new regime comes into force on 25 October 2027. If you own, trade, or work with crypto assets, here is what you need to know.",
-  whoItAppliesTo: "Crypto asset businesses, exchanges, custodians, issuers of stablecoins, and DeFi platforms serving UK customers.",
+  whoItAppliesTo:
+    "Crypto asset businesses, exchanges, custodians, issuers of stablecoins, and DeFi platforms serving UK customers.",
   chapters: [
     {
       id: "crypto-1",
@@ -72,16 +73,25 @@ The transition period runs from the publication of final rules (30 June 2026) to
         },
       ],
       keyTakeaways: [
-        { text: "The UK's crypto regulation has evolved from AML registration (2020) to financial promotions (2023) to comprehensive regulation (2027)." },
-        { text: "The new regime comes into force on 25 October 2027 and covers trading, custody, stablecoins, lending, and advice." },
+        {
+          text: "The UK's crypto regulation has evolved from AML registration (2020) to financial promotions (2023) to comprehensive regulation (2027).",
+        },
+        {
+          text: "The new regime comes into force on 25 October 2027 and covers trading, custody, stablecoins, lending, and advice.",
+        },
         { text: "The FCA published its final rules on 30 June 2026." },
-        { text: "Stablecoin issuers must hold 100% reserves in high-quality liquid assets and provide redemption rights." },
-        { text: "DeFi regulation remains complex, protocols with sufficient centralisation may be caught by the new regime." },
+        {
+          text: "Stablecoin issuers must hold 100% reserves in high-quality liquid assets and provide redemption rights.",
+        },
+        {
+          text: "DeFi regulation remains complex, protocols with sufficient centralisation may be caught by the new regime.",
+        },
       ],
       quizQuestions: [
         {
           id: "crypto-1-q1",
-          question: "What was the focus of the UK's first phase of crypto regulation, from 2020 to 2023?",
+          question:
+            "What was the focus of the UK's first phase of crypto regulation, from 2020 to 2023?",
           options: [
             "Consumer protection and suitability",
             "AML registration with the FCA under the Money Laundering Regulations",
@@ -89,11 +99,13 @@ The transition period runs from the publication of final rules (30 June 2026) to
             "Market abuse surveillance",
           ],
           correctIndex: 1,
-          explanation: "Phase 1 was a light-touch regime under the Money Laundering Regulations 2017: crypto businesses had to register with the FCA and show AML/KYC compliance. Investor protection came later, with financial promotions rules from October 2023 and the comprehensive regime going live in October 2027.",
+          explanation:
+            "Phase 1 was a light-touch regime under the Money Laundering Regulations 2017: crypto businesses had to register with the FCA and show AML/KYC compliance. Investor protection came later, with financial promotions rules from October 2023 and the comprehensive regime going live in October 2027.",
         },
         {
           id: "crypto-1-q2",
-          question: "When does the UK's comprehensive crypto regime come into force?",
+          question:
+            "When does the UK's comprehensive crypto regime come into force?",
           options: [
             "It is already fully in force",
             "30 June 2026",
@@ -101,11 +113,13 @@ The transition period runs from the publication of final rules (30 June 2026) to
             "1 January 2030",
           ],
           correctIndex: 2,
-          explanation: "The FCA published its final rules on 30 June 2026, and the new regime comes into force on 25 October 2027. The period in between is the transition window, with a streamlined authorisation route for firms already registered under the AML regime.",
+          explanation:
+            "The FCA published its final rules on 30 June 2026, and the new regime comes into force on 25 October 2027. The period in between is the transition window, with a streamlined authorisation route for firms already registered under the AML regime.",
         },
         {
           id: "crypto-1-q3",
-          question: "What reserve requirement will apply to fiat-referenced stablecoin issuers under the new UK regime?",
+          question:
+            "What reserve requirement will apply to fiat-referenced stablecoin issuers under the new UK regime?",
           options: [
             "50% reserves in any assets",
             "100% reserves in high-quality liquid assets, with redemption rights for holders",
@@ -113,7 +127,8 @@ The transition period runs from the publication of final rules (30 June 2026) to
             "Reserves held in the same cryptocurrency being issued",
           ],
           correctIndex: 1,
-          explanation: "Stablecoin issuers must hold 100% reserves in high-quality liquid assets, give holders redemption rights, and meet strict governance requirements. The framework treats them similarly to e-money institutions.",
+          explanation:
+            "Stablecoin issuers must hold 100% reserves in high-quality liquid assets, give holders redemption rights, and meet strict governance requirements. The framework treats them similarly to e-money institutions.",
         },
       ],
     },
@@ -123,7 +138,8 @@ The transition period runs from the publication of final rules (30 June 2026) to
     questions: [
       {
         id: "crypto-test-q1",
-        question: "Which Act gave HM Treasury the powers to bring crypto assets within full financial regulation?",
+        question:
+          "Which Act gave HM Treasury the powers to bring crypto assets within full financial regulation?",
         options: [
           "The Proceeds of Crime Act 2002",
           "The Financial Services and Markets Act 2023",
@@ -131,7 +147,8 @@ The transition period runs from the publication of final rules (30 June 2026) to
           "The Companies Act 2006",
         ],
         correctIndex: 1,
-        explanation: "FSMA 2023 gave HM Treasury the power to designate crypto activities as regulated activities, which it did in 2024. The FCA then wrote the detailed rules, published in final form on 30 June 2026.",
+        explanation:
+          "FSMA 2023 gave HM Treasury the power to designate crypto activities as regulated activities, which it did in 2024. The FCA then wrote the detailed rules, published in final form on 30 June 2026.",
       },
       {
         id: "crypto-test-q2",
@@ -143,11 +160,13 @@ The transition period runs from the publication of final rules (30 June 2026) to
           "Nothing, marketing rules arrive in 2027",
         ],
         correctIndex: 1,
-        explanation: "From October 2023 the financial promotions regime was extended to crypto assets. Promotions must be approved by an FCA-authorised firm and carry prominent risk warnings, the same discipline applied to traditional financial promotions.",
+        explanation:
+          "From October 2023 the financial promotions regime was extended to crypto assets. Promotions must be approved by an FCA-authorised firm and carry prominent risk warnings, the same discipline applied to traditional financial promotions.",
       },
       {
         id: "crypto-test-q3",
-        question: "Which of these activities will require FCA authorisation under the new regime?",
+        question:
+          "Which of these activities will require FCA authorisation under the new regime?",
         options: [
           "Simply owning bitcoin as an individual",
           "Writing a blog about cryptocurrency prices",
@@ -155,11 +174,13 @@ The transition period runs from the publication of final rules (30 June 2026) to
           "Mining crypto for your own account",
         ],
         correctIndex: 2,
-        explanation: "The regulated activities include operating trading platforms, custody of crypto assets (including private keys and wallet services), stablecoin issuance, crypto lending and staking, and crypto advice. Personal ownership and general commentary are not regulated activities.",
+        explanation:
+          "The regulated activities include operating trading platforms, custody of crypto assets (including private keys and wallet services), stablecoin issuance, crypto lending and staking, and crypto advice. Personal ownership and general commentary are not regulated activities.",
       },
       {
         id: "crypto-test-q4",
-        question: "How will the FCA decide whether a DeFi protocol falls within the new regime?",
+        question:
+          "How will the FCA decide whether a DeFi protocol falls within the new regime?",
         options: [
           "All DeFi is automatically exempt",
           "By whether the protocol has a sufficient degree of centralisation, such as a controlling governance token",
@@ -167,11 +188,13 @@ The transition period runs from the publication of final rules (30 June 2026) to
           "By a public vote of token holders",
         ],
         correctIndex: 1,
-        explanation: "DeFi is the most complex area. The FCA has indicated that protocols with a sufficient degree of centralisation, for example where a governance token controls the protocol, may be caught by the regime. Truly decentralised protocols are harder to bring within scope.",
+        explanation:
+          "DeFi is the most complex area. The FCA has indicated that protocols with a sufficient degree of centralisation, for example where a governance token controls the protocol, may be caught by the regime. Truly decentralised protocols are harder to bring within scope.",
       },
       {
         id: "crypto-test-q5",
-        question: "What market integrity obligations will crypto exchanges face?",
+        question:
+          "What market integrity obligations will crypto exchanges face?",
         options: [
           "None, market abuse rules do not apply to crypto",
           "They must implement market abuse detection systems and report suspicious transactions, with MAR extended to crypto assets",
@@ -179,11 +202,13 @@ The transition period runs from the publication of final rules (30 June 2026) to
           "They must close during periods of high volatility",
         ],
         correctIndex: 1,
-        explanation: "Under the final rules, crypto exchanges must run market abuse detection systems and report suspicious transactions. The UK's Market Abuse Regulation will be extended to crypto assets.",
+        explanation:
+          "Under the final rules, crypto exchanges must run market abuse detection systems and report suspicious transactions. The UK's Market Abuse Regulation will be extended to crypto assets.",
       },
       {
         id: "crypto-test-q6",
-        question: "A crypto firm is already registered with the FCA under the AML regime. What does the transition to the new regime look like for it?",
+        question:
+          "A crypto firm is already registered with the FCA under the AML regime. What does the transition to the new regime look like for it?",
         options: [
           "It must cease trading until 2028",
           "It benefits from a streamlined authorisation process during the transition period",
@@ -191,7 +216,8 @@ The transition period runs from the publication of final rules (30 June 2026) to
           "It must re-register with HM Treasury instead",
         ],
         correctIndex: 1,
-        explanation: "The transition period runs from the final rules (30 June 2026) to go-live (25 October 2027). Firms already registered under the AML regime get a streamlined authorisation process rather than automatic authorisation.",
+        explanation:
+          "The transition period runs from the final rules (30 June 2026) to go-live (25 October 2027). Firms already registered under the AML regime get a streamlined authorisation process rather than automatic authorisation.",
       },
     ],
   },

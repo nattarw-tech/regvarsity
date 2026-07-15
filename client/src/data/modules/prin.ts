@@ -70,15 +70,24 @@ Importantly, the Principles are **outcome-focused**. The FCA does not just ask "
         },
       ],
       keyTakeaways: [
-        { text: "The FCA uses principles-based regulation, broad standards rather than rules for every situation." },
-        { text: "There are 12 Principles for Business. Every FCA-authorised firm must follow all of them." },
-        { text: "Principle 12 (Consumer Duty) was added in July 2023 and is the most significant recent change." },
-        { text: "Breaching a Principle can result in fines, public censure, loss of authorisation, or personal bans." },
+        {
+          text: "The FCA uses principles-based regulation, broad standards rather than rules for every situation.",
+        },
+        {
+          text: "There are 12 Principles for Business. Every FCA-authorised firm must follow all of them.",
+        },
+        {
+          text: "Principle 12 (Consumer Duty) was added in July 2023 and is the most significant recent change.",
+        },
+        {
+          text: "Breaching a Principle can result in fines, public censure, loss of authorisation, or personal bans.",
+        },
       ],
       quizQuestions: [
         {
           id: "prin-1-q1",
-          question: "A retail bank introduces a new savings product. It is technically compliant with all specific FCA product rules, but the interest rate is structured in a way that most customers will never achieve the advertised headline rate. Which Principle is most likely being breached?",
+          question:
+            "A retail bank introduces a new savings product. It is technically compliant with all specific FCA product rules, but the interest rate is structured in a way that most customers will never achieve the advertised headline rate. Which Principle is most likely being breached?",
           options: [
             "Principle 1 (Integrity), because the bank is being dishonest",
             "Principle 6 (Customers' interests), because the bank is not treating customers fairly",
@@ -86,11 +95,13 @@ Importantly, the Principles are **outcome-focused**. The FCA does not just ask "
             "Both Principle 6 and Principle 12 could apply",
           ],
           correctIndex: 3,
-          explanation: "Both Principle 6 and Principle 12 are relevant here. Principle 6 requires firms to pay due regard to the interests of customers and treat them fairly, a misleading headline rate likely fails this. Principle 12 (Consumer Duty) requires firms to deliver good outcomes for retail customers, including on price and value. The fact that the product is technically rule-compliant does not protect the firm if the outcome for customers is poor. This is the essence of principles-based regulation.",
+          explanation:
+            "Both Principle 6 and Principle 12 are relevant here. Principle 6 requires firms to pay due regard to the interests of customers and treat them fairly, a misleading headline rate likely fails this. Principle 12 (Consumer Duty) requires firms to deliver good outcomes for retail customers, including on price and value. The fact that the product is technically rule-compliant does not protect the firm if the outcome for customers is poor. This is the essence of principles-based regulation.",
         },
         {
           id: "prin-1-q2",
-          question: "The FCA discovers serious weaknesses in a firm's practices and wants an independent expert to review them at the firm's own expense. Which enforcement tool is this?",
+          question:
+            "The FCA discovers serious weaknesses in a firm's practices and wants an independent expert to review them at the firm's own expense. Which enforcement tool is this?",
           options: [
             "A public censure",
             "A skilled person review under Section 166 of FSMA",
@@ -98,11 +109,13 @@ Importantly, the Principles are **outcome-focused**. The FCA does not just ask "
             "A financial penalty",
           ],
           correctIndex: 1,
-          explanation: "A skilled person review under Section 166 of FSMA requires the firm to appoint an independent expert to review its practices, and the firm pays for it. Public censure is a critical public statement, withdrawal of authorisation shuts the firm down, and a financial penalty is a fine. All are FCA tools, but only the Section 166 review matches this description.",
+          explanation:
+            "A skilled person review under Section 166 of FSMA requires the firm to appoint an independent expert to review its practices, and the firm pays for it. Public censure is a critical public statement, withdrawal of authorisation shuts the firm down, and a financial penalty is a fine. All are FCA tools, but only the Section 166 review matches this description.",
         },
         {
           id: "prin-1-q3",
-          question: "What is the largest single fine the FCA has imposed to date?",
+          question:
+            "What is the largest single fine the FCA has imposed to date?",
           options: [
             "£29 million on Starling Bank in 2024",
             "£176 million on a group of banks in 2024",
@@ -110,7 +123,8 @@ Importantly, the Principles are **outcome-focused**. The FCA does not just ask "
             "£120,000 on a small advice firm",
           ],
           correctIndex: 2,
-          explanation: "The largest single FCA fine to date is £284.4 million, imposed on Barclays in May 2015 for failings in its foreign exchange business. The £176 million figure is the FCA's total fines across 2024, and £29 million was the Starling Bank fine in October 2024 for financial crime failings.",
+          explanation:
+            "The largest single FCA fine to date is £284.4 million, imposed on Barclays in May 2015 for failings in its foreign exchange business. The £176 million figure is the FCA's total fines across 2024, and £29 million was the Starling Bank fine in October 2024 for financial crime failings.",
         },
       ],
     },
@@ -218,16 +232,27 @@ Principle 12 applies to all firms in the distribution chain for retail products,
         },
       ],
       keyTakeaways: [
-        { text: "Principles 1–4 cover character: integrity, competence, governance, and financial soundness." },
-        { text: "Principles 5–8 cover market conduct: fair markets, customer interests, clear communications, and conflict management." },
-        { text: "Principles 9–12 cover relationships: suitability, asset protection, regulator relations, and consumer outcomes." },
-        { text: "Principle 12 (Consumer Duty, July 2023) is the most significant recent addition and applies to the entire retail distribution chain." },
-        { text: "Principle 6 (TCF) still applies to all customers including wholesale clients; Principle 12 applies only to retail customers." },
+        {
+          text: "Principles 1–4 cover character: integrity, competence, governance, and financial soundness.",
+        },
+        {
+          text: "Principles 5–8 cover market conduct: fair markets, customer interests, clear communications, and conflict management.",
+        },
+        {
+          text: "Principles 9–12 cover relationships: suitability, asset protection, regulator relations, and consumer outcomes.",
+        },
+        {
+          text: "Principle 12 (Consumer Duty, July 2023) is the most significant recent addition and applies to the entire retail distribution chain.",
+        },
+        {
+          text: "Principle 6 (TCF) still applies to all customers including wholesale clients; Principle 12 applies only to retail customers.",
+        },
       ],
       quizQuestions: [
         {
           id: "prin-2-q1",
-          question: "A firm holds client money but fails to keep it separate from its own assets. Which Principle does this breach most directly?",
+          question:
+            "A firm holds client money but fails to keep it separate from its own assets. Which Principle does this breach most directly?",
           options: [
             "Principle 4 (Financial prudence)",
             "Principle 8 (Conflicts of interest)",
@@ -235,11 +260,13 @@ Principle 12 applies to all firms in the distribution chain for retail products,
             "Principle 11 (Relations with regulators)",
           ],
           correctIndex: 2,
-          explanation: "Principle 10 requires a firm to arrange adequate protection for clients' assets when it is responsible for them, including keeping them safe and separate from the firm's own assets. This principle underpins the Client Assets sourcebook (CASS). The collapse of MF Global in 2011 showed why this matters.",
+          explanation:
+            "Principle 10 requires a firm to arrange adequate protection for clients' assets when it is responsible for them, including keeping them safe and separate from the firm's own assets. This principle underpins the Client Assets sourcebook (CASS). The collapse of MF Global in 2011 showed why this matters.",
         },
         {
           id: "prin-2-q2",
-          question: "A firm discovers a significant compliance failure and decides to fix it quietly without telling the FCA. Which Principle is it breaching?",
+          question:
+            "A firm discovers a significant compliance failure and decides to fix it quietly without telling the FCA. Which Principle is it breaching?",
           options: [
             "Principle 11, because firms must deal with regulators in an open and cooperative way",
             "Principle 3, because this is a management and control failure",
@@ -247,11 +274,13 @@ Principle 12 applies to all firms in the distribution chain for retail products,
             "No Principle, provided the failure is fixed promptly",
           ],
           correctIndex: 0,
-          explanation: "Principle 11 requires firms to deal with regulators openly and cooperatively, and to disclose anything of which the FCA would reasonably expect notice. A significant compliance failure clearly qualifies, so staying quiet is itself a breach, even if the underlying problem gets fixed. Concealment could also engage Principle 1, but Principle 11 is the most direct answer.",
+          explanation:
+            "Principle 11 requires firms to deal with regulators openly and cooperatively, and to disclose anything of which the FCA would reasonably expect notice. A significant compliance failure clearly qualifies, so staying quiet is itself a breach, even if the underlying problem gets fixed. Concealment could also engage Principle 1, but Principle 11 is the most direct answer.",
         },
         {
           id: "prin-2-q3",
-          question: "Which statement about Principle 6 and Principle 12 is correct?",
+          question:
+            "Which statement about Principle 6 and Principle 12 is correct?",
           options: [
             "Principle 12 replaced Principle 6 entirely in July 2023",
             "Principle 6 applies to all customers including wholesale clients, while Principle 12 applies only to retail customers",
@@ -259,7 +288,8 @@ Principle 12 applies to all firms in the distribution chain for retail products,
             "Both principles apply only to firms that sell directly to consumers",
           ],
           correctIndex: 1,
-          explanation: "Principle 12 (Consumer Duty) strengthened and expanded on Principle 6 for retail customers, but it did not replace it. Principle 6 (Treating Customers Fairly) still applies to all customers, including wholesale clients. Principle 12 applies to retail customers and reaches every firm in the retail distribution chain.",
+          explanation:
+            "Principle 12 (Consumer Duty) strengthened and expanded on Principle 6 for retail customers, but it did not replace it. Principle 6 (Treating Customers Fairly) still applies to all customers, including wholesale clients. Principle 12 applies to retail customers and reaches every firm in the retail distribution chain.",
         },
       ],
     },
@@ -338,16 +368,27 @@ This has significant implications for firms that previously considered themselve
         },
       ],
       keyTakeaways: [
-        { text: "Consumer Duty (Principle 12) came into force on 31 July 2023 for new products and 31 July 2024 for closed products." },
-        { text: "It requires firms to deliver four outcomes: good products/services, fair value, consumer understanding, and effective support." },
-        { text: "Vulnerable customers must be identified and treated with additional care, around 50% of UK adults show vulnerability characteristics." },
-        { text: "Consumer Duty applies to all firms in the distribution chain, not just those selling directly to retail customers." },
-        { text: "The standard is outcome-based: firms must demonstrate customers are getting good outcomes, not just that rules were followed." },
+        {
+          text: "Consumer Duty (Principle 12) came into force on 31 July 2023 for new products and 31 July 2024 for closed products.",
+        },
+        {
+          text: "It requires firms to deliver four outcomes: good products/services, fair value, consumer understanding, and effective support.",
+        },
+        {
+          text: "Vulnerable customers must be identified and treated with additional care, around 50% of UK adults show vulnerability characteristics.",
+        },
+        {
+          text: "Consumer Duty applies to all firms in the distribution chain, not just those selling directly to retail customers.",
+        },
+        {
+          text: "The standard is outcome-based: firms must demonstrate customers are getting good outcomes, not just that rules were followed.",
+        },
       ],
       quizQuestions: [
         {
           id: "prin-3-q1",
-          question: "A firm's product terms are technically accurate but so confusing that customers routinely misunderstand what they are buying. Which Consumer Duty outcome does this fail?",
+          question:
+            "A firm's product terms are technically accurate but so confusing that customers routinely misunderstand what they are buying. Which Consumer Duty outcome does this fail?",
           options: [
             "Outcome 1 (Products and Services)",
             "Outcome 2 (Price and Value)",
@@ -355,23 +396,22 @@ This has significant implications for firms that previously considered themselve
             "Outcome 4 (Consumer Support)",
           ],
           correctIndex: 2,
-          explanation: "Outcome 3 (Consumer Understanding) requires firms to communicate in a way that enables customers to make informed decisions, and to test whether customers actually understand. A technically accurate but confusing document fails this outcome. This goes further than Principle 7's 'clear, fair and not misleading' standard.",
+          explanation:
+            "Outcome 3 (Consumer Understanding) requires firms to communicate in a way that enables customers to make informed decisions, and to test whether customers actually understand. A technically accurate but confusing document fails this outcome. This goes further than Principle 7's 'clear, fair and not misleading' standard.",
         },
         {
           id: "prin-3-q2",
-          question: "Roughly what proportion of UK adults show characteristics of vulnerability at any given time, according to the FCA?",
-          options: [
-            "Around 5%",
-            "Around 15%",
-            "Around 25%",
-            "Around 50%",
-          ],
+          question:
+            "Roughly what proportion of UK adults show characteristics of vulnerability at any given time, according to the FCA?",
+          options: ["Around 5%", "Around 15%", "Around 25%", "Around 50%"],
           correctIndex: 3,
-          explanation: "The FCA estimates around 50% of UK adults show characteristics of vulnerability at any given time, whether health-related, life event-related, resilience-related or capability-related. Vulnerability is mainstream, not a small minority, which is why Consumer Duty requires firms to identify vulnerable customers and adapt how they serve them.",
+          explanation:
+            "The FCA estimates around 50% of UK adults show characteristics of vulnerability at any given time, whether health-related, life event-related, resilience-related or capability-related. Vulnerability is mainstream, not a small minority, which is why Consumer Duty requires firms to identify vulnerable customers and adapt how they serve them.",
         },
         {
           id: "prin-3-q3",
-          question: "A bank manufactures a savings product that a platform distributes and an adviser recommends. Under Consumer Duty, who has obligations to the retail customer?",
+          question:
+            "A bank manufactures a savings product that a platform distributes and an adviser recommends. Under Consumer Duty, who has obligations to the retail customer?",
           options: [
             "Only the adviser, because they deal with the customer directly",
             "Only the bank, because it designed the product",
@@ -379,7 +419,8 @@ This has significant implications for firms that previously considered themselve
             "The platform and the adviser, but not the manufacturer",
           ],
           correctIndex: 2,
-          explanation: "Consumer Duty applies to every firm in the distribution chain for retail products. The manufacturer must design a product that meets the target market's needs at fair value, the distributor must ensure it reaches appropriate customers, and the adviser must ensure the recommendation is suitable. Firms must also share information up and down the chain.",
+          explanation:
+            "Consumer Duty applies to every firm in the distribution chain for retail products. The manufacturer must design a product that meets the target market's needs at fair value, the distributor must ensure it reaches appropriate customers, and the adviser must ensure the recommendation is suitable. Firms must also share information up and down the chain.",
         },
       ],
     },
@@ -389,7 +430,8 @@ This has significant implications for firms that previously considered themselve
     questions: [
       {
         id: "prin-test-q1",
-        question: "What is the core idea behind the FCA's principles-based approach to regulation?",
+        question:
+          "What is the core idea behind the FCA's principles-based approach to regulation?",
         options: [
           "Writing a detailed rule for every conceivable scenario",
           "Setting broad standards of behaviour and expecting firms to use judgement to meet them",
@@ -397,11 +439,13 @@ This has significant implications for firms that previously considered themselve
           "Copying the rulebooks of other national regulators",
         ],
         correctIndex: 1,
-        explanation: "Principles-based regulation sets out broad standards of behaviour rather than a rule for every situation. The FCA expects firms to use their judgement to meet those standards, and it judges firms on outcomes, not just technical rule-following.",
+        explanation:
+          "Principles-based regulation sets out broad standards of behaviour rather than a rule for every situation. The FCA expects firms to use their judgement to meet those standards, and it judges firms on outcomes, not just technical rule-following.",
       },
       {
         id: "prin-test-q2",
-        question: "How many Principles for Business are there, and which is the newest?",
+        question:
+          "How many Principles for Business are there, and which is the newest?",
         options: [
           "Ten, with Principle 10 (Clients' assets) the newest",
           "Eleven, with Principle 11 (Relations with regulators) the newest",
@@ -409,11 +453,13 @@ This has significant implications for firms that previously considered themselve
           "Twelve, with Principle 12 (Consumer Duty) added in January 2018",
         ],
         correctIndex: 2,
-        explanation: "There are 12 Principles. The first 11 date from the FSA era; Principle 12 (Consumer Duty) was added in July 2023 and is the most significant recent change to retail regulation.",
+        explanation:
+          "There are 12 Principles. The first 11 date from the FSA era; Principle 12 (Consumer Duty) was added in July 2023 and is the most significant recent change to retail regulation.",
       },
       {
         id: "prin-test-q3",
-        question: "Which Principle requires a firm to maintain adequate financial resources?",
+        question:
+          "Which Principle requires a firm to maintain adequate financial resources?",
         options: [
           "Principle 2 (Skill, care and diligence)",
           "Principle 3 (Management and control)",
@@ -421,11 +467,13 @@ This has significant implications for firms that previously considered themselve
           "Principle 10 (Clients' assets)",
         ],
         correctIndex: 2,
-        explanation: "Principle 4 (Financial prudence) requires a firm to maintain adequate financial resources, meaning enough capital and liquidity to meet its obligations without taking on more risk than it can absorb. It underpins the prudential regulatory framework.",
+        explanation:
+          "Principle 4 (Financial prudence) requires a firm to maintain adequate financial resources, meaning enough capital and liquidity to meet its obligations without taking on more risk than it can absorb. It underpins the prudential regulatory framework.",
       },
       {
         id: "prin-test-q4",
-        question: "In October 2024 the FCA fined Starling Bank £29 million. What was the failing?",
+        question:
+          "In October 2024 the FCA fined Starling Bank £29 million. What was the failing?",
         options: [
           "Mis-selling savings products to vulnerable customers",
           "Financial crime systems failings, including opening over 54,000 accounts for high-risk customers",
@@ -433,11 +481,13 @@ This has significant implications for firms that previously considered themselve
           "Failing to pay compensation ordered by the Financial Ombudsman",
         ],
         correctIndex: 1,
-        explanation: "Starling Bank was fined £29 million in October 2024 for failings in its financial crime systems and controls. It opened over 54,000 accounts for high-risk customers despite a requirement not to, and its sanctions screening was inadequate.",
+        explanation:
+          "Starling Bank was fined £29 million in October 2024 for failings in its financial crime systems and controls. It opened over 54,000 accounts for high-risk customers despite a requirement not to, and its sanctions screening was inadequate.",
       },
       {
         id: "prin-test-q5",
-        question: "Principle 7 requires communications with clients to be what?",
+        question:
+          "Principle 7 requires communications with clients to be what?",
         options: [
           "Short, simple and friendly",
           "Approved in advance by the FCA",
@@ -445,11 +495,13 @@ This has significant implications for firms that previously considered themselve
           "Written only, never verbal",
         ],
         correctIndex: 2,
-        explanation: "Principle 7 requires firms to pay due regard to clients' information needs and communicate in a way that is clear, fair and not misleading. It applies to every communication, from brochures and websites to phone calls and social media posts, and is the foundation of the financial promotions regime.",
+        explanation:
+          "Principle 7 requires firms to pay due regard to clients' information needs and communicate in a way that is clear, fair and not misleading. It applies to every communication, from brochures and websites to phone calls and social media posts, and is the foundation of the financial promotions regime.",
       },
       {
         id: "prin-test-q6",
-        question: "Which of the following is NOT one of the four Consumer Duty outcomes?",
+        question:
+          "Which of the following is NOT one of the four Consumer Duty outcomes?",
         options: [
           "Products and Services",
           "Price and Value",
@@ -457,7 +509,8 @@ This has significant implications for firms that previously considered themselve
           "Guaranteed Investment Returns",
         ],
         correctIndex: 3,
-        explanation: "The four Consumer Duty outcomes are Products and Services, Price and Value, Consumer Understanding, and Consumer Support. The Duty never guarantees investment returns; it requires firms to deliver good outcomes in how products are designed, priced, explained and supported.",
+        explanation:
+          "The four Consumer Duty outcomes are Products and Services, Price and Value, Consumer Understanding, and Consumer Support. The Duty never guarantees investment returns; it requires firms to deliver good outcomes in how products are designed, priced, explained and supported.",
       },
       {
         id: "prin-test-q7",
@@ -469,11 +522,13 @@ This has significant implications for firms that previously considered themselve
           "It has not yet come into force for closed products",
         ],
         correctIndex: 1,
-        explanation: "Consumer Duty came into force on 31 July 2023 for new and existing products, and on 31 July 2024 for closed products (products no longer on sale but still held by customers).",
+        explanation:
+          "Consumer Duty came into force on 31 July 2023 for new and existing products, and on 31 July 2024 for closed products (products no longer on sale but still held by customers).",
       },
       {
         id: "prin-test-q8",
-        question: "A wholesale asset manager designs funds that are sold to retail investors through third-party platforms. Does Consumer Duty apply to it?",
+        question:
+          "A wholesale asset manager designs funds that are sold to retail investors through third-party platforms. Does Consumer Duty apply to it?",
         options: [
           "No, because it never deals with retail customers directly",
           "No, because Consumer Duty only applies to banks",
@@ -481,7 +536,8 @@ This has significant implications for firms that previously considered themselve
           "Only if the platforms ask it to comply contractually",
         ],
         correctIndex: 2,
-        explanation: "Consumer Duty applies across the whole distribution chain. If a firm's products ultimately reach retail customers, the Duty applies even if the firm considers itself a wholesale business and never deals with retail customers directly.",
+        explanation:
+          "Consumer Duty applies across the whole distribution chain. If a firm's products ultimately reach retail customers, the Duty applies even if the firm considers itself a wholesale business and never deals with retail customers directly.",
       },
     ],
   },

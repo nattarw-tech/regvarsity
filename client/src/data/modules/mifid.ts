@@ -14,7 +14,8 @@ export const moduleMiFID: Module = {
   accentColour: "oklch(0.38 0.16 145)",
   description:
     "MiFID II and UK MiFIR are the rulebooks for financial markets, covering how shares, bonds, and derivatives are traded, how trades must be reported to regulators, and how investment firms must treat their clients. After Brexit, the UK has its own version and is actively reforming it.",
-  whoItAppliesTo: "Investment firms, trading venues, data reporting service providers, and systematic internalisers.",
+  whoItAppliesTo:
+    "Investment firms, trading venues, data reporting service providers, and systematic internalisers.",
   chapters: [
     {
       id: "mifid-1",
@@ -67,10 +68,18 @@ The UK's approach reflects a broader post-Brexit strategy of maintaining high st
         },
       ],
       keyTakeaways: [
-        { text: "MiFID II came into force in January 2018, replacing the original MiFID I and significantly strengthening market regulation." },
-        { text: "The four objectives are: market transparency, investor protection, market structure regulation, and supervisory convergence." },
-        { text: "After Brexit, the UK retained MiFID II/MiFIR in UK law and is actively reforming it through the Wholesale Markets Review." },
-        { text: "Key UK reforms include removing the share trading obligation, reforming investment research rules, and streamlining transaction reporting." },
+        {
+          text: "MiFID II came into force in January 2018, replacing the original MiFID I and significantly strengthening market regulation.",
+        },
+        {
+          text: "The four objectives are: market transparency, investor protection, market structure regulation, and supervisory convergence.",
+        },
+        {
+          text: "After Brexit, the UK retained MiFID II/MiFIR in UK law and is actively reforming it through the Wholesale Markets Review.",
+        },
+        {
+          text: "Key UK reforms include removing the share trading obligation, reforming investment research rules, and streamlining transaction reporting.",
+        },
       ],
       quizQuestions: [
         {
@@ -83,11 +92,13 @@ The UK's approach reflects a broader post-Brexit strategy of maintaining high st
             "MiFIR replaced MiFID II in 2018",
           ],
           correctIndex: 1,
-          explanation: "MiFID II is a directive, which member states had to implement through national law. MiFIR is a regulation, which applied directly without national implementation. They came into force together on 3 January 2018 and jointly form the markets rulebook.",
+          explanation:
+            "MiFID II is a directive, which member states had to implement through national law. MiFIR is a regulation, which applied directly without national implementation. They came into force together on 3 January 2018 and jointly form the markets rulebook.",
         },
         {
           id: "mifid-1-q2",
-          question: "Which of these was one of the UK's post-Brexit reforms under the Wholesale Markets Review?",
+          question:
+            "Which of these was one of the UK's post-Brexit reforms under the Wholesale Markets Review?",
           options: [
             "Introducing a share trading obligation for the first time",
             "Removing the share trading obligation that required UK firms to trade EU shares on EU venues",
@@ -95,11 +106,13 @@ The UK's approach reflects a broader post-Brexit strategy of maintaining high st
             "Adopting all new EU rules automatically",
           ],
           correctIndex: 1,
-          explanation: "The Wholesale Markets Review, launched in 2021, removed the share trading obligation, reformed the transparency regime to be more proportionate, and streamlined transaction reporting. The UK also relaxed the strict research unbundling rule through the Investment Research Review.",
+          explanation:
+            "The Wholesale Markets Review, launched in 2021, removed the share trading obligation, reformed the transparency regime to be more proportionate, and streamlined transaction reporting. The UK also relaxed the strict research unbundling rule through the Investment Research Review.",
         },
         {
           id: "mifid-1-q3",
-          question: "Which of the following is NOT one of MiFID II's four main objectives?",
+          question:
+            "Which of the following is NOT one of MiFID II's four main objectives?",
           options: [
             "Market transparency",
             "Investor protection",
@@ -107,7 +120,8 @@ The UK's approach reflects a broader post-Brexit strategy of maintaining high st
             "Supervisory convergence",
           ],
           correctIndex: 2,
-          explanation: "MiFID II's four objectives are market transparency (pre-trade and post-trade), investor protection, market structure regulation of venues such as RMs, MTFs and OTFs, and supervisory convergence. No regulation guarantees profits.",
+          explanation:
+            "MiFID II's four objectives are market transparency (pre-trade and post-trade), investor protection, market structure regulation of venues such as RMs, MTFs and OTFs, and supervisory convergence. No regulation guarantees profits.",
         },
       ],
     },
@@ -158,15 +172,24 @@ For retail clients, price is generally the most important factor. For profession
         },
       ],
       keyTakeaways: [
-        { text: "Investment firms must report all transactions in financial instruments to the FCA by T+1, with up to 65 data fields." },
-        { text: "Best execution requires firms to obtain the best possible result for clients, considering price, costs, speed, and likelihood of execution." },
-        { text: "Firms must have a Best Execution Policy reviewed at least annually." },
-        { text: "For retail clients, price is generally the most important best execution factor." },
+        {
+          text: "Investment firms must report all transactions in financial instruments to the FCA by T+1, with up to 65 data fields.",
+        },
+        {
+          text: "Best execution requires firms to obtain the best possible result for clients, considering price, costs, speed, and likelihood of execution.",
+        },
+        {
+          text: "Firms must have a Best Execution Policy reviewed at least annually.",
+        },
+        {
+          text: "For retail clients, price is generally the most important best execution factor.",
+        },
       ],
       quizQuestions: [
         {
           id: "mifid-2-q1",
-          question: "By when must an investment firm submit a transaction report to the FCA?",
+          question:
+            "By when must an investment firm submit a transaction report to the FCA?",
           options: [
             "Within one hour of the trade",
             "By the end of the working day following the transaction (T+1)",
@@ -174,7 +197,8 @@ For retail clients, price is generally the most important factor. For profession
             "By the end of the calendar month",
           ],
           correctIndex: 1,
-          explanation: "Under UK MiFIR Article 26, transaction reports must be submitted by the end of the working day following the transaction, known as T+1. Reports can contain up to 65 data fields, including LEIs, ISINs, quantity, price, venue and timing.",
+          explanation:
+            "Under UK MiFIR Article 26, transaction reports must be submitted by the end of the working day following the transaction, known as T+1. Reports can contain up to 65 data fields, including LEIs, ISINs, quantity, price, venue and timing.",
         },
         {
           id: "mifid-2-q2",
@@ -186,7 +210,8 @@ For retail clients, price is generally the most important factor. For profession
             "To set interest rates",
           ],
           correctIndex: 1,
-          explanation: "Transaction reports give the FCA a detailed picture of market activity, which it uses to detect market abuse, monitor systemic risk and ensure market integrity. Reporting failures attract significant fines.",
+          explanation:
+            "Transaction reports give the FCA a detailed picture of market activity, which it uses to detect market abuse, monitor systemic risk and ensure market integrity. Reporting failures attract significant fines.",
         },
         {
           id: "mifid-2-q3",
@@ -198,7 +223,8 @@ For retail clients, price is generally the most important factor. For profession
             "Best execution policies never need reviewing once written",
           ],
           correctIndex: 1,
-          explanation: "Best execution is about the best possible overall result, weighing price, costs, speed, likelihood of execution, size and market impact. For retail clients price generally matters most, but a large institution might prioritise market impact. The policy must be reviewed at least annually.",
+          explanation:
+            "Best execution is about the best possible overall result, weighing price, costs, speed, likelihood of execution, size and market impact. For retail clients price generally matters most, but a large institution might prioritise market impact. The policy must be reviewed at least annually.",
         },
       ],
     },
@@ -216,7 +242,8 @@ For retail clients, price is generally the most important factor. For profession
           "After the 2016 Brexit referendum",
         ],
         correctIndex: 1,
-        explanation: "MiFID II and MiFIR came into force on 3 January 2018, replacing the original MiFID I of 2007, whose weaknesses had been exposed by the 2008 financial crisis.",
+        explanation:
+          "MiFID II and MiFIR came into force on 3 January 2018, replacing the original MiFID I of 2007, whose weaknesses had been exposed by the 2008 financial crisis.",
       },
       {
         id: "mifid-test-q2",
@@ -228,7 +255,8 @@ For retail clients, price is generally the most important factor. For profession
           "To abolish stock exchanges",
         ],
         correctIndex: 1,
-        explanation: "MiFID I, in force from 2007, aimed to create a single European market for financial services, letting investment firms operate across EU member states under a single passport.",
+        explanation:
+          "MiFID I, in force from 2007, aimed to create a single European market for financial services, letting investment firms operate across EU member states under a single passport.",
       },
       {
         id: "mifid-test-q3",
@@ -240,7 +268,8 @@ For retail clients, price is generally the most important factor. For profession
           "They apply in the UK only until 2030",
         ],
         correctIndex: 1,
-        explanation: "The UK retained MiFID II and MiFIR through the EU (Withdrawal) Act 2018. The retained version, UK MiFIR, is being actively reformed through the Wholesale Markets Review and the FCA's UK MiFIR review.",
+        explanation:
+          "The UK retained MiFID II and MiFIR through the EU (Withdrawal) Act 2018. The retained version, UK MiFIR, is being actively reformed through the Wholesale Markets Review and the FCA's UK MiFIR review.",
       },
       {
         id: "mifid-test-q4",
@@ -252,7 +281,8 @@ For retail clients, price is generally the most important factor. For profession
           "Retail bank branches",
         ],
         correctIndex: 1,
-        explanation: "MiFID II's market structure rules cover Regulated Markets (RMs), Multilateral Trading Facilities (MTFs) and Organised Trading Facilities (OTFs), ensuring they operate fairly and transparently.",
+        explanation:
+          "MiFID II's market structure rules cover Regulated Markets (RMs), Multilateral Trading Facilities (MTFs) and Organised Trading Facilities (OTFs), ensuring they operate fairly and transparently.",
       },
       {
         id: "mifid-test-q5",
@@ -264,7 +294,8 @@ For retail clients, price is generally the most important factor. For profession
           "The trader's National Insurance number",
         ],
         correctIndex: 1,
-        explanation: "Transaction reports identify the buyer and seller using LEIs and the financial instrument using its ISIN, along with quantity, price, venue and the date and time of the transaction.",
+        explanation:
+          "Transaction reports identify the buyer and seller using LEIs and the financial instrument using its ISIN, along with quantity, price, venue and the date and time of the transaction.",
       },
       {
         id: "mifid-test-q6",
@@ -276,11 +307,13 @@ For retail clients, price is generally the most important factor. For profession
           "Prices may only change twice a day",
         ],
         correctIndex: 0,
-        explanation: "Transparency under MiFID II means trading venues and firms publish price and volume information before trades happen (pre-trade) and details after they occur (post-trade), so participants can see where prices are and how much is being traded.",
+        explanation:
+          "Transparency under MiFID II means trading venues and firms publish price and volume information before trades happen (pre-trade) and details after they occur (post-trade), so participants can see where prices are and how much is being traded.",
       },
       {
         id: "mifid-test-q7",
-        question: "A large pension fund executing a very large order cares most about not moving the market. Is prioritising market impact over headline price consistent with best execution?",
+        question:
+          "A large pension fund executing a very large order cares most about not moving the market. Is prioritising market impact over headline price consistent with best execution?",
         options: [
           "No, price always comes first for every client",
           "Yes, for professional clients other execution factors can outweigh price",
@@ -288,7 +321,8 @@ For retail clients, price is generally the most important factor. For profession
           "Yes, but only with FCA permission for each order",
         ],
         correctIndex: 1,
-        explanation: "Best execution weighs several factors: price, costs, speed, likelihood of execution, size and market impact. For retail clients price is generally most important, but a professional client such as a large institution can legitimately prioritise market impact.",
+        explanation:
+          "Best execution weighs several factors: price, costs, speed, likelihood of execution, size and market impact. For retail clients price is generally most important, but a professional client such as a large institution can legitimately prioritise market impact.",
       },
       {
         id: "mifid-test-q8",
@@ -300,7 +334,8 @@ For retail clients, price is generally the most important factor. For profession
           "Never, once the FCA has approved it",
         ],
         correctIndex: 1,
-        explanation: "The Best Execution Policy must be reviewed at least once a year, and additionally whenever a material change affects the firm's ability to obtain the best result for clients.",
+        explanation:
+          "The Best Execution Policy must be reviewed at least once a year, and additionally whenever a material change affects the firm's ability to obtain the best result for clients.",
       },
     ],
   },

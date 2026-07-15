@@ -38,7 +38,10 @@ function saveProgress(p: ProgressStore) {
 
 const difficultyColors: Record<string, { bg: string; text: string }> = {
   beginner: { bg: "oklch(0.55 0.14 155 / 0.12)", text: "oklch(0.35 0.14 155)" },
-  intermediate: { bg: "oklch(0.78 0.14 85 / 0.15)", text: "oklch(0.45 0.14 75)" },
+  intermediate: {
+    bg: "oklch(0.78 0.14 85 / 0.15)",
+    text: "oklch(0.45 0.14 75)",
+  },
   advanced: { bg: "oklch(0.65 0.18 290 / 0.1)", text: "oklch(0.4 0.18 290)" },
 };
 
@@ -74,7 +77,8 @@ function ExerciseCard({
     if (!revealed) {
       return {
         borderColor: selected === optionId ? meta.color : "var(--border)",
-        backgroundColor: selected === optionId ? `${meta.color}10` : "transparent",
+        backgroundColor:
+          selected === optionId ? `${meta.color}10` : "transparent",
         cursor: "pointer",
       };
     }
@@ -92,25 +96,39 @@ function ExerciseCard({
         cursor: "default",
       };
     }
-    return { borderColor: "var(--border)", backgroundColor: "transparent", cursor: "default", opacity: 0.5 };
+    return {
+      borderColor: "var(--border)",
+      backgroundColor: "transparent",
+      cursor: "default",
+      opacity: 0.5,
+    };
   };
 
   return (
     <div className="card-base p-6 md:p-8">
       {/* Header */}
       <div className="flex flex-wrap items-center gap-2 mb-5">
-        <span className="badge-pill" style={{ backgroundColor: meta.bg, color: meta.color }}>
+        <span
+          className="badge-pill"
+          style={{ backgroundColor: meta.bg, color: meta.color }}
+        >
           {meta.label}
         </span>
-        <span className="badge-pill" style={{ backgroundColor: diff.bg, color: diff.text }}>
+        <span
+          className="badge-pill"
+          style={{ backgroundColor: diff.bg, color: diff.text }}
+        >
           {exercise.difficulty}
         </span>
         <div className="flex flex-wrap gap-1 ml-auto">
-          {exercise.tags.slice(0, 2).map((tag) => (
+          {exercise.tags.slice(0, 2).map(tag => (
             <span
               key={tag}
               className="text-xs px-2 py-0.5 rounded-full"
-              style={{ backgroundColor: "var(--surface-3)", color: "var(--muted-foreground)" }}
+              style={{
+                backgroundColor: "var(--surface-3)",
+                color: "var(--muted-foreground)",
+              }}
             >
               {tag}
             </span>
@@ -121,24 +139,36 @@ function ExerciseCard({
       {/* Scenario */}
       <div
         className="p-4 rounded-xl mb-5 border-l-4"
-        style={{ backgroundColor: "var(--surface-2)", borderLeftColor: meta.color }}
+        style={{
+          backgroundColor: "var(--surface-2)",
+          borderLeftColor: meta.color,
+        }}
       >
-        <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: meta.color }}>
+        <p
+          className="text-xs font-semibold uppercase tracking-wider mb-2"
+          style={{ color: meta.color }}
+        >
           Scenario
         </p>
-        <p className="text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+        <p
+          className="text-sm leading-relaxed"
+          style={{ color: "var(--foreground)" }}
+        >
           {exercise.scenario}
         </p>
       </div>
 
       {/* Question */}
-      <h3 className="font-bold text-lg mb-4" style={{ color: "var(--foreground)" }}>
+      <h3
+        className="font-bold text-lg mb-4"
+        style={{ color: "var(--foreground)" }}
+      >
         {exercise.question}
       </h3>
 
       {/* Options */}
       <div className="space-y-3 mb-5">
-        {exercise.options.map((option) => (
+        {exercise.options.map(option => (
           <button
             key={option.id}
             onClick={() => handleSelect(option.id)}
@@ -151,16 +181,21 @@ function ExerciseCard({
               <span
                 className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold mt-0.5"
                 style={{
-                  backgroundColor: revealed && option.id === exercise.correctId
-                    ? "oklch(0.55 0.14 155)"
-                    : revealed && option.id === selected && selected !== exercise.correctId
-                    ? "oklch(0.55 0.22 25)"
-                    : selected === option.id
-                    ? meta.color
-                    : "var(--surface-3)",
+                  backgroundColor:
+                    revealed && option.id === exercise.correctId
+                      ? "oklch(0.55 0.14 155)"
+                      : revealed &&
+                          option.id === selected &&
+                          selected !== exercise.correctId
+                        ? "oklch(0.55 0.22 25)"
+                        : selected === option.id
+                          ? meta.color
+                          : "var(--surface-3)",
                   color:
                     (revealed && option.id === exercise.correctId) ||
-                    (revealed && option.id === selected && selected !== exercise.correctId) ||
+                    (revealed &&
+                      option.id === selected &&
+                      selected !== exercise.correctId) ||
                     selected === option.id
                       ? "white"
                       : "var(--muted-foreground)",
@@ -168,15 +203,28 @@ function ExerciseCard({
               >
                 {option.id.toUpperCase()}
               </span>
-              <span className="text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+              <span
+                className="text-sm leading-relaxed"
+                style={{ color: "var(--foreground)" }}
+              >
                 {option.text}
               </span>
               {revealed && option.id === exercise.correctId && (
-                <CheckCircle2 size={18} className="shrink-0 ml-auto mt-0.5" style={{ color: "oklch(0.55 0.14 155)" }} />
+                <CheckCircle2
+                  size={18}
+                  className="shrink-0 ml-auto mt-0.5"
+                  style={{ color: "oklch(0.55 0.14 155)" }}
+                />
               )}
-              {revealed && option.id === selected && selected !== exercise.correctId && (
-                <XCircle size={18} className="shrink-0 ml-auto mt-0.5" style={{ color: "oklch(0.55 0.22 25)" }} />
-              )}
+              {revealed &&
+                option.id === selected &&
+                selected !== exercise.correctId && (
+                  <XCircle
+                    size={18}
+                    className="shrink-0 ml-auto mt-0.5"
+                    style={{ color: "oklch(0.55 0.22 25)" }}
+                  />
+                )}
             </div>
           </button>
         ))}
@@ -199,28 +247,48 @@ function ExerciseCard({
           <div
             className="flex items-center gap-3 p-3 rounded-xl"
             style={{
-              backgroundColor: isCorrect ? "oklch(0.55 0.14 155 / 0.1)" : "oklch(0.55 0.22 25 / 0.08)",
+              backgroundColor: isCorrect
+                ? "oklch(0.55 0.14 155 / 0.1)"
+                : "oklch(0.55 0.22 25 / 0.08)",
             }}
           >
             {isCorrect ? (
-              <CheckCircle2 size={20} style={{ color: "oklch(0.55 0.14 155)" }} />
+              <CheckCircle2
+                size={20}
+                style={{ color: "oklch(0.55 0.14 155)" }}
+              />
             ) : (
               <XCircle size={20} style={{ color: "oklch(0.55 0.22 25)" }} />
             )}
             <span
               className="font-semibold text-sm"
-              style={{ color: isCorrect ? "oklch(0.35 0.14 155)" : "oklch(0.45 0.22 25)" }}
+              style={{
+                color: isCorrect
+                  ? "oklch(0.35 0.14 155)"
+                  : "oklch(0.45 0.22 25)",
+              }}
             >
-              {isCorrect ? "Correct! Well done." : `Incorrect, the correct answer is (${exercise.correctId.toUpperCase()}).`}
+              {isCorrect
+                ? "Correct! Well done."
+                : `Incorrect, the correct answer is (${exercise.correctId.toUpperCase()}).`}
             </span>
           </div>
 
           {/* Explanation */}
-          <div className="p-4 rounded-xl" style={{ backgroundColor: "var(--surface-2)" }}>
-            <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--muted-foreground)" }}>
+          <div
+            className="p-4 rounded-xl"
+            style={{ backgroundColor: "var(--surface-2)" }}
+          >
+            <p
+              className="text-xs font-semibold uppercase tracking-wider mb-2"
+              style={{ color: "var(--muted-foreground)" }}
+            >
               Explanation
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: "var(--foreground)" }}
+            >
               {exercise.explanation}
             </p>
           </div>
@@ -229,12 +297,21 @@ function ExerciseCard({
           {!isCorrect && selected && exercise.wrongExplanations[selected] && (
             <div
               className="p-4 rounded-xl border-l-4"
-              style={{ backgroundColor: "oklch(0.55 0.22 25 / 0.05)", borderLeftColor: "oklch(0.55 0.22 25)" }}
+              style={{
+                backgroundColor: "oklch(0.55 0.22 25 / 0.05)",
+                borderLeftColor: "oklch(0.55 0.22 25)",
+              }}
             >
-              <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "oklch(0.45 0.22 25)" }}>
+              <p
+                className="text-xs font-semibold uppercase tracking-wider mb-1"
+                style={{ color: "oklch(0.45 0.22 25)" }}
+              >
                 Why option ({selected?.toUpperCase()}) is wrong
               </p>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "var(--foreground)" }}
+              >
                 {exercise.wrongExplanations[selected]}
               </p>
             </div>
@@ -252,24 +329,40 @@ function ProgressSummary({ progress }: { progress: ProgressStore }) {
     <div className="card-base p-6 mb-8">
       <div className="flex items-center gap-2 mb-4">
         <Trophy size={20} style={{ color: "var(--brand-gold)" }} />
-        <h2 className="font-bold text-lg" style={{ color: "var(--foreground)" }}>
+        <h2
+          className="font-bold text-lg"
+          style={{ color: "var(--foreground)" }}
+        >
           Your Progress
         </h2>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {topics.map((topic) => {
-          const topicExercises = exercises.filter((e) => e.topic === topic);
-          const answered = topicExercises.filter((e) => progress[e.id]?.answered).length;
-          const correct = topicExercises.filter((e) => progress[e.id]?.correct).length;
+        {topics.map(topic => {
+          const topicExercises = exercises.filter(e => e.topic === topic);
+          const answered = topicExercises.filter(
+            e => progress[e.id]?.answered
+          ).length;
+          const correct = topicExercises.filter(
+            e => progress[e.id]?.correct
+          ).length;
           const meta = topicMeta[topic];
-          const pct = topicExercises.length > 0 ? Math.round((answered / topicExercises.length) * 100) : 0;
+          const pct =
+            topicExercises.length > 0
+              ? Math.round((answered / topicExercises.length) * 100)
+              : 0;
           return (
             <div key={topic} className="text-center">
-              <div className="text-xs font-semibold mb-1" style={{ color: meta.color }}>
+              <div
+                className="text-xs font-semibold mb-1"
+                style={{ color: meta.color }}
+              >
                 {meta.label}
               </div>
               <Progress value={pct} className="h-2 mb-1" />
-              <div className="text-xs" style={{ color: "var(--muted-foreground)" }}>
+              <div
+                className="text-xs"
+                style={{ color: "var(--muted-foreground)" }}
+              >
                 {answered}/{topicExercises.length} done · {correct} correct
               </div>
             </div>
@@ -285,7 +378,9 @@ export default function ExercisesPage() {
   const topicParam = params.topic as TopicKey | undefined;
 
   const [progress, setProgress] = useState<ProgressStore>(loadProgress);
-  const [activeTopic, setActiveTopic] = useState<TopicKey | "all">(topicParam || "all");
+  const [activeTopic, setActiveTopic] = useState<TopicKey | "all">(
+    topicParam || "all"
+  );
   const [resultsOpen, setResultsOpen] = useState(false);
 
   useEffect(() => {
@@ -293,17 +388,17 @@ export default function ExercisesPage() {
   }, [topicParam]);
 
   const handleAnswer = useCallback((exerciseId: string, optionId: string) => {
-    const ex = exercises.find((e) => e.id === exerciseId);
+    const ex = exercises.find(e => e.id === exerciseId);
     if (!ex) return;
-    setProgress((prev) => {
+    setProgress(prev => {
       const next = {
         ...prev,
         [exerciseId]: { answered: true, correct: optionId === ex.correctId },
       };
       saveProgress(next);
       // the final answer just went in: celebrate with the results pop-up
-      const allDoneNow = exercises.every((e) => next[e.id]?.answered);
-      const allDoneBefore = exercises.every((e) => prev[e.id]?.answered);
+      const allDoneNow = exercises.every(e => next[e.id]?.answered);
+      const allDoneBefore = exercises.every(e => prev[e.id]?.answered);
       if (allDoneNow && !allDoneBefore) setResultsOpen(true);
       return next;
     });
@@ -314,30 +409,41 @@ export default function ExercisesPage() {
     saveProgress({});
   };
 
-  const allAnswered = exercises.every((e) => progress[e.id]?.answered);
+  const allAnswered = exercises.every(e => progress[e.id]?.answered);
 
   const filteredExercises =
-    activeTopic === "all" ? exercises : exercises.filter((e) => e.topic === activeTopic);
+    activeTopic === "all"
+      ? exercises
+      : exercises.filter(e => e.topic === activeTopic);
 
-  const totalAnswered = Object.values(progress).filter((v) => v.answered).length;
-  const totalCorrect = Object.values(progress).filter((v) => v.correct).length;
+  const totalAnswered = Object.values(progress).filter(v => v.answered).length;
+  const totalCorrect = Object.values(progress).filter(v => v.correct).length;
 
   return (
     <PageLayout>
       <section className="py-12 md:py-16 bg-background border-b border-border">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="font-bold mb-3" style={{ color: "var(--foreground)" }}>
+            <h1
+              className="font-bold mb-3"
+              style={{ color: "var(--foreground)" }}
+            >
               Practice Exercises
             </h1>
-            <p className="text-lg leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
-              Real-world scenarios, CFA ethics-style. Choose your answer, then read a detailed
-              explanation of why it's right or wrong. No account needed, your progress is saved
-              in your browser.
+            <p
+              className="text-lg leading-relaxed"
+              style={{ color: "var(--muted-foreground)" }}
+            >
+              Real-world scenarios, CFA ethics-style. Choose your answer, then
+              read a detailed explanation of why it's right or wrong. No account
+              needed, your progress is saved in your browser.
             </p>
             {totalAnswered > 0 && (
               <div className="flex items-center gap-3 mt-4">
-                <span className="text-sm font-medium" style={{ color: "var(--muted-foreground)" }}>
+                <span
+                  className="text-sm font-medium"
+                  style={{ color: "var(--muted-foreground)" }}
+                >
                   {totalAnswered} answered · {totalCorrect} correct (
                   {Math.round((totalCorrect / totalAnswered) * 100)}% score)
                 </span>
@@ -372,10 +478,13 @@ export default function ExercisesPage() {
         {/* Topic filter */}
         <div className="flex flex-wrap items-center gap-2 mb-8">
           <Filter size={16} style={{ color: "var(--muted-foreground)" }} />
-          <span className="text-sm font-medium mr-1" style={{ color: "var(--muted-foreground)" }}>
+          <span
+            className="text-sm font-medium mr-1"
+            style={{ color: "var(--muted-foreground)" }}
+          >
             Filter:
           </span>
-          {(["all", "fca", "aml", "mifid", "crypto"] as const).map((t) => {
+          {(["all", "fca", "aml", "mifid", "crypto"] as const).map(t => {
             const meta = t === "all" ? null : topicMeta[t];
             return (
               <button
@@ -383,9 +492,20 @@ export default function ExercisesPage() {
                 onClick={() => setActiveTopic(t)}
                 className="px-4 py-1.5 rounded-full text-sm font-medium border-2 transition-all"
                 style={{
-                  borderColor: activeTopic === t ? (meta?.color || "var(--brand-navy)") : "var(--border)",
-                  backgroundColor: activeTopic === t ? (meta ? `${meta.color}15` : "var(--secondary)") : "transparent",
-                  color: activeTopic === t ? (meta?.color || "var(--brand-navy)") : "var(--muted-foreground)",
+                  borderColor:
+                    activeTopic === t
+                      ? meta?.color || "var(--brand-navy)"
+                      : "var(--border)",
+                  backgroundColor:
+                    activeTopic === t
+                      ? meta
+                        ? `${meta.color}15`
+                        : "var(--secondary)"
+                      : "transparent",
+                  color:
+                    activeTopic === t
+                      ? meta?.color || "var(--brand-navy)"
+                      : "var(--muted-foreground)",
                 }}
                 aria-pressed={activeTopic === t}
               >
@@ -397,7 +517,7 @@ export default function ExercisesPage() {
 
         {/* Exercise list */}
         <div className="space-y-8">
-          {filteredExercises.map((exercise) => (
+          {filteredExercises.map(exercise => (
             <ExerciseCard
               key={exercise.id}
               exercise={exercise}
@@ -409,14 +529,24 @@ export default function ExercisesPage() {
 
         {filteredExercises.length === 0 && (
           <div className="text-center py-16">
-            <BookOpen size={48} className="mx-auto mb-4" style={{ color: "var(--muted-foreground)" }} />
-            <p style={{ color: "var(--muted-foreground)" }}>No exercises found for this topic.</p>
+            <BookOpen
+              size={48}
+              className="mx-auto mb-4"
+              style={{ color: "var(--muted-foreground)" }}
+            />
+            <p style={{ color: "var(--muted-foreground)" }}>
+              No exercises found for this topic.
+            </p>
           </div>
         )}
       </div>
 
       {/* Results pop-up: opens automatically when the last exercise is answered */}
-      <ExerciseResults open={resultsOpen} onOpenChange={setResultsOpen} progress={progress} />
+      <ExerciseResults
+        open={resultsOpen}
+        onOpenChange={setResultsOpen}
+        progress={progress}
+      />
     </PageLayout>
   );
 }

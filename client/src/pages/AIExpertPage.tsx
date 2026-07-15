@@ -3,7 +3,14 @@ import Navigation from "@/components/Navigation";
 import { sendChat } from "@/lib/aiChat";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, Bot, User, Sparkles, RefreshCw, ChevronDown } from "lucide-react";
+import {
+  Send,
+  Bot,
+  User,
+  Sparkles,
+  RefreshCw,
+  ChevronDown,
+} from "lucide-react";
 import { Streamdown } from "streamdown";
 
 interface Message {
@@ -47,7 +54,9 @@ function ChatMessage({ message }: { message: Message }) {
         }`}
       >
         {isUser ? (
-          <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
+          <p className="text-sm leading-relaxed whitespace-pre-wrap">
+            {message.content}
+          </p>
         ) : (
           <div className="text-sm leading-relaxed prose prose-sm max-w-none text-foreground">
             <Streamdown>{message.content}</Streamdown>
@@ -58,7 +67,10 @@ function ChatMessage({ message }: { message: Message }) {
             isUser ? "text-primary-foreground/70" : "text-muted-foreground"
           }`}
         >
-          {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+          {message.timestamp.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          })}
         </p>
       </div>
     </div>
@@ -72,7 +84,7 @@ function TypingIndicator() {
         <Bot size={14} />
       </div>
       <div className="flex items-center gap-1.5 rounded-2xl rounded-tl-sm px-4 py-3 bg-muted">
-        {[0, 1, 2].map((i) => (
+        {[0, 1, 2].map(i => (
           <span
             key={i}
             className="h-2 w-2 rounded-full bg-brand-teal animate-bounce"
@@ -102,7 +114,9 @@ export default function AIExpertPage() {
 
   const [isPending, setIsPending] = useState(false);
 
-  const runChat = async (contextMessages: { role: "user" | "assistant"; content: string }[]) => {
+  const runChat = async (
+    contextMessages: { role: "user" | "assistant"; content: string }[]
+  ) => {
     setIsPending(true);
     try {
       const data = await sendChat(contextMessages);
@@ -112,7 +126,7 @@ export default function AIExpertPage() {
         content: data.content,
         timestamp: new Date(),
       };
-      setMessages((prev) => [...prev, assistantMessage]);
+      setMessages(prev => [...prev, assistantMessage]);
     } catch {
       const errorMessage: Message = {
         id: `error-${Date.now()}`,
@@ -121,7 +135,7 @@ export default function AIExpertPage() {
           "I'm sorry, I encountered an error processing your question. Please try again in a moment.",
         timestamp: new Date(),
       };
-      setMessages((prev) => [...prev, errorMessage]);
+      setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsPending(false);
     }
@@ -158,7 +172,7 @@ export default function AIExpertPage() {
     setInput("");
 
     // Send only the last 10 messages to keep context manageable
-    const contextMessages = updatedMessages.slice(-10).map((m) => ({
+    const contextMessages = updatedMessages.slice(-10).map(m => ({
       role: m.role,
       content: m.content,
     }));
@@ -206,7 +220,8 @@ export default function AIExpertPage() {
                   RegVarsity AI Expert
                 </h1>
                 <p className="text-xs text-muted-foreground">
-                  UK & EU financial regulation. FCA · AML/KYC · MiFID II · Crypto · MiCA · UK GDPR
+                  UK & EU financial regulation. FCA · AML/KYC · MiFID II ·
+                  Crypto · MiCA · UK GDPR
                 </p>
               </div>
             </div>
@@ -230,7 +245,7 @@ export default function AIExpertPage() {
         >
           <div className="container py-6">
             <div className="max-w-2xl mx-auto space-y-5">
-              {messages.map((message) => (
+              {messages.map(message => (
                 <ChatMessage key={message.id} message={message} />
               ))}
               {isPending && <TypingIndicator />}
@@ -259,7 +274,7 @@ export default function AIExpertPage() {
                   Try asking:
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {SUGGESTED_QUESTIONS.slice(0, 4).map((q) => (
+                  {SUGGESTED_QUESTIONS.slice(0, 4).map(q => (
                     <button
                       key={q}
                       onClick={() => handleSuggestion(q)}
@@ -282,7 +297,7 @@ export default function AIExpertPage() {
                 <Textarea
                   ref={textareaRef}
                   value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                  onChange={e => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Ask about UK or EU financial regulation..."
                   className="min-h-[44px] max-h-[200px] resize-none border-0 bg-transparent p-2 text-sm text-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
@@ -300,7 +315,8 @@ export default function AIExpertPage() {
                 </Button>
               </div>
               <p className="text-xs mt-2 text-center text-muted-foreground">
-                Educational information only, not legal advice. Always consult qualified professionals for compliance decisions.
+                Educational information only, not legal advice. Always consult
+                qualified professionals for compliance decisions.
               </p>
             </div>
           </div>

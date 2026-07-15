@@ -2,7 +2,15 @@ import { getModuleBySlug } from "@/data/modules";
 import { Link, useParams } from "wouter";
 import PageLayout from "@/components/PageLayout";
 import ModuleBadge from "@/components/ModuleBadge";
-import { ArrowLeft, BookOpen, CheckCircle, ChevronRight, Clock, GraduationCap, Users } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  CheckCircle,
+  ChevronRight,
+  Clock,
+  GraduationCap,
+  Users,
+} from "lucide-react";
 import { useProgress } from "@/hooks/useProgress";
 
 export default function ModuleDetailPage() {
@@ -14,9 +22,13 @@ export default function ModuleDetailPage() {
     return (
       <PageLayout>
         <div className="max-w-3xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">Module not found</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            Module not found
+          </h1>
           <Link href="/learn">
-            <span className="text-primary underline cursor-pointer">Back to all modules</span>
+            <span className="text-primary underline cursor-pointer">
+              Back to all modules
+            </span>
           </Link>
         </div>
       </PageLayout>
@@ -27,7 +39,7 @@ export default function ModuleDetailPage() {
   const mp = progress.getModuleProgress(mod);
   const lastVisitedSlug = progress.getLastVisited(mod.slug);
   const continueChapter =
-    mod.chapters.find((c) => c.slug === lastVisitedSlug) ?? mod.chapters[0];
+    mod.chapters.find(c => c.slug === lastVisitedSlug) ?? mod.chapters[0];
 
   return (
     <PageLayout>
@@ -53,14 +65,19 @@ export default function ModuleDetailPage() {
                 <span className="text-xs font-semibold bg-secondary text-secondary-foreground px-3 py-1 rounded-full border border-border">
                   {mod.block}
                 </span>
-                <span className="text-xs font-mono text-muted-foreground">{mod.sourceCode}</span>
+                <span className="text-xs font-mono text-muted-foreground">
+                  {mod.sourceCode}
+                </span>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-foreground">
                 {mod.title}
               </h1>
             </div>
             {mp.badgeEarned && (
-              <div className="hidden sm:block flex-shrink-0 ml-auto" title="Module badge earned">
+              <div
+                className="hidden sm:block flex-shrink-0 ml-auto"
+                title="Module badge earned"
+              >
                 <ModuleBadge module={mod} earned size={72} />
               </div>
             )}
@@ -89,13 +106,18 @@ export default function ModuleDetailPage() {
           {mp.readCount > 0 && (
             <div className="max-w-sm">
               <div className="flex justify-between text-xs text-muted-foreground mb-1">
-                <span>{mp.readCount} of {mp.totalChapters} chapters read</span>
+                <span>
+                  {mp.readCount} of {mp.totalChapters} chapters read
+                </span>
                 <span>{mp.percent}%</span>
               </div>
               <div className="h-2 bg-muted rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all duration-500"
-                  style={{ width: `${mp.percent}%`, background: mod.accentColour }}
+                  style={{
+                    width: `${mp.percent}%`,
+                    background: mod.accentColour,
+                  }}
                 />
               </div>
             </div>
@@ -105,22 +127,34 @@ export default function ModuleDetailPage() {
 
       {/* Chapter list */}
       <section className="max-w-4xl mx-auto px-4 py-10">
-        <h2 className="text-xl font-bold text-foreground mb-6">Chapters in this Module</h2>
+        <h2 className="text-xl font-bold text-foreground mb-6">
+          Chapters in this Module
+        </h2>
         <div className="space-y-3">
           {mod.chapters.map((chapter, idx) => {
             const isRead = progress.isChapterRead(chapter.id);
             return (
-              <Link key={chapter.id} href={`/learn/${mod.slug}/${chapter.slug}`}>
+              <Link
+                key={chapter.id}
+                href={`/learn/${mod.slug}/${chapter.slug}`}
+              >
                 <div className="group flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/40 hover:shadow-md transition-all duration-200 cursor-pointer">
                   {/* Chapter number / check */}
                   <div
                     className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold ${!isRead ? "bg-muted text-muted-foreground" : ""}`}
                     style={{
                       background: isRead ? mod.accentColour + "22" : undefined,
-                      color: isRead ? mod.accentColour : undefined
+                      color: isRead ? mod.accentColour : undefined,
                     }}
                   >
-                    {isRead ? <CheckCircle className="w-5 h-5" style={{ color: mod.accentColour }} /> : idx + 1}
+                    {isRead ? (
+                      <CheckCircle
+                        className="w-5 h-5"
+                        style={{ color: mod.accentColour }}
+                      />
+                    ) : (
+                      idx + 1
+                    )}
                   </div>
 
                   {/* Content */}
@@ -160,15 +194,17 @@ export default function ModuleDetailPage() {
               )}
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-foreground mb-1">Module test</h3>
+              <h3 className="font-semibold text-foreground mb-1">
+                Module test
+              </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {!mod.moduleTest
                   ? "The test for this module is still being written."
                   : mp.testPassed
-                  ? `Passed, best score ${mp.bestScorePercent}%. You can retake it any time.`
-                  : mp.readCount === mp.totalChapters
-                  ? `All chapters read. ${mod.moduleTest.questions.length} questions, ${mod.moduleTest.passMarkPercent}% to pass and earn the badge.`
-                  : `${mod.moduleTest.questions.length} questions covering the whole module. ${mod.moduleTest.passMarkPercent}% to pass. Best taken after reading the chapters.`}
+                    ? `Passed, best score ${mp.bestScorePercent}%. You can retake it any time.`
+                    : mp.readCount === mp.totalChapters
+                      ? `All chapters read. ${mod.moduleTest.questions.length} questions, ${mod.moduleTest.passMarkPercent}% to pass and earn the badge.`
+                      : `${mod.moduleTest.questions.length} questions covering the whole module. ${mod.moduleTest.passMarkPercent}% to pass. Best taken after reading the chapters.`}
               </p>
             </div>
             {mod.moduleTest && (

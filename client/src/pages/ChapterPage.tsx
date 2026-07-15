@@ -25,7 +25,10 @@ import { stripMarkdown } from "@/lib/stripMarkdown";
 
 export default function ChapterPage() {
   const params = useParams<{ moduleSlug: string; chapterSlug: string }>();
-  const result = getChapterBySlug(params.moduleSlug ?? "", params.chapterSlug ?? "");
+  const result = getChapterBySlug(
+    params.moduleSlug ?? "",
+    params.chapterSlug ?? ""
+  );
   const progress = useProgress();
   const [activeSection, setActiveSection] = useState<string>("");
   const [shareOpen, setShareOpen] = useState(false);
@@ -37,7 +40,7 @@ export default function ChapterPage() {
     const { chapter } = result;
     return [
       { sectionId: "", text: `${chapter.title}. ${chapter.intro}` },
-      ...chapter.subSections.map((s) => ({
+      ...chapter.subSections.map(s => ({
         sectionId: s.id,
         text: `${s.heading.replace(/^[\d.\s, -]+/, "")}. ${stripMarkdown(s.content)}`,
       })),
@@ -56,8 +59,8 @@ export default function ChapterPage() {
   // Intersection observer for sidebar highlighting
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
@@ -66,7 +69,7 @@ export default function ChapterPage() {
       { rootMargin: "-20% 0px -70% 0px" }
     );
     const headings = document.querySelectorAll("[data-section-id]");
-    headings.forEach((el) => observer.observe(el));
+    headings.forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, [result?.chapter.id]);
 
@@ -79,13 +82,23 @@ export default function ChapterPage() {
 
   const handleShare = (method: "copy" | "twitter" | "linkedin") => {
     const url = window.location.href;
-    const title = result ? `${result.chapter.title} - RegVarsity` : "RegVarsity";
+    const title = result
+      ? `${result.chapter.title} - RegVarsity`
+      : "RegVarsity";
     if (method === "copy") {
-      navigator.clipboard.writeText(url).then(() => toast.success("Link copied to clipboard!"));
+      navigator.clipboard
+        .writeText(url)
+        .then(() => toast.success("Link copied to clipboard!"));
     } else if (method === "twitter") {
-      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, "_blank");
+      window.open(
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+        "_blank"
+      );
     } else if (method === "linkedin") {
-      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank");
+      window.open(
+        `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+        "_blank"
+      );
     }
     setShareOpen(false);
   };
@@ -94,9 +107,13 @@ export default function ChapterPage() {
     return (
       <PageLayout>
         <div className="max-w-3xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">Chapter not found</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            Chapter not found
+          </h1>
           <Link href="/learn">
-            <span className="text-primary underline cursor-pointer">Back to all modules</span>
+            <span className="text-primary underline cursor-pointer">
+              Back to all modules
+            </span>
           </Link>
         </div>
       </PageLayout>
@@ -112,11 +129,15 @@ export default function ChapterPage() {
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8 flex-wrap">
           <Link href="/learn">
-            <span className="hover:text-primary cursor-pointer transition-colors">Modules</span>
+            <span className="hover:text-primary cursor-pointer transition-colors">
+              Modules
+            </span>
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <Link href={`/learn/${mod.slug}`}>
-            <span className="hover:text-primary cursor-pointer transition-colors">{mod.title}</span>
+            <span className="hover:text-primary cursor-pointer transition-colors">
+              {mod.title}
+            </span>
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-foreground font-medium">{chapter.title}</span>
@@ -153,8 +174,8 @@ export default function ChapterPage() {
                             read
                               ? "text-primary"
                               : isCurrent
-                              ? "bg-primary text-white"
-                              : "bg-muted/70 text-muted-foreground"
+                                ? "bg-primary text-white"
+                                : "bg-muted/70 text-muted-foreground"
                           }`}
                         >
                           {read ? <CheckCircle className="w-4 h-4" /> : idx + 1}
@@ -194,7 +215,7 @@ export default function ChapterPage() {
 
             {/* Sub-sections */}
             <div className="space-y-12 max-w-[72ch]">
-              {chapter.subSections.map((section) => (
+              {chapter.subSections.map(section => (
                 <div
                   key={section.id}
                   id={section.id}
@@ -220,7 +241,10 @@ export default function ChapterPage() {
               <p className="overline-kicker mb-5">Key takeaways</p>
               <ul className="space-y-3">
                 {chapter.keyTakeaways.map((kt, i) => (
-                  <li key={i} className="grid grid-cols-[2rem_1fr] gap-3 text-sm leading-relaxed text-foreground/85">
+                  <li
+                    key={i}
+                    className="grid grid-cols-[2rem_1fr] gap-3 text-sm leading-relaxed text-foreground/85"
+                  >
                     <span className="font-serif text-lg text-primary tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -232,7 +256,11 @@ export default function ChapterPage() {
 
             {/* Quick Check quiz */}
             {chapter.quizQuestions && chapter.quizQuestions.length > 0 && (
-              <QuickCheck module={mod} chapter={chapter} questions={chapter.quizQuestions} />
+              <QuickCheck
+                module={mod}
+                chapter={chapter}
+                questions={chapter.quizQuestions}
+              />
             )}
 
             {/* Source line */}
@@ -259,7 +287,8 @@ export default function ChapterPage() {
               ) : (
                 <span>{mod.sourceCode}</span>
               )}{" "}
-              · Last reviewed {mod.lastReviewed ?? "July 2026"} · Educational purposes only, not legal advice.
+              · Last reviewed {mod.lastReviewed ?? "July 2026"} · Educational
+              purposes only, not legal advice.
             </p>
 
             {/* Actions row */}
@@ -277,7 +306,7 @@ export default function ChapterPage() {
               {/* Share button */}
               <div className="relative">
                 <button
-                  onClick={() => setShareOpen((v) => !v)}
+                  onClick={() => setShareOpen(v => !v)}
                   className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-muted text-muted-foreground border border-border hover:border-primary hover:text-primary transition-all"
                 >
                   <Share2 className="w-4 h-4" />
@@ -328,7 +357,9 @@ export default function ChapterPage() {
                   <div className="group flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:border-primary hover:shadow-md transition-all cursor-pointer">
                     <ArrowLeft className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:-translate-x-1 transition-all flex-shrink-0" />
                     <div>
-                      <div className="text-xs text-muted-foreground mb-0.5">Previous</div>
+                      <div className="text-xs text-muted-foreground mb-0.5">
+                        Previous
+                      </div>
                       <div className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1">
                         {prevChapter.title}
                       </div>
@@ -342,7 +373,9 @@ export default function ChapterPage() {
                 <Link href={`/learn/${mod.slug}/${nextChapter.slug}`}>
                   <div className="group flex items-center justify-end gap-3 p-4 bg-card border border-border rounded-xl hover:border-primary hover:shadow-md transition-all cursor-pointer text-right">
                     <div>
-                      <div className="text-xs text-muted-foreground mb-0.5">Next</div>
+                      <div className="text-xs text-muted-foreground mb-0.5">
+                        Next
+                      </div>
                       <div className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1">
                         {nextChapter.title}
                       </div>
@@ -354,7 +387,9 @@ export default function ChapterPage() {
                 <Link href={`/learn/${mod.slug}`}>
                   <div className="group flex items-center justify-end gap-3 p-4 bg-card border border-border rounded-xl hover:border-primary hover:shadow-md transition-all cursor-pointer text-right">
                     <div>
-                      <div className="text-xs text-muted-foreground mb-0.5">Module complete</div>
+                      <div className="text-xs text-muted-foreground mb-0.5">
+                        Module complete
+                      </div>
                       <div className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
                         Back to module overview
                       </div>
@@ -373,7 +408,7 @@ export default function ChapterPage() {
                 On this page
               </div>
               <nav className="space-y-1">
-                {chapter.subSections.map((section) => {
+                {chapter.subSections.map(section => {
                   const isSpoken = tts.currentSectionId === section.id;
                   return (
                     <a

@@ -2,11 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useTheme, Theme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Sun,
   Moon,
@@ -68,7 +64,6 @@ export default function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between gap-4">
-
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
             <div className="logo-icon flex h-9 w-9 items-center justify-center rounded-md font-serif text-lg font-semibold">
@@ -80,8 +75,10 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
-
+          <nav
+            className="hidden lg:flex items-center gap-1"
+            aria-label="Main navigation"
+          >
             {/* Learn mega-dropdown */}
             <div
               className="relative"
@@ -99,7 +96,9 @@ export default function Navigation() {
                 <ChevronDown
                   size={13}
                   className="transition-transform duration-200"
-                  style={{ transform: learnOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+                  style={{
+                    transform: learnOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  }}
                 />
               </button>
 
@@ -132,7 +131,7 @@ export default function Navigation() {
                   <div className="grid grid-cols-2 gap-0 p-3">
                     {[col1, col2].map((col, ci) => (
                       <div key={ci} className="space-y-0.5">
-                        {col.map((mod) => (
+                        {col.map(mod => (
                           <Link
                             key={mod.id}
                             href={`/learn/${mod.slug}`}
@@ -143,7 +142,10 @@ export default function Navigation() {
                               {String(mod.number).padStart(2, "0")}
                             </span>
                             <div className="min-w-0">
-                              <div className="font-medium leading-snug truncate text-foreground group-hover/item:text-primary" style={{ fontSize: "0.8rem" }}>
+                              <div
+                                className="font-medium leading-snug truncate text-foreground group-hover/item:text-primary"
+                                style={{ fontSize: "0.8rem" }}
+                              >
                                 {mod.title}
                               </div>
                               <div className="text-xs font-mono text-muted-foreground">
@@ -214,7 +216,7 @@ export default function Navigation() {
           <div className="flex items-center gap-2">
             {/* Theme switcher, segmented control */}
             <div className="hidden md:flex items-center rounded-lg border border-border p-0.5 gap-0.5 bg-muted/50">
-              {themeOptions.map((opt) => (
+              {themeOptions.map(opt => (
                 <button
                   key={opt.value}
                   onClick={() => setTheme(opt.value)}
@@ -247,8 +249,14 @@ export default function Navigation() {
               <SheetContent side="right" className="w-80 p-0 bg-background">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between p-4 border-b border-border">
-                    <span className="font-bold text-lg text-foreground">Menu</span>
-                    <Button variant="ghost" size="icon" onClick={() => setMobileOpen(false)}>
+                    <span className="font-bold text-lg text-foreground">
+                      Menu
+                    </span>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => setMobileOpen(false)}
+                    >
                       <X size={18} />
                     </Button>
                   </div>
@@ -266,13 +274,15 @@ export default function Navigation() {
                       <Library size={15} />
                       All Modules
                     </Link>
-                    {ALL_MODULES.map((mod) => (
+                    {ALL_MODULES.map(mod => (
                       <Link
                         key={mod.id}
                         href={`/learn/${mod.slug}`}
                         onClick={() => setMobileOpen(false)}
                         className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors hover:bg-accent/30 ${
-                          isActive(`/learn/${mod.slug}`) ? "text-primary" : "text-muted-foreground"
+                          isActive(`/learn/${mod.slug}`)
+                            ? "text-primary"
+                            : "text-muted-foreground"
                         }`}
                       >
                         <div
@@ -286,12 +296,28 @@ export default function Navigation() {
                     ))}
                     <div className="h-px my-2 bg-border" />
                     {[
-                      { href: "/exercises", label: "Exercises", icon: GraduationCap },
-                      { href: "/glossary", label: "Glossary", icon: BookMarked },
-                      { href: "/whats-new", label: "What's New", icon: Newspaper },
+                      {
+                        href: "/exercises",
+                        label: "Exercises",
+                        icon: GraduationCap,
+                      },
+                      {
+                        href: "/glossary",
+                        label: "Glossary",
+                        icon: BookMarked,
+                      },
+                      {
+                        href: "/whats-new",
+                        label: "What's New",
+                        icon: Newspaper,
+                      },
                       { href: "/progress", label: "My Progress", icon: Medal },
-                      { href: "/ai-expert", label: "AI Expert", icon: Sparkles },
-                    ].map((link) => {
+                      {
+                        href: "/ai-expert",
+                        label: "AI Expert",
+                        icon: Sparkles,
+                      },
+                    ].map(link => {
                       const Icon = link.icon;
                       return (
                         <Link
@@ -299,7 +325,9 @@ export default function Navigation() {
                           href={link.href}
                           onClick={() => setMobileOpen(false)}
                           className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors hover:bg-accent/30 ${
-                            isActive(link.href) ? "text-primary" : "text-foreground"
+                            isActive(link.href)
+                              ? "text-primary"
+                              : "text-foreground"
                           }`}
                         >
                           <Icon size={15} />
@@ -313,7 +341,7 @@ export default function Navigation() {
                       Display Mode
                     </p>
                     <div className="flex gap-2">
-                      {themeOptions.map((opt) => (
+                      {themeOptions.map(opt => (
                         <button
                           key={opt.value}
                           onClick={() => setTheme(opt.value)}

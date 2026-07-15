@@ -14,7 +14,8 @@ export const moduleFEES: Module = {
   accentColour: "oklch(0.50 0.14 60)",
   description:
     "Every FCA-authorised firm pays fees to fund the FCA, the Financial Ombudsman Service (FOS), and the Financial Services Compensation Scheme (FSCS). Understanding how these work, and what the FSCS covers, is essential for both firms and consumers.",
-  whoItAppliesTo: "All FCA-authorised firms. FSCS protection applies to eligible claimants dealing with authorised firms.",
+  whoItAppliesTo:
+    "All FCA-authorised firms. FSCS protection applies to eligible claimants dealing with authorised firms.",
   chapters: [
     {
       id: "fees-1",
@@ -32,9 +33,15 @@ export const moduleFEES: Module = {
         },
       ],
       keyTakeaways: [
-        { text: "The FCA is funded entirely by the firms it regulates through annual fees." },
-        { text: "Fees fund three bodies: the FCA, the Financial Ombudsman Service, and the FSCS." },
-        { text: "Fees are calculated based on the firm's fee-block and tariff data (size measure)." },
+        {
+          text: "The FCA is funded entirely by the firms it regulates through annual fees.",
+        },
+        {
+          text: "Fees fund three bodies: the FCA, the Financial Ombudsman Service, and the FSCS.",
+        },
+        {
+          text: "Fees are calculated based on the firm's fee-block and tariff data (size measure).",
+        },
       ],
       quizQuestions: [
         {
@@ -47,11 +54,13 @@ export const moduleFEES: Module = {
             "By the Bank of England",
           ],
           correctIndex: 1,
-          explanation: "The FCA is funded entirely by the firms it regulates. Fees also fund the Financial Ombudsman Service and the FSCS. Fines, by contrast, mostly go to the Treasury, not the FCA's budget.",
+          explanation:
+            "The FCA is funded entirely by the firms it regulates. Fees also fund the Financial Ombudsman Service and the FSCS. Fines, by contrast, mostly go to the Treasury, not the FCA's budget.",
         },
         {
           id: "fees-1-q2",
-          question: "What determines how much an individual firm pays in FCA fees?",
+          question:
+            "What determines how much an individual firm pays in FCA fees?",
           options: [
             "Its fee-block (category of activity) and tariff data such as income or assets under management",
             "The number of complaints it received",
@@ -59,7 +68,8 @@ export const moduleFEES: Module = {
             "Its share price performance",
           ],
           correctIndex: 0,
-          explanation: "Fees are calculated from the firm's fee-block, the category of regulated activity, and its tariff data, a size measure such as income, assets under management or number of mortgages. Even the smallest firms pay a minimum annual fee of roughly £1,000 to £2,000.",
+          explanation:
+            "Fees are calculated from the firm's fee-block, the category of regulated activity, and its tariff data, a size measure such as income, assets under management or number of mortgages. Even the smallest firms pay a minimum annual fee of roughly £1,000 to £2,000.",
         },
         {
           id: "fees-1-q3",
@@ -71,7 +81,8 @@ export const moduleFEES: Module = {
             "The FOS, the FSCS and the Pension Protection Fund",
           ],
           correctIndex: 1,
-          explanation: "Fees charged to authorised firms fund the FCA itself, the Financial Ombudsman Service, and the Financial Services Compensation Scheme.",
+          explanation:
+            "Fees charged to authorised firms fund the FCA itself, the Financial Ombudsman Service, and the Financial Services Compensation Scheme.",
         },
       ],
     },
@@ -96,10 +107,16 @@ export const moduleFEES: Module = {
         },
       ],
       keyTakeaways: [
-        { text: "The FSCS compensates customers of failed FCA-authorised firms, not investment losses." },
-        { text: "Deposit protection is £120,000 per person per institution (since 1 December 2025)." },
+        {
+          text: "The FSCS compensates customers of failed FCA-authorised firms, not investment losses.",
+        },
+        {
+          text: "Deposit protection is £120,000 per person per institution (since 1 December 2025).",
+        },
         { text: "Investment protection is £85,000 per person per firm." },
-        { text: "The FSCS does not cover unauthorised firms, always check the FCA Register." },
+        {
+          text: "The FSCS does not cover unauthorised firms, always check the FCA Register.",
+        },
       ],
       quizQuestions: [
         {
@@ -112,11 +129,13 @@ export const moduleFEES: Module = {
             "When interest rates fall",
           ],
           correctIndex: 1,
-          explanation: "The FSCS compensates eligible claimants when an authorised firm cannot pay claims against it, usually on insolvency. Investment losses from market movements are not covered.",
+          explanation:
+            "The FSCS compensates eligible claimants when an authorised firm cannot pay claims against it, usually on insolvency. Investment losses from market movements are not covered.",
         },
         {
           id: "fees-2-q2",
-          question: "What is the FSCS compensation limit for long-term (life) insurance claims?",
+          question:
+            "What is the FSCS compensation limit for long-term (life) insurance claims?",
           options: [
             "90% of the claim",
             "£85,000",
@@ -124,11 +143,13 @@ export const moduleFEES: Module = {
             "£120,000",
           ],
           correctIndex: 2,
-          explanation: "Long-term insurance such as life policies is protected at 100% of the claim. Most general insurance is covered at 90%, with no upper limit for compulsory insurance. Deposits are covered to £120,000 and investments to £85,000.",
+          explanation:
+            "Long-term insurance such as life policies is protected at 100% of the claim. Most general insurance is covered at 90%, with no upper limit for compulsory insurance. Deposits are covered to £120,000 and investments to £85,000.",
         },
         {
           id: "fees-2-q3",
-          question: "A saver inherits £500,000 and deposits it while deciding what to do. Their bank fails four months later. What protection applies?",
+          question:
+            "A saver inherits £500,000 and deposits it while deciding what to do. Their bank fails four months later. What protection applies?",
           options: [
             "Only the standard £120,000",
             "Temporary high balance protection of up to £1.4 million, because the deposit came from a specific life event within six months",
@@ -136,7 +157,8 @@ export const moduleFEES: Module = {
             "The full amount indefinitely",
           ],
           correctIndex: 1,
-          explanation: "Balances from specific life events such as inheritance, a house sale or redundancy get temporary protection of up to £1.4 million for six months. After six months, the standard £120,000 limit applies.",
+          explanation:
+            "Balances from specific life events such as inheritance, a house sale or redundancy get temporary protection of up to £1.4 million for six months. After six months, the standard £120,000 limit applies.",
         },
       ],
     },
@@ -154,7 +176,8 @@ export const moduleFEES: Module = {
           "The FCA is funded by the London Stock Exchange",
         ],
         correctIndex: 1,
-        explanation: "The FCA is funded entirely by the firms it regulates through application fees and annual fees. Those fees also fund the FOS and the FSCS.",
+        explanation:
+          "The FCA is funded entirely by the firms it regulates through application fees and annual fees. Those fees also fund the FOS and the FSCS.",
       },
       {
         id: "fees-test-q2",
@@ -166,11 +189,13 @@ export const moduleFEES: Module = {
           "Its age and its legal form",
         ],
         correctIndex: 0,
-        explanation: "Fees are based on the firm's fee-block (the category of regulated activity) and its tariff data (a size measure such as income, assets under management or number of mortgages).",
+        explanation:
+          "Fees are based on the firm's fee-block (the category of regulated activity) and its tariff data (a size measure such as income, assets under management or number of mortgages).",
       },
       {
         id: "fees-test-q3",
-        question: "Since 1 December 2025, what is the FSCS deposit protection limit?",
+        question:
+          "Since 1 December 2025, what is the FSCS deposit protection limit?",
         options: [
           "£85,000 per person per institution",
           "£100,000 per person per institution",
@@ -178,11 +203,13 @@ export const moduleFEES: Module = {
           "£1.4 million per person per institution",
         ],
         correctIndex: 2,
-        explanation: "The deposit limit rose to £120,000 per person per authorised institution on 1 December 2025. The £1.4 million figure is the separate temporary high balance protection for life events, lasting six months.",
+        explanation:
+          "The deposit limit rose to £120,000 per person per authorised institution on 1 December 2025. The £1.4 million figure is the separate temporary high balance protection for life events, lasting six months.",
       },
       {
         id: "fees-test-q4",
-        question: "What is the FSCS limit for investment claims against a failed firm?",
+        question:
+          "What is the FSCS limit for investment claims against a failed firm?",
         options: [
           "£55,000 per person per firm",
           "£85,000 per person per firm",
@@ -190,11 +217,13 @@ export const moduleFEES: Module = {
           "Unlimited",
         ],
         correctIndex: 1,
-        explanation: "Investment claims are protected up to £85,000 per person per firm. The December 2025 increase to £120,000 applied to deposits only.",
+        explanation:
+          "Investment claims are protected up to £85,000 per person per firm. The December 2025 increase to £120,000 applied to deposits only.",
       },
       {
         id: "fees-test-q5",
-        question: "An investor puts money into a scheme run by a firm that is not FCA-authorised. The scheme collapses. What FSCS protection do they have?",
+        question:
+          "An investor puts money into a scheme run by a firm that is not FCA-authorised. The scheme collapses. What FSCS protection do they have?",
         options: [
           "The full £85,000",
           "None, because the FSCS only covers customers of FCA-authorised firms",
@@ -202,11 +231,13 @@ export const moduleFEES: Module = {
           "£120,000",
         ],
         correctIndex: 1,
-        explanation: "The FSCS only covers customers of FCA-authorised firms. Dealing with an unauthorised firm means no FSCS protection, which is why checking the FCA Register before investing matters so much.",
+        explanation:
+          "The FSCS only covers customers of FCA-authorised firms. Dealing with an unauthorised firm means no FSCS protection, which is why checking the FCA Register before investing matters so much.",
       },
       {
         id: "fees-test-q6",
-        question: "A customer's fund drops 30% in a market crash, but the firm remains solvent. Can the FSCS help?",
+        question:
+          "A customer's fund drops 30% in a market crash, but the firm remains solvent. Can the FSCS help?",
         options: [
           "Yes, up to £85,000",
           "No, the FSCS covers firm failure, not investment losses",
@@ -214,7 +245,8 @@ export const moduleFEES: Module = {
           "Only if the crash lasted more than a year",
         ],
         correctIndex: 1,
-        explanation: "Investment losses from market movements are investment risk, not an FSCS claim. The scheme pays out when an authorised firm has failed and cannot meet claims against it.",
+        explanation:
+          "Investment losses from market movements are investment risk, not an FSCS claim. The scheme pays out when an authorised firm has failed and cannot meet claims against it.",
       },
     ],
   },

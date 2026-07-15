@@ -17,7 +17,8 @@ export const moduleMiCA: Module = {
   accentColour: "oklch(0.45 0.16 265)",
   description:
     "MiCA is the EU's single rulebook for crypto assets, the first comprehensive crypto framework by a major regulator anywhere in the world. It covers stablecoins, exchanges, custodians and token issuers across all 27 member states. If you work in crypto compliance, or want to, MiCA is now essential knowledge alongside the UK regime.",
-  whoItAppliesTo: "Crypto-asset issuers, stablecoin issuers, and crypto-asset service providers (CASPs) operating in or into the EU.",
+  whoItAppliesTo:
+    "Crypto-asset issuers, stablecoin issuers, and crypto-asset service providers (CASPs) operating in or into the EU.",
   chapters: [
     {
       id: "mica-1",
@@ -72,16 +73,27 @@ Issuers of "other crypto assets" must publish a **crypto-asset white paper**: a 
         },
       ],
       keyTakeaways: [
-        { text: "MiCA (Regulation (EU) 2023/1114) is the EU's single crypto rulebook, applying directly in all 27 member states." },
-        { text: "Stablecoin rules applied from 30 June 2024; the CASP and other crypto-asset rules from 30 December 2024." },
-        { text: "The three token categories are asset-referenced tokens (ARTs), e-money tokens (EMTs), and other crypto assets." },
-        { text: "Security tokens fall under MiFID II, and genuinely unique NFTs, CBDCs and fully decentralised services sit outside MiCA." },
-        { text: "One authorisation can be passported across the whole EU, the biggest commercial draw of the regime." },
+        {
+          text: "MiCA (Regulation (EU) 2023/1114) is the EU's single crypto rulebook, applying directly in all 27 member states.",
+        },
+        {
+          text: "Stablecoin rules applied from 30 June 2024; the CASP and other crypto-asset rules from 30 December 2024.",
+        },
+        {
+          text: "The three token categories are asset-referenced tokens (ARTs), e-money tokens (EMTs), and other crypto assets.",
+        },
+        {
+          text: "Security tokens fall under MiFID II, and genuinely unique NFTs, CBDCs and fully decentralised services sit outside MiCA.",
+        },
+        {
+          text: "One authorisation can be passported across the whole EU, the biggest commercial draw of the regime.",
+        },
       ],
       quizQuestions: [
         {
           id: "mica-1-q1",
-          question: "A token aims to hold a stable value by referencing a basket of the US dollar, gold and bitcoin. How does MiCA classify it?",
+          question:
+            "A token aims to hold a stable value by referencing a basket of the US dollar, gold and bitcoin. How does MiCA classify it?",
           options: [
             "An e-money token (EMT)",
             "An asset-referenced token (ART)",
@@ -89,7 +101,8 @@ Issuers of "other crypto assets" must publish a **crypto-asset white paper**: a 
             "A financial instrument under MiFID II",
           ],
           correctIndex: 1,
-          explanation: "ARTs stabilise their value by referencing a basket of assets, currencies, commodities or crypto assets. EMTs reference a single official currency. A token pegged to a mixed basket is the textbook ART.",
+          explanation:
+            "ARTs stabilise their value by referencing a basket of assets, currencies, commodities or crypto assets. EMTs reference a single official currency. A token pegged to a mixed basket is the textbook ART.",
         },
         {
           id: "mica-1-q2",
@@ -101,11 +114,13 @@ Issuers of "other crypto assets" must publish a **crypto-asset white paper**: a 
             "1 July 2026",
           ],
           correctIndex: 2,
-          explanation: "MiCA applied in two stages: the stablecoin rules (ARTs and EMTs) from 30 June 2024, and the rules for crypto-asset service providers and other crypto assets from 30 December 2024. July 2026 is the end of the longest national grandfathering periods.",
+          explanation:
+            "MiCA applied in two stages: the stablecoin rules (ARTs and EMTs) from 30 June 2024, and the rules for crypto-asset service providers and other crypto assets from 30 December 2024. July 2026 is the end of the longest national grandfathering periods.",
         },
         {
           id: "mica-1-q3",
-          question: "A company issues tokenised shares that carry dividend and voting rights. Which regime applies?",
+          question:
+            "A company issues tokenised shares that carry dividend and voting rights. Which regime applies?",
           options: [
             "MiCA, because the shares are on a blockchain",
             "MiFID II, because tokens that qualify as financial instruments are excluded from MiCA",
@@ -113,7 +128,8 @@ Issuers of "other crypto assets" must publish a **crypto-asset white paper**: a 
             "The issuer can choose either regime",
           ],
           correctIndex: 1,
-          explanation: "Crypto assets that qualify as financial instruments are excluded from MiCA and regulated under MiFID II. Putting a share on a blockchain does not change what it is: if it grants rights like a share, it is treated as a share.",
+          explanation:
+            "Crypto assets that qualify as financial instruments are excluded from MiCA and regulated under MiFID II. Putting a share on a blockchain does not change what it is: if it grants rights like a share, it is treated as a share.",
         },
       ],
     },
@@ -179,16 +195,27 @@ For a compliance career, the practical point is that the two regimes are cousins
         },
       ],
       keyTakeaways: [
-        { text: "Ten crypto-asset services require CASP authorisation from a national competent authority, passportable across the EU." },
-        { text: "CASPs face conduct rules: honest and fair treatment of clients, clear communications, and mandatory risk warnings." },
-        { text: "Minimum capital ranges from €50,000 to €150,000 depending on the services, and client assets must be segregated." },
-        { text: "Grandfathered firms could operate under national rules until MiCA authorisation, with a hard stop at 1 July 2026." },
-        { text: "The UK regime (live 25 October 2027) covers lending and staking from the start but offers no EU-style passport." },
+        {
+          text: "Ten crypto-asset services require CASP authorisation from a national competent authority, passportable across the EU.",
+        },
+        {
+          text: "CASPs face conduct rules: honest and fair treatment of clients, clear communications, and mandatory risk warnings.",
+        },
+        {
+          text: "Minimum capital ranges from €50,000 to €150,000 depending on the services, and client assets must be segregated.",
+        },
+        {
+          text: "Grandfathered firms could operate under national rules until MiCA authorisation, with a hard stop at 1 July 2026.",
+        },
+        {
+          text: "The UK regime (live 25 October 2027) covers lending and staking from the start but offers no EU-style passport.",
+        },
       ],
       quizQuestions: [
         {
           id: "mica-2-q1",
-          question: "Which of these activities does NOT require CASP authorisation under MiCA?",
+          question:
+            "Which of these activities does NOT require CASP authorisation under MiCA?",
           options: [
             "Holding customers' crypto assets in custody",
             "Running a crypto trading platform",
@@ -196,11 +223,13 @@ For a compliance career, the practical point is that the two regimes are cousins
             "Advising clients on crypto assets",
           ],
           correctIndex: 2,
-          explanation: "CASP authorisation applies to providing crypto-asset services as a business for clients, including custody, operating a platform, execution and advice. Buying crypto for yourself is not a service to clients and needs no licence.",
+          explanation:
+            "CASP authorisation applies to providing crypto-asset services as a business for clients, including custody, operating a platform, execution and advice. Buying crypto for yourself is not a service to clients and needs no licence.",
         },
         {
           id: "mica-2-q2",
-          question: "What does MiCA require a CASP to do with client crypto assets and funds?",
+          question:
+            "What does MiCA require a CASP to do with client crypto assets and funds?",
           options: [
             "Insure them with a private insurer",
             "Keep them segregated from the firm's own assets, with custodians liable for losses",
@@ -208,11 +237,13 @@ For a compliance career, the practical point is that the two regimes are cousins
             "Deposit them with the European Central Bank",
           ],
           correctIndex: 1,
-          explanation: "Client crypto assets and funds must be kept separate from the firm's own, the same logic as the UK's CASS rules. Custodians are liable to clients for the loss of crypto assets held in custody, up to the market value of what was lost.",
+          explanation:
+            "Client crypto assets and funds must be kept separate from the firm's own, the same logic as the UK's CASS rules. Custodians are liable to clients for the loss of crypto assets held in custody, up to the market value of what was lost.",
         },
         {
           id: "mica-2-q3",
-          question: "A crypto exchange was operating legally in France before 30 December 2024. What did the grandfathering rules allow?",
+          question:
+            "A crypto exchange was operating legally in France before 30 December 2024. What did the grandfathering rules allow?",
           options: [
             "Permanent exemption from MiCA",
             "Continued operation under national rules until MiCA authorisation is granted or refused, with a hard stop at 1 July 2026",
@@ -220,7 +251,8 @@ For a compliance career, the practical point is that the two regimes are cousins
             "Six months to wind down the business",
           ],
           correctIndex: 1,
-          explanation: "Pre-existing firms could keep operating under their old national regime while seeking MiCA authorisation, at the latest until 1 July 2026. Member states could shorten the window, and several, including Germany and the Netherlands, did.",
+          explanation:
+            "Pre-existing firms could keep operating under their old national regime while seeking MiCA authorisation, at the latest until 1 July 2026. Member states could shorten the window, and several, including Germany and the Netherlands, did.",
         },
       ],
     },
@@ -259,11 +291,21 @@ One visible market effect: several major global stablecoins chose not to seek EU
         },
       ],
       keyTakeaways: [
-        { text: "EMTs may only be issued by authorised credit institutions or e-money institutions, with redemption at par, at any time, free of charge." },
-        { text: "ART issuers need dedicated authorisation and an approved white paper, and holders get redemption rights." },
-        { text: "Reserves must be segregated, insolvency-remote, low-risk and audited, and must always cover holders' claims." },
-        { text: "Significant ARTs and EMTs face stricter requirements and substantial EBA supervision." },
-        { text: "Paying interest on stablecoins is banned, so they cannot compete with bank deposits." },
+        {
+          text: "EMTs may only be issued by authorised credit institutions or e-money institutions, with redemption at par, at any time, free of charge.",
+        },
+        {
+          text: "ART issuers need dedicated authorisation and an approved white paper, and holders get redemption rights.",
+        },
+        {
+          text: "Reserves must be segregated, insolvency-remote, low-risk and audited, and must always cover holders' claims.",
+        },
+        {
+          text: "Significant ARTs and EMTs face stricter requirements and substantial EBA supervision.",
+        },
+        {
+          text: "Paying interest on stablecoins is banned, so they cannot compete with bank deposits.",
+        },
       ],
       quizQuestions: [
         {
@@ -276,11 +318,13 @@ One visible market effect: several major global stablecoins chose not to seek EU
             "Only the European Central Bank",
           ],
           correctIndex: 1,
-          explanation: "EMTs, stablecoins referencing a single official currency, may only be issued by authorised credit institutions or e-money institutions. Holders have a claim at par: redemption at any moment, at face value, with no redemption fee.",
+          explanation:
+            "EMTs, stablecoins referencing a single official currency, may only be issued by authorised credit institutions or e-money institutions. Holders have a claim at par: redemption at any moment, at face value, with no redemption fee.",
         },
         {
           id: "mica-3-q2",
-          question: "What happens when a stablecoin is classified as 'significant' under MiCA?",
+          question:
+            "What happens when a stablecoin is classified as 'significant' under MiCA?",
           options: [
             "It is banned from the EU",
             "It faces stricter requirements and supervision shifts substantially to the European Banking Authority",
@@ -288,11 +332,13 @@ One visible market effect: several major global stablecoins chose not to seek EU
             "It becomes legal tender in the euro area",
           ],
           correctIndex: 1,
-          explanation: "Tokens crossing thresholds for holders, reserve size and reach become significant, attracting higher capital and liquidity requirements, with the EBA taking a substantial supervisory role in place of national regulators alone.",
+          explanation:
+            "Tokens crossing thresholds for holders, reserve size and reach become significant, attracting higher capital and liquidity requirements, with the EBA taking a substantial supervisory role in place of national regulators alone.",
         },
         {
           id: "mica-3-q3",
-          question: "Why does MiCA ban issuers from paying interest on ARTs and EMTs?",
+          question:
+            "Why does MiCA ban issuers from paying interest on ARTs and EMTs?",
           options: [
             "To keep issuer costs down",
             "So stablecoins do not compete with bank deposits",
@@ -300,7 +346,8 @@ One visible market effect: several major global stablecoins chose not to seek EU
             "To encourage people to spend rather than save",
           ],
           correctIndex: 1,
-          explanation: "The interest ban stops stablecoins functioning as interest-bearing savings products competing with bank deposits, which could pull funding out of the banking system and amplify runs in a crisis.",
+          explanation:
+            "The interest ban stops stablecoins functioning as interest-bearing savings products competing with bank deposits, which could pull funding out of the banking system and amplify runs in a crisis.",
         },
       ],
     },
@@ -346,16 +393,27 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
         },
       ],
       keyTakeaways: [
-        { text: "MiCA prohibits insider dealing, unlawful disclosure and market manipulation for crypto assets admitted to trading." },
-        { text: "Issuers must disclose inside information as soon as possible, and professional intermediaries must detect and report suspected abuse." },
-        { text: "Wash trading and spoofing in crypto markets are squarely within the manipulation prohibition." },
-        { text: "The EU regulated crypto first with one bespoke regulation; the UK extends its existing FSMA framework from October 2027." },
-        { text: "Both regimes converge on the same principle: same activity, same risk, same rules as traditional finance." },
+        {
+          text: "MiCA prohibits insider dealing, unlawful disclosure and market manipulation for crypto assets admitted to trading.",
+        },
+        {
+          text: "Issuers must disclose inside information as soon as possible, and professional intermediaries must detect and report suspected abuse.",
+        },
+        {
+          text: "Wash trading and spoofing in crypto markets are squarely within the manipulation prohibition.",
+        },
+        {
+          text: "The EU regulated crypto first with one bespoke regulation; the UK extends its existing FSMA framework from October 2027.",
+        },
+        {
+          text: "Both regimes converge on the same principle: same activity, same risk, same rules as traditional finance.",
+        },
       ],
       quizQuestions: [
         {
           id: "mica-4-q1",
-          question: "An exchange employee learns a token will be listed next week and buys it before the announcement. Under MiCA this is:",
+          question:
+            "An exchange employee learns a token will be listed next week and buys it before the announcement. Under MiCA this is:",
           options: [
             "Legitimate research-driven trading",
             "Insider dealing, trading on precise non-public price-sensitive information",
@@ -363,11 +421,13 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
             "Market manipulation",
           ],
           correctIndex: 1,
-          explanation: "Advance knowledge of an exchange listing is precise, non-public and price sensitive, so trading on it is insider dealing under MiCA's market abuse rules, mirroring the traditional MAR regime.",
+          explanation:
+            "Advance knowledge of an exchange listing is precise, non-public and price sensitive, so trading on it is insider dealing under MiCA's market abuse rules, mirroring the traditional MAR regime.",
         },
         {
           id: "mica-4-q2",
-          question: "A trading firm repeatedly buys and sells the same token with itself to inflate reported volume. What is this?",
+          question:
+            "A trading firm repeatedly buys and sells the same token with itself to inflate reported volume. What is this?",
           options: [
             "Wash trading, a form of market manipulation prohibited by MiCA",
             "Arbitrage, which is permitted",
@@ -375,11 +435,13 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
             "A legitimate liquidity programme",
           ],
           correctIndex: 0,
-          explanation: "Wash trading creates false signals about demand and volume, which is market manipulation under MiCA, exactly as it would be under UK MAR in traditional markets.",
+          explanation:
+            "Wash trading creates false signals about demand and volume, which is market manipulation under MiCA, exactly as it would be under UK MAR in traditional markets.",
         },
         {
           id: "mica-4-q3",
-          question: "Which statement about the EU and UK crypto regimes is correct?",
+          question:
+            "Which statement about the EU and UK crypto regimes is correct?",
           options: [
             "The UK regime went live before MiCA",
             "MiCA covers crypto lending and staking from day one, the UK regime does not",
@@ -387,7 +449,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
             "Both regimes offer EU-wide passporting",
           ],
           correctIndex: 2,
-          explanation: "The EU moved first: MiCA was fully applicable by the end of 2024. The UK's comprehensive regime, built on FSMA 2023, has final rules from 30 June 2026 and goes live on 25 October 2027. The UK covers lending and staking from the start, and only an EU CASP licence passports across member states.",
+          explanation:
+            "The EU moved first: MiCA was fully applicable by the end of 2024. The UK's comprehensive regime, built on FSMA 2023, has final rules from 30 June 2026 and goes live on 25 October 2027. The UK covers lending and staking from the start, and only an EU CASP licence passports across member states.",
         },
       ],
     },
@@ -397,7 +460,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
     questions: [
       {
         id: "mica-test-q1",
-        question: "What kind of EU legal instrument is MiCA, and why does that matter?",
+        question:
+          "What kind of EU legal instrument is MiCA, and why does that matter?",
         options: [
           "A directive, so each member state writes its own version",
           "A regulation, so it applies directly and identically in all 27 member states",
@@ -405,7 +469,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "A treaty requiring unanimous ratification",
         ],
         correctIndex: 1,
-        explanation: "MiCA is a regulation (Regulation (EU) 2023/1114), so it applies directly in every member state without national implementing laws. One rulebook for 27 countries, and one licence that passports across all of them.",
+        explanation:
+          "MiCA is a regulation (Regulation (EU) 2023/1114), so it applies directly in every member state without national implementing laws. One rulebook for 27 countries, and one licence that passports across all of them.",
       },
       {
         id: "mica-test-q2",
@@ -417,11 +482,13 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "A central bank digital currency",
         ],
         correctIndex: 1,
-        explanation: "Tokens stabilising their value against a single official currency are e-money tokens. Tokens referencing baskets of assets are ARTs, and everything else, including bitcoin and utility tokens, is an 'other crypto asset'.",
+        explanation:
+          "Tokens stabilising their value against a single official currency are e-money tokens. Tokens referencing baskets of assets are ARTs, and everything else, including bitcoin and utility tokens, is an 'other crypto asset'.",
       },
       {
         id: "mica-test-q3",
-        question: "What must accompany a public offer of an 'other crypto asset' in the EU?",
+        question:
+          "What must accompany a public offer of an 'other crypto asset' in the EU?",
         options: [
           "A full prospectus pre-approved by ESMA",
           "A crypto-asset white paper that is fair, clear and not misleading, notified to the regulator",
@@ -429,7 +496,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "Nothing, other crypto assets are unregulated",
         ],
         correctIndex: 1,
-        explanation: "Issuers of other crypto assets must publish a white paper describing the project, rights, technology and risks. It must be notified to the national regulator but, unlike a securities prospectus, does not need pre-approval.",
+        explanation:
+          "Issuers of other crypto assets must publish a white paper describing the project, rights, technology and risks. It must be notified to the national regulator but, unlike a securities prospectus, does not need pre-approval.",
       },
       {
         id: "mica-test-q4",
@@ -441,7 +509,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "Manufacturing hardware wallets",
         ],
         correctIndex: 1,
-        explanation: "The ten CASP services include custody, operating a trading platform, exchanging crypto for fiat or other crypto, execution, placing, order transmission, advice, portfolio management and transfer services. Mining, journalism and hardware manufacture are not crypto-asset services.",
+        explanation:
+          "The ten CASP services include custody, operating a trading platform, exchanging crypto for fiat or other crypto, execution, placing, order transmission, advice, portfolio management and transfer services. Mining, journalism and hardware manufacture are not crypto-asset services.",
       },
       {
         id: "mica-test-q5",
@@ -453,7 +522,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "1% of client assets held",
         ],
         correctIndex: 1,
-        explanation: "MiCA sets minimum capital between €50,000 and €150,000 depending on the services provided, or one quarter of the previous year's fixed overheads, whichever is higher.",
+        explanation:
+          "MiCA sets minimum capital between €50,000 and €150,000 depending on the services provided, or one quarter of the previous year's fixed overheads, whichever is higher.",
       },
       {
         id: "mica-test-q6",
@@ -465,7 +535,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "No redemption rights",
         ],
         correctIndex: 1,
-        explanation: "EMT holders have a claim at par on the issuer: they can redeem at any moment, at face value, in the referenced currency, and issuers may not charge a redemption fee.",
+        explanation:
+          "EMT holders have a claim at par on the issuer: they can redeem at any moment, at face value, in the referenced currency, and issuers may not charge a redemption fee.",
       },
       {
         id: "mica-test-q7",
@@ -477,11 +548,13 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "In cash under the issuer's direct control",
         ],
         correctIndex: 1,
-        explanation: "Reserves must be legally and operationally segregated from the issuer's estate, insulated from insolvency, invested in secure and liquid low-risk assets, always at least equal to holders' claims, and independently audited.",
+        explanation:
+          "Reserves must be legally and operationally segregated from the issuer's estate, insulated from insolvency, invested in secure and liquid low-risk assets, always at least equal to holders' claims, and independently audited.",
       },
       {
         id: "mica-test-q8",
-        question: "Which body takes a substantial supervisory role over 'significant' ARTs and EMTs?",
+        question:
+          "Which body takes a substantial supervisory role over 'significant' ARTs and EMTs?",
         options: [
           "The European Banking Authority (EBA)",
           "The FCA",
@@ -489,7 +562,8 @@ Two themes are worth remembering in interviews. First, **convergence**: both reg
           "The Bank for International Settlements",
         ],
         correctIndex: 0,
-        explanation: "When a stablecoin crosses the significance thresholds, such as more than 10 million holders or a very large reserve, supervision shifts substantially from national regulators to the EBA, and the token faces stricter requirements.",
+        explanation:
+          "When a stablecoin crosses the significance thresholds, such as more than 10 million holders or a very large reserve, supervision shifts substantially from national regulators to the EBA, and the token faces stricter requirements.",
       },
     ],
   },
