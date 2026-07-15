@@ -36,8 +36,8 @@ function Router() {
       {/* Redirects from legacy routes */}
       <Route path="/fca">{() => <Redirect to="/learn/prin-principles-for-business" />}</Route>
       <Route path="/aml-kyc">{() => <Redirect to="/learn/aml-kyc-anti-money-laundering" />}</Route>
-      <Route path="/mifid">{() => <Redirect to="/learn/mifid-ii-uk-mifir-markets-in-financial-instruments" />}</Route>
-      <Route path="/crypto">{() => <Redirect to="/learn/fca-cp24-28-crypto-asset-regulation" />}</Route>
+      <Route path="/mifid">{() => <Redirect to="/learn/mifid-ii-uk-mifir" />}</Route>
+      <Route path="/crypto">{() => <Redirect to="/learn/crypto-asset-regulation" />}</Route>
       <Route path="/updates">{() => <Redirect to="/whats-new" />}</Route>
       {/* 404 */}
       <Route path="/404" component={NotFound} />

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useParams } from "wouter";
 import PageLayout from "@/components/PageLayout";
+import ExerciseResults from "@/components/ExerciseResults";
 import { exercises, topicMeta, Exercise } from "@/data/exercises";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -285,6 +286,7 @@ export default function ExercisesPage() {
 
   const [progress, setProgress] = useState<ProgressStore>(loadProgress);
   const [activeTopic, setActiveTopic] = useState<TopicKey | "all">(topicParam || "all");
+  const [resultsOpen, setResultsOpen] = useState(false);
 
   useEffect(() => {
     if (topicParam) setActiveTopic(topicParam);
@@ -299,6 +301,10 @@ export default function ExercisesPage() {
         [exerciseId]: { answered: true, correct: optionId === ex.correctId },
       };
       saveProgress(next);
+      // the final answer just went in: celebrate with the results pop-up
+      const allDoneNow = exercises.every((e) => next[e.id]?.answered);
+      const allDoneBefore = exercises.every((e) => prev[e.id]?.answered);
+      if (allDoneNow && !allDoneBefore) setResultsOpen(true);
       return next;
     });
   }, []);
@@ -307,6 +313,8 @@ export default function ExercisesPage() {
     setProgress({});
     saveProgress({});
   };
+
+  const allAnswered = exercises.every((e) => progress[e.id]?.answered);
 
   const filteredExercises =
     activeTopic === "all" ? exercises : exercises.filter((e) => e.topic === activeTopic);
@@ -341,6 +349,16 @@ export default function ExercisesPage() {
                   <RotateCcw size={12} />
                   Reset all
                 </button>
+                {allAnswered && (
+                  <button
+                    onClick={() => setResultsOpen(true)}
+                    className="flex items-center gap-1 text-xs font-semibold hover:underline"
+                    style={{ color: "var(--primary)" }}
+                  >
+                    <Trophy size={12} />
+                    View results
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -396,6 +414,9 @@ export default function ExercisesPage() {
           </div>
         )}
       </div>
+
+      {/* Results pop-up: opens automatically when the last exercise is answered */}
+      <ExerciseResults open={resultsOpen} onOpenChange={setResultsOpen} progress={progress} />
     </PageLayout>
   );
 }

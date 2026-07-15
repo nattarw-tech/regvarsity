@@ -30,7 +30,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Created by{" "}
                 <a
-                  href="https://www.linkedin.com/in/nisrinattarwala"
+                  href="https://www.linkedin.com/in/nisrin-attarwala/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold text-foreground underline hover:text-primary"
