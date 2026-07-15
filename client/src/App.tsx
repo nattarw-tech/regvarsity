@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Redirect, Route, Switch } from "wouter";
+import { Analytics } from "@vercel/analytics/react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -34,10 +35,18 @@ function Router() {
       <Route path="/whats-new" component={WhatsNewPage} />
       <Route path="/ai-expert" component={AIExpertPage} />
       {/* Redirects from legacy routes */}
-      <Route path="/fca">{() => <Redirect to="/learn/prin-principles-for-business" />}</Route>
-      <Route path="/aml-kyc">{() => <Redirect to="/learn/aml-kyc-anti-money-laundering" />}</Route>
-      <Route path="/mifid">{() => <Redirect to="/learn/mifid-ii-uk-mifir" />}</Route>
-      <Route path="/crypto">{() => <Redirect to="/learn/crypto-asset-regulation" />}</Route>
+      <Route path="/fca">
+        {() => <Redirect to="/learn/prin-principles-for-business" />}
+      </Route>
+      <Route path="/aml-kyc">
+        {() => <Redirect to="/learn/aml-kyc-anti-money-laundering" />}
+      </Route>
+      <Route path="/mifid">
+        {() => <Redirect to="/learn/mifid-ii-uk-mifir" />}
+      </Route>
+      <Route path="/crypto">
+        {() => <Redirect to="/learn/crypto-asset-regulation" />}
+      </Route>
       <Route path="/updates">{() => <Redirect to="/whats-new" />}</Route>
       {/* 404 */}
       <Route path="/404" component={NotFound} />
@@ -55,6 +64,7 @@ function App() {
           <Router />
           {/* Floating AI chat widget, appears on every page, minimisable */}
           <FloatingAIChat />
+          <Analytics />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

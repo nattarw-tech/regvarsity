@@ -12,7 +12,11 @@ interface ModuleBadgeProps {
  * module code and REGVARSITY around the ring. Earned badges use the
  * module accent colour; unearned ones render as a faint outline.
  */
-export default function ModuleBadge({ module, earned, size = 96 }: ModuleBadgeProps) {
+export default function ModuleBadge({
+  module,
+  earned,
+  size = 96,
+}: ModuleBadgeProps) {
   const colour = earned ? module.accentColour : "var(--border)";
   const textColour = earned ? module.accentColour : "var(--muted-foreground)";
   // Scalloped edge: 24 small arcs around a circle
@@ -51,13 +55,37 @@ export default function ModuleBadge({ module, earned, size = 96 }: ModuleBadgePr
       style={{ opacity: earned ? 1 : 0.45 }}
     >
       {/* Scalloped seal edge */}
-      <path d={path} fill={earned ? colour : "none"} fillOpacity={earned ? 0.08 : 0} stroke={colour} strokeWidth="1.5" />
+      <path
+        d={path}
+        fill={earned ? colour : "none"}
+        fillOpacity={earned ? 0.08 : 0}
+        stroke={colour}
+        strokeWidth="1.5"
+      />
       {/* Inner rings */}
-      <circle cx={cx} cy={cy} r={44} fill="none" stroke={colour} strokeWidth="1" />
-      <circle cx={cx} cy={cy} r={30} fill="none" stroke={colour} strokeWidth="0.75" />
+      <circle
+        cx={cx}
+        cy={cy}
+        r={44}
+        fill="none"
+        stroke={colour}
+        strokeWidth="1"
+      />
+      <circle
+        cx={cx}
+        cy={cy}
+        r={30}
+        fill="none"
+        stroke={colour}
+        strokeWidth="0.75"
+      />
       {/* Ring text */}
       <defs>
-        <path id={`ring-${module.id}`} d={`M ${cx} ${cy - 37} a 37 37 0 1 1 -0.01 0`} fill="none" />
+        <path
+          id={`ring-${module.id}`}
+          d={`M ${cx} ${cy - 37} a 37 37 0 1 1 -0.01 0`}
+          fill="none"
+        />
       </defs>
       <text
         fontSize="7.5"

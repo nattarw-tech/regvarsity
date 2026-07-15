@@ -117,7 +117,7 @@ function getSnapshot(): ProgressState {
 function setState(next: ProgressState) {
   state = next;
   persist(next);
-  listeners.forEach((l) => l());
+  listeners.forEach(l => l());
 }
 
 function subscribe(listener: () => void): () => void {
@@ -127,10 +127,10 @@ function subscribe(listener: () => void): () => void {
 
 // Keep tabs in sync: another tab writing the key reloads our snapshot.
 if (typeof window !== "undefined") {
-  window.addEventListener("storage", (e) => {
+  window.addEventListener("storage", e => {
     if (e.key === STORAGE_KEY) {
       state = load();
-      listeners.forEach((l) => l());
+      listeners.forEach(l => l());
     }
   });
 }
@@ -155,7 +155,11 @@ export function recordVisit(module: Module, chapter: Chapter) {
   });
 }
 
-export function recordQuickCheck(chapterId: string, correct: number, total: number) {
+export function recordQuickCheck(
+  chapterId: string,
+  correct: number,
+  total: number
+) {
   const s = getSnapshot();
   const prev = s.quickChecks[chapterId];
   // keep the best attempt
@@ -171,7 +175,7 @@ export function recordQuickCheck(chapterId: string, correct: number, total: numb
 
 export function recordTestAttempt(
   module: Module,
-  scorePercent: number,
+  scorePercent: number
 ): { passed: boolean; newlyPassed: boolean } {
   const s = getSnapshot();
   const passMark = module.moduleTest?.passMarkPercent ?? 70;
@@ -191,7 +195,9 @@ export function recordTestAttempt(
         passedAt: prev?.passedAt ?? (passedNow ? now : undefined),
       },
     },
-    badges: newlyPassed ? { ...s.badges, [module.id]: { earnedAt: now } } : s.badges,
+    badges: newlyPassed
+      ? { ...s.badges, [module.id]: { earnedAt: now } }
+      : s.badges,
   };
   setState(next);
   return { passed, newlyPassed };
@@ -209,16 +215,22 @@ export function resetProgress() {
 
 // ── Derived reads ─────────────────────────────────────────────
 
-export function computeModuleProgress(s: ProgressState, module: Module): ModuleProgress {
+export function computeModuleProgress(
+  s: ProgressState,
+  module: Module
+): ModuleProgress {
   const totalChapters = module.chapters.length;
-  const readCount = module.chapters.filter((c) => s.chaptersRead[c.id]).length;
-  const quickChecksDone = module.chapters.filter((c) => s.quickChecks[c.id]).length;
+  const readCount = module.chapters.filter(c => s.chaptersRead[c.id]).length;
+  const quickChecksDone = module.chapters.filter(
+    c => s.quickChecks[c.id]
+  ).length;
   const test = s.moduleTests[module.id];
   const testPassed = test?.passed ?? false;
   return {
     readCount,
     totalChapters,
-    percent: totalChapters > 0 ? Math.round((readCount / totalChapters) * 100) : 0,
+    percent:
+      totalChapters > 0 ? Math.round((readCount / totalChapters) * 100) : 0,
     quickChecksDone,
     testPassed,
     bestScorePercent: test ? test.bestScorePercent : null,
@@ -228,15 +240,26 @@ export function computeModuleProgress(s: ProgressState, module: Module): ModuleP
 }
 
 export function computeOverallStats(s: ProgressState) {
-  const totalChapters = ALL_MODULES.reduce((sum, m) => sum + m.chapters.length, 0);
+  const totalChapters = ALL_MODULES.reduce(
+    (sum, m) => sum + m.chapters.length,
+    0
+  );
   const chaptersRead = ALL_MODULES.reduce(
-    (sum, m) => sum + m.chapters.filter((c) => s.chaptersRead[c.id]).length,
-    0,
+    (sum, m) => sum + m.chapters.filter(c => s.chaptersRead[c.id]).length,
+    0
   );
   const quickChecksDone = Object.keys(s.quickChecks).length;
-  const testsPassed = ALL_MODULES.filter((m) => s.moduleTests[m.id]?.passed).length;
-  const badgesEarned = ALL_MODULES.filter((m) => s.badges[m.id]).length;
-  return { totalChapters, chaptersRead, quickChecksDone, testsPassed, badgesEarned };
+  const testsPassed = ALL_MODULES.filter(
+    m => s.moduleTests[m.id]?.passed
+  ).length;
+  const badgesEarned = ALL_MODULES.filter(m => s.badges[m.id]).length;
+  return {
+    totalChapters,
+    chaptersRead,
+    quickChecksDone,
+    testsPassed,
+    badgesEarned,
+  };
 }
 
 // ── Hook ──────────────────────────────────────────────────────

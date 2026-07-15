@@ -24,11 +24,30 @@ export interface Exercise {
   wrongExplanations: Record<string, string>;
 }
 
-export const topicMeta: Record<TopicKey, { label: string; color: string; bg: string }> = {
-  fca: { label: "FCA Rules", color: "oklch(0.37 0.075 165)", bg: "oklch(0.37 0.075 165 / 0.1)" },
-  aml: { label: "AML / KYC", color: "oklch(0.42 0.08 190)", bg: "oklch(0.42 0.08 190 / 0.1)" },
-  mifid: { label: "MiFID II", color: "oklch(0.45 0.1 130)", bg: "oklch(0.45 0.1 130 / 0.1)" },
-  crypto: { label: "Crypto", color: "oklch(0.45 0.12 300)", bg: "oklch(0.45 0.12 300 / 0.1)" },
+export const topicMeta: Record<
+  TopicKey,
+  { label: string; color: string; bg: string }
+> = {
+  fca: {
+    label: "FCA Rules",
+    color: "oklch(0.37 0.075 165)",
+    bg: "oklch(0.37 0.075 165 / 0.1)",
+  },
+  aml: {
+    label: "AML / KYC",
+    color: "oklch(0.42 0.08 190)",
+    bg: "oklch(0.42 0.08 190 / 0.1)",
+  },
+  mifid: {
+    label: "MiFID II",
+    color: "oklch(0.45 0.1 130)",
+    bg: "oklch(0.45 0.1 130 / 0.1)",
+  },
+  crypto: {
+    label: "Crypto",
+    color: "oklch(0.45 0.12 300)",
+    bg: "oklch(0.45 0.12 300 / 0.1)",
+  },
 };
 
 export const exercises: Exercise[] = [
@@ -40,12 +59,25 @@ export const exercises: Exercise[] = [
     tags: ["Consumer Duty", "PRIN"],
     scenario:
       "A bank launches a savings account with a headline rate of 5%. Buried in the terms, the rate only applies to the first £1,000 of savings and drops to 0.5% above that. Most customers who open the account earn far less than they expected. The product complies with every specific product rule.",
-    question: "Under the Consumer Duty (Principle 12), what is the bank's position?",
+    question:
+      "Under the Consumer Duty (Principle 12), what is the bank's position?",
     options: [
-      { id: "a", text: "The bank is safe because the product complies with all specific FCA product rules." },
-      { id: "b", text: "The bank is likely in breach, because the Duty requires good customer outcomes, not just technical rule compliance." },
-      { id: "c", text: "The bank is safe as long as the full terms were disclosed before the customer signed up." },
-      { id: "d", text: "The Duty does not apply because savings accounts are not investment products." },
+      {
+        id: "a",
+        text: "The bank is safe because the product complies with all specific FCA product rules.",
+      },
+      {
+        id: "b",
+        text: "The bank is likely in breach, because the Duty requires good customer outcomes, not just technical rule compliance.",
+      },
+      {
+        id: "c",
+        text: "The bank is safe as long as the full terms were disclosed before the customer signed up.",
+      },
+      {
+        id: "d",
+        text: "The Duty does not apply because savings accounts are not investment products.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -65,10 +97,22 @@ export const exercises: Exercise[] = [
       "A payments firm discovers a serious IT failure that has delayed thousands of customer transactions for three days. The operations director suggests fixing the issue quietly first and only telling the FCA if the regulator asks about it.",
     question: "What does Principle 11 require the firm to do?",
     options: [
-      { id: "a", text: "Nothing, provided the issue is fixed and customers are compensated." },
-      { id: "b", text: "Disclose the incident to the FCA promptly, because the regulator would reasonably expect notice of it." },
-      { id: "c", text: "Notify the FCA only if more than 10% of customers were affected." },
-      { id: "d", text: "Wait until the annual compliance report to mention the incident." },
+      {
+        id: "a",
+        text: "Nothing, provided the issue is fixed and customers are compensated.",
+      },
+      {
+        id: "b",
+        text: "Disclose the incident to the FCA promptly, because the regulator would reasonably expect notice of it.",
+      },
+      {
+        id: "c",
+        text: "Notify the FCA only if more than 10% of customers were affected.",
+      },
+      {
+        id: "d",
+        text: "Wait until the annual compliance report to mention the incident.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -86,12 +130,25 @@ export const exercises: Exercise[] = [
     tags: ["SMCR", "Accountability"],
     scenario:
       "A wealth management firm is fined after its advice arm recommended unsuitable products for two years. The Senior Manager responsible for advice says she cannot be personally liable because she never knew about the failings, she delegated supervision to a head of department and received no escalations.",
-    question: "Under the SMCR Duty of Responsibility, is her defence likely to succeed?",
+    question:
+      "Under the SMCR Duty of Responsibility, is her defence likely to succeed?",
     options: [
-      { id: "a", text: "Yes, personal liability requires proof that she knew about the breaches." },
-      { id: "b", text: "Yes, delegation transfers responsibility to the head of department." },
-      { id: "c", text: "No, she must show she took reasonable steps to prevent the breach, and not knowing may itself show inadequate oversight." },
-      { id: "d", text: "No. Senior Managers are automatically liable for any breach in their area." },
+      {
+        id: "a",
+        text: "Yes, personal liability requires proof that she knew about the breaches.",
+      },
+      {
+        id: "b",
+        text: "Yes, delegation transfers responsibility to the head of department.",
+      },
+      {
+        id: "c",
+        text: "No, she must show she took reasonable steps to prevent the breach, and not knowing may itself show inadequate oversight.",
+      },
+      {
+        id: "d",
+        text: "No. Senior Managers are automatically liable for any breach in their area.",
+      },
     ],
     correctId: "c",
     explanation:
@@ -111,10 +168,22 @@ export const exercises: Exercise[] = [
       "A fintech startup that is not FCA-authorised wants to promote its new investment app on social media. A marketing agency suggests using a popular finfluencer to post about guaranteed 12% returns.",
     question: "What does the financial promotions regime require?",
     options: [
-      { id: "a", text: "Nothing, social media posts are not financial promotions." },
-      { id: "b", text: "The promotion must be communicated or approved by an FCA-authorised person, and 'guaranteed returns' claims would be misleading." },
-      { id: "c", text: "The startup only needs to add a #ad hashtag to comply." },
-      { id: "d", text: "The finfluencer's personal account makes the promotion exempt." },
+      {
+        id: "a",
+        text: "Nothing, social media posts are not financial promotions.",
+      },
+      {
+        id: "b",
+        text: "The promotion must be communicated or approved by an FCA-authorised person, and 'guaranteed returns' claims would be misleading.",
+      },
+      {
+        id: "c",
+        text: "The startup only needs to add a #ad hashtag to comply.",
+      },
+      {
+        id: "d",
+        text: "The finfluencer's personal account makes the promotion exempt.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -134,11 +203,21 @@ export const exercises: Exercise[] = [
     tags: ["CDD", "MLRs"],
     scenario:
       "A customer with no existing relationship walks into a currency exchange and asks to convert €16,000 into pounds in a single transaction.",
-    question: "Under the Money Laundering Regulations 2017, what must the firm do?",
+    question:
+      "Under the Money Laundering Regulations 2017, what must the firm do?",
     options: [
-      { id: "a", text: "Nothing special, one-off transactions do not require checks." },
-      { id: "b", text: "Apply customer due diligence, because this is an occasional transaction above the €15,000 threshold." },
-      { id: "c", text: "Refuse the transaction, cash transactions above €10,000 are illegal in the UK." },
+      {
+        id: "a",
+        text: "Nothing special, one-off transactions do not require checks.",
+      },
+      {
+        id: "b",
+        text: "Apply customer due diligence, because this is an occasional transaction above the €15,000 threshold.",
+      },
+      {
+        id: "c",
+        text: "Refuse the transaction, cash transactions above €10,000 are illegal in the UK.",
+      },
       { id: "d", text: "Only record the customer's name for its files." },
     ],
     correctId: "b",
@@ -159,10 +238,22 @@ export const exercises: Exercise[] = [
       "A bank's MLRO submits a Suspicious Activity Report to the NCA about a business customer's unusual transactions. The next day, the customer's relationship manager, who knows about the SAR, receives an angry call from the customer asking why a payment is delayed.",
     question: "What must the relationship manager avoid doing?",
     options: [
-      { id: "a", text: "Speaking to the customer at all, which would be tipping off." },
-      { id: "b", text: "Telling the customer a SAR has been made or that they are under investigation, the tipping-off offence." },
-      { id: "c", text: "Processing any future transactions for this customer." },
-      { id: "d", text: "Escalating the call to the MLRO, which would breach confidentiality." },
+      {
+        id: "a",
+        text: "Speaking to the customer at all, which would be tipping off.",
+      },
+      {
+        id: "b",
+        text: "Telling the customer a SAR has been made or that they are under investigation, the tipping-off offence.",
+      },
+      {
+        id: "c",
+        text: "Processing any future transactions for this customer.",
+      },
+      {
+        id: "d",
+        text: "Escalating the call to the MLRO, which would breach confidentiality.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -182,10 +273,22 @@ export const exercises: Exercise[] = [
       "An onboarding analyst discovers a new private banking client is a serving member of a foreign country's parliament. A colleague argues no extra work is needed because the client passed standard identity checks.",
     question: "How should the client be treated under the MLRs?",
     options: [
-      { id: "a", text: "As a standard customer, passing identity checks is sufficient." },
-      { id: "b", text: "As a politically exposed person requiring enhanced due diligence, including senior management approval and source-of-wealth checks." },
-      { id: "c", text: "The firm must decline the relationship. PEPs cannot be banked in the UK." },
-      { id: "d", text: "As high risk only if the client appears on a sanctions list." },
+      {
+        id: "a",
+        text: "As a standard customer, passing identity checks is sufficient.",
+      },
+      {
+        id: "b",
+        text: "As a politically exposed person requiring enhanced due diligence, including senior management approval and source-of-wealth checks.",
+      },
+      {
+        id: "c",
+        text: "The firm must decline the relationship. PEPs cannot be banked in the UK.",
+      },
+      {
+        id: "d",
+        text: "As high risk only if the client appears on a sanctions list.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -205,9 +308,18 @@ export const exercises: Exercise[] = [
       "A payments firm screens customers against the OFSI consolidated list at onboarding only. A customer onboarded two years ago was added to the UK sanctions list last month, and the firm has continued processing their payments.",
     question: "What is the firm's exposure?",
     options: [
-      { id: "a", text: "None, screening at onboarding satisfies UK sanctions obligations." },
-      { id: "b", text: "It may have breached sanctions by making funds available to a designated person. OFSI can impose penalties up to £1 million or 50% of the breach value, whichever is higher." },
-      { id: "c", text: "Only a reporting failure, processing the payments itself was lawful." },
+      {
+        id: "a",
+        text: "None, screening at onboarding satisfies UK sanctions obligations.",
+      },
+      {
+        id: "b",
+        text: "It may have breached sanctions by making funds available to a designated person. OFSI can impose penalties up to £1 million or 50% of the breach value, whichever is higher.",
+      },
+      {
+        id: "c",
+        text: "Only a reporting failure, processing the payments itself was lawful.",
+      },
       { id: "d", text: "None, provided the customer is not a PEP." },
     ],
     correctId: "b",
@@ -230,10 +342,22 @@ export const exercises: Exercise[] = [
       "A retired teacher with £40,000 in savings opens an account with an investment firm. The firm's sales team suggests classifying her as a professional client so fewer protections and disclosures apply.",
     question: "Is this classification appropriate under UK MiFID rules?",
     options: [
-      { id: "a", text: "Yes, any client can be classified as professional if they agree in writing." },
-      { id: "b", text: "No, she is a retail client, and opting up to professional status requires meeting strict quantitative and qualitative tests she is unlikely to satisfy." },
-      { id: "c", text: "Yes, professional status is the default for advised clients." },
-      { id: "d", text: "No, individuals can never be professional clients under any circumstances." },
+      {
+        id: "a",
+        text: "Yes, any client can be classified as professional if they agree in writing.",
+      },
+      {
+        id: "b",
+        text: "No, she is a retail client, and opting up to professional status requires meeting strict quantitative and qualitative tests she is unlikely to satisfy.",
+      },
+      {
+        id: "c",
+        text: "Yes, professional status is the default for advised clients.",
+      },
+      {
+        id: "d",
+        text: "No, individuals can never be professional clients under any circumstances.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -253,10 +377,22 @@ export const exercises: Exercise[] = [
       "An execution desk routinely routes all retail client orders to a single venue because it pays the firm for order flow, even though another accessible venue consistently offers better prices after costs.",
     question: "How does this sit with the best execution obligation?",
     options: [
-      { id: "a", text: "It is acceptable, firms may choose any execution venue." },
-      { id: "b", text: "It likely breaches best execution: for retail clients the key test is total consideration, price plus costs, and conflicts must not drive routing." },
-      { id: "c", text: "It is acceptable if the venue choice is disclosed in the order execution policy." },
-      { id: "d", text: "Best execution only applies to institutional clients." },
+      {
+        id: "a",
+        text: "It is acceptable, firms may choose any execution venue.",
+      },
+      {
+        id: "b",
+        text: "It likely breaches best execution: for retail clients the key test is total consideration, price plus costs, and conflicts must not drive routing.",
+      },
+      {
+        id: "c",
+        text: "It is acceptable if the venue choice is disclosed in the order execution policy.",
+      },
+      {
+        id: "d",
+        text: "Best execution only applies to institutional clients.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -276,10 +412,22 @@ export const exercises: Exercise[] = [
       "A UK investment firm executes trades in shares admitted to trading on a UK venue. Its compliance officer discovers that a system error meant thousands of transaction reports over several months were never submitted to the FCA.",
     question: "What is the position under UK MiFIR?",
     options: [
-      { id: "a", text: "Reports were optional because the trades all settled correctly." },
-      { id: "b", text: "The firm has breached its obligation to report complete and accurate transaction details to the FCA by the close of the following working day, and should notify the FCA and remediate." },
-      { id: "c", text: "No issue arises if the counterparties reported their side of each trade." },
-      { id: "d", text: "The firm can simply delete the failed reports and move on." },
+      {
+        id: "a",
+        text: "Reports were optional because the trades all settled correctly.",
+      },
+      {
+        id: "b",
+        text: "The firm has breached its obligation to report complete and accurate transaction details to the FCA by the close of the following working day, and should notify the FCA and remediate.",
+      },
+      {
+        id: "c",
+        text: "No issue arises if the counterparties reported their side of each trade.",
+      },
+      {
+        id: "d",
+        text: "The firm can simply delete the failed reports and move on.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -299,10 +447,22 @@ export const exercises: Exercise[] = [
       "A product provider offers an advisory firm generous hospitality and a 'marketing allowance' in exchange for featuring its funds prominently in client recommendations.",
     question: "How do the UK MiFID inducement rules treat this arrangement?",
     options: [
-      { id: "a", text: "It is a normal commercial arrangement and needs no analysis." },
-      { id: "b", text: "It is likely a prohibited inducement: benefits must not impair the duty to act in clients' best interests, and firms giving independent advice face the strictest limits." },
-      { id: "c", text: "It is fine as long as clients are told about the marketing allowance." },
-      { id: "d", text: "Only cash payments count as inducements, hospitality is always exempt." },
+      {
+        id: "a",
+        text: "It is a normal commercial arrangement and needs no analysis.",
+      },
+      {
+        id: "b",
+        text: "It is likely a prohibited inducement: benefits must not impair the duty to act in clients' best interests, and firms giving independent advice face the strictest limits.",
+      },
+      {
+        id: "c",
+        text: "It is fine as long as clients are told about the marketing allowance.",
+      },
+      {
+        id: "d",
+        text: "Only cash payments count as inducements, hospitality is always exempt.",
+      },
     ],
     correctId: "b",
     explanation:
@@ -324,9 +484,18 @@ export const exercises: Exercise[] = [
       "A startup wants to launch a crypto exchange for UK customers today, before the new FSMA-based regime goes live in October 2027. The founder believes crypto is currently unregulated in the UK.",
     question: "Is the founder right?",
     options: [
-      { id: "a", text: "Yes, crypto is entirely unregulated in the UK until October 2027." },
-      { id: "b", text: "No, the exchange must register with the FCA under the Money Laundering Regulations and comply with the financial promotions regime for cryptoassets." },
-      { id: "c", text: "No, crypto exchanges have needed full FCA authorisation since 2020." },
+      {
+        id: "a",
+        text: "Yes, crypto is entirely unregulated in the UK until October 2027.",
+      },
+      {
+        id: "b",
+        text: "No, the exchange must register with the FCA under the Money Laundering Regulations and comply with the financial promotions regime for cryptoassets.",
+      },
+      {
+        id: "c",
+        text: "No, crypto exchanges have needed full FCA authorisation since 2020.",
+      },
       { id: "d", text: "Yes, provided the exchange only lists Bitcoin." },
     ],
     correctId: "b",
@@ -345,10 +514,14 @@ export const exercises: Exercise[] = [
     tags: ["Financial Promotions"],
     scenario:
       "A crypto platform plans a UK advertising campaign: 'Earn while you sleep, join 2 million users!' with a sign-up link that lets new customers buy crypto within minutes.",
-    question: "What do the FCA's crypto promotion rules (in force since October 2023) require?",
+    question:
+      "What do the FCA's crypto promotion rules (in force since October 2023) require?",
     options: [
       { id: "a", text: "Nothing, crypto adverts are outside the FCA's remit." },
-      { id: "b", text: "Approval by an FCA-authorised person, prominent risk warnings, and a 24-hour cooling-off period for first-time investors, and no misleading earnings claims." },
+      {
+        id: "b",
+        text: "Approval by an FCA-authorised person, prominent risk warnings, and a 24-hour cooling-off period for first-time investors, and no misleading earnings claims.",
+      },
       { id: "c", text: "Only a small-print disclaimer that crypto is risky." },
       { id: "d", text: "A ban on all crypto advertising in the UK." },
     ],
@@ -370,10 +543,22 @@ export const exercises: Exercise[] = [
       "In August 2026, a crypto custodian registered with the FCA under the MLRs is planning for the new regime. The CEO asks compliance what the timeline looks like.",
     question: "Which summary of the FCA's crypto regime timeline is correct?",
     options: [
-      { id: "a", text: "Final rules were published on 30 June 2026; applications open 30 September 2026; the regime comes into force on 25 October 2027, with a streamlined route for MLR-registered firms." },
-      { id: "b", text: "The regime already came into force in 2025 and the firm is operating illegally." },
-      { id: "c", text: "The rules are still only proposals with no confirmed dates." },
-      { id: "d", text: "Only stablecoin issuers will need authorisation; custodians are out of scope." },
+      {
+        id: "a",
+        text: "Final rules were published on 30 June 2026; applications open 30 September 2026; the regime comes into force on 25 October 2027, with a streamlined route for MLR-registered firms.",
+      },
+      {
+        id: "b",
+        text: "The regime already came into force in 2025 and the firm is operating illegally.",
+      },
+      {
+        id: "c",
+        text: "The rules are still only proposals with no confirmed dates.",
+      },
+      {
+        id: "d",
+        text: "Only stablecoin issuers will need authorisation; custodians are out of scope.",
+      },
     ],
     correctId: "a",
     explanation:
@@ -393,10 +578,19 @@ export const exercises: Exercise[] = [
       "A first-time investor keeps £30,000 of savings in a bank account and is considering moving it all into crypto on a registered exchange. She assumes that because the exchange is 'FCA-registered', her money is protected like a bank deposit.",
     question: "Is her assumption correct?",
     options: [
-      { id: "a", text: "Yes. FCA registration brings FSCS protection up to £120,000." },
-      { id: "b", text: "No, crypto assets are not covered by the FSCS, and MLR registration is an anti-money-laundering check, not a soundness or protection guarantee." },
+      {
+        id: "a",
+        text: "Yes. FCA registration brings FSCS protection up to £120,000.",
+      },
+      {
+        id: "b",
+        text: "No, crypto assets are not covered by the FSCS, and MLR registration is an anti-money-laundering check, not a soundness or protection guarantee.",
+      },
       { id: "c", text: "Yes, but only up to £85,000." },
-      { id: "d", text: "No, but the Financial Ombudsman will refund any crypto losses." },
+      {
+        id: "d",
+        text: "No, but the Financial Ombudsman will refund any crypto losses.",
+      },
     ],
     correctId: "b",
     explanation:

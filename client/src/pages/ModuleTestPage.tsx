@@ -16,7 +16,10 @@ export default function ModuleTestPage() {
   const [stage, setStage] = useState<Stage>("intro");
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
-  const [outcome, setOutcome] = useState<{ scorePercent: number; passed: boolean } | null>(null);
+  const [outcome, setOutcome] = useState<{
+    scorePercent: number;
+    passed: boolean;
+  } | null>(null);
 
   useEffect(() => {
     setStage("intro");
@@ -30,9 +33,13 @@ export default function ModuleTestPage() {
     return (
       <PageLayout>
         <div className="max-w-3xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">Module not found</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            Module not found
+          </h1>
           <Link href="/learn">
-            <span className="text-primary underline cursor-pointer">Back to all modules</span>
+            <span className="text-primary underline cursor-pointer">
+              Back to all modules
+            </span>
           </Link>
         </div>
       </PageLayout>
@@ -48,12 +55,17 @@ export default function ModuleTestPage() {
       <PageLayout>
         <div className="max-w-3xl mx-auto px-4 py-20 text-center">
           <p className="overline-kicker mb-3">{mod.title}</p>
-          <h1 className="text-2xl font-bold text-foreground mb-4">Test coming soon</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            Test coming soon
+          </h1>
           <p className="text-muted-foreground mb-8">
-            The test for this module is still being written. The chapters are ready to read in the meantime.
+            The test for this module is still being written. The chapters are
+            ready to read in the meantime.
           </p>
           <Link href={`/learn/${mod.slug}`}>
-            <span className="text-primary underline cursor-pointer">Back to module</span>
+            <span className="text-primary underline cursor-pointer">
+              Back to module
+            </span>
           </Link>
         </div>
       </PageLayout>
@@ -61,7 +73,7 @@ export default function ModuleTestPage() {
   }
 
   const questions = test.questions;
-  const nextModule = ALL_MODULES.find((m) => m.number === mod.number + 1);
+  const nextModule = ALL_MODULES.find(m => m.number === mod.number + 1);
 
   const start = () => {
     setAnswers([]);
@@ -77,14 +89,19 @@ export default function ModuleTestPage() {
     // brief pause so the learner sees their selection, then advance
     setTimeout(() => {
       if (next.length === questions.length) {
-        const correct = next.filter((a, qi) => a === questions[qi].correctIndex).length;
+        const correct = next.filter(
+          (a, qi) => a === questions[qi].correctIndex
+        ).length;
         const scorePercent = Math.round((correct / questions.length) * 100);
         const { passed } = progress.recordTestAttempt(mod, scorePercent);
-        setOutcome({ scorePercent, passed: scorePercent >= test.passMarkPercent });
+        setOutcome({
+          scorePercent,
+          passed: scorePercent >= test.passMarkPercent,
+        });
         setStage("results");
         window.scrollTo(0, 0);
       } else {
-        setCurrent((c) => c + 1);
+        setCurrent(c => c + 1);
       }
     }, 350);
   };
@@ -108,32 +125,44 @@ export default function ModuleTestPage() {
               <ul className="space-y-3 text-sm text-foreground/85 leading-relaxed">
                 <li className="grid grid-cols-[1.5rem_1fr] gap-2">
                   <span className="font-serif text-primary">01</span>
-                  <span>{questions.length} multiple-choice questions, drawn from the module chapters.</span>
+                  <span>
+                    {questions.length} multiple-choice questions, drawn from the
+                    module chapters.
+                  </span>
                 </li>
                 <li className="grid grid-cols-[1.5rem_1fr] gap-2">
                   <span className="font-serif text-primary">02</span>
-                  <span>You need {test.passMarkPercent}% to pass and earn the module badge.</span>
+                  <span>
+                    You need {test.passMarkPercent}% to pass and earn the module
+                    badge.
+                  </span>
                 </li>
                 <li className="grid grid-cols-[1.5rem_1fr] gap-2">
                   <span className="font-serif text-primary">03</span>
-                  <span>Answers lock when you select them. Explanations are shown at the end, not during the test.</span>
+                  <span>
+                    Answers lock when you select them. Explanations are shown at
+                    the end, not during the test.
+                  </span>
                 </li>
                 <li className="grid grid-cols-[1.5rem_1fr] gap-2">
                   <span className="font-serif text-primary">04</span>
-                  <span>You can retake the test as many times as you like.</span>
+                  <span>
+                    You can retake the test as many times as you like.
+                  </span>
                 </li>
               </ul>
             </div>
             {mp.readCount < mp.totalChapters && (
               <p className="text-sm text-muted-foreground mb-6">
-                You have read {mp.readCount} of {mp.totalChapters} chapters so far. You can take the
-                test now, but it draws on the whole module.
+                You have read {mp.readCount} of {mp.totalChapters} chapters so
+                far. You can take the test now, but it draws on the whole
+                module.
               </p>
             )}
             {testRecord && (
               <p className="text-sm text-muted-foreground mb-6">
-                Previous attempts: {testRecord.attempts} · best score {testRecord.bestScorePercent}%
-                {testRecord.passed && " · passed"}
+                Previous attempts: {testRecord.attempts} · best score{" "}
+                {testRecord.bestScorePercent}%{testRecord.passed && " · passed"}
               </p>
             )}
             <button
@@ -182,7 +211,9 @@ export default function ModuleTestPage() {
                         : "bg-muted border-border text-muted-foreground hover:border-primary hover:bg-muted/70 cursor-pointer"
                     }`}
                   >
-                    <span className="font-semibold mr-2">{String.fromCharCode(65 + i)}.</span>
+                    <span className="font-semibold mr-2">
+                      {String.fromCharCode(65 + i)}.
+                    </span>
                     {opt}
                   </button>
                 );
@@ -201,8 +232,9 @@ export default function ModuleTestPage() {
                 <p className="overline-kicker mb-3">Module complete</p>
                 <h1 className="mb-4">Well done, you passed.</h1>
                 <p className="text-muted-foreground max-w-md mx-auto leading-relaxed mb-8">
-                  You scored {outcome.scorePercent}% on the {mod.title} test. The module badge is
-                  yours, and it now appears on your progress page.
+                  You scored {outcome.scorePercent}% on the {mod.title} test.
+                  The module badge is yours, and it now appears on your progress
+                  page.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">
                   <Link href="/progress">
@@ -224,8 +256,8 @@ export default function ModuleTestPage() {
                 <p className="overline-kicker mb-3">Not this time</p>
                 <h1 className="mb-4">You scored {outcome.scorePercent}%</h1>
                 <p className="text-muted-foreground max-w-md mx-auto leading-relaxed mb-8">
-                  You need {test.passMarkPercent}% to pass. Review the answers below, revisit the
-                  chapters, and try again when you are ready.
+                  You need {test.passMarkPercent}% to pass. Review the answers
+                  below, revisit the chapters, and try again when you are ready.
                 </p>
                 <button
                   onClick={start}
@@ -258,14 +290,18 @@ export default function ModuleTestPage() {
                       <div className="ml-8 text-sm space-y-1.5">
                         {!correct && (
                           <p className="text-red-600 dark:text-red-400">
-                            Your answer: {String.fromCharCode(65 + given)}. {q.options[given]}
+                            Your answer: {String.fromCharCode(65 + given)}.{" "}
+                            {q.options[given]}
                           </p>
                         )}
                         <p className="text-green-700 dark:text-green-400">
-                          Correct answer: {String.fromCharCode(65 + q.correctIndex)}.{" "}
+                          Correct answer:{" "}
+                          {String.fromCharCode(65 + q.correctIndex)}.{" "}
                           {q.options[q.correctIndex]}
                         </p>
-                        <p className="text-muted-foreground leading-relaxed pt-1">{q.explanation}</p>
+                        <p className="text-muted-foreground leading-relaxed pt-1">
+                          {q.explanation}
+                        </p>
                       </div>
                     </div>
                   );

@@ -14,7 +14,8 @@ export const moduleMAR: Module = {
   accentColour: "oklch(0.45 0.2 25)",
   description:
     "Market abuse undermines the integrity of financial markets and harms investors. The UK Market Abuse Regulation (UK MAR) prohibits insider dealing, market manipulation, and unlawful disclosure of inside information. Understanding these rules is essential for anyone working in or around financial markets.",
-  whoItAppliesTo: "Anyone who trades in financial instruments admitted to trading on a UK trading venue: including individuals, firms, and issuers.",
+  whoItAppliesTo:
+    "Anyone who trades in financial instruments admitted to trading on a UK trading venue: including individuals, firms, and issuers.",
   chapters: [
     {
       id: "mar-1",
@@ -77,11 +78,21 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
         },
       ],
       keyTakeaways: [
-        { text: "Inside information is precise, non-public information that a reasonable investor would use in making investment decisions." },
-        { text: "UK MAR prohibits three forms of market abuse: insider dealing, unlawful disclosure, and market manipulation." },
-        { text: "Market manipulation includes wash trading, spoofing, pump and dump, and layering." },
-        { text: "Issuers must maintain insider lists of all persons with access to inside information." },
-        { text: "Market soundings (sharing inside information before a transaction) are permitted under strict conditions." },
+        {
+          text: "Inside information is precise, non-public information that a reasonable investor would use in making investment decisions.",
+        },
+        {
+          text: "UK MAR prohibits three forms of market abuse: insider dealing, unlawful disclosure, and market manipulation.",
+        },
+        {
+          text: "Market manipulation includes wash trading, spoofing, pump and dump, and layering.",
+        },
+        {
+          text: "Issuers must maintain insider lists of all persons with access to inside information.",
+        },
+        {
+          text: "Market soundings (sharing inside information before a transaction) are permitted under strict conditions.",
+        },
       ],
       quizQuestions: [
         {
@@ -94,11 +105,13 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
             "An analyst note based entirely on public data",
           ],
           correctIndex: 2,
-          explanation: "Inside information is precise, non-public information relating to an issuer or instrument that would likely have a significant effect on prices if made public. Advance knowledge of an acquisition ticks every box. Published accounts, vague rumours and research built on public data do not.",
+          explanation:
+            "Inside information is precise, non-public information relating to an issuer or instrument that would likely have a significant effect on prices if made public. Advance knowledge of an acquisition ticks every box. Published accounts, vague rumours and research built on public data do not.",
         },
         {
           id: "mar-1-q2",
-          question: "An employee learns their company will announce a major acquisition and tells a friend at the pub, but neither of them trades. Has an offence been committed?",
+          question:
+            "An employee learns their company will announce a major acquisition and tells a friend at the pub, but neither of them trades. Has an offence been committed?",
           options: [
             "No, because nobody traded",
             "Yes, unlawful disclosure of inside information outside the normal exercise of employment",
@@ -106,11 +119,13 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
             "Only if the information turns out to be true",
           ],
           correctIndex: 1,
-          explanation: "Unlawful disclosure is one of the three forms of market abuse under UK MAR. Sharing inside information outside the normal exercise of your employment, profession or duties is an offence in itself, even if no one trades on it.",
+          explanation:
+            "Unlawful disclosure is one of the three forms of market abuse under UK MAR. Sharing inside information outside the normal exercise of your employment, profession or duties is an offence in itself, even if no one trades on it.",
         },
         {
           id: "mar-1-q3",
-          question: "A trader places large orders they never intend to execute, purely to move the price, then cancels them. What is this practice called?",
+          question:
+            "A trader places large orders they never intend to execute, purely to move the price, then cancels them. What is this practice called?",
           options: [
             "Wash trading",
             "Spoofing",
@@ -118,7 +133,8 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
             "Wall-crossing",
           ],
           correctIndex: 1,
-          explanation: "Spoofing is placing large orders with no intention of executing them in order to move prices. Wash trading creates artificial volume by trading with yourself, pump and dump inflates a price through misleading information before selling, and wall-crossing is the legitimate process of sharing inside information under market sounding rules.",
+          explanation:
+            "Spoofing is placing large orders with no intention of executing them in order to move prices. Wash trading creates artificial volume by trading with yourself, pump and dump inflates a price through misleading information before selling, and wall-crossing is the legitimate process of sharing inside information under market sounding rules.",
         },
       ],
     },
@@ -128,7 +144,8 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
     questions: [
       {
         id: "mar-test-q1",
-        question: "What are the four elements of inside information under UK MAR?",
+        question:
+          "What are the four elements of inside information under UK MAR?",
         options: [
           "Secret, valuable, foreign and financial",
           "Precise, not public, relating to issuers or instruments, and likely to significantly affect prices",
@@ -136,11 +153,13 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
           "Recent, exclusive, corporate and material",
         ],
         correctIndex: 1,
-        explanation: "Inside information must be of a precise nature, not have been made public, relate directly or indirectly to one or more issuers or financial instruments, and be likely to have a significant effect on prices if made public. The 'reasonable investor' test guides the last element.",
+        explanation:
+          "Inside information must be of a precise nature, not have been made public, relate directly or indirectly to one or more issuers or financial instruments, and be likely to have a significant effect on prices if made public. The 'reasonable investor' test guides the last element.",
       },
       {
         id: "mar-test-q2",
-        question: "What are the three forms of market abuse prohibited by UK MAR?",
+        question:
+          "What are the three forms of market abuse prohibited by UK MAR?",
         options: [
           "Fraud, theft and forgery",
           "Insider dealing, unlawful disclosure and market manipulation",
@@ -148,11 +167,13 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
           "Mis-selling, churning and front running",
         ],
         correctIndex: 1,
-        explanation: "UK MAR prohibits insider dealing, unlawful disclosure of inside information, and market manipulation. Spoofing, layering and wash trading are all specific techniques within the market manipulation category.",
+        explanation:
+          "UK MAR prohibits insider dealing, unlawful disclosure of inside information, and market manipulation. Spoofing, layering and wash trading are all specific techniques within the market manipulation category.",
       },
       {
         id: "mar-test-q3",
-        question: "You hold inside information about a company. Without revealing the information, you tell your brother to buy the shares. Is this insider dealing?",
+        question:
+          "You hold inside information about a company. Without revealing the information, you tell your brother to buy the shares. Is this insider dealing?",
         options: [
           "No, because you did not disclose the information itself",
           "No, because you did not trade personally",
@@ -160,7 +181,8 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
           "Only if your brother makes a profit",
         ],
         correctIndex: 2,
-        explanation: "Insider dealing includes recommending or inducing someone else to trade on the basis of inside information, even if you never reveal the information itself and never trade yourself.",
+        explanation:
+          "Insider dealing includes recommending or inducing someone else to trade on the basis of inside information, even if you never reveal the information itself and never trade yourself.",
       },
       {
         id: "mar-test-q4",
@@ -172,7 +194,8 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
           "Selling shares to pay a tax bill",
         ],
         correctIndex: 0,
-        explanation: "Wash trading means buying and selling the same instrument to create the false appearance of trading volume. It gives misleading signals about supply and demand, which is market manipulation under UK MAR.",
+        explanation:
+          "Wash trading means buying and selling the same instrument to create the false appearance of trading volume. It gives misleading signals about supply and demand, which is market manipulation under UK MAR.",
       },
       {
         id: "mar-test-q5",
@@ -184,11 +207,13 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
           "Delete it after each announcement",
         ],
         correctIndex: 1,
-        explanation: "Issuers must maintain a list of all persons with access to inside information and provide it to the FCA on request. Accurate insider lists are a core compliance obligation for listed companies.",
+        explanation:
+          "Issuers must maintain a list of all persons with access to inside information and provide it to the FCA on request. Accurate insider lists are a core compliance obligation for listed companies.",
       },
       {
         id: "mar-test-q6",
-        question: "An investment bank wants to gauge investor appetite for a capital raising before announcing it. How can it legally share inside information with potential investors?",
+        question:
+          "An investment bank wants to gauge investor appetite for a capital raising before announcing it. How can it legally share inside information with potential investors?",
         options: [
           "It cannot, under any circumstances",
           "Through the market soundings safe harbour, following strict procedures including warnings and record-keeping",
@@ -196,7 +221,8 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
           "By publishing the information on social media first",
         ],
         correctIndex: 1,
-        explanation: "UK MAR provides a safe harbour for legitimate market soundings. The sounding firm must assess whether inside information is involved, warn recipients they may receive it and will be restricted from trading, and keep records. Once 'wall-crossed', investors cannot trade until the information is public.",
+        explanation:
+          "UK MAR provides a safe harbour for legitimate market soundings. The sounding firm must assess whether inside information is involved, warn recipients they may receive it and will be restricted from trading, and keep records. Once 'wall-crossed', investors cannot trade until the information is public.",
       },
       {
         id: "mar-test-q7",
@@ -208,7 +234,8 @@ The "reasonable investor" test is key. Information that a reasonable investor wo
           "Only professional traders",
         ],
         correctIndex: 2,
-        explanation: "UK MAR applies to anyone who trades in financial instruments admitted to trading on a UK venue, including private individuals, firms and issuers. You do not need to work in finance to commit market abuse.",
+        explanation:
+          "UK MAR applies to anyone who trades in financial instruments admitted to trading on a UK venue, including private individuals, firms and issuers. You do not need to work in finance to commit market abuse.",
       },
     ],
   },

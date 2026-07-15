@@ -44,14 +44,16 @@ export default async function handler(req: any, res: any) {
   }
 
   const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-  const messages: IncomingMessage[] = Array.isArray(body?.messages) ? body.messages : [];
+  const messages: IncomingMessage[] = Array.isArray(body?.messages)
+    ? body.messages
+    : [];
 
   // Basic validation: 1-20 messages, user/assistant roles only, max 4000 chars each
   if (
     messages.length === 0 ||
     messages.length > 20 ||
     !messages.every(
-      (m) =>
+      m =>
         (m.role === "user" || m.role === "assistant") &&
         typeof m.content === "string" &&
         m.content.length <= 4000
@@ -62,22 +64,25 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const groqRes = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
-        temperature: 0.3,
-        max_tokens: 1024,
-        messages: [
-          { role: "system", content: AI_SYSTEM_PROMPT },
-          ...messages.map((m) => ({ role: m.role, content: m.content })),
-        ],
-      }),
-    });
+    const groqRes = await fetch(
+      "https://api.groq.com/openai/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: "llama-3.3-70b-versatile",
+          temperature: 0.3,
+          max_tokens: 1024,
+          messages: [
+            { role: "system", content: AI_SYSTEM_PROMPT },
+            ...messages.map(m => ({ role: m.role, content: m.content })),
+          ],
+        }),
+      }
+    );
 
     if (!groqRes.ok) {
       const detail = await groqRes.text();

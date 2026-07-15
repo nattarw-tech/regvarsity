@@ -14,10 +14,16 @@ interface QuickCheckProps {
  * Each answer locks on selection and shows its explanation.
  * Finishing records the result and marks the chapter as read.
  */
-export default function QuickCheck({ module, chapter, questions }: QuickCheckProps) {
+export default function QuickCheck({
+  module,
+  chapter,
+  questions,
+}: QuickCheckProps) {
   const progress = useProgress();
   const [current, setCurrent] = useState(0);
-  const [answers, setAnswers] = useState<(number | null)[]>(() => questions.map(() => null));
+  const [answers, setAnswers] = useState<(number | null)[]>(() =>
+    questions.map(() => null)
+  );
   const [finished, setFinished] = useState(false);
 
   // Reset when navigating between chapters
@@ -30,13 +36,15 @@ export default function QuickCheck({ module, chapter, questions }: QuickCheckPro
   const question = questions[current];
   const answer = answers[current];
   const answered = answer !== null;
-  const correctCount = answers.filter((a, i) => a === questions[i].correctIndex).length;
+  const correctCount = answers.filter(
+    (a, i) => a === questions[i].correctIndex
+  ).length;
   const isLast = current === questions.length - 1;
   const previousBest = progress.getQuickCheck(chapter.id);
 
   const selectAnswer = (i: number) => {
     if (answered) return;
-    setAnswers((prev) => {
+    setAnswers(prev => {
       const next = [...prev];
       next[current] = i;
       return next;
@@ -90,11 +98,16 @@ export default function QuickCheck({ module, chapter, questions }: QuickCheckPro
         <span className="text-xs text-muted-foreground tabular-nums">
           Question {current + 1} of {questions.length}
           {previousBest && (
-            <span> · best so far {previousBest.correct}/{previousBest.total}</span>
+            <span>
+              {" "}
+              · best so far {previousBest.correct}/{previousBest.total}
+            </span>
           )}
         </span>
       </div>
-      <p className="text-muted-foreground mb-5 leading-relaxed">{question.question}</p>
+      <p className="text-muted-foreground mb-5 leading-relaxed">
+        {question.question}
+      </p>
       <div className="space-y-3">
         {question.options.map((opt, i) => {
           const isCorrect = i === question.correctIndex;
@@ -109,12 +122,14 @@ export default function QuickCheck({ module, chapter, questions }: QuickCheckPro
                   ? isCorrect
                     ? "bg-green-50 border-green-400 text-green-800 dark:bg-green-900/20 dark:border-green-600 dark:text-green-300"
                     : isSelected
-                    ? "bg-red-50 border-red-400 text-red-800 dark:bg-red-900/20 dark:border-red-600 dark:text-red-300"
-                    : "bg-muted border-border text-muted-foreground"
+                      ? "bg-red-50 border-red-400 text-red-800 dark:bg-red-900/20 dark:border-red-600 dark:text-red-300"
+                      : "bg-muted border-border text-muted-foreground"
                   : "bg-muted border-border text-muted-foreground hover:border-primary hover:bg-muted/70 cursor-pointer"
               }`}
             >
-              <span className="font-semibold mr-2">{String.fromCharCode(65 + i)}.</span>
+              <span className="font-semibold mr-2">
+                {String.fromCharCode(65 + i)}.
+              </span>
               {opt}
             </button>
           );
@@ -129,7 +144,9 @@ export default function QuickCheck({ module, chapter, questions }: QuickCheckPro
                 : "bg-amber-50 text-amber-800 dark:bg-amber-900/20 dark:text-amber-300"
             }`}
           >
-            <strong>{answer === question.correctIndex ? "✓ Correct!" : "Not quite."}</strong>{" "}
+            <strong>
+              {answer === question.correctIndex ? "✓ Correct!" : "Not quite."}
+            </strong>{" "}
             {question.explanation}
           </div>
           <div className="mt-4 flex justify-end">
@@ -142,7 +159,7 @@ export default function QuickCheck({ module, chapter, questions }: QuickCheckPro
               </button>
             ) : (
               <button
-                onClick={() => setCurrent((c) => c + 1)}
+                onClick={() => setCurrent(c => c + 1)}
                 className="px-5 py-2.5 rounded-md text-sm font-semibold bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
               >
                 Next question

@@ -25,14 +25,18 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="border-b border-border">
         <div className="max-w-5xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24">
-          <p className="overline-kicker mb-6">Free · No account · Plain English</p>
+          <p className="overline-kicker mb-6">
+            Free · No account · Plain English
+          </p>
           <h1 className="max-w-3xl text-balance mb-7">
-            UK and EU financial regulation, explained so anyone can understand it.
+            UK and EU financial regulation, explained so anyone can understand
+            it.
           </h1>
           <p className="text-lg md:text-xl leading-relaxed max-w-2xl mb-10 text-muted-foreground">
-            {ALL_MODULES.length} structured modules covering the FCA Handbook and key EU
-            frameworks: from the Principles and Consumer Duty to AML, MiFID, MiCA and data
-            protection. Written like a good textbook, not a legal document.
+            {ALL_MODULES.length} structured modules covering the FCA Handbook
+            and key EU frameworks: from the Principles and Consumer Duty to AML,
+            MiFID, MiCA and data protection. Written like a good textbook, not a
+            legal document.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <Link href="/learn">
@@ -55,17 +59,21 @@ export default function Home() {
         <section className="border-b border-border bg-surface-2">
           <div className="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3 text-sm">
             <span className="text-muted-foreground">
-              Welcome back - {stats.chaptersRead} of {stats.totalChapters} chapters read
+              Welcome back - {stats.chaptersRead} of {stats.totalChapters}{" "}
+              chapters read
               {stats.badgesEarned > 0 && (
                 <>
                   {" "}
-                  · {stats.badgesEarned} badge{stats.badgesEarned !== 1 ? "s" : ""} earned
+                  · {stats.badgesEarned} badge
+                  {stats.badgesEarned !== 1 ? "s" : ""} earned
                 </>
               )}
             </span>
             <span className="flex items-center gap-5">
               {continueTarget && (
-                <Link href={`/learn/${continueTarget.mod.slug}/${continueTarget.chapterSlug}`}>
+                <Link
+                  href={`/learn/${continueTarget.mod.slug}/${continueTarget.chapterSlug}`}
+                >
                   <span className="font-semibold text-primary hover:underline cursor-pointer">
                     Continue reading →
                   </span>
@@ -85,16 +93,24 @@ export default function Home() {
       <section className="border-b border-border">
         <div className="max-w-5xl mx-auto px-6 py-6 flex flex-wrap gap-x-12 gap-y-3 text-sm text-muted-foreground">
           <span>
-            <strong className="text-foreground font-semibold">{ALL_MODULES.length}</strong> modules
+            <strong className="text-foreground font-semibold">
+              {ALL_MODULES.length}
+            </strong>{" "}
+            modules
           </span>
           <span>
-            <strong className="text-foreground font-semibold">{totalChapters}</strong> chapters
+            <strong className="text-foreground font-semibold">
+              {totalChapters}
+            </strong>{" "}
+            chapters
           </span>
           <span>
-            <strong className="text-foreground font-semibold">57</strong> glossary terms
+            <strong className="text-foreground font-semibold">57</strong>{" "}
+            glossary terms
           </span>
           <span>
-            Last reviewed <strong className="text-foreground font-semibold">July 2026</strong>
+            Last reviewed{" "}
+            <strong className="text-foreground font-semibold">July 2026</strong>
           </span>
         </div>
       </section>
@@ -110,13 +126,16 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-muted-foreground mb-10 max-w-2xl">
-          Each module maps to a real FCA Handbook sourcebook or EU regulation. Start anywhere, 
-          no prior knowledge assumed.
+          Each module maps to a real FCA Handbook sourcebook or EU regulation.
+          Start anywhere, no prior knowledge assumed.
         </p>
 
         <ol className="border-t border-border">
-          {ALL_MODULES.map((mod) => {
-            const totalTime = mod.chapters.reduce((s, c) => s + c.readingTimeMinutes, 0);
+          {ALL_MODULES.map(mod => {
+            const totalTime = mod.chapters.reduce(
+              (s, c) => s + c.readingTimeMinutes,
+              0
+            );
             return (
               <li key={mod.id} className="border-b border-border">
                 <Link href={`/learn/${mod.slug}`}>
@@ -164,11 +183,15 @@ export default function Home() {
                 title: "Ask the AI expert",
                 desc: "Stuck on a concept? Ask a question and get a clear answer grounded in UK regulation, available on every page.",
               },
-            ].map((step) => (
+            ].map(step => (
               <div key={step.n}>
-                <div className="font-serif text-3xl text-primary/50 mb-3">{step.n}</div>
+                <div className="font-serif text-3xl text-primary/50 mb-3">
+                  {step.n}
+                </div>
                 <h3 className="text-lg mb-2">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -194,14 +217,18 @@ export default function Home() {
               title: "AI expert",
               desc: "Ask any question about UK or EU financial regulation and get a clear answer, with the caveats that matter.",
             },
-          ].map((card) => (
+          ].map(card => (
             <Link key={card.href} href={card.href}>
               <div className="group bg-background p-7 h-full cursor-pointer hover:bg-surface-2 transition-colors">
                 <div className="flex items-baseline justify-between mb-3">
-                  <h3 className="text-lg group-hover:text-primary transition-colors">{card.title}</h3>
+                  <h3 className="text-lg group-hover:text-primary transition-colors">
+                    {card.title}
+                  </h3>
                   <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {card.desc}
+                </p>
               </div>
             </Link>
           ))}
@@ -211,11 +238,19 @@ export default function Home() {
       {/* ── Disclaimer ── */}
       <section className="max-w-5xl mx-auto px-6 pb-16">
         <p className="text-xs leading-relaxed text-muted-foreground border-t border-border pt-6">
-          <strong className="text-foreground">Educational purposes only.</strong> RegVarsity
-          provides general information about UK and EU financial regulation. It is not legal or
-          compliance advice, and it is not affiliated with or endorsed by the FCA. For
-          compliance decisions, consult the{" "}
-          <a href="https://handbook.fca.org.uk" target="_blank" rel="noopener noreferrer" className="underline">
+          <strong className="text-foreground">
+            Educational purposes only.
+          </strong>{" "}
+          RegVarsity provides general information about UK and EU financial
+          regulation. It is not legal or compliance advice, and it is not
+          affiliated with or endorsed by the FCA. For compliance decisions,
+          consult the{" "}
+          <a
+            href="https://handbook.fca.org.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
             FCA Handbook
           </a>{" "}
           and qualified counsel.

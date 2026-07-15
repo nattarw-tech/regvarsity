@@ -74,16 +74,25 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
         },
       ],
       keyTakeaways: [
-        { text: "A complaint is any expression of dissatisfaction from an eligible complainant, it does not need to be justified." },
-        { text: "Firms must send a final response within 8 weeks, accepting or rejecting the complaint with reasons." },
-        { text: "Customers can refer unresolved complaints to the FOS, which can award up to £455,000 in compensation (2026/27 limit)." },
+        {
+          text: "A complaint is any expression of dissatisfaction from an eligible complainant, it does not need to be justified.",
+        },
+        {
+          text: "Firms must send a final response within 8 weeks, accepting or rejecting the complaint with reasons.",
+        },
+        {
+          text: "Customers can refer unresolved complaints to the FOS, which can award up to £455,000 in compensation (2026/27 limit).",
+        },
         { text: "FOS decisions are binding on firms but not on customers." },
-        { text: "Motor finance redress is a major current issue, the FCA's 2026 scheme estimates around £7.5 billion in redress across the industry." },
+        {
+          text: "Motor finance redress is a major current issue, the FCA's 2026 scheme estimates around £7.5 billion in redress across the industry.",
+        },
       ],
       quizQuestions: [
         {
           id: "disp-1-q1",
-          question: "A customer phones a bank and says, wrongly, that they have been overcharged. Is this a complaint under DISP?",
+          question:
+            "A customer phones a bank and says, wrongly, that they have been overcharged. Is this a complaint under DISP?",
           options: [
             "No, because the customer is mistaken",
             "No, because it was made by phone rather than in writing",
@@ -91,23 +100,22 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
             "Only if the customer uses the word 'complaint'",
           ],
           correctIndex: 2,
-          explanation: "DISP defines a complaint as any oral or written expression of dissatisfaction, whether justified or not, from or on behalf of an eligible complainant. Whether the customer is right is decided in the investigation; the expression of dissatisfaction alone makes it a complaint.",
+          explanation:
+            "DISP defines a complaint as any oral or written expression of dissatisfaction, whether justified or not, from or on behalf of an eligible complainant. Whether the customer is right is decided in the investigation; the expression of dissatisfaction alone makes it a complaint.",
         },
         {
           id: "disp-1-q2",
-          question: "How long does a firm have to send its final response to a complaint?",
-          options: [
-            "5 business days",
-            "3 weeks",
-            "8 weeks",
-            "6 months",
-          ],
+          question:
+            "How long does a firm have to send its final response to a complaint?",
+          options: ["5 business days", "3 weeks", "8 weeks", "6 months"],
           correctIndex: 2,
-          explanation: "The firm must send a final response within 8 weeks of receiving the complaint, accepting or rejecting it with reasons, offering redress where accepted, and telling the customer about their right to go to the Financial Ombudsman Service.",
+          explanation:
+            "The firm must send a final response within 8 weeks of receiving the complaint, accepting or rejecting it with reasons, offering redress where accepted, and telling the customer about their right to go to the Financial Ombudsman Service.",
         },
         {
           id: "disp-1-q3",
-          question: "Which statement about Financial Ombudsman Service decisions is correct?",
+          question:
+            "Which statement about Financial Ombudsman Service decisions is correct?",
           options: [
             "They are binding on both firms and customers",
             "They are binding on firms, but a customer can reject the decision and go to court",
@@ -115,7 +123,8 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
             "They can only be enforced through the FCA",
           ],
           correctIndex: 1,
-          explanation: "FOS decisions bind firms but not customers. A customer who rejects an ombudsman decision keeps the right to pursue the matter in court. The FOS is free for customers and decides cases on what is fair and reasonable, not just strict law.",
+          explanation:
+            "FOS decisions bind firms but not customers. A customer who rejects an ombudsman decision keeps the right to pursue the matter in court. The FOS is free for customers and decides cases on what is fair and reasonable, not just strict law.",
         },
       ],
     },
@@ -162,28 +171,36 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
         },
       ],
       keyTakeaways: [
-        { text: "The FSCS protects deposits up to £120,000 per person per authorised institution (since 1 December 2025)." },
-        { text: "Investments are protected up to £85,000 per person per firm. Insurance claims are covered up to 90% (100% for compulsory insurance)." },
-        { text: "Temporary high balances (e.g. from property sales) may be protected up to £1.4 million for 6 months." },
-        { text: "The FSCS does NOT cover unauthorised firms, investment losses, or crypto assets (currently)." },
-        { text: "Always check a firm is FCA-authorised before investing, use the FCA Register." },
+        {
+          text: "The FSCS protects deposits up to £120,000 per person per authorised institution (since 1 December 2025).",
+        },
+        {
+          text: "Investments are protected up to £85,000 per person per firm. Insurance claims are covered up to 90% (100% for compulsory insurance).",
+        },
+        {
+          text: "Temporary high balances (e.g. from property sales) may be protected up to £1.4 million for 6 months.",
+        },
+        {
+          text: "The FSCS does NOT cover unauthorised firms, investment losses, or crypto assets (currently).",
+        },
+        {
+          text: "Always check a firm is FCA-authorised before investing, use the FCA Register.",
+        },
       ],
       quizQuestions: [
         {
           id: "disp-2-q1",
-          question: "Since 1 December 2025, how much of a customer's deposits does the FSCS protect per person per authorised institution?",
-          options: [
-            "£85,000",
-            "£100,000",
-            "£120,000",
-            "£455,000",
-          ],
+          question:
+            "Since 1 December 2025, how much of a customer's deposits does the FSCS protect per person per authorised institution?",
+          options: ["£85,000", "£100,000", "£120,000", "£455,000"],
           correctIndex: 2,
-          explanation: "The FSCS deposit limit rose from £85,000 to £120,000 on 1 December 2025. Note that the limit applies per authorised institution, so brands sharing one authorisation share one limit. The £85,000 limit still applies to investment, mortgage and pension advice claims.",
+          explanation:
+            "The FSCS deposit limit rose from £85,000 to £120,000 on 1 December 2025. Note that the limit applies per authorised institution, so brands sharing one authorisation share one limit. The £85,000 limit still applies to investment, mortgage and pension advice claims.",
         },
         {
           id: "disp-2-q2",
-          question: "A saver deposits £900,000 from a house sale into one bank account. Three months later the bank fails. What FSCS protection applies?",
+          question:
+            "A saver deposits £900,000 from a house sale into one bank account. Three months later the bank fails. What FSCS protection applies?",
           options: [
             "Only the standard £120,000",
             "Nothing, because the balance exceeded the limit",
@@ -191,11 +208,13 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
             "The full amount with no limit",
           ],
           correctIndex: 2,
-          explanation: "Temporary high balances, for example from a property sale or inheritance, are protected up to £1.4 million for up to 6 months (raised from £1 million on 1 December 2025). After the 6-month window, only the standard £120,000 limit applies.",
+          explanation:
+            "Temporary high balances, for example from a property sale or inheritance, are protected up to £1.4 million for up to 6 months (raised from £1 million on 1 December 2025). After the 6-month window, only the standard £120,000 limit applies.",
         },
         {
           id: "disp-2-q3",
-          question: "An investor's FCA-authorised fund falls 40% in a market downturn. Can they claim from the FSCS?",
+          question:
+            "An investor's FCA-authorised fund falls 40% in a market downturn. Can they claim from the FSCS?",
           options: [
             "Yes, the FSCS covers all investment losses",
             "No, the FSCS covers firm failure, not poor investment performance",
@@ -203,7 +222,8 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
             "Only if they are over 65",
           ],
           correctIndex: 1,
-          explanation: "The FSCS steps in when an authorised firm fails (becomes insolvent), not when investments simply lose value. Market losses are investment risk. The £85,000 investment limit applies to claims arising from a failed firm.",
+          explanation:
+            "The FSCS steps in when an authorised firm fails (becomes insolvent), not when investments simply lose value. Market losses are investment risk. The £85,000 investment limit applies to claims arising from a failed firm.",
         },
       ],
     },
@@ -221,11 +241,13 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
           "Only customers who have held a product for a year",
         ],
         correctIndex: 1,
-        explanation: "Eligible complainants include retail clients, small businesses (annual turnover below £6.5 million) and charities (annual income below £6.5 million). Large corporates and sophisticated investors are expected to resolve disputes commercially or through litigation.",
+        explanation:
+          "Eligible complainants include retail clients, small businesses (annual turnover below £6.5 million) and charities (annual income below £6.5 million). Large corporates and sophisticated investors are expected to resolve disputes commercially or through litigation.",
       },
       {
         id: "disp-test-q2",
-        question: "Within how many business days must a firm acknowledge most complaints?",
+        question:
+          "Within how many business days must a firm acknowledge most complaints?",
         options: [
           "1 business day",
           "5 business days",
@@ -233,19 +255,17 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
           "8 weeks",
         ],
         correctIndex: 1,
-        explanation: "Firms must acknowledge complaints promptly, within 5 business days for most complaints. Complaints resolved within 3 business days can be closed with a simpler summary resolution communication. The full final response deadline is 8 weeks.",
+        explanation:
+          "Firms must acknowledge complaints promptly, within 5 business days for most complaints. Complaints resolved within 3 business days can be closed with a simpler summary resolution communication. The full final response deadline is 8 weeks.",
       },
       {
         id: "disp-test-q3",
-        question: "What is the FOS award limit for complaints referred on or after 1 April 2026?",
-        options: [
-          "£85,000",
-          "£120,000",
-          "£430,000",
-          "£455,000",
-        ],
+        question:
+          "What is the FOS award limit for complaints referred on or after 1 April 2026?",
+        options: ["£85,000", "£120,000", "£430,000", "£455,000"],
         correctIndex: 3,
-        explanation: "The FOS can award up to £455,000 for complaints referred on or after 1 April 2026 about acts occurring on or after 1 April 2019. The limit is adjusted each April in line with inflation.",
+        explanation:
+          "The FOS can award up to £455,000 for complaints referred on or after 1 April 2026 about acts occurring on or after 1 April 2019. The limit is adjusted each April in line with inflation.",
       },
       {
         id: "disp-test-q4",
@@ -257,11 +277,13 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
           "Precedents set by the Supreme Court only",
         ],
         correctIndex: 1,
-        explanation: "The FOS considers what is fair and reasonable, which can go beyond what is strictly legal. It is free for customers, funded by levies on firms, and was established by FSMA 2000.",
+        explanation:
+          "The FOS considers what is fair and reasonable, which can go beyond what is strictly legal. It is free for customers, funded by levies on firms, and was established by FSMA 2000.",
       },
       {
         id: "disp-test-q5",
-        question: "Roughly how large is the motor finance redress confirmed by the FCA in March 2026 (PS26/3)?",
+        question:
+          "Roughly how large is the motor finance redress confirmed by the FCA in March 2026 (PS26/3)?",
         options: [
           "Around £75 million across 120,000 agreements",
           "Around £7.5 billion in redress across roughly 12 million agreements",
@@ -269,11 +291,13 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
           "No scheme was confirmed",
         ],
         correctIndex: 1,
-        explanation: "The FCA's industry-wide redress scheme, confirmed in March 2026 after the Supreme Court's 2025 ruling on undisclosed commissions, estimates around £7.5 billion in redress across roughly 12 million eligible agreements, about £9.1 billion including firms' costs. Parts of the scheme are paused pending legal challenges.",
+        explanation:
+          "The FCA's industry-wide redress scheme, confirmed in March 2026 after the Supreme Court's 2025 ruling on undisclosed commissions, estimates around £7.5 billion in redress across roughly 12 million eligible agreements, about £9.1 billion including firms' costs. Parts of the scheme are paused pending legal challenges.",
       },
       {
         id: "disp-test-q6",
-        question: "Halifax and Bank of Scotland share one banking authorisation. A customer holds £100,000 with each. How much FSCS deposit protection do they have in total across the two brands?",
+        question:
+          "Halifax and Bank of Scotland share one banking authorisation. A customer holds £100,000 with each. How much FSCS deposit protection do they have in total across the two brands?",
         options: [
           "£240,000, because there are two brands",
           "£120,000, because the limit applies per authorised institution, not per brand",
@@ -281,7 +305,8 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
           "£85,000",
         ],
         correctIndex: 1,
-        explanation: "The £120,000 deposit limit applies per person per authorised institution. Brands sharing a single authorisation share a single limit, so this customer is protected up to £120,000 across both accounts, not £120,000 each.",
+        explanation:
+          "The £120,000 deposit limit applies per person per authorised institution. Brands sharing a single authorisation share a single limit, so this customer is protected up to £120,000 across both accounts, not £120,000 each.",
       },
       {
         id: "disp-test-q7",
@@ -293,11 +318,13 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
           "90% of a non-compulsory insurance claim when the insurer fails",
         ],
         correctIndex: 1,
-        explanation: "Crypto assets are not currently covered by the FSCS, although some crypto activities may become eligible when the new regime arrives in 2027. Deposits, investment claims against failed firms, and insurance claims are covered within the stated limits.",
+        explanation:
+          "Crypto assets are not currently covered by the FSCS, although some crypto activities may become eligible when the new regime arrives in 2027. Deposits, investment claims against failed firms, and insurance claims are covered within the stated limits.",
       },
       {
         id: "disp-test-q8",
-        question: "Which body covers shortfalls in defined benefit pension schemes?",
+        question:
+          "Which body covers shortfalls in defined benefit pension schemes?",
         options: [
           "The FSCS",
           "The Pension Protection Fund",
@@ -305,7 +332,8 @@ The FOS receives **hundreds of thousands of new cases each year**, with volumes 
           "HM Treasury directly",
         ],
         correctIndex: 1,
-        explanation: "The FSCS covers pension advice and arranging (up to £85,000 per person per firm), but shortfalls in defined benefit schemes are covered by the Pension Protection Fund (PPF), a separate body.",
+        explanation:
+          "The FSCS covers pension advice and arranging (up to £85,000 per person per firm), but shortfalls in defined benefit schemes are covered by the Pension Protection Fund (PPF), a separate body.",
       },
     ],
   },

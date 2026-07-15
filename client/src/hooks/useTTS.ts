@@ -41,9 +41,9 @@ function splitLong(text: string, max = 1500): string[] {
 function pickVoice(): SpeechSynthesisVoice | null {
   const voices = window.speechSynthesis.getVoices();
   return (
-    voices.find((v) => v.lang === "en-GB" && v.localService) ??
-    voices.find((v) => v.lang === "en-GB") ??
-    voices.find((v) => v.lang.startsWith("en")) ??
+    voices.find(v => v.lang === "en-GB" && v.localService) ??
+    voices.find(v => v.lang === "en-GB") ??
+    voices.find(v => v.lang.startsWith("en")) ??
     null
   );
 }
@@ -54,7 +54,8 @@ function pickVoice(): SpeechSynthesisVoice | null {
  * highlight it. Hidden entirely when speechSynthesis is unavailable.
  */
 export function useTTS(chunks: TTSChunk[]) {
-  const supported = typeof window !== "undefined" && "speechSynthesis" in window;
+  const supported =
+    typeof window !== "undefined" && "speechSynthesis" in window;
   const [status, setStatus] = useState<TTSStatus>("idle");
   const [rate, setRate] = useState<TTSRate>(1);
   const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
@@ -117,7 +118,11 @@ export function useTTS(chunks: TTSChunk[]) {
     setStatus("playing");
     // voices load asynchronously in some browsers; retry once they arrive
     if (window.speechSynthesis.getVoices().length === 0) {
-      window.speechSynthesis.addEventListener("voiceschanged", () => speakFrom(0), { once: true });
+      window.speechSynthesis.addEventListener(
+        "voiceschanged",
+        () => speakFrom(0),
+        { once: true }
+      );
       // fall through and try anyway - some browsers speak with the default voice
     }
     speakFrom(0);
@@ -154,7 +159,7 @@ export function useTTS(chunks: TTSChunk[]) {
         }, 60);
       }
     },
-    [status, speakFrom],
+    [status, speakFrom]
   );
 
   // stop speech when the chapter changes or the page unmounts
@@ -167,5 +172,14 @@ export function useTTS(chunks: TTSChunk[]) {
     };
   }, [supported, chunks]);
 
-  return { supported, status, rate, currentSectionId, play, pause, stop, changeRate };
+  return {
+    supported,
+    status,
+    rate,
+    currentSectionId,
+    play,
+    pause,
+    stop,
+    changeRate,
+  };
 }

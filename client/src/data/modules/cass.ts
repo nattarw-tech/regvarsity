@@ -14,7 +14,8 @@ export const moduleCASS: Module = {
   accentColour: "oklch(0.42 0.14 210)",
   description:
     "When you invest through a broker or platform, your money and assets are held by that firm on your behalf. CASS sets out the rules for how firms must protect client assets, keeping them separate from the firm's own assets so that, if the firm fails, your assets can be returned to you.",
-  whoItAppliesTo: "Investment firms, stockbrokers, and platforms that hold client money or assets.",
+  whoItAppliesTo:
+    "Investment firms, stockbrokers, and platforms that hold client money or assets.",
   chapters: [
     {
       id: "cass-1",
@@ -51,10 +52,18 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
         },
       ],
       keyTakeaways: [
-        { text: "CASS requires firms to segregate client money and assets from the firm's own assets." },
-        { text: "Client money is held on statutory trust, it legally belongs to the client, not the firm." },
-        { text: "Proper segregation means client assets can be returned if the firm becomes insolvent." },
-        { text: "CASS was significantly strengthened after the Lehman Brothers and MF Global insolvencies." },
+        {
+          text: "CASS requires firms to segregate client money and assets from the firm's own assets.",
+        },
+        {
+          text: "Client money is held on statutory trust, it legally belongs to the client, not the firm.",
+        },
+        {
+          text: "Proper segregation means client assets can be returned if the firm becomes insolvent.",
+        },
+        {
+          text: "CASS was significantly strengthened after the Lehman Brothers and MF Global insolvencies.",
+        },
       ],
       quizQuestions: [
         {
@@ -67,11 +76,13 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
             "Client assets must be held in cash only",
           ],
           correctIndex: 1,
-          explanation: "Segregation is the core of CASS: client money goes into designated client money bank accounts and custody assets into client custody accounts, separate from the firm's own holdings, so they can be identified and returned if the firm fails.",
+          explanation:
+            "Segregation is the core of CASS: client money goes into designated client money bank accounts and custody assets into client custody accounts, separate from the firm's own holdings, so they can be identified and returned if the firm fails.",
         },
         {
           id: "cass-1-q2",
-          question: "A broker holding client money becomes insolvent. Why can't the firm's general creditors claim that money?",
+          question:
+            "A broker holding client money becomes insolvent. Why can't the firm's general creditors claim that money?",
           options: [
             "Because the FSCS pays the creditors instead",
             "Because client money is held on statutory trust and legally belongs to the clients",
@@ -79,11 +90,13 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
             "They can claim it, client money has no special status",
           ],
           correctIndex: 1,
-          explanation: "CASS uses a statutory trust: client money legally belongs to the client, not the firm. On insolvency it does not form part of the firm's estate, so clients are entitled to have their money returned from the client money pool ahead of general creditors.",
+          explanation:
+            "CASS uses a statutory trust: client money legally belongs to the client, not the firm. On insolvency it does not form part of the firm's estate, so clients are entitled to have their money returned from the client money pool ahead of general creditors.",
         },
         {
           id: "cass-1-q3",
-          question: "Which insolvency confirmed in the UK Supreme Court that properly segregated client money was protected?",
+          question:
+            "Which insolvency confirmed in the UK Supreme Court that properly segregated client money was protected?",
           options: [
             "Northern Rock (2007)",
             "Lehman Brothers (ruling in 2012)",
@@ -91,7 +104,8 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
             "FTX (2022)",
           ],
           correctIndex: 1,
-          explanation: "The Lehman Brothers insolvency tested the trust mechanism, and in 2012 the UK Supreme Court confirmed that client money in properly segregated accounts was protected. The case also exposed weaknesses where money had not been properly segregated, which led to CASS being strengthened.",
+          explanation:
+            "The Lehman Brothers insolvency tested the trust mechanism, and in 2012 the UK Supreme Court confirmed that client money in properly segregated accounts was protected. The case also exposed weaknesses where money had not been properly segregated, which led to CASS being strengthened.",
         },
       ],
     },
@@ -109,7 +123,8 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
           "Only insurance companies",
         ],
         correctIndex: 1,
-        explanation: "CASS applies to firms that hold client money or custody assets on behalf of clients, such as investment firms, stockbrokers and investment platforms.",
+        explanation:
+          "CASS applies to firms that hold client money or custody assets on behalf of clients, such as investment firms, stockbrokers and investment platforms.",
       },
       {
         id: "cass-test-q2",
@@ -121,11 +136,13 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
           "The firm's main operating account with an internal ledger note",
         ],
         correctIndex: 1,
-        explanation: "Client money must sit in a separate bank account with an approved bank, clearly identified and designated as a client account, never mixed with the firm's own money.",
+        explanation:
+          "Client money must sit in a separate bank account with an approved bank, clearly identified and designated as a client account, never mixed with the firm's own money.",
       },
       {
         id: "cass-test-q3",
-        question: "What must a firm be able to do with custody assets at all times?",
+        question:
+          "What must a firm be able to do with custody assets at all times?",
         options: [
           "Lend them to other clients freely",
           "Identify which assets belong to which client",
@@ -133,11 +150,13 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
           "Report them to Companies House",
         ],
         correctIndex: 1,
-        explanation: "Custody assets must be held in client custody accounts separate from the firm's proprietary holdings, and the firm must be able to identify which assets belong to which client at all times.",
+        explanation:
+          "Custody assets must be held in client custody accounts separate from the firm's proprietary holdings, and the firm must be able to identify which assets belong to which client at all times.",
       },
       {
         id: "cass-test-q4",
-        question: "Which two firm collapses drove the strengthening of client asset rules?",
+        question:
+          "Which two firm collapses drove the strengthening of client asset rules?",
         options: [
           "Northern Rock and RBS",
           "Lehman Brothers (2008) and MF Global (2011)",
@@ -145,11 +164,13 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
           "FTX and Celsius",
         ],
         correctIndex: 1,
-        explanation: "The Lehman Brothers collapse in 2008 and MF Global in 2011 left thousands of clients with frozen or lost assets where segregation had failed. Both led to significant strengthening of CASS.",
+        explanation:
+          "The Lehman Brothers collapse in 2008 and MF Global in 2011 left thousands of clients with frozen or lost assets where segregation had failed. Both led to significant strengthening of CASS.",
       },
       {
         id: "cass-test-q5",
-        question: "Which Principle for Business does CASS give detailed effect to?",
+        question:
+          "Which Principle for Business does CASS give detailed effect to?",
         options: [
           "Principle 4 (Financial prudence)",
           "Principle 10 (Clients' assets)",
@@ -157,11 +178,13 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
           "Principle 12 (Consumer Duty)",
         ],
         correctIndex: 1,
-        explanation: "Principle 10 requires firms to arrange adequate protection for clients' assets. CASS is the sourcebook that turns that high-level principle into detailed segregation, trust and record-keeping rules.",
+        explanation:
+          "Principle 10 requires firms to arrange adequate protection for clients' assets. CASS is the sourcebook that turns that high-level principle into detailed segregation, trust and record-keeping rules.",
       },
       {
         id: "cass-test-q6",
-        question: "What was the key lesson from the parts of the Lehman estate where client money had NOT been properly segregated?",
+        question:
+          "What was the key lesson from the parts of the Lehman estate where client money had NOT been properly segregated?",
         options: [
           "Clients were fully protected anyway",
           "Clients suffered significant losses, showing that segregation only protects when done properly",
@@ -169,7 +192,8 @@ However, the Lehman case also revealed weaknesses, some client money had not bee
           "Segregation was found to be unnecessary",
         ],
         correctIndex: 1,
-        explanation: "Where money had not been properly segregated, clients suffered significant losses. The trust protection only works when firms actually follow the segregation rules, which is why CASS compliance and record-keeping are taken so seriously.",
+        explanation:
+          "Where money had not been properly segregated, clients suffered significant losses. The trust protection only works when firms actually follow the segregation rules, which is why CASS compliance and record-keeping are taken so seriously.",
       },
     ],
   },

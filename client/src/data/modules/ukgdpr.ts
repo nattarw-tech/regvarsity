@@ -10,14 +10,16 @@ export const moduleUKGDPR: Module = {
   slug: "uk-gdpr-data-protection",
   block: "Data Protection",
   sourceCode: "UK GDPR",
-  sourceUrl: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/",
+  sourceUrl:
+    "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/",
   sourceLabel: "ICO - UK GDPR guidance and resources",
   lastReviewed: "July 2026",
   colour: "bg-rose-50",
   accentColour: "oklch(0.48 0.16 350)",
   description:
     "Every financial firm processes personal data: customer records, KYC files, transaction histories, call recordings. UK GDPR and the Data Protection Act 2018 set the rules for handling it lawfully. Compliance and AML analysts touch data protection daily, often without realising it, which is exactly why employers expect you to know the basics.",
-  whoItAppliesTo: "Every organisation processing personal data in the UK, and overseas organisations offering goods or services to people in the UK.",
+  whoItAppliesTo:
+    "Every organisation processing personal data in the UK, and overseas organisations offering goods or services to people in the UK.",
   chapters: [
     {
       id: "ukgdpr-1",
@@ -72,16 +74,27 @@ A common exam and interview trap: consent is not the default lawful basis, and a
         },
       ],
       keyTakeaways: [
-        { text: "UK GDPR and the DPA 2018 form the core framework, amended (not replaced) by the Data (Use and Access) Act 2025." },
-        { text: "The ICO is the UK's data protection regulator: guidance, complaints, investigations and fines." },
-        { text: "Controllers decide why and how data is processed; processors act on their instructions. Pseudonymised data is still personal data." },
-        { text: "Special category data and criminal offence data need extra conditions, which matters for screening and fraud work in finance." },
-        { text: "Every act of processing needs one of six lawful bases, and consent is usually the wrong one in financial services." },
+        {
+          text: "UK GDPR and the DPA 2018 form the core framework, amended (not replaced) by the Data (Use and Access) Act 2025.",
+        },
+        {
+          text: "The ICO is the UK's data protection regulator: guidance, complaints, investigations and fines.",
+        },
+        {
+          text: "Controllers decide why and how data is processed; processors act on their instructions. Pseudonymised data is still personal data.",
+        },
+        {
+          text: "Special category data and criminal offence data need extra conditions, which matters for screening and fraud work in finance.",
+        },
+        {
+          text: "Every act of processing needs one of six lawful bases, and consent is usually the wrong one in financial services.",
+        },
       ],
       quizQuestions: [
         {
           id: "ukgdpr-1-q1",
-          question: "A bank hires a vendor to run sanctions screening on its customer base, strictly on the bank's instructions. Who is the controller and who is the processor?",
+          question:
+            "A bank hires a vendor to run sanctions screening on its customer base, strictly on the bank's instructions. Who is the controller and who is the processor?",
           options: [
             "The vendor is the controller, the bank is the processor",
             "The bank is the controller, the vendor is the processor",
@@ -89,11 +102,13 @@ A common exam and interview trap: consent is not the default lawful basis, and a
             "Neither, screening is exempt from data protection law",
           ],
           correctIndex: 1,
-          explanation: "The bank decides why and how the data is processed, making it the controller. The vendor processes data on the bank's instructions, making it the processor. Controllers carry the primary compliance burden, but processors have direct obligations too.",
+          explanation:
+            "The bank decides why and how the data is processed, making it the controller. The vendor processes data on the bank's instructions, making it the processor. Controllers carry the primary compliance burden, but processors have direct obligations too.",
         },
         {
           id: "ukgdpr-1-q2",
-          question: "A firm carries out AML customer due diligence because the Money Laundering Regulations require it. What is its lawful basis?",
+          question:
+            "A firm carries out AML customer due diligence because the Money Laundering Regulations require it. What is its lawful basis?",
           options: [
             "Consent",
             "Contract",
@@ -101,7 +116,8 @@ A common exam and interview trap: consent is not the default lawful basis, and a
             "Vital interests",
           ],
           correctIndex: 2,
-          explanation: "Where processing is required by law, the lawful basis is legal obligation. AML checks under the MLRs are the standard financial services example. Asking customers to 'consent' to checks the firm must do anyway would be misleading, since consent must be freely refusable.",
+          explanation:
+            "Where processing is required by law, the lawful basis is legal obligation. AML checks under the MLRs are the standard financial services example. Asking customers to 'consent' to checks the firm must do anyway would be misleading, since consent must be freely refusable.",
         },
         {
           id: "ukgdpr-1-q3",
@@ -113,7 +129,8 @@ A common exam and interview trap: consent is not the default lawful basis, and a
             "A customer's email address",
           ],
           correctIndex: 1,
-          explanation: "Special category data covers racial or ethnic origin, political opinions, religious beliefs, trade union membership, genetic and biometric data, health data, and sex life or sexual orientation. Account numbers, transactions and email addresses are ordinary personal data.",
+          explanation:
+            "Special category data covers racial or ethnic origin, political opinions, religious beliefs, trade union membership, genetic and biometric data, health data, and sex life or sexual orientation. Account numbers, transactions and email addresses are ordinary personal data.",
         },
       ],
     },
@@ -159,16 +176,27 @@ The mechanics:
         },
       ],
       keyTakeaways: [
-        { text: "Individuals have eight rights, including access, rectification, erasure and objection to direct marketing." },
-        { text: "A DSAR can be made in any form and must be answered within one calendar month, extendable by two months for complex requests." },
-        { text: "DSARs are free unless manifestly unfounded or excessive, and the DUAA 2025 confirmed a 'reasonable and proportionate search' standard." },
-        { text: "Rights are not absolute: AML record-keeping duties override erasure requests, with an explanation to the individual." },
-        { text: "SAR-related material must be withheld from DSAR responses; revealing a SAR is tipping off, a criminal offence." },
+        {
+          text: "Individuals have eight rights, including access, rectification, erasure and objection to direct marketing.",
+        },
+        {
+          text: "A DSAR can be made in any form and must be answered within one calendar month, extendable by two months for complex requests.",
+        },
+        {
+          text: "DSARs are free unless manifestly unfounded or excessive, and the DUAA 2025 confirmed a 'reasonable and proportionate search' standard.",
+        },
+        {
+          text: "Rights are not absolute: AML record-keeping duties override erasure requests, with an explanation to the individual.",
+        },
+        {
+          text: "SAR-related material must be withheld from DSAR responses; revealing a SAR is tipping off, a criminal offence.",
+        },
       ],
       quizQuestions: [
         {
           id: "ukgdpr-2-q1",
-          question: "A customer emails a bank: 'Please send me all the information you hold about me.' What is this?",
+          question:
+            "A customer emails a bank: 'Please send me all the information you hold about me.' What is this?",
           options: [
             "An informal enquiry the bank can ignore",
             "A valid data subject access request that starts the one-month clock",
@@ -176,11 +204,13 @@ The mechanics:
             "A complaint under DISP",
           ],
           correctIndex: 1,
-          explanation: "A DSAR can be made in any form, with no magic words. The bank must respond within one calendar month, extendable by up to two further months for complex requests if the customer is told within the first month.",
+          explanation:
+            "A DSAR can be made in any form, with no magic words. The bank must respond within one calendar month, extendable by up to two further months for complex requests if the customer is told within the first month.",
         },
         {
           id: "ukgdpr-2-q2",
-          question: "A customer who closed their account last year demands erasure of all their data. The firm's AML rules require records to be kept for five years. What should the firm do?",
+          question:
+            "A customer who closed their account last year demands erasure of all their data. The firm's AML rules require records to be kept for five years. What should the firm do?",
           options: [
             "Delete everything, the right to erasure is absolute",
             "Retain what the law requires, explain to the customer why, and delete what is no longer needed",
@@ -188,11 +218,13 @@ The mechanics:
             "Report the customer to the ICO",
           ],
           correctIndex: 1,
-          explanation: "The right to erasure is not absolute. A legal obligation to retain records, such as the five-year AML retention period, overrides it. The firm should keep what the law requires, explain that to the customer, and erase anything it has no continuing need or duty to keep.",
+          explanation:
+            "The right to erasure is not absolute. A legal obligation to retain records, such as the five-year AML retention period, overrides it. The firm should keep what the law requires, explain that to the customer, and erase anything it has no continuing need or duty to keep.",
         },
         {
           id: "ukgdpr-2-q3",
-          question: "A DSAR response would reveal that the firm filed a Suspicious Activity Report about the customer. What must the firm do?",
+          question:
+            "A DSAR response would reveal that the firm filed a Suspicious Activity Report about the customer. What must the firm do?",
           options: [
             "Include the SAR, transparency always wins",
             "Withhold the SAR material without revealing why, since disclosure would be tipping off",
@@ -200,7 +232,8 @@ The mechanics:
             "Send the SAR to the customer's solicitor instead",
           ],
           correctIndex: 1,
-          explanation: "Revealing a SAR would be the criminal offence of tipping off. Crime-related exemptions allow the firm to withhold that material, and it must not signal the reason. This is why DSAR teams in financial firms coordinate with the MLRO.",
+          explanation:
+            "Revealing a SAR would be the criminal offence of tipping off. Crime-related exemptions allow the firm to withhold that material, and it must not signal the reason. This is why DSAR teams in financial firms coordinate with the MLRO.",
         },
       ],
     },
@@ -248,16 +281,27 @@ In practice, compliance analysts meet DPIAs whenever a firm rolls out new monito
         },
       ],
       keyTakeaways: [
-        { text: "A personal data breach covers loss, alteration, unauthorised disclosure or access, and loss of access, not just hacking." },
-        { text: "Serious breaches must reach the ICO within 72 hours of awareness; high-risk breaches must also be notified to affected individuals." },
-        { text: "All breaches must be recorded internally, and financial firms may owe a parallel incident report to the FCA under Principle 11." },
-        { text: "DPIAs are mandatory before high-risk processing such as credit scoring, large-scale screening or biometric onboarding." },
-        { text: "If high residual risk remains after mitigations, the ICO must be consulted before processing starts." },
+        {
+          text: "A personal data breach covers loss, alteration, unauthorised disclosure or access, and loss of access, not just hacking.",
+        },
+        {
+          text: "Serious breaches must reach the ICO within 72 hours of awareness; high-risk breaches must also be notified to affected individuals.",
+        },
+        {
+          text: "All breaches must be recorded internally, and financial firms may owe a parallel incident report to the FCA under Principle 11.",
+        },
+        {
+          text: "DPIAs are mandatory before high-risk processing such as credit scoring, large-scale screening or biometric onboarding.",
+        },
+        {
+          text: "If high residual risk remains after mitigations, the ICO must be consulted before processing starts.",
+        },
       ],
       quizQuestions: [
         {
           id: "ukgdpr-3-q1",
-          question: "An analyst emails a spreadsheet of 2,000 customers' details to the wrong external address. Is this a personal data breach?",
+          question:
+            "An analyst emails a spreadsheet of 2,000 customers' details to the wrong external address. Is this a personal data breach?",
           options: [
             "No, breaches require hacking by a third party",
             "Yes, unauthorised disclosure of personal data is a breach, and it may need reporting to the ICO within 72 hours",
@@ -265,11 +309,13 @@ In practice, compliance analysts meet DPIAs whenever a firm rolls out new monito
             "Only if the recipient opens the file",
           ],
           correctIndex: 1,
-          explanation: "A breach includes accidental unauthorised disclosure, so a misdirected email qualifies. The firm must assess the risk to individuals; unless the breach is unlikely to result in a risk, it must be reported to the ICO within 72 hours of awareness.",
+          explanation:
+            "A breach includes accidental unauthorised disclosure, so a misdirected email qualifies. The firm must assess the risk to individuals; unless the breach is unlikely to result in a risk, it must be reported to the ICO within 72 hours of awareness.",
         },
         {
           id: "ukgdpr-3-q2",
-          question: "How long does a firm have to report a reportable breach to the ICO, and from when?",
+          question:
+            "How long does a firm have to report a reportable breach to the ICO, and from when?",
           options: [
             "72 hours from becoming aware of the breach, including weekends",
             "5 business days from the breach occurring",
@@ -277,11 +323,13 @@ In practice, compliance analysts meet DPIAs whenever a firm rolls out new monito
             "There is no deadline",
           ],
           correctIndex: 0,
-          explanation: "Reportable breaches must be notified without undue delay and, where feasible, within 72 hours of the firm becoming aware. The clock runs through weekends and holidays, and firms can report in phases if facts are still emerging.",
+          explanation:
+            "Reportable breaches must be notified without undue delay and, where feasible, within 72 hours of the firm becoming aware. The clock runs through weekends and holidays, and firms can report in phases if facts are still emerging.",
         },
         {
           id: "ukgdpr-3-q3",
-          question: "A bank plans an AI-driven transaction monitoring system that profiles all customers. What must it do first?",
+          question:
+            "A bank plans an AI-driven transaction monitoring system that profiles all customers. What must it do first?",
           options: [
             "Nothing, AML systems are exempt from data protection law",
             "Carry out a Data Protection Impact Assessment, and consult the ICO if high residual risk remains",
@@ -289,7 +337,8 @@ In practice, compliance analysts meet DPIAs whenever a firm rolls out new monito
             "Notify the Financial Ombudsman Service",
           ],
           correctIndex: 1,
-          explanation: "Large-scale profiling and monitoring is a classic DPIA trigger. The DPIA assesses necessity, proportionality and risks, and sets mitigations. If a high residual risk remains after mitigation, the ICO must be consulted before processing begins.",
+          explanation:
+            "Large-scale profiling and monitoring is a classic DPIA trigger. The DPIA assesses necessity, proportionality and risks, and sets mitigations. If a high residual risk remains after mitigation, the ICO must be consulted before processing begins.",
         },
       ],
     },
@@ -337,16 +386,27 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
         },
       ],
       keyTakeaways: [
-        { text: "Higher-tier ICO fines reach £17.5 million or 4% of worldwide turnover; standard-tier fines reach £8.7 million or 2%." },
-        { text: "British Airways (£20m) and Marriott (£18.4m) show the ICO fines inadequate security, not merely being attacked." },
-        { text: "Since the DUAA 2025, direct marketing breaches under PECR can attract GDPR-scale fines." },
-        { text: "One data incident can breach UK GDPR and FCA requirements at once: security principle, Principle 3, Principle 11 and Consumer Duty." },
-        { text: "KYC, screening, outsourcing and complaints all sit at the junction of data protection and FCA regulation." },
+        {
+          text: "Higher-tier ICO fines reach £17.5 million or 4% of worldwide turnover; standard-tier fines reach £8.7 million or 2%.",
+        },
+        {
+          text: "British Airways (£20m) and Marriott (£18.4m) show the ICO fines inadequate security, not merely being attacked.",
+        },
+        {
+          text: "Since the DUAA 2025, direct marketing breaches under PECR can attract GDPR-scale fines.",
+        },
+        {
+          text: "One data incident can breach UK GDPR and FCA requirements at once: security principle, Principle 3, Principle 11 and Consumer Duty.",
+        },
+        {
+          text: "KYC, screening, outsourcing and complaints all sit at the junction of data protection and FCA regulation.",
+        },
       ],
       quizQuestions: [
         {
           id: "ukgdpr-4-q1",
-          question: "What is the maximum higher-tier fine the ICO can impose under UK GDPR?",
+          question:
+            "What is the maximum higher-tier fine the ICO can impose under UK GDPR?",
           options: [
             "£500,000",
             "£8.7 million or 2% of worldwide turnover",
@@ -354,7 +414,8 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
             "Unlimited",
           ],
           correctIndex: 2,
-          explanation: "The higher tier, for breaches of the principles, lawful bases, individuals' rights and transfer rules, reaches £17.5 million or 4% of worldwide annual turnover, whichever is higher. The standard tier reaches £8.7 million or 2% for failures like unreported breaches or missing DPIAs.",
+          explanation:
+            "The higher tier, for breaches of the principles, lawful bases, individuals' rights and transfer rules, reaches £17.5 million or 4% of worldwide annual turnover, whichever is higher. The standard tier reaches £8.7 million or 2% for failures like unreported breaches or missing DPIAs.",
         },
         {
           id: "ukgdpr-4-q2",
@@ -366,11 +427,13 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
             "For moving data outside the UK",
           ],
           correctIndex: 1,
-          explanation: "In both cases the ICO's core finding was inadequate technical and organisational security, not the mere fact of being attacked. BA was fined £20 million and Marriott £18.4 million in 2020.",
+          explanation:
+            "In both cases the ICO's core finding was inadequate technical and organisational security, not the mere fact of being attacked. BA was fined £20 million and Marriott £18.4 million in 2020.",
         },
         {
           id: "ukgdpr-4-q3",
-          question: "A bank suffers a serious breach of customer data. Which obligations could be triggered at the same time?",
+          question:
+            "A bank suffers a serious breach of customer data. Which obligations could be triggered at the same time?",
           options: [
             "Only an ICO notification",
             "ICO notification within 72 hours, notifying high-risk individuals, and reporting to the FCA under Principle 11",
@@ -378,7 +441,8 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
             "A mandatory press release",
           ],
           correctIndex: 1,
-          explanation: "A single serious incident can require ICO notification within 72 hours, direct notification of affected individuals where risk is high, and prompt FCA notification under Principle 11, with Principle 3 and Consumer Duty questions following close behind.",
+          explanation:
+            "A single serious incident can require ICO notification within 72 hours, direct notification of affected individuals where risk is high, and prompt FCA notification under Principle 11, with Principle 3 and Consumer Duty questions following close behind.",
         },
       ],
     },
@@ -388,7 +452,8 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
     questions: [
       {
         id: "ukgdpr-test-q1",
-        question: "What did the Data (Use and Access) Act 2025 do to the UK's data protection framework?",
+        question:
+          "What did the Data (Use and Access) Act 2025 do to the UK's data protection framework?",
         options: [
           "Replaced UK GDPR with an entirely new act",
           "Amended UK GDPR, the DPA 2018 and PECR, including recognised legitimate interests and higher PECR marketing fines",
@@ -396,11 +461,13 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "Rejoined the UK to the EU GDPR",
         ],
         correctIndex: 1,
-        explanation: "The DUAA, given Royal Assent on 19 June 2025, amends rather than replaces the framework. Changes include a statutory list of recognised legitimate interests, clarified DSAR rules, and raising PECR direct marketing fines to UK GDPR levels.",
+        explanation:
+          "The DUAA, given Royal Assent on 19 June 2025, amends rather than replaces the framework. Changes include a statutory list of recognised legitimate interests, clarified DSAR rules, and raising PECR direct marketing fines to UK GDPR levels.",
       },
       {
         id: "ukgdpr-test-q2",
-        question: "Records keyed to a customer number, with the name held in a separate lookup table, are:",
+        question:
+          "Records keyed to a customer number, with the name held in a separate lookup table, are:",
         options: [
           "Anonymous data outside UK GDPR",
           "Pseudonymised data, which is still personal data",
@@ -408,11 +475,13 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "Criminal offence data",
         ],
         correctIndex: 1,
-        explanation: "Pseudonymisation is a good security measure but the data remains personal data because the link back to the individual exists. Only truly anonymous data falls outside the law, and genuine anonymisation is hard to achieve.",
+        explanation:
+          "Pseudonymisation is a good security measure but the data remains personal data because the link back to the individual exists. Only truly anonymous data falls outside the law, and genuine anonymisation is hard to achieve.",
       },
       {
         id: "ukgdpr-test-q3",
-        question: "Which lawful basis requires a three-part test of purpose, necessity and balancing against the individual's rights?",
+        question:
+          "Which lawful basis requires a three-part test of purpose, necessity and balancing against the individual's rights?",
         options: [
           "Consent",
           "Contract",
@@ -420,7 +489,8 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "Legitimate interests",
         ],
         correctIndex: 3,
-        explanation: "Legitimate interests is the most flexible basis but requires identifying the interest, showing necessity, and balancing against individuals' rights. Fraud prevention is a classic example, and the DUAA 2025 simplified the test for a list of recognised legitimate interests.",
+        explanation:
+          "Legitimate interests is the most flexible basis but requires identifying the interest, showing necessity, and balancing against individuals' rights. Fraud prevention is a classic example, and the DUAA 2025 simplified the test for a list of recognised legitimate interests.",
       },
       {
         id: "ukgdpr-test-q4",
@@ -432,11 +502,13 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "Six months",
         ],
         correctIndex: 1,
-        explanation: "DSARs must be answered without undue delay and within one calendar month. For complex or numerous requests the deadline can be extended by up to two further months, provided the individual is told within the first month.",
+        explanation:
+          "DSARs must be answered without undue delay and within one calendar month. For complex or numerous requests the deadline can be extended by up to two further months, provided the individual is told within the first month.",
       },
       {
         id: "ukgdpr-test-q5",
-        question: "Which right lets an individual insist on human involvement in a decision?",
+        question:
+          "Which right lets an individual insist on human involvement in a decision?",
         options: [
           "The right to data portability",
           "The rights around purely automated decision-making with legal or similarly significant effects",
@@ -444,11 +516,13 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "The right to restrict processing",
         ],
         correctIndex: 1,
-        explanation: "Individuals are protected against purely automated decisions with legal or similarly significant effects, such as a fully automated credit decline, and can demand human review of the decision.",
+        explanation:
+          "Individuals are protected against purely automated decisions with legal or similarly significant effects, such as a fully automated credit decline, and can demand human review of the decision.",
       },
       {
         id: "ukgdpr-test-q6",
-        question: "A ransomware attack encrypts a firm's customer database. No data was copied out. Is this a personal data breach?",
+        question:
+          "A ransomware attack encrypts a firm's customer database. No data was copied out. Is this a personal data breach?",
         options: [
           "No, because no data left the firm",
           "Yes, loss of access to personal data is itself a breach",
@@ -456,7 +530,8 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "Only if customers notice",
         ],
         correctIndex: 1,
-        explanation: "A breach includes accidental or unlawful destruction, loss, alteration, unauthorised disclosure or access. Losing access to data through encryption is a breach even if nothing was exfiltrated, and it must be risk-assessed for ICO reporting within 72 hours.",
+        explanation:
+          "A breach includes accidental or unlawful destruction, loss, alteration, unauthorised disclosure or access. Losing access to data through encryption is a breach even if nothing was exfiltrated, and it must be risk-assessed for ICO reporting within 72 hours.",
       },
       {
         id: "ukgdpr-test-q7",
@@ -468,11 +543,13 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "Never, the ICO only acts after breaches",
         ],
         correctIndex: 1,
-        explanation: "Prior consultation with the ICO is required when a DPIA identifies a high residual risk remaining after mitigations. DPIAs themselves are mandatory for high-risk processing such as large-scale profiling and monitoring.",
+        explanation:
+          "Prior consultation with the ICO is required when a DPIA identifies a high residual risk remaining after mitigations. DPIAs themselves are mandatory for high-risk processing such as large-scale profiling and monitoring.",
       },
       {
         id: "ukgdpr-test-q8",
-        question: "Which statement best captures the GDPR-FCA overlap in financial services?",
+        question:
+          "Which statement best captures the GDPR-FCA overlap in financial services?",
         options: [
           "Data protection is handled by the ICO, so the FCA never cares about data incidents",
           "A serious data breach can simultaneously engage the ICO, FCA Principles 3 and 11, and Consumer Duty",
@@ -480,7 +557,8 @@ The takeaway for your CV: being fluent in both regimes, and knowing which regula
           "DSARs and complaints are the same process",
         ],
         correctIndex: 1,
-        explanation: "The regimes run in parallel. One serious incident can breach the UK GDPR security principle, FCA Principle 3 (management and control) and Principle 11 (notifying the regulator), with Consumer Duty questions if customers were harmed. AML duties shape retention but do not switch off data protection.",
+        explanation:
+          "The regimes run in parallel. One serious incident can breach the UK GDPR security principle, FCA Principle 3 (management and control) and Principle 11 (notifying the regulator), with Consumer Duty questions if customers were harmed. AML duties shape retention but do not switch off data protection.",
       },
     ],
   },
