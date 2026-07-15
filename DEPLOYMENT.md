@@ -36,7 +36,7 @@ Total time: about 30 minutes. Everything is free tier.
 
 Two easy options once the site is live:
 
-- Vercel Analytics: Project -> Analytics -> Enable (free tier, zero code changes).
+- Vercel Analytics: already integrated in code; enable it in the Vercel dashboard to start collecting data.
 - Plausible or GA4: paste their script tag into `client/index.html` before `</head>`.
 
 ## 6. Check the launch basics

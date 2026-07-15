@@ -64,7 +64,7 @@ function App() {
           <Router />
           {/* Floating AI chat widget, appears on every page, minimisable */}
           <FloatingAIChat />
-          <Analytics />
+          {import.meta.env.PROD && <Analytics />}
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
