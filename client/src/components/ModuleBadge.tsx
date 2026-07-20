@@ -17,7 +17,7 @@ export default function ModuleBadge({
   earned,
   size = 96,
 }: ModuleBadgeProps) {
-  const colour = earned ? module.accentColour : "var(--border)";
+  const colour = earned ? module.accentColour : "var(--muted-foreground)";
   const textColour = earned ? module.accentColour : "var(--muted-foreground)";
   // Scalloped edge: 24 small arcs around a circle
   const scallops = 24;
@@ -52,7 +52,7 @@ export default function ModuleBadge({
           ? `Completion badge for ${module.title}`
           : `Locked badge for ${module.title} - pass the module test to earn it`
       }
-      style={{ opacity: earned ? 1 : 0.45 }}
+      style={{ opacity: earned ? 1 : 0.85 }}
     >
       {/* Scalloped seal edge */}
       <path
