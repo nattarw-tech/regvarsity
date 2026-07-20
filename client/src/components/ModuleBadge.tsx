@@ -1,4 +1,5 @@
 import type { Module } from "@/data/modules";
+import { useTheme } from "@/contexts/ThemeContext";
 
 interface ModuleBadgeProps {
   module: Module;
@@ -7,18 +8,26 @@ interface ModuleBadgeProps {
   size?: number;
 }
 
+// Earned badges use each module's own accent colour, except in dark mode,
+// where every earned badge uses this single bright green instead.
+const DARK_MODE_EARNED_GREEN = "#66FF14";
+
 /**
  * Academic-seal completion badge: scalloped ring, § mark in the centre,
  * module code and REGVARSITY around the ring. Earned badges use the
- * module accent colour; unearned ones render as a faint outline.
+ * module accent colour (bright green in dark mode); unearned ones
+ * render as a faint outline.
  */
 export default function ModuleBadge({
   module,
   earned,
   size = 96,
 }: ModuleBadgeProps) {
-  const colour = earned ? module.accentColour : "var(--muted-foreground)";
-  const textColour = earned ? module.accentColour : "var(--muted-foreground)";
+  const { theme } = useTheme();
+  const earnedColour =
+    theme === "dark" ? DARK_MODE_EARNED_GREEN : module.accentColour;
+  const colour = earned ? earnedColour : "var(--muted-foreground)";
+  const textColour = earned ? earnedColour : "var(--muted-foreground)";
   // Scalloped edge: 24 small arcs around a circle
   const scallops = 24;
   const cx = 60;
