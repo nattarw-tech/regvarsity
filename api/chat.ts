@@ -73,9 +73,11 @@ export default async function handler(req: any, res: any) {
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
+          model: "openai/gpt-oss-120b",
           temperature: 0.3,
-          max_tokens: 1024,
+          // Tutor replies are explanatory, not a reasoning task.
+          reasoning_effort: "low",
+          max_completion_tokens: 2048,
           messages: [
             { role: "system", content: AI_SYSTEM_PROMPT },
             ...messages.map(m => ({ role: m.role, content: m.content })),
